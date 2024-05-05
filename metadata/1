@@ -1,0 +1,15 @@
+{
+    "name": "Bored Ape #2",
+    "description": "A unique Bored Ape from the Bored Ape Yacht Club collection.",
+    "image": "ipfs://bafybeiaf5u2vb2nlldea6pac6gfheeyx24f5sleqpc7ytvifd7hqsj7qky/1.avif",
+    "attributes": [
+      {
+        "trait_type": "Fur",
+        "value": "Brown"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Bored Unshaven"
+      }
+    ]
+  }

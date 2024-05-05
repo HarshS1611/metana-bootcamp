@@ -1,0 +1,15 @@
+{
+    "name": "Crypto Punk #1",
+    "description": "One of the original 10,000 Crypto Punks created by Larva Labs.",
+    "image": "ipfs://bafybeiaf5u2vb2nlldea6pac6gfheeyx24f5sleqpc7ytvifd7hqsj7qky/0.avif",
+    "attributes": [
+      {
+        "trait_type": "Accessory",
+        "value": "Cap Forward"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Male"
+      }
+    ]
+  }
