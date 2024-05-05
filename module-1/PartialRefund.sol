@@ -15,7 +15,7 @@ contract TokenSale is ERC20Capped, Ownable2Step {
         ERC20Capped(MAX_SUPPLY)
         Ownable(initialOwner)
     {
-        _mint(msg.sender, initialSupply * 10**18);
+        _mint(msg.sender, initialSupply * 1 ether);
     }
 
     function mint(address add, uint256 amount) public onlyOwner{
@@ -31,8 +31,8 @@ contract TokenSale is ERC20Capped, Ownable2Step {
     }
 
     function withdrawEther(uint256 amount,address target) public onlyOwner {
-        require(amount * 10**18 <= users[target], "Insufficient balance");
-        users[target] -= amount * 10**18;
+        require((amount * 1 ether) <= users[target], "Insufficient balance");
+        users[target] -= amount * 1 ether;
         payable(target).transfer(amount);
         contractBalance -= amount;
     }
@@ -49,9 +49,9 @@ contract TokenSale is ERC20Capped, Ownable2Step {
             "Insufficient contract balance"
         );
 
-        _burn(msg.sender, (amount * 10**18));
+        _burn(msg.sender, (amount * 1 ether));
         users[msg.sender] += refundAmount;
         contractBalance -= refundAmount;
-        payable(msg.sender).transfer(refundAmount * 10**18);
+        payable(msg.sender).transfer(refundAmount * 1 ether);
     }
 }
