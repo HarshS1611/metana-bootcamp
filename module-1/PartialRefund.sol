@@ -4,7 +4,7 @@ pragma solidity ^0.8.25;
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
 
-contract TokenSale is ERC20Capped, Ownable2Step {
+    contract PartialRefund is ERC20Capped, Ownable2Step {
     uint256 public constant TOKEN_PRICE = 0.001 ether;
     uint256 public constant MAX_SUPPLY = 1000000 ether;
     mapping(address => uint256) public users;
