@@ -1,69 +1,64 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
-contract ERC20Token is ERC20 {
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+contract MyToken is ERC20 {
     constructor(uint256 initialSupply) ERC20("XHACKS", "XHS") {
         _mint(msg.sender, initialSupply);
     }
-}
-
-contract ERC721Token is ERC721 {
-    uint256 public totalSupply;
-
-    constructor() ERC721("MyERC721", "M721") {}
-
-    function mint(address to, uint256 tokenId) external {
-        _mint(to, tokenId);
+    function mint(address account, uint256 amount) public {
+        _mint(account, amount);
     }
 }
 
-contract NFTMinter is IERC721Receiver {
-    ERC20Token public erc20Token;
-    ERC721Token public erc721Token;
-    uint256 public tokenid;
-    mapping (uint => address) public OriginalOnwers;
-    mapping (uint => address) public stakedOwners;
+contract MyNFT is ERC721 {
+    constructor() ERC721("MyNFT", "MNFT") {}
 
-
-    constructor(ERC20Token _erc20Token, ERC721Token _erc721Token) {
-        erc20Token = _erc20Token;
-        erc721Token = _erc721Token;
+    function mint(uint256 tokenId) public {
+        _safeMint(msg.sender, tokenId);
     }
-
-    function onERC721Received(
-        address operator,
-        address from,
-        uint256 tokenId,
-        bytes calldata data
-    ) external returns (bytes4) {
-        return IERC721Receiver.onERC721Received.selector;
-    }
-
-    function StakeNFT(uint256 tokenId) external {
-        require(
-            erc721Token.ownerOf(tokenId) == msg.sender,
-            "NFT not found"
-        );
-
-        erc20Token.transferFrom(msg.sender, address(this),tokenId);
-        stakedOwners[tokenId] = msg.sender;
-        OriginalOnwers[tokenid] = msg.sender;
-        tokenid++;
-    }
-    
-  function withdrawNFT(uint tokenId) external {
-    require(stakedOwners[tokenId] == erc721Token.ownerOf(tokenId), "Staked NFT not found");
-    require(OriginalOnwers[tokenId] == msg.sender, "Only original owner can withdraw NFT");
-    
-    erc20Token.transferFrom(address(this), msg.sender, 10);
-    erc721Token.transferFrom(address(this), msg.sender, tokenId);
-    
-    stakedOwners[tokenId] = address(0);
-    OriginalOnwers[tokenId] = address(0);
 }
 
-}
+contract NFTStake  {
+    MyToken public token;
+    MyNFT public nft;
 
+    struct Stake {
+        uint256 tokenId;
+        uint256 stakingTime;
+    }
+
+    mapping(address => Stake) public stakes;
+
+    constructor(address _tokenAddress, address _nftAddress) {
+        token = MyToken(_tokenAddress);
+        nft = MyNFT(_nftAddress);
+    }
+
+    function stakeNFT(uint256 tokenId) external {
+        require(nft.ownerOf(tokenId) == msg.sender, "You don't own this NFT");
+        require(stakes[msg.sender].tokenId == 0, "You already have an active stake");
+
+        nft.transferFrom(msg.sender, address(this), tokenId);
+        stakes[msg.sender] = Stake(tokenId, block.timestamp);
+    }
+
+    function withdrawNFT() external {
+        Stake storage stake = stakes[msg.sender];
+        require(stake.tokenId >= 0, "You don't have an active stake");
+
+        nft.transferFrom(address(this), msg.sender, stake.tokenId);
+        delete stakes[msg.sender];
+    }
+
+    function claimReward() external {
+        Stake storage stake = stakes[msg.sender];
+        require(stake.tokenId >= 0, "You don't have an active stake");
+        require(block.timestamp >= stake.stakingTime + 25 seconds, "Reward period not over yet");
+
+        token.mint(msg.sender, 10);
+        stake.stakingTime = block.timestamp;
+    }
+}
