@@ -10,7 +10,7 @@ contract MyToken is ERC20 {
         _mint(msg.sender, initialSupply);
     }
     function mint(address account, uint256 amount) public {
-        _mint(account, amount);
+        _mint(account, amount * 1 ether);
     }
 }
 
@@ -67,7 +67,7 @@ contract NFTStake is IERC721Receiver  {
         require(stake.tokenId >= 0, "You don't have an active stake");
         require(block.timestamp >= stake.stakingTime + 1 days, "Reward period not over yet");
 
-        token.mint(msg.sender, 10);
+        token.mint(msg.sender, 10 * 1 ether);
         stake.stakingTime = block.timestamp;
     }
 }
