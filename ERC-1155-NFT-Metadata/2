@@ -1,0 +1,19 @@
+{
+  "name": "CryptoPup #412",
+  "description": "An adorable digital puppy from the CryptoPets collection.",
+  "image": "ipfs://bafybeihyygnxaeny2v4koxwnhyax5dd7bbwr72oisi6ynh44ct6l2p7hfy/2.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Dog"
+    },
+    {
+      "trait_type": "Breed",
+      "value": "Labrador"
+    },
+    {
+      "trait_type": "Color",
+      "value": "Golden"
+    }
+  ]
+}

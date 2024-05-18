@@ -1,0 +1,15 @@
+{
+  "name": "Fractal Dreamscapes #7",
+  "description": "A mesmerizing fractal artwork from the Dreamscapes collection by artist Kai-Xu.",
+  "image": "ipfs://bafybeihyygnxaeny2v4koxwnhyax5dd7bbwr72oisi6ynh44ct6l2p7hfy/4.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Fractal Art"
+    },
+    {
+      "trait_type": "Edition",
+      "value": 7
+    }
+  ]
+}

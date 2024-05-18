@@ -1,0 +1,19 @@
+{
+  "name": "Cyber Kicks 2.0",
+  "description": "The latest edition of the popular Cyber Kicks digital sneakers.",
+  "image": "ipfs://bafybeihyygnxaeny2v4koxwnhyax5dd7bbwr72oisi6ynh44ct6l2p7hfy/6.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Category",
+      "value": "Fashion"
+    },
+    {
+      "trait_type": "Item Type",
+      "value": "Sneakers"
+    },
+    {
+      "trait_type": "Edition",
+      "value": 2
+    }
+  ]
+}
