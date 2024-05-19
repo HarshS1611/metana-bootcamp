@@ -131,6 +131,30 @@ contract ForgeToken is ERC1155, Ownable {
 		_mint(msg.sender, TOKEN_6, amount, "");
 	}
 
+	 function tradeToken(
+        uint256 tradeTokenId,
+        uint256 tradeAmount,
+        uint256 receiveTokenId
+    ) external {
+        require(
+            tradeTokenId == TOKEN_3 ||
+                tradeTokenId == TOKEN_4 ||
+                tradeTokenId == TOKEN_5 ||
+                tradeTokenId == TOKEN_6,
+            "Can only trade tokens 3, 4, 5, or 6"
+        );
+        require(
+            receiveTokenId == TOKEN_0 ||
+                receiveTokenId == TOKEN_1 ||
+                receiveTokenId == TOKEN_2,
+            "Can only receive tokens 0, 1, or 2"
+        );
+        require(balanceOf(msg.sender, tradeTokenId) >= tradeAmount);
+
+        _burn(msg.sender, tradeTokenId, tradeAmount);
+        _mint(msg.sender, receiveTokenId, tradeAmount, "");
+    }
+
 	function uri(uint256 tokenId) public view override returns (string memory) {
 		return (_uris[tokenId]);
 	}
