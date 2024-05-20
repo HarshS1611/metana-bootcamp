@@ -612,7 +612,7 @@ const deployedContracts = {
   },
   80002: {
     ForgeToken: {
-      address: "0x1da618e1E158513Dd9458FDf78B51FCE1C235913",
+      address: "0x3f03c2B2EE8030afa5B36acD4898242c086DB003",
       abi: [
         {
           inputs: [
@@ -1100,6 +1100,29 @@ const deployedContracts = {
             },
           ],
           stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tradeTokenId",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "tradeAmount",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "receiveTokenId",
+              type: "uint256",
+            },
+          ],
+          name: "tradeToken",
+          outputs: [],
+          stateMutability: "nonpayable",
           type: "function",
         },
         {

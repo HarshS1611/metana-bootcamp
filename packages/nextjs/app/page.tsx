@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 import { ethers } from "ethers";
 import deployedContracts from "~~/contracts/deployedContracts";
@@ -13,7 +12,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
   const [networks] = useState(getTargetNetworks());
-  const [selectedNetwork, setSelectedNetwork] = useState(networks[0].id);
+  const selectedNetwork = networks[0].id;
+  const [provider, setProvider] = useState(null);
 
   const [isSelected1, setIsSelected1] = useState(false);
   const [isSelected2, setIsSelected2] = useState(false);
@@ -25,10 +25,18 @@ const Home: NextPage = () => {
 
   const [amount, setAmount] = useState(0);
 
-
-  const provider = new ethers.BrowserProvider(window.ethereum)
+  const [txHash, setTxHash] = useState("");
+  const [fTxHash, setFTxHash] = useState("");
+  const [loading1, setLoading1] = useState(false);
+  const [loading2, setLoading2] = useState(false);
+  const [loading3, setLoading3] = useState(false);
+  const [loading4, setLoading4] = useState(false);
+  const [loading5, setLoading5] = useState(false);
+  const [loading6, setLoading6] = useState(false);
+  const [loading7, setLoading7] = useState(false);
 
   const MintToken = async (index: number, amount: number) => {
+    setFTxHash("");
     if (amount > 0) {
       try {
         const signer = await provider.getSigner();
@@ -41,17 +49,27 @@ const Home: NextPage = () => {
         const tx = await contract.mint(index, amount);
         await tx.wait();
         console.log(tx);
+        setLoading1(false);
+        setLoading2(false);
+        setLoading3(false);
+        setTxHash(tx.hash);
+        setAmount(0);
         alert("Token minted successfully")
       }
       catch (e) {
         console.log(e)
-        alert("You do not have enough tokens to mint")
+        setLoading1(false);
+        setLoading2(false);
+        setLoading3(false);
+
+        alert("Invalid token index or amount entered")
       }
     } else {
       alert("Please enter a valid amount")
     }
   };
   const ForgeToken = async (index: number, amount: number) => {
+    setTxHash("");
     if (amount > 0) {
       try {
         const signer = await provider.getSigner();
@@ -65,15 +83,33 @@ const Home: NextPage = () => {
         await tx.wait();
         console.log(tx);
         setAmount(0);
+        setFTxHash(tx.hash);
+        setLoading4(false);
+        setLoading5(false);
+        setLoading6(false);
+        setLoading7(false);
         alert("Token forged successfully")
       } catch (e) {
         console.log(e)
+        setLoading4(false);
+        setLoading5(false);
+        setLoading6(false);
+        setLoading7(false);
         alert("You do not have enough tokens to forge")
       }
     } else {
       alert("Please enter a valid amount")
     }
   }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const ethereum = window.ethereum;
+      if (ethereum) {
+        setProvider(new ethers.BrowserProvider(ethereum));
+      }
+    }
+  }, []);
+
 
   return (
     <>
@@ -88,16 +124,25 @@ const Home: NextPage = () => {
             <Address address={connectedAddress} />
           </div>
           <p className="text-center text-lg">
-            MINT, TRADE AND FORGE NFT TOKENS{" "}
+            MINT AND FORGE NFT TOKENS{" "}
             <code className="italic bg-base-300 ml-5 text-base font-bold max-w-full break-words break-all inline-block">
               COMPLETELY FREE
             </code>
           </p>
 
         </div>
-        {/* <button onClick={MintToken}>
-          Mint
-        </button> */}
+        {
+          txHash && <div>
+            <p>Your NFT token has been minted  successfully - <a target="blank" href={`https://amoy.polygonscan.com/tx/${txHash}`} className="underline">{txHash}</a></p>
+
+          </div>
+        }
+        {
+          fTxHash && <div>
+            <p>Your NFT token has been  forged successfully - <a target="blank" href={`https://amoy.polygonscan.com/tx/${fTxHash}`} className="underline">{fTxHash}</a></p>
+
+          </div>
+        }
         <div>
 
         </div>
@@ -112,7 +157,7 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/0.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0x1da618e1e158513dd9458fdf78b51fce1c235913:0" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:0" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Legendary Sword <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">A powerful sword forged by ancient dwarven blacksmiths. Grants +25 Attack Power.</p>
@@ -123,17 +168,25 @@ const Home: NextPage = () => {
                         setIsSelected1(false);
                       }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Mint</button></div>
                   ) : <>
-                    <button onClick={() => setIsSelected1(true)} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button></>}
+                    {
+                      loading1 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
+                        setIsSelected1(true);
+                        setLoading1(true)
+                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
+                    }
+                  </>
+                  }
+
                 </div>
               </div>
 
               <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div>
 
-                  <img className="rounded-t-lg w-96 h-48" src="./assets/0.jpeg" alt="" />
+                  <img className="rounded-t-lg w-96 h-48" src="./assets/1.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0x1da618e1e158513dd9458fdf78b51fce1c235913:1" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:1" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Pixel Landscapes <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">A collection of pixel art landscapes created by a renowned digital artist.</p>
@@ -144,17 +197,23 @@ const Home: NextPage = () => {
                         setIsSelected2(false);
                       }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Mint</button></div>
                   ) : <>
-                    <button onClick={() => setIsSelected2(true)} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button></>}
+                    {
+                      loading2 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
+                        setIsSelected2(true);
+                        setLoading2(true)
+                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
+                    }
+                  </>}
                 </div>
               </div>
 
               <div className="relative max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div>
 
-                  <img className="rounded-t-lg w-96 h-48" src="./assets/0.jpeg" alt="" />
+                  <img className="rounded-t-lg w-96 h-48" src="./assets/2.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0x1da618e1e158513dd9458fdf78b51fce1c235913:2" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:2" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">CryptoPup #412 <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">An adorable digital puppy from the CryptoPets collection.</p>
@@ -165,17 +224,22 @@ const Home: NextPage = () => {
                         setIsSelected3(false);
                       }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Mint</button></div>
                   ) : <>
-                    <button onClick={() => setIsSelected3(true)} className="absolute bottom-4  p-2 bg-blue-700 rounded-lg text-white">Mint Token</button></>}
+                    {
+                      loading3 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
+                        setIsSelected3(true);
+                        setLoading3(true)
+                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
+                    }                    </>}
                 </div>
               </div>
 
               <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div>
 
-                  <img className="rounded-t-lg w-96 h-48" src="./assets/0.jpeg" alt="" />
+                  <img className="rounded-t-lg w-96 h-48" src="./assets/3.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0x1da618e1e158513dd9458fdf78b51fce1c235913:3" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:3" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Cyber Shades<FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">A pair of stylish augmented reality shades for your digital avatar.</p>
@@ -186,7 +250,12 @@ const Home: NextPage = () => {
                         setIsSelected4(false);
                       }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
                   ) : <>
-                    <button onClick={() => setIsSelected4(true)} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button></>}
+                    {
+                      loading4 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                        setIsSelected4(true);
+                        setLoading4(true)
+                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                    }                    </>}
                 </div>
               </div>
 
@@ -196,7 +265,7 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/4.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0x1da618e1e158513dd9458fdf78b51fce1c235913:4" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:4" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl  font-bold tracking-tight text-gray-900 dark:text-white">Fractal Dreamscapes <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">A mesmerizing fractal artwork from the Dreamscapes collection by artist Kai-Xu.</p>
@@ -207,7 +276,13 @@ const Home: NextPage = () => {
                         setIsSelected5(false);
                       }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
                   ) : <>
-                    <button onClick={() => setIsSelected5(true)} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button></>}
+                    {
+                      loading5 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                        setIsSelected5(true);
+                        setLoading5(true)
+                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                    }
+                  </>}
                 </div>
               </div>
 
@@ -217,7 +292,7 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/5.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0x1da618e1e158513dd9458fdf78b51fce1c235913:5" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:5" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-80 font-bold tracking-tight text-gray-900 dark:text-white">MetaCity Penthouse <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">A luxurious penthouse in the heart of the MetaCity virtual world.</p>
@@ -228,17 +303,23 @@ const Home: NextPage = () => {
                         setIsSelected6(false);
                       }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
                   ) : <>
-                    <button onClick={() => setIsSelected6(true)} className="absolute bottom-4 p-2 bg-blue-700 rounded-lg text-white">Forge Token</button></>}
+                    {
+                      loading6 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                        setIsSelected6(true);
+                        setLoading6(true)
+                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                    }
+                  </>}
                 </div>
               </div>
-            
+
               <div className="relative max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div>
 
                   <img className="rounded-t-lg w-96 h-48" src="./assets/6.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0x1da618e1e158513dd9458fdf78b51fce1c235913:6" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:6" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Cyber Kicks 2.0<FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">The latest edition of the popular Cyber Kicks digital sneakers.</p>
@@ -249,10 +330,16 @@ const Home: NextPage = () => {
                         setIsSelected7(false);
                       }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
                   ) : <>
-                    <button onClick={() => setIsSelected7(true)} className="absolute bottom-5 p-2 bg-blue-700 rounded-lg text-white">Forge Token</button></>}
+                    {
+                      loading7 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                        setIsSelected7(true);
+                        setLoading7(true)
+                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                    }
+                  </>}
                 </div>
               </div>
-            
+
 
 
 

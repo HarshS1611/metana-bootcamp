@@ -137,11 +137,8 @@ contract ForgeToken is ERC1155, Ownable {
         uint256 receiveTokenId
     ) external {
         require(
-            tradeTokenId == TOKEN_3 ||
-                tradeTokenId == TOKEN_4 ||
-                tradeTokenId == TOKEN_5 ||
-                tradeTokenId == TOKEN_6,
-            "Can only trade tokens 3, 4, 5, or 6"
+            tradeTokenId != receiveTokenId,
+            "Same token trade not allowed"
         );
         require(
             receiveTokenId == TOKEN_0 ||
