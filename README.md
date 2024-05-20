@@ -9,7 +9,7 @@
   ## Technology Used
 
   - Solidity (ERC1155) for smart contract
-  - Scaffold-eth-2 for frotnend intergration
+  - Scaffold-eth-2 for frontend integration
   - TailwindCSS for styling
 
 Description of Deliverables
