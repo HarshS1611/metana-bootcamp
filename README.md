@@ -38,7 +38,7 @@ Changing the network of metamask to the appropriate one
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/e7272f6a-28cf-4b0d-80c5-8ec0b7eba778)
 
 ## Requirements
 
