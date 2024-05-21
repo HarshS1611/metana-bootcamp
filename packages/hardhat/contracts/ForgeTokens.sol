@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract ForgeToken is ERC1155, Ownable {
+contract NFTContract is ERC1155, Ownable {
 	uint256 public constant TOKEN_0 = 0;
 	uint256 public constant TOKEN_1 = 1;
 	uint256 public constant TOKEN_2 = 2;
@@ -13,6 +13,8 @@ contract ForgeToken is ERC1155, Ownable {
 	uint256 public constant TOKEN_4 = 4;
 	uint256 public constant TOKEN_5 = 5;
 	uint256 public constant TOKEN_6 = 6;
+
+	mapping (address => mapping (uint => bool)) public forgedTokens;
 
 	constructor(
 		address initialOwner
@@ -33,124 +35,33 @@ contract ForgeToken is ERC1155, Ownable {
 		_mint(msg.sender, tokenid, amount, "");
 	}
 
-	function ForgeTokenById(uint256 tokenid, uint256 amount) external {
-		require(
-			tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,
-			"This token can only be minted not forged"
-		);
-		if (tokenid == 3) {
-			forgeToken3(amount);
-		} else if (tokenid == 4) {
-			forgeToken4(amount);
-		} else if (tokenid == 5) {
-			forgeToken5(amount);
-		} else if (tokenid == 6) {
-			forgeToken6(amount);
-		}
+	function mintExtra(
+		address owner,
+		uint256 tokenid,
+		uint256 amount,
+		address operator
+	) external {
+		require(operator != address(this), "Cannot Call this function");
+		_mint(owner, tokenid, amount, "");
 	}
 
-	function forgeToken3(uint256 amount) internal {
-		uint256[] memory ids = new uint256[](2);
-		ids[0] = TOKEN_0;
-		ids[1] = TOKEN_1;
-		uint256[] memory balances = new uint256[](2);
-		balances[0] =
-			balanceOf(msg.sender, TOKEN_0) -
-			(balanceOf(msg.sender, TOKEN_0) - amount);
-		balances[1] =
-			balanceOf(msg.sender, TOKEN_1) -
-			(balanceOf(msg.sender, TOKEN_1) - amount);
-		require(
-			balances[0] >= amount && balances[1] >= amount,
-			"Insufficient Tokens"
-		);
-		_burnBatch(msg.sender, ids, balances);
-		_mint(msg.sender, TOKEN_3, amount, "");
+	function burn(
+		address onwer,
+		uint256 id,
+		uint256 amount,
+		address operator
+	) external {
+		_burn(onwer, id, amount);
 	}
 
-	function forgeToken4(uint256 amount) internal {
-		uint256[] memory ids = new uint256[](2);
-		ids[0] = TOKEN_1;
-		ids[1] = TOKEN_2;
-		uint256[] memory balances = new uint256[](2);
-		balances[0] =
-			balanceOf(msg.sender, TOKEN_1) -
-			(balanceOf(msg.sender, TOKEN_1) - amount);
-		balances[1] =
-			balanceOf(msg.sender, TOKEN_2) -
-			(balanceOf(msg.sender, TOKEN_2) - amount);
-		require(
-			balances[0] >= amount && balances[1] >= amount,
-			"Insufficient Tokens"
-		);
-		_burnBatch(msg.sender, ids, balances);
-		_mint(msg.sender, TOKEN_4, amount, "");
+	function burnBatch(
+		address onwer,
+		uint[] memory ids,
+		uint[] memory amount,
+		address operator
+	) external {
+		_burnBatch(onwer, ids, amount);
 	}
-
-	function forgeToken5(uint256 amount) internal {
-		uint256[] memory ids = new uint256[](2);
-		ids[0] = TOKEN_0;
-		ids[1] = TOKEN_2;
-		uint256[] memory balances = new uint256[](2);
-		balances[0] =
-			balanceOf(msg.sender, TOKEN_0) -
-			(balanceOf(msg.sender, TOKEN_0) - amount);
-		balances[1] =
-			balanceOf(msg.sender, TOKEN_2) -
-			(balanceOf(msg.sender, TOKEN_2) - amount);
-		require(
-			balances[0] >= amount && balances[1] >= amount,
-			"Insufficient Tokens"
-		);
-		_burnBatch(msg.sender, ids, balances);
-		_mint(msg.sender, TOKEN_5, amount, "");
-	}
-
-	function forgeToken6(uint256 amount) internal {
-		uint256[] memory ids = new uint256[](3);
-		ids[0] = TOKEN_0;
-		ids[1] = TOKEN_1;
-		ids[2] = TOKEN_2;
-		uint256[] memory balances = new uint256[](3);
-		balances[0] =
-			balanceOf(msg.sender, TOKEN_0) -
-			(balanceOf(msg.sender, TOKEN_0) - amount);
-		balances[1] =
-			balanceOf(msg.sender, TOKEN_1) -
-			(balanceOf(msg.sender, TOKEN_1) - amount);
-		balances[2] =
-			balanceOf(msg.sender, TOKEN_2) -
-			(balanceOf(msg.sender, TOKEN_2) - amount);
-		require(
-			balances[0] >= amount &&
-				balances[1] >= amount &&
-				balances[2] >= amount,
-			"Insufficient Tokens"
-		);
-		_burnBatch(msg.sender, ids, balances);
-		_mint(msg.sender, TOKEN_6, amount, "");
-	}
-
-	 function tradeToken(
-        uint256 tradeTokenId,
-        uint256 tradeAmount,
-        uint256 receiveTokenId
-    ) external {
-        require(
-            tradeTokenId != receiveTokenId,
-            "Same token trade not allowed"
-        );
-        require(
-            receiveTokenId == TOKEN_0 ||
-                receiveTokenId == TOKEN_1 ||
-                receiveTokenId == TOKEN_2,
-            "Can only receive tokens 0, 1, or 2"
-        );
-        require(balanceOf(msg.sender, tradeTokenId) >= tradeAmount);
-
-        _burn(msg.sender, tradeTokenId, tradeAmount);
-        _mint(msg.sender, receiveTokenId, tradeAmount, "");
-    }
 
 	function uri(uint256 tokenId) public view override returns (string memory) {
 		return (_uris[tokenId]);
@@ -162,5 +73,148 @@ contract ForgeToken is ERC1155, Ownable {
 	) public virtual onlyOwner {
 		require(bytes(_uris[tokenId]).length == 0, "Cannot set uri twice");
 		_uris[tokenId] = uri;
+	}
+}
+
+contract ForgeToken {
+	NFTContract public nftAddress;
+	uint256 public constant TOKEN_0 = 0;
+	uint256 public constant TOKEN_1 = 1;
+	uint256 public constant TOKEN_2 = 2;
+	uint256 public constant TOKEN_3 = 3;
+	uint256 public constant TOKEN_4 = 4;
+	uint256 public constant TOKEN_5 = 5;
+	uint256 public constant TOKEN_6 = 6;
+
+	constructor(address _address) {
+		nftAddress = NFTContract(_address);
+	}
+
+	function ForgeTokenById(uint256 tokenid, uint256 amount) external {
+		require(
+			tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,
+			"This token can only be minted not forged"
+		);
+		if (tokenid == 3) {
+			forgeToken3(TOKEN_3, amount);
+		} else if (tokenid == 4) {
+			forgeToken4(TOKEN_4, amount);
+		} else if (tokenid == 5) {
+			forgeToken5(TOKEN_5, amount);
+		} else if (tokenid == 6) {
+			forgeToken6(TOKEN_6, amount);
+		}
+	}
+
+	function forgeToken3(uint256 tokenid, uint256 amount) internal {
+		uint256[] memory ids = new uint256[](2);
+		ids[0] = TOKEN_0;
+		ids[1] = TOKEN_1;
+		uint256[] memory balances = new uint256[](2);
+		balances[0] =
+			nftAddress.balanceOf(msg.sender, TOKEN_0) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_0) - amount);
+		balances[1] =
+			nftAddress.balanceOf(msg.sender, TOKEN_1) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_1) - amount);
+		require(
+			balances[0] >= amount && balances[1] >= amount,
+			"Insufficient Tokens"
+		);
+
+		nftAddress.burnBatch(msg.sender, ids, balances, address(this));
+		nftAddress.mintExtra(msg.sender, tokenid, amount, address(this));
+	}
+
+	function forgeToken4(uint256 tokenid, uint256 amount) internal {
+		uint256[] memory ids = new uint256[](2);
+		ids[0] = TOKEN_1;
+		ids[1] = TOKEN_2;
+		uint256[] memory balances = new uint256[](2);
+		balances[0] =
+			nftAddress.balanceOf(msg.sender, TOKEN_1) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_1) - amount);
+		balances[1] =
+			nftAddress.balanceOf(msg.sender, TOKEN_2) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_2) - amount);
+		require(
+			balances[0] >= amount && balances[1] >= amount,
+			"Insufficient Tokens"
+		);
+		nftAddress.burnBatch(msg.sender, ids, balances, address(this));
+		nftAddress.mintExtra(msg.sender, tokenid, amount, address(this));
+	}
+
+	function forgeToken5(uint256 tokenid, uint256 amount) internal {
+		uint256[] memory ids = new uint256[](2);
+		ids[0] = TOKEN_0;
+		ids[1] = TOKEN_2;
+		uint256[] memory balances = new uint256[](2);
+		balances[0] =
+			nftAddress.balanceOf(msg.sender, TOKEN_0) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_0) - amount);
+		balances[1] =
+			nftAddress.balanceOf(msg.sender, TOKEN_2) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_2) - amount);
+		require(
+			balances[0] >= amount && balances[1] >= amount,
+			"Insufficient Tokens"
+		);
+		nftAddress.burnBatch(msg.sender, ids, balances, address(this));
+		nftAddress.mintExtra(msg.sender, tokenid, amount, address(this));
+	}
+
+	function forgeToken6(uint256 tokenid, uint256 amount) internal {
+		uint256[] memory ids = new uint256[](3);
+		ids[0] = TOKEN_0;
+		ids[1] = TOKEN_1;
+		ids[2] = TOKEN_2;
+		uint256[] memory balances = new uint256[](3);
+		balances[0] =
+			nftAddress.balanceOf(msg.sender, TOKEN_0) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_0) - amount);
+		balances[1] =
+			nftAddress.balanceOf(msg.sender, TOKEN_1) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_1) - amount);
+		balances[2] =
+			nftAddress.balanceOf(msg.sender, TOKEN_2) -
+			(nftAddress.balanceOf(msg.sender, TOKEN_2) - amount);
+		require(
+			balances[0] >= amount &&
+				balances[1] >= amount &&
+				balances[2] >= amount,
+			"Insufficient Tokens"
+		);
+		nftAddress.burnBatch(msg.sender, ids, balances, address(this));
+		nftAddress.mintExtra(msg.sender, tokenid, amount, address(this));
+	}
+
+	function tradeToken(
+		uint256 tradeTokenId,
+		uint256 tradeAmount,
+		uint256 receiveTokenId
+	) external {
+		require(
+			tradeTokenId == TOKEN_3 ||
+				tradeTokenId == TOKEN_4 ||
+				tradeTokenId == TOKEN_5 ||
+				tradeTokenId == TOKEN_6,
+			"Can only trade tokens 3, 4, 5, or 6"
+		);
+		require(
+			receiveTokenId == TOKEN_0 ||
+				receiveTokenId == TOKEN_1 ||
+				receiveTokenId == TOKEN_2,
+			"Can only receive tokens 0, 1, or 2"
+		);
+		require(nftAddress.balanceOf(msg.sender, tradeTokenId) >= tradeAmount);
+
+		nftAddress.burn(msg.sender, tradeTokenId, tradeAmount, address(this));
+		nftAddress.mintExtra(
+			msg.sender,
+			receiveTokenId,
+			tradeAmount,
+			address(this)
+		);
 	}
 }
