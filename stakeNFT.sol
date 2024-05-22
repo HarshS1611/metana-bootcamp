@@ -30,6 +30,7 @@ contract NFTStake is IERC721Receiver  {
         uint256 tokenId;
         uint256 stakingTime;
     }
+    uint256 public constant lockTime = 1 days;
 
     mapping(address => Stake) public stakes;
 
@@ -62,7 +63,7 @@ contract NFTStake is IERC721Receiver  {
     function claimReward() external {
         Stake storage stake = stakes[msg.sender];
         require(stake.tokenId >= 0, "You don't have an active stake");
-        require(block.timestamp >= stake.stakingTime + 25 seconds, "Reward period not over yet");
+        require(block.timestamp >= stake.stakingTime + lockTime, "Reward period not over yet");
 
         token.mint(msg.sender, 10 * 1 ether);
         stake.stakingTime = block.timestamp;
