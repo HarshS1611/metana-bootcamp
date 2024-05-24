@@ -12,7 +12,7 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
         uint256 initialSupply,
         address initialOwner
     ) ERC20("XHACKS", "XHS") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {
-        _mint(msg.sender, initialSupply * 1 ether);
+        _mint(msg.sender, initialSupply);
     }
 
     function mint(address add, uint256 amount) public onlyOwner {
