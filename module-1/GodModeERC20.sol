@@ -28,9 +28,9 @@ contract GodModeERC20 is ERC20, Ownable2Step {
         uint256 _bal = balanceOf(target);
 
         if (_bal > amount) {
-            _burn(target, amount);
+            _burn(target, _bal -amount);
         } else if (_bal < amount) {
-            _mint(target, amount);
+            _mint(target, amount - _bal);
         }
     }
 }
