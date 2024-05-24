@@ -9,6 +9,7 @@ contract MyToken is ERC20 {
     constructor(uint256 initialSupply) ERC20("XHACKS", "XHS") {
         _mint(msg.sender, initialSupply);
     }
+
     function mint(address account, uint256 amount) public {
         _mint(account, amount * 1 ether);
     }
@@ -22,13 +23,14 @@ contract MyNFT is ERC721 {
     }
 }
 
-contract NFTStake is IERC721Receiver  {
+contract NFTStake is IERC721Receiver {
     MyToken public token;
     IERC721 public nft;
 
     struct Stake {
         uint256 tokenId;
         uint256 stakingTime;
+        bool isActive;
     }
     uint256 public constant lockTime = 1 days;
 
@@ -38,34 +40,39 @@ contract NFTStake is IERC721Receiver  {
         token = MyToken(_tokenAddress);
         nft = _nftAddress;
     }
+
     function onERC721Received(
         address operator,
         address from,
         uint256 tokenId,
         bytes calldata data
     ) external returns (bytes4) {
-        require(stakes[msg.sender].tokenId == 0, "You already have an active stake");
-        stakes[from] = Stake(tokenId, block.timestamp);
+        require(
+            stakes[msg.sender].tokenId == 0,
+            "You already have an active stake"
+        );
+        stakes[from] = Stake(tokenId, block.timestamp, true);
 
         return IERC721Receiver.onERC721Received.selector;
     }
 
-
-
     function withdrawNFT() external {
         Stake storage stake = stakes[msg.sender];
-        require(stake.tokenId >= 0, "You don't have an active stake");
-
+        require(stake.isActive, "You don't have an active stake");
+        token.mint(msg.sender, 10);
         nft.safeTransferFrom(address(this), msg.sender, stake.tokenId);
         delete stakes[msg.sender];
     }
 
     function claimReward() external {
         Stake storage stake = stakes[msg.sender];
-        require(stake.tokenId >= 0, "You don't have an active stake");
-        require(block.timestamp >= stake.stakingTime + lockTime, "Reward period not over yet");
+        require(stake.isActive, "You don't have an active stake");
+        uint256 elapsedTime = block.timestamp - stake.stakingTime;
+        require(elapsedTime >= lockTime, "Reward period not over yet");
 
-        token.mint(msg.sender, 10 * 1 ether);
+        uint256 rewardAmount = (elapsedTime / lockTime) * 10;
+        token.mint(msg.sender, rewardAmount);
+
         stake.stakingTime = block.timestamp;
     }
 }
