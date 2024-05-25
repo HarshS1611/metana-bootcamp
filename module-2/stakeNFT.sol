@@ -6,6 +6,20 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+/*
+    I have used onlyNFTStake modifier in ERC20Token contract to restrict the mint function to be called only by NFTMinter contract.
+    As it was giving error while using mint or _mint function in NFTStake contract.
+
+    TypeError: Member "mint" not found or not visible after argument-dependent lookup in contract MyToken.
+  --> contracts/stakeNFT.sol:92:9:
+   |
+92 |         token.mint(msg.sender, _rewardAmount);
+   |         ^^^^^^^^^^
+
+
+
+*/
+
 contract MyToken is ERC20, Ownable {
     address public nftStakeContract;
 
@@ -39,6 +53,10 @@ contract MyToken is ERC20, Ownable {
 
 contract MyNFT is ERC721 {
     constructor() ERC721("MyNFT", "MNFT") {}
+
+    /* 
+        I have added mint function to mint NFTs to the users. As its not visible after deplying in the contract.
+    */
 
     function mint(uint256 tokenId) public {
         _mint(msg.sender, tokenId);
