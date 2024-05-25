@@ -5,3 +5,4 @@
 
 - Deployed contract - [Polygonscan](https://amoy.polygonscan.com/address/0x3f03c2b2ee8030afa5b36acd4898242c086db003)
 - Rarible Collection - [NFT Details](https://testnet.rarible.com/collection/polygon/0x3f03c2b2ee8030afa5b36acd4898242c086db003/items)
+
