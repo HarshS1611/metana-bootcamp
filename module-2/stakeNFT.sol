@@ -71,7 +71,7 @@ contract NFTStake is IERC721Receiver {
         uint256 stakingTime;
         bool isActive;
     }
-    uint256 public constant lockTime = 15 seconds;
+    uint256 public constant lockTime = 1 days;
 
     mapping(address => mapping(uint256 => Stake)) public stakes;
 
