@@ -25,8 +25,8 @@ contract TokenSale is ERC20Capped, Ownable2Step {
     }
 
     function withdrawEther(uint256 amount,address target) public onlyOwner {
-        require((amount * 1 ether) <= balanceOf(target), "Insufficient balance");
-        (bool success, ) = target.call{value: amount * 1 ether}("");
+        require(amount <= address(this).balance, "Insufficient balance");
+        (bool success, ) = target.call{value: amount}("");
         require(success, "Transfer failed");
     }
 }
