@@ -9,18 +9,11 @@ contract MyToken is ERC20 {
     constructor(uint256 initialSupply) ERC20("XHACKS", "XHS") {
         _mint(msg.sender, initialSupply);
     }
-
-    function mint(address account, uint256 amount) public {
-        _mint(account, amount * 1 ether);
-    }
 }
 
 contract MyNFT is ERC721 {
     constructor() ERC721("MyNFT", "MNFT") {}
 
-    function mint(uint256 tokenId) public {
-        _safeMint(msg.sender, tokenId);
-    }
 }
 
 contract NFTStake is IERC721Receiver {
@@ -46,11 +39,7 @@ contract NFTStake is IERC721Receiver {
         address from,
         uint256 tokenId,
         bytes calldata data
-    ) external returns (bytes4) {
-        require(
-            stakes[msg.sender].tokenId == 0,
-            "You already have an active stake"
-        );
+    ) internal returns (bytes4) {
         stakes[from] = Stake(tokenId, block.timestamp, true);
 
         return IERC721Receiver.onERC721Received.selector;
@@ -59,20 +48,17 @@ contract NFTStake is IERC721Receiver {
     function withdrawNFT() external {
         Stake storage stake = stakes[msg.sender];
         require(stake.isActive, "You don't have an active stake");
-        token.mint(msg.sender, 10);
+        claimReward();
         nft.safeTransferFrom(address(this), msg.sender, stake.tokenId);
         delete stakes[msg.sender];
     }
 
     function claimReward() external {
         Stake storage stake = stakes[msg.sender];
-        require(stake.isActive, "You don't have an active stake");
         uint256 elapsedTime = block.timestamp - stake.stakingTime;
-        require(elapsedTime >= lockTime, "Reward period not over yet");
-
-        uint256 rewardAmount = (elapsedTime / lockTime) * 10;
-        token.mint(msg.sender, rewardAmount);
-
-        stake.stakingTime = block.timestamp;
+        uint256 _multiplier = elapsedTime / lockTime;
+        uint256 _rewardAmount = 10 ether * _multiplier;
+        token.mint(msg.sender, _rewardAmount);
+        stake.stakingTime = block.timestamp - (elapsedTime % lockTime);
     }
 }
