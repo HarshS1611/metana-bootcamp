@@ -1,6 +1,5 @@
 # Assignments M3
 
-
 ## Deliverables - [Deployed Link](https://forge-token.vercel.app/)
 - A website that allows users to mint ERC1155 tokens and “forge” new ones
 
