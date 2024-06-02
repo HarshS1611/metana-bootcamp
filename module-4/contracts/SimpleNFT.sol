@@ -5,6 +5,7 @@ import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 import '@openzeppelin/contracts/access/Ownable2Step.sol';
 
 contract MyNFT is ERC721, Ownable2Step {
+    uint256 public totalSupply;
     uint256 public constant MAX_SUPPLY = 10;
 
     constructor() ERC721('MyNFTCollection', 'MNFT') Ownable(msg.sender) {}
