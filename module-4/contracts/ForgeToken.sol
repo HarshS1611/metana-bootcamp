@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.22;
 
-import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import '@openzeppelin/contracts/token/ERC1155/ERC1155.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
+import '@openzeppelin/contracts/utils/Strings.sol';
 
 contract NFTContract is ERC1155, Ownable {
     address public forgeContract;
@@ -17,9 +17,11 @@ contract NFTContract is ERC1155, Ownable {
 
     mapping(address => uint256) public users;
 
-    constructor(address initialOwner)
+    constructor(
+        address initialOwner
+    )
         ERC1155(
-            "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}"
+            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'
         )
         Ownable(initialOwner)
     {}
@@ -29,25 +31,25 @@ contract NFTContract is ERC1155, Ownable {
     modifier onlyForgeContract() {
         require(
             msg.sender == forgeContract,
-            "Only ForgeToken contract can call this function"
+            'Only ForgeToken contract can call this function'
         );
         _;
     }
 
     function setForgeContract(address _forgeContract) external onlyOwner {
-        require(_forgeContract == address(0), "NFTStake contract already set");
+        require(_forgeContract == address(0), 'NFTStake contract already set');
         forgeContract = _forgeContract;
     }
 
     function mint(uint256 tokenid) external {
         require(
             tokenid == 0 || tokenid == 1 || tokenid == 2,
-            "This token can only be forged not minted"
+            'This token can only be forged not minted'
         );
         uint256 elapsedTime = block.timestamp - users[msg.sender];
-        require(elapsedTime > 1 minutes, "Cannot mint token yet.");
+        require(elapsedTime > 1 minutes, 'Cannot mint token yet.');
         users[msg.sender] = block.timestamp;
-        _mint(msg.sender, tokenid, 1, "");
+        _mint(msg.sender, tokenid, 1, '');
     }
 
     function mintExtra(
@@ -55,7 +57,7 @@ contract NFTContract is ERC1155, Ownable {
         uint256 tokenid,
         uint256 amount
     ) external onlyForgeContract {
-        _mint(owner, tokenid, amount, "");
+        _mint(owner, tokenid, amount, '');
     }
 
     function burn(
@@ -70,12 +72,11 @@ contract NFTContract is ERC1155, Ownable {
         return (_uris[tokenId]);
     }
 
-    function setTokenUri(uint256 tokenId, string memory uri)
-        public
-        virtual
-        onlyOwner
-    {
-        require(bytes(_uris[tokenId]).length == 0, "Cannot set uri twice");
+    function setTokenUri(
+        uint256 tokenId,
+        string memory uri
+    ) public virtual onlyOwner {
+        require(bytes(_uris[tokenId]).length == 0, 'Cannot set uri twice');
         _uris[tokenId] = uri;
     }
 }
@@ -97,7 +98,7 @@ contract ForgeToken {
     function ForgeTokenById(uint256 tokenid, uint256 amount) external {
         require(
             tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,
-            "This token can only be minted not forged"
+            'This token can only be minted not forged'
         );
         if (tokenid == 3) {
             nftAddress.burn(msg.sender, TOKEN_0, amount);
@@ -124,7 +125,6 @@ contract ForgeToken {
         uint256 tradeAmount,
         uint256 receiveTokenId
     ) external {
-
         if (
             receiveTokenId == TOKEN_3 ||
             receiveTokenId == TOKEN_4 ||

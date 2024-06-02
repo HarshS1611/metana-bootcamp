@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.22;
 
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
-import "@openzeppelin/contracts/access/Ownable2Step.sol";
+import '@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol';
+import '@openzeppelin/contracts/access/Ownable2Step.sol';
 
 contract PartialRefund is ERC20Capped, Ownable2Step {
     uint256 public constant MAX_SUPPLY = 1000000 ether;
@@ -11,7 +11,7 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
     constructor(
         uint256 initialSupply,
         address initialOwner
-    ) ERC20("XHACKS", "XHS") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {
+    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {
         _mint(msg.sender, initialSupply);
     }
 
@@ -20,24 +20,24 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
     }
 
     function buyTokens() public payable {
-        require(msg.value > 0, "You need to send some ether");
+        require(msg.value > 0, 'You need to send some ether');
         uint256 tokensToMint = (msg.value * 1000 ether) / 1 ether;
         _mint(msg.sender, tokensToMint);
         contractBalance += msg.value;
     }
 
     function withdrawEther(uint256 amount, address target) public onlyOwner {
-        require(amount <= address(this).balance, "Insufficient balance");
+        require(amount <= address(this).balance, 'Insufficient balance');
         payable(target).transfer(amount);
         contractBalance -= amount;
     }
 
     function sellBack(uint256 amount) public {
-        require(amount <= balanceOf(msg.sender), "Insufficient token balance");
+        require(amount <= balanceOf(msg.sender), 'Insufficient token balance');
         uint256 refundAmount = ((amount * 0.5 ether) / 1000 ether);
         require(
             contractBalance >= refundAmount,
-            "Insufficient contract balance"
+            'Insufficient contract balance'
         );
 
         _burn(msg.sender, (amount));
