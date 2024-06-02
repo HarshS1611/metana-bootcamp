@@ -5,6 +5,7 @@
     "hardhat": "^2.22.4"
   },
   "dependencies": {
+    "@morenabarboni/sumo": "^2.5.4",
     "@openzeppelin/contracts": "^5.0.2",
     "ethers": "^6.12.2",
     "hardhat-prettier": "^0.0.1",
