@@ -1,6 +1,6 @@
 ## Assignment 4
 
-##mErrors got in slither- 
+## Errors got in slither- 
 
 `Warning: This declaration shadows an existing declaration.
 stderr:   --> contracts/ForgeToken.sol:73:43:
