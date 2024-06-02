@@ -14,6 +14,7 @@ describe("PartialRefund", function () {
         const PartialRefund = await hre.ethers.getContractFactory("PartialRefund");
         const partialRefundContract = await PartialRefund.deploy(initialSupply, owner.address);
 
+
         return { partialRefundContract, owner, nonOwner, initialSupply };
     }
 
@@ -48,6 +49,7 @@ describe("PartialRefund", function () {
             const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
             const etherAmount = hre.ethers.parseEther("1");
             const expectedRefundAmount = hre.ethers.parseEther("0.5");
+            const sellAmount = 1000;
 
             await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
             const userBalanceBefore = await hre.ethers.provider.getBalance(nonOwner.address);
@@ -61,7 +63,7 @@ describe("PartialRefund", function () {
             expect(userBalanceAfter).to.equal(0);
             expect(contractBalanceBefore).to.equal(etherAmount);
             expect(contractBalanceAfter).to.equal(expectedRefundAmount);
-            await expect(sellTx).to.emit(partialRefundContract, "Burn").withArgs(nonOwner.address, 1000);
+            await expect(sellTx).to.emit(partialRefundContract, "Burn").withArgs(nonOwner.address, sellAmount);
         });
     });
 
