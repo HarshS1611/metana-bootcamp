@@ -37,7 +37,6 @@ contract NFTContract is ERC1155, Ownable {
     }
 
     function setForgeContract(address _forgeContract) external onlyOwner {
-        require(_forgeContract == address(0), 'NFTStake contract already set');
         forgeContract = _forgeContract;
     }
 
