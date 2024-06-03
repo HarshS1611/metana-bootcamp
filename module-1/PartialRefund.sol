@@ -11,8 +11,7 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
     constructor(
         uint256 initialSupply,
         address initialOwner
-    ) ERC20("XHACKS", "XHS") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {
-    }
+    ) ERC20("XHACKS", "XHS") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {}
 
     function buyTokens() public payable {
         require(msg.value > 0, "You need to send some ether");
@@ -37,6 +36,7 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
 
         _burn(msg.sender, (amount));
         contractBalance -= refundAmount;
-        payable(msg.sender).transfer(refundAmount);
+        (bool success, ) = msg.sender.call{value: refundAmount}("");
+        require(success, "Transfer failed");
     }
 }
