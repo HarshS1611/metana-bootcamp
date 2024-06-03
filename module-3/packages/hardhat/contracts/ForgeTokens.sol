@@ -15,9 +15,11 @@ contract NFTContract is ERC1155, Ownable {
     uint256 public constant TOKEN_5 = 5;
     uint256 public constant TOKEN_6 = 6;
 
-    mapping(address => uint256) public users;
+    uint256 public lastMintTimestamp;
 
-    constructor(address initialOwner)
+    constructor(
+        address initialOwner
+    )
         ERC1155(
             "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}"
         )
@@ -39,14 +41,14 @@ contract NFTContract is ERC1155, Ownable {
         forgeContract = _forgeContract;
     }
 
-    function mint(uint256 tokenid) external {
+    function freeMint(uint256 tokenid) external {
         require(
             tokenid == 0 || tokenid == 1 || tokenid == 2,
             "This token can only be forged not minted"
         );
-        uint256 elapsedTime = block.timestamp - users[msg.sender];
+        uint256 elapsedTime = block.timestamp - lastMintTimestamp;
         require(elapsedTime > 1 minutes, "Cannot mint token yet.");
-        users[msg.sender] = block.timestamp;
+        lastMintTimestamp = block.timestamp;
         _mint(msg.sender, tokenid, 1, "");
     }
 
@@ -70,11 +72,10 @@ contract NFTContract is ERC1155, Ownable {
         return (_uris[tokenId]);
     }
 
-    function setTokenUri(uint256 tokenId, string memory uri)
-        public
-        virtual
-        onlyOwner
-    {
+    function setTokenUri(
+        uint256 tokenId,
+        string memory uri
+    ) public virtual onlyOwner {
         require(bytes(_uris[tokenId]).length == 0, "Cannot set uri twice");
         _uris[tokenId] = uri;
     }
@@ -124,12 +125,12 @@ contract ForgeToken {
         uint256 tradeAmount,
         uint256 receiveTokenId
     ) external {
-
+        require(tradeTokenId != receiveTokenId, "Cannot trade same token");
         if (
-            receiveTokenId == TOKEN_3 ||
-            receiveTokenId == TOKEN_4 ||
-            receiveTokenId == TOKEN_5 ||
-            receiveTokenId == TOKEN_6
+            tradeTokenId == TOKEN_3 ||
+            tradeTokenId == TOKEN_4 ||
+            tradeTokenId == TOKEN_5 ||
+            tradeTokenId == TOKEN_6
         ) {
             nftAddress.burn(msg.sender, tradeTokenId, tradeAmount);
         } else {
