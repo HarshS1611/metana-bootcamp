@@ -59,6 +59,6 @@ contract NFTMinter is Ownable {
     }
 
     function withdrawToken(address target, uint256 amount) external OnlyOwner {
-        erc20Token.transferFrom(erc20Token, target, amount);
+        erc20Token.transferFrom(address(this), target, amount);
     }
 }
