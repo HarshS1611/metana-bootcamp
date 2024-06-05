@@ -8,11 +8,8 @@ contract SanctionedERC20 is ERC20, Ownable2Step {
     mapping(address => bool) public sanctionedAddresses;
 
     constructor(
-        uint256 initialSupply,
         address initialOwner
-    ) ERC20("XHACKS", "XHS") Ownable(initialOwner) {
-        _mint(msg.sender, initialSupply);
-    }
+    ) ERC20("XHACKS", "XHS") Ownable(initialOwner) {}
 
     function addToSanctionList(address account) public onlyOwner {
         require(!sanctionedAddresses[account], "Already sanctioned");
