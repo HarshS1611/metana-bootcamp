@@ -6,10 +6,8 @@ import "@openzeppelin/contracts/access/Ownable2Step.sol";
 
 contract PartialRefund is ERC20Capped, Ownable2Step {
     uint256 public constant MAX_SUPPLY = 1000000 ether;
-    uint256 public contractBalance;
 
     constructor(
-        uint256 initialSupply,
         address initialOwner
     ) ERC20("XHACKS", "XHS") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {}
 
@@ -17,26 +15,22 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
         require(msg.value > 0, "You need to send some ether");
         uint256 tokensToMint = (msg.value * 1000 ether) / 1 ether;
         _mint(msg.sender, tokensToMint);
-        contractBalance += msg.value;
     }
 
     function withdrawEther(uint256 amount, address target) public onlyOwner {
-        require(amount <= contractBalance, "Insufficient balance");
+        require(amount <= address(this).balance, "Insufficient balance");
         payable(target).transfer(amount);
-        contractBalance -= amount;
     }
 
     function sellBack(uint256 amount) public {
         require(amount <= balanceOf(msg.sender), "Insufficient token balance");
         uint256 refundAmount = ((amount * 0.5 ether) / 1000 ether);
         require(
-            contractBalance >= refundAmount,
+            address(this).balance >= refundAmount,
             "Insufficient contract balance"
         );
 
         _burn(msg.sender, (amount));
-        contractBalance -= refundAmount;
-        (bool success, ) = msg.sender.call{value: refundAmount}("");
-        require(success, "Transfer failed");
+        payable(msg.sender).transfer(refundAmount);
     }
 }
