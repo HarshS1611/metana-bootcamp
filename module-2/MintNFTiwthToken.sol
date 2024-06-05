@@ -2,7 +2,6 @@
 pragma solidity ^0.8.25;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract ERC20Token is ERC20 {
@@ -29,12 +28,19 @@ contract ERC721Token is ERC721, Ownable {
     }
 
     function setNFTStakeContract(address _nftMintContract) external onlyOwner {
-        require(nftMintContract == address(0), "NFTMinter contract already set");
+        require(
+            nftMintContract == address(0),
+            "NFTMinter contract already set"
+        );
         nftMintContract = _nftMintContract;
     }
 
     function mint(address to, uint256 amount) external onlyNFTMinter {
         _mint(to, amount);
+    }
+
+    function burn( uint256 amount) external onlyNFTMinter {
+        _burn(amount);
     }
 }
 
@@ -42,6 +48,7 @@ contract NFTMinter is Ownable {
     ERC20Token public erc20Token;
     ERC721Token public erc721Token;
     uint256 public tokenid;
+    mapping(address => uint) users;
     uint256 public constant NFT_PRICE = 10 ether;
 
     constructor(
@@ -55,10 +62,12 @@ contract NFTMinter is Ownable {
 
     function mintNFT() external {
         erc20Token.transferFrom(msg.sender, address(this), NFT_PRICE);
+        users[msg.sender] = tokenid;
         erc721Token.mint(msg.sender, tokenid++);
     }
 
-    function withdrawToken(address target, uint256 amount) external OnlyOwner {
-        erc20Token.transferFrom(address(this), target, amount);
+    function withdrawToken(address target) external onlyOwner {
+        erc20Token.transfer(target, NFT_PRICE);
+        erc721Token.burn(users[msg.sender]);
     }
 }
