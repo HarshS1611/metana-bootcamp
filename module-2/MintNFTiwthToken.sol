@@ -27,7 +27,7 @@ contract ERC721Token is ERC721, Ownable {
         _;
     }
 
-    function setNFTStakeContract(address _nftMintContract) external onlyOwner {
+    function setNFTMintContract(address _nftMintContract) external onlyOwner {
         require(
             nftMintContract == address(0),
             "NFTMinter contract already set"
