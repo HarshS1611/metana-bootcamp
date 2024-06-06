@@ -130,4 +130,11 @@ describe("ForgeToken", function () {
         expect(finalBalance1).to.equal(initialBalance1 + BigInt(1));
     });
 
+    it("should not trade same tokens", async function () {
+        const { forgeToken, addr1, owner } = await loadFixture(deployForgeFixture);
+        await expect(forgeToken.connect(owner).tradeToken(1, 1, 1)).to.be.revertedWith(
+            "Cannot trade same token"
+        );
+    });
+
 });
