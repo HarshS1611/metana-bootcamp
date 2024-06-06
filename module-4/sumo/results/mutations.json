@@ -2,567 +2,632 @@
 	"ForgeToken.sol": [
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1203,
-			"end": 1217,
+			"start": 1195,
+			"end": 1209,
 			"startLine": 40,
 			"endLine": 40,
 			"original": "_forgeContract",
 			"replace": "address(this)",
 			"operator": "AVR",
 			"status": "killed",
-			"testingTime": 1592,
-			"id": "m408dfd66"
+			"testingTime": 2390,
+			"id": "mb9413841"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1203,
-			"end": 1217,
+			"start": 1195,
+			"end": 1209,
 			"startLine": 40,
 			"endLine": 40,
 			"original": "_forgeContract",
 			"replace": "address(0)",
 			"operator": "AVR",
 			"status": "killed",
-			"testingTime": 1570,
-			"id": "m7f5de312"
+			"testingTime": 2445,
+			"id": "m89b4b7a2"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 994,
-			"end": 998,
+			"start": 986,
+			"end": 990,
 			"startLine": 33,
 			"endLine": 33,
 			"original": " == ",
 			"replace": " <= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m6403a42b"
+			"status": "live",
+			"testingTime": 2404,
+			"id": "mef625778"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 994,
-			"end": 998,
+			"start": 986,
+			"end": 990,
 			"startLine": 33,
 			"endLine": 33,
 			"original": " == ",
 			"replace": " >= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m07d2646e"
+			"status": "live",
+			"testingTime": 2426,
+			"id": "medecf3eb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 994,
-			"end": 998,
+			"start": 986,
+			"end": 990,
 			"startLine": 33,
 			"endLine": 33,
 			"original": " == ",
 			"replace": "  < ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mb7bcb92c"
+			"status": "killed",
+			"testingTime": 2494,
+			"id": "m4c645798"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 994,
-			"end": 998,
+			"start": 986,
+			"end": 990,
 			"startLine": 33,
 			"endLine": 33,
 			"original": " == ",
 			"replace": "  > ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m0edf8131"
+			"status": "killed",
+			"testingTime": 2408,
+			"id": "ma885c1fe"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 994,
-			"end": 998,
+			"start": 986,
+			"end": 990,
 			"startLine": 33,
 			"endLine": 33,
 			"original": " == ",
 			"replace": " != ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "md25c135b"
+			"status": "killed",
+			"testingTime": 2443,
+			"id": "m81c41f9a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1329,
-			"end": 1333,
+			"start": 1325,
+			"end": 1329,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " || ",
 			"replace": " && ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mdbebb967"
+			"status": "killed",
+			"testingTime": 2382,
+			"id": "m5f967513"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1313,
-			"end": 1317,
+			"start": 1309,
+			"end": 1313,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " || ",
 			"replace": " && ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m937de895"
+			"status": "killed",
+			"testingTime": 2362,
+			"id": "mb1301603"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1308,
-			"end": 1312,
+			"start": 1304,
+			"end": 1308,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " <= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m24b4f322"
+			"status": "live",
+			"testingTime": 2626,
+			"id": "ma312c6d8"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1308,
-			"end": 1312,
+			"start": 1304,
+			"end": 1308,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " >= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "made46969"
+			"status": "killed",
+			"testingTime": 2360,
+			"id": "m099ca190"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1308,
-			"end": 1312,
+			"start": 1304,
+			"end": 1308,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": "  < ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m5c0ad746"
+			"status": "killed",
+			"testingTime": 2577,
+			"id": "m3093fc79"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1308,
-			"end": 1312,
+			"start": 1304,
+			"end": 1308,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": "  > ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m6c100b22"
+			"status": "killed",
+			"testingTime": 3019,
+			"id": "mae023ae6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1308,
-			"end": 1312,
+			"start": 1304,
+			"end": 1308,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " != ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m3a877042"
+			"status": "killed",
+			"testingTime": 2632,
+			"id": "m2c5894b8"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1324,
-			"end": 1328,
+			"start": 1320,
+			"end": 1324,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " <= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "ma18da4aa"
+			"status": "live",
+			"testingTime": 2695,
+			"id": "m0cfc5d4d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1324,
-			"end": 1328,
+			"start": 1320,
+			"end": 1324,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " >= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m56646a79"
+			"status": "killed",
+			"testingTime": 2558,
+			"id": "m2e1625a5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1324,
-			"end": 1328,
+			"start": 1320,
+			"end": 1324,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": "  < ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m52b55e02"
+			"status": "killed",
+			"testingTime": 2559,
+			"id": "mbbc7bf54"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1324,
-			"end": 1328,
+			"start": 1320,
+			"end": 1324,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": "  > ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m3feb3c1b"
+			"status": "killed",
+			"testingTime": 2323,
+			"id": "m5d68909a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1324,
-			"end": 1328,
+			"start": 1320,
+			"end": 1324,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " != ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m31b8cccb"
+			"status": "killed",
+			"testingTime": 2377,
+			"id": "md55de14e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1340,
-			"end": 1344,
+			"start": 1336,
+			"end": 1340,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " <= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mf272a292"
+			"status": "live",
+			"testingTime": 2421,
+			"id": "m48ba64d9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1340,
-			"end": 1344,
+			"start": 1336,
+			"end": 1340,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " >= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m61a79763"
+			"status": "killed",
+			"testingTime": 2399,
+			"id": "m2d9edc5b"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1340,
-			"end": 1344,
+			"start": 1336,
+			"end": 1340,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": "  < ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mcfd0caed"
+			"status": "live",
+			"testingTime": 2407,
+			"id": "m7bddd6dc"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1340,
-			"end": 1344,
+			"start": 1336,
+			"end": 1340,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": "  > ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m5d822d9d"
+			"status": "killed",
+			"testingTime": 2355,
+			"id": "m055f20ea"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1340,
-			"end": 1344,
+			"start": 1336,
+			"end": 1340,
 			"startLine": 45,
 			"endLine": 45,
 			"original": " == ",
 			"replace": " != ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m7fb3f62d"
+			"status": "killed",
+			"testingTime": 2525,
+			"id": "m2a5a1bcd"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1458,
-			"end": 1461,
+			"start": 1454,
+			"end": 1457,
 			"startLine": 48,
 			"endLine": 48,
 			"original": " - ",
 			"replace": " + ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m9ed9f0fa"
+			"status": "killed",
+			"testingTime": 3098,
+			"id": "m8cd22aed"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1458,
-			"end": 1461,
+			"start": 1454,
+			"end": 1457,
 			"startLine": 48,
 			"endLine": 48,
 			"original": " - ",
 			"replace": " * ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m35ac2521"
+			"status": "killed",
+			"testingTime": 2955,
+			"id": "mfbcfb13c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1458,
-			"end": 1461,
+			"start": 1454,
+			"end": 1457,
 			"startLine": 48,
 			"endLine": 48,
 			"original": " - ",
 			"replace": " / ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m000512e8"
+			"status": "killed",
+			"testingTime": 2836,
+			"id": "m7aeca0f5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1458,
-			"end": 1461,
+			"start": 1454,
+			"end": 1457,
 			"startLine": 48,
 			"endLine": 48,
 			"original": " - ",
 			"replace": " ** ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m043e4799"
+			"status": "killed",
+			"testingTime": 3071,
+			"id": "m04500ea7"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1458,
-			"end": 1461,
+			"start": 1454,
+			"end": 1457,
 			"startLine": 48,
 			"endLine": 48,
 			"original": " - ",
 			"replace": " % ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "md24dd0b2"
+			"status": "killed",
+			"testingTime": 2968,
+			"id": "m57fa49eb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1507,
-			"end": 1510,
+			"start": 1503,
+			"end": 1506,
 			"startLine": 49,
 			"endLine": 49,
 			"original": " > ",
 			"replace": " >=  ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mde9a50a8"
+			"status": "live",
+			"testingTime": 3073,
+			"id": "m91e288bf"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1507,
-			"end": 1510,
+			"start": 1503,
+			"end": 1506,
 			"startLine": 49,
 			"endLine": 49,
 			"original": " > ",
 			"replace": " <=  ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m7bc9e06f"
+			"status": "killed",
+			"testingTime": 3025,
+			"id": "mdac81fea"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1507,
-			"end": 1510,
+			"start": 1503,
+			"end": 1506,
 			"startLine": 49,
 			"endLine": 49,
 			"original": " > ",
 			"replace": " < ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "me03a473f"
+			"status": "killed",
+			"testingTime": 2973,
+			"id": "m75a7caf7"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1507,
-			"end": 1510,
+			"start": 1503,
+			"end": 1506,
 			"startLine": 49,
 			"endLine": 49,
 			"original": " > ",
 			"replace": " != ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m4a215507"
+			"status": "killed",
+			"testingTime": 2951,
+			"id": "m443edbd6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1507,
-			"end": 1510,
+			"start": 1503,
+			"end": 1506,
 			"startLine": 49,
 			"endLine": 49,
 			"original": " > ",
 			"replace": " == ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m73b4a14b"
+			"status": "killed",
+			"testingTime": 3034,
+			"id": "m36c89751"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2259,
-			"end": 2263,
+			"start": 2255,
+			"end": 2259,
 			"startLine": 78,
 			"endLine": 78,
 			"original": " == ",
 			"replace": " <= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m064f87c7"
+			"status": "live",
+			"testingTime": 3099,
+			"id": "m4dce0b62"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2259,
-			"end": 2263,
+			"start": 2255,
+			"end": 2259,
 			"startLine": 78,
 			"endLine": 78,
 			"original": " == ",
 			"replace": " >= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mf874be47"
+			"status": "killed",
+			"testingTime": 2997,
+			"id": "md90b200e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2259,
-			"end": 2263,
+			"start": 2255,
+			"end": 2259,
 			"startLine": 78,
 			"endLine": 78,
 			"original": " == ",
 			"replace": "  < ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m049e1a15"
+			"status": "killed",
+			"testingTime": 3063,
+			"id": "m824e47e3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2259,
-			"end": 2263,
+			"start": 2255,
+			"end": 2259,
 			"startLine": 78,
 			"endLine": 78,
 			"original": " == ",
 			"replace": "  > ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m1c5fbd09"
+			"status": "killed",
+			"testingTime": 2959,
+			"id": "ma2b8399b"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2259,
-			"end": 2263,
+			"start": 2255,
+			"end": 2259,
 			"startLine": 78,
 			"endLine": 78,
 			"original": " == ",
 			"replace": " != ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m17982363"
+			"status": "killed",
+			"testingTime": 2492,
+			"id": "m0f581546"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2907,
-			"end": 2911,
+			"start": 2903,
+			"end": 2907,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " || ",
 			"replace": " && ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mfa8ac65a"
+			"status": "live",
+			"testingTime": 2809,
+			"id": "m1391fdae"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2891,
-			"end": 2895,
+			"start": 2887,
+			"end": 2891,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " || ",
 			"replace": " && ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m4fa68092"
+			"status": "live",
+			"testingTime": 2983,
+			"id": "m15aeae39"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2875,
-			"end": 2879,
+			"start": 2871,
+			"end": 2875,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " || ",
 			"replace": " && ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m3bda8e09"
+			"status": "killed",
+			"testingTime": 2879,
+			"id": "m7fbeb89d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2870,
-			"end": 2874,
+			"start": 2866,
+			"end": 2870,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
 			"replace": " <= ",
 			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m34f4a087"
+			"status": "killed",
+			"testingTime": 2946,
+			"id": "m61a1fa8c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2870,
-			"end": 2874,
+			"start": 2866,
+			"end": 2870,
+			"startLine": 99,
+			"endLine": 99,
+			"original": " == ",
+			"replace": " >= ",
+			"operator": "BOR",
+			"status": "live",
+			"testingTime": 2974,
+			"id": "m0673f53d"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 2866,
+			"end": 2870,
+			"startLine": 99,
+			"endLine": 99,
+			"original": " == ",
+			"replace": "  < ",
+			"operator": "BOR",
+			"status": "killed",
+			"testingTime": 2895,
+			"id": "m360559d7"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 2866,
+			"end": 2870,
+			"startLine": 99,
+			"endLine": 99,
+			"original": " == ",
+			"replace": "  > ",
+			"operator": "BOR",
+			"status": "killed",
+			"testingTime": 2880,
+			"id": "mc4b4ce12"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 2866,
+			"end": 2870,
+			"startLine": 99,
+			"endLine": 99,
+			"original": " == ",
+			"replace": " != ",
+			"operator": "BOR",
+			"status": "killed",
+			"testingTime": 2728,
+			"id": "m32febb5a"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 2882,
+			"end": 2886,
+			"startLine": 99,
+			"endLine": 99,
+			"original": " == ",
+			"replace": " <= ",
+			"operator": "BOR",
+			"status": "killed",
+			"testingTime": 2443,
+			"id": "md8996c44"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 2882,
+			"end": 2886,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -570,12 +635,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mfabde6eb"
+			"id": "m510ee2b4"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2870,
-			"end": 2874,
+			"start": 2882,
+			"end": 2886,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -583,12 +648,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf2dbf8f8"
+			"id": "ma5667bf9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2870,
-			"end": 2874,
+			"start": 2882,
+			"end": 2886,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -596,12 +661,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7d1c53cf"
+			"id": "mf59525a0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2870,
-			"end": 2874,
+			"start": 2882,
+			"end": 2886,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -609,12 +674,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5f3d05ea"
+			"id": "m0ac2855e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2886,
-			"end": 2890,
+			"start": 2898,
+			"end": 2902,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -622,12 +687,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc6712ff7"
+			"id": "m0c2f1218"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2886,
-			"end": 2890,
+			"start": 2898,
+			"end": 2902,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -635,12 +700,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5e92e15d"
+			"id": "md2605c79"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2886,
-			"end": 2890,
+			"start": 2898,
+			"end": 2902,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -648,12 +713,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m1105cef8"
+			"id": "m9c8f3e47"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2886,
-			"end": 2890,
+			"start": 2898,
+			"end": 2902,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -661,12 +726,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m29203384"
+			"id": "md7a78771"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2886,
-			"end": 2890,
+			"start": 2898,
+			"end": 2902,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -674,12 +739,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m271cabf4"
+			"id": "m2b562393"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2902,
-			"end": 2906,
+			"start": 2914,
+			"end": 2918,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -687,12 +752,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma0a1338b"
+			"id": "md0e0fa2a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2902,
-			"end": 2906,
+			"start": 2914,
+			"end": 2918,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -700,12 +765,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc3a6891e"
+			"id": "m28d23c94"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2902,
-			"end": 2906,
+			"start": 2914,
+			"end": 2918,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -713,12 +778,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mb5469d29"
+			"id": "m8091274f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2902,
-			"end": 2906,
+			"start": 2914,
+			"end": 2918,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -726,12 +791,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc5df6cfb"
+			"id": "m22d826de"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2902,
-			"end": 2906,
+			"start": 2914,
+			"end": 2918,
 			"startLine": 99,
 			"endLine": 99,
 			"original": " == ",
@@ -739,77 +804,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mb38c71b5"
+			"id": "mf154eeaf"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2918,
-			"end": 2922,
-			"startLine": 99,
-			"endLine": 99,
-			"original": " == ",
-			"replace": " <= ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m6e950c86"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2918,
-			"end": 2922,
-			"startLine": 99,
-			"endLine": 99,
-			"original": " == ",
-			"replace": " >= ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mef4dc522"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2918,
-			"end": 2922,
-			"startLine": 99,
-			"endLine": 99,
-			"original": " == ",
-			"replace": "  < ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m5ad10d21"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2918,
-			"end": 2922,
-			"startLine": 99,
-			"endLine": 99,
-			"original": " == ",
-			"replace": "  > ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "ma085e14e"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2918,
-			"end": 2922,
-			"startLine": 99,
-			"endLine": 99,
-			"original": " == ",
-			"replace": " != ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "me724867e"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3010,
-			"end": 3014,
+			"start": 3006,
+			"end": 3010,
 			"startLine": 102,
 			"endLine": 102,
 			"original": " == ",
@@ -817,12 +817,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc7fb5e11"
+			"id": "m36066cc1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3010,
-			"end": 3014,
+			"start": 3006,
+			"end": 3010,
 			"startLine": 102,
 			"endLine": 102,
 			"original": " == ",
@@ -830,12 +830,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4c7b1709"
+			"id": "m44263733"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3010,
-			"end": 3014,
+			"start": 3006,
+			"end": 3010,
 			"startLine": 102,
 			"endLine": 102,
 			"original": " == ",
@@ -843,12 +843,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2c99db40"
+			"id": "m79a3a103"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3010,
-			"end": 3014,
+			"start": 3006,
+			"end": 3010,
 			"startLine": 102,
 			"endLine": 102,
 			"original": " == ",
@@ -856,12 +856,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2229f5f2"
+			"id": "m9ef39f89"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3010,
-			"end": 3014,
+			"start": 3006,
+			"end": 3010,
 			"startLine": 102,
 			"endLine": 102,
 			"original": " == ",
@@ -869,12 +869,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3fe22dee"
+			"id": "m5ea33d3a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3224,
-			"end": 3228,
+			"start": 3220,
+			"end": 3224,
 			"startLine": 106,
 			"endLine": 106,
 			"original": " == ",
@@ -882,12 +882,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc3408b46"
+			"id": "m24e60013"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3224,
-			"end": 3228,
+			"start": 3220,
+			"end": 3224,
 			"startLine": 106,
 			"endLine": 106,
 			"original": " == ",
@@ -895,12 +895,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m734f1cee"
+			"id": "mf994a9c9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3224,
-			"end": 3228,
+			"start": 3220,
+			"end": 3224,
 			"startLine": 106,
 			"endLine": 106,
 			"original": " == ",
@@ -908,12 +908,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbffaf93e"
+			"id": "m5422af6d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3224,
-			"end": 3228,
+			"start": 3220,
+			"end": 3224,
 			"startLine": 106,
 			"endLine": 106,
 			"original": " == ",
@@ -921,12 +921,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7c67cf9f"
+			"id": "m24840fa3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3224,
-			"end": 3228,
+			"start": 3220,
+			"end": 3224,
 			"startLine": 106,
 			"endLine": 106,
 			"original": " == ",
@@ -934,12 +934,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf6df422d"
+			"id": "mf1077b29"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3438,
-			"end": 3442,
+			"start": 3434,
+			"end": 3438,
 			"startLine": 110,
 			"endLine": 110,
 			"original": " == ",
@@ -947,12 +947,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5d5c1f44"
+			"id": "m87717118"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3438,
-			"end": 3442,
+			"start": 3434,
+			"end": 3438,
 			"startLine": 110,
 			"endLine": 110,
 			"original": " == ",
@@ -960,12 +960,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mdb0a7033"
+			"id": "m3d550ab5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3438,
-			"end": 3442,
+			"start": 3434,
+			"end": 3438,
 			"startLine": 110,
 			"endLine": 110,
 			"original": " == ",
@@ -973,12 +973,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbc3749f3"
+			"id": "mc3a75b80"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3438,
-			"end": 3442,
+			"start": 3434,
+			"end": 3438,
 			"startLine": 110,
 			"endLine": 110,
 			"original": " == ",
@@ -986,12 +986,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m75ade7ea"
+			"id": "med05ace3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3438,
-			"end": 3442,
+			"start": 3434,
+			"end": 3438,
 			"startLine": 110,
 			"endLine": 110,
 			"original": " == ",
@@ -999,12 +999,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4c1cc045"
+			"id": "mc14cbdbb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3652,
-			"end": 3656,
+			"start": 3648,
+			"end": 3652,
 			"startLine": 114,
 			"endLine": 114,
 			"original": " == ",
@@ -1012,12 +1012,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma29ea0d4"
+			"id": "mb8e257c6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3652,
-			"end": 3656,
+			"start": 3648,
+			"end": 3652,
 			"startLine": 114,
 			"endLine": 114,
 			"original": " == ",
@@ -1025,12 +1025,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7e1ff0d7"
+			"id": "m1717a97e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3652,
-			"end": 3656,
+			"start": 3648,
+			"end": 3652,
 			"startLine": 114,
 			"endLine": 114,
 			"original": " == ",
@@ -1038,12 +1038,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4d0458d2"
+			"id": "m0d86e662"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3652,
-			"end": 3656,
+			"start": 3648,
+			"end": 3652,
 			"startLine": 114,
 			"endLine": 114,
 			"original": " == ",
@@ -1051,12 +1051,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m820b9bec"
+			"id": "mae966022"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3652,
-			"end": 3656,
+			"start": 3648,
+			"end": 3652,
 			"startLine": 114,
 			"endLine": 114,
 			"original": " == ",
@@ -1064,12 +1064,90 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m147544a6"
+			"id": "m61f31669"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4179,
-			"end": 4195,
+			"start": 4071,
+			"end": 4075,
+			"startLine": 127,
+			"endLine": 127,
+			"original": " != ",
+			"replace": " >  ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m353ab702"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4071,
+			"end": 4075,
+			"startLine": 127,
+			"endLine": 127,
+			"original": " != ",
+			"replace": "  < ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "mb154ee1a"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4071,
+			"end": 4075,
+			"startLine": 127,
+			"endLine": 127,
+			"original": " != ",
+			"replace": " <= ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m81ef8fc9"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4071,
+			"end": 4075,
+			"startLine": 127,
+			"endLine": 127,
+			"original": " != ",
+			"replace": " >= ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m6a0caf6c"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4071,
+			"end": 4075,
+			"startLine": 127,
+			"endLine": 127,
+			"original": " != ",
+			"replace": " == ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m60199344"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4245,
+			"end": 4261,
+			"startLine": 131,
+			"endLine": 132,
+			"original": " ||\n            ",
+			"replace": " &&\n            ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m62a581cb"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4206,
+			"end": 4222,
 			"startLine": 130,
 			"endLine": 131,
 			"original": " ||\n            ",
@@ -1077,12 +1155,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "me511e2db"
+			"id": "mbc080401"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4138,
-			"end": 4154,
+			"start": 4167,
+			"end": 4183,
 			"startLine": 129,
 			"endLine": 130,
 			"original": " ||\n            ",
@@ -1090,90 +1168,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "md061590a"
+			"id": "maf478259"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4097,
-			"end": 4113,
-			"startLine": 128,
-			"endLine": 129,
-			"original": " ||\n            ",
-			"replace": " &&\n            ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m408e5ba0"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4086,
-			"end": 4090,
-			"startLine": 128,
-			"endLine": 128,
-			"original": " == ",
-			"replace": " <= ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m329d4f02"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4086,
-			"end": 4090,
-			"startLine": 128,
-			"endLine": 128,
-			"original": " == ",
-			"replace": " >= ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m6dd83096"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4086,
-			"end": 4090,
-			"startLine": 128,
-			"endLine": 128,
-			"original": " == ",
-			"replace": "  < ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mbc0078ff"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4086,
-			"end": 4090,
-			"startLine": 128,
-			"endLine": 128,
-			"original": " == ",
-			"replace": "  > ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mcc27558c"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4086,
-			"end": 4090,
-			"startLine": 128,
-			"endLine": 128,
-			"original": " == ",
-			"replace": " != ",
-			"operator": "BOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m99329ade"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4127,
-			"end": 4131,
+			"start": 4156,
+			"end": 4160,
 			"startLine": 129,
 			"endLine": 129,
 			"original": " == ",
@@ -1181,12 +1181,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mae5a4edd"
+			"id": "m04ab2fdb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4127,
-			"end": 4131,
+			"start": 4156,
+			"end": 4160,
 			"startLine": 129,
 			"endLine": 129,
 			"original": " == ",
@@ -1194,12 +1194,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m84338058"
+			"id": "m4d0999bf"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4127,
-			"end": 4131,
+			"start": 4156,
+			"end": 4160,
 			"startLine": 129,
 			"endLine": 129,
 			"original": " == ",
@@ -1207,12 +1207,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m0a5041c9"
+			"id": "m3aa8878a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4127,
-			"end": 4131,
+			"start": 4156,
+			"end": 4160,
 			"startLine": 129,
 			"endLine": 129,
 			"original": " == ",
@@ -1220,12 +1220,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m625cd9b3"
+			"id": "mf9c43a13"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4127,
-			"end": 4131,
+			"start": 4156,
+			"end": 4160,
 			"startLine": 129,
 			"endLine": 129,
 			"original": " == ",
@@ -1233,12 +1233,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m49dca370"
+			"id": "ma9752a3b"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4168,
-			"end": 4172,
+			"start": 4195,
+			"end": 4199,
 			"startLine": 130,
 			"endLine": 130,
 			"original": " == ",
@@ -1246,12 +1246,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m772238bc"
+			"id": "m3e410a14"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4168,
-			"end": 4172,
+			"start": 4195,
+			"end": 4199,
 			"startLine": 130,
 			"endLine": 130,
 			"original": " == ",
@@ -1259,12 +1259,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7b913b5e"
+			"id": "mec16cb5c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4168,
-			"end": 4172,
+			"start": 4195,
+			"end": 4199,
 			"startLine": 130,
 			"endLine": 130,
 			"original": " == ",
@@ -1272,12 +1272,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7b6a678c"
+			"id": "mebeb2a8f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4168,
-			"end": 4172,
+			"start": 4195,
+			"end": 4199,
 			"startLine": 130,
 			"endLine": 130,
 			"original": " == ",
@@ -1285,12 +1285,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m00c6b341"
+			"id": "m60376da1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4168,
-			"end": 4172,
+			"start": 4195,
+			"end": 4199,
 			"startLine": 130,
 			"endLine": 130,
 			"original": " == ",
@@ -1298,12 +1298,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbb0bc62f"
+			"id": "md2fdd1d3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4209,
-			"end": 4213,
+			"start": 4234,
+			"end": 4238,
 			"startLine": 131,
 			"endLine": 131,
 			"original": " == ",
@@ -1311,12 +1311,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma0260d9f"
+			"id": "m94d92421"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4209,
-			"end": 4213,
+			"start": 4234,
+			"end": 4238,
 			"startLine": 131,
 			"endLine": 131,
 			"original": " == ",
@@ -1324,12 +1324,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4847d6cf"
+			"id": "m95380f51"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4209,
-			"end": 4213,
+			"start": 4234,
+			"end": 4238,
 			"startLine": 131,
 			"endLine": 131,
 			"original": " == ",
@@ -1337,12 +1337,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma2776b8a"
+			"id": "m6dcc73b8"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4209,
-			"end": 4213,
+			"start": 4234,
+			"end": 4238,
 			"startLine": 131,
 			"endLine": 131,
 			"original": " == ",
@@ -1350,12 +1350,12 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf431f956"
+			"id": "m76dd28fe"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4209,
-			"end": 4213,
+			"start": 4234,
+			"end": 4238,
 			"startLine": 131,
 			"endLine": 131,
 			"original": " == ",
@@ -1363,25 +1363,90 @@
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "me6c5c7d9"
+			"id": "mc871b408"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 640,
-			"end": 871,
+			"start": 4273,
+			"end": 4277,
+			"startLine": 132,
+			"endLine": 132,
+			"original": " == ",
+			"replace": " <= ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "mcc83f553"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4273,
+			"end": 4277,
+			"startLine": 132,
+			"endLine": 132,
+			"original": " == ",
+			"replace": " >= ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m9a077d8a"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4273,
+			"end": 4277,
+			"startLine": 132,
+			"endLine": 132,
+			"original": " == ",
+			"replace": "  < ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m94e33e64"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4273,
+			"end": 4277,
+			"startLine": 132,
+			"endLine": 132,
+			"original": " == ",
+			"replace": "  > ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "md2ae509a"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 4273,
+			"end": 4277,
+			"startLine": 132,
+			"endLine": 132,
+			"original": " == ",
+			"replace": " != ",
+			"operator": "BOR",
+			"status": null,
+			"testingTime": null,
+			"id": "me76af9ea"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 632,
+			"end": 863,
 			"startLine": 20,
 			"endLine": 27,
-			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'\n        )\n        Ownable(initialOwner)\n    {}",
+			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            \"https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}\"\n        )\n        Ownable(initialOwner)\n    {}",
 			"replace": "",
 			"operator": "CCD",
 			"status": null,
 			"testingTime": null,
-			"id": "m425d08b0"
+			"id": "m6149ee9c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2679,
-			"end": 2760,
+			"start": 2675,
+			"end": 2756,
 			"startLine": 93,
 			"endLine": 95,
 			"original": "constructor(address _address) {\n        nftAddress = NFTContract(_address);\n    }",
@@ -1389,12 +1454,12 @@
 			"operator": "CCD",
 			"status": null,
 			"testingTime": null,
-			"id": "ma6bf20ed"
+			"id": "m63f1e67a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3003,
-			"end": 3015,
+			"start": 2999,
+			"end": 3011,
 			"startLine": 102,
 			"endLine": 102,
 			"original": "tokenid == 3",
@@ -1402,12 +1467,12 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "me62a3f31"
+			"id": "md8143596"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3003,
-			"end": 3015,
+			"start": 2999,
+			"end": 3011,
 			"startLine": 102,
 			"endLine": 102,
 			"original": "tokenid == 3",
@@ -1415,12 +1480,12 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m550c6503"
+			"id": "m204b93b8"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3217,
-			"end": 3229,
+			"start": 3213,
+			"end": 3225,
 			"startLine": 106,
 			"endLine": 106,
 			"original": "tokenid == 4",
@@ -1428,12 +1493,12 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m86ca50f8"
+			"id": "m54a77045"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3217,
-			"end": 3229,
+			"start": 3213,
+			"end": 3225,
 			"startLine": 106,
 			"endLine": 106,
 			"original": "tokenid == 4",
@@ -1441,12 +1506,12 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m5f15fa32"
+			"id": "madebd536"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3431,
-			"end": 3443,
+			"start": 3427,
+			"end": 3439,
 			"startLine": 110,
 			"endLine": 110,
 			"original": "tokenid == 5",
@@ -1454,12 +1519,12 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m43d0b23d"
+			"id": "m8f9c52c0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3431,
-			"end": 3443,
+			"start": 3427,
+			"end": 3439,
 			"startLine": 110,
 			"endLine": 110,
 			"original": "tokenid == 5",
@@ -1467,12 +1532,12 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "mec8e9238"
+			"id": "m5ef4971c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3645,
-			"end": 3657,
+			"start": 3641,
+			"end": 3653,
 			"startLine": 114,
 			"endLine": 114,
 			"original": "tokenid == 6",
@@ -1480,12 +1545,12 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m1fc192d1"
+			"id": "mf3e693a6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3645,
-			"end": 3657,
+			"start": 3641,
+			"end": 3653,
 			"startLine": 114,
 			"endLine": 114,
 			"original": "tokenid == 6",
@@ -1493,51 +1558,51 @@
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m333a2e17"
+			"id": "m39b1f9be"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4072,
-			"end": 4220,
-			"startLine": 128,
-			"endLine": 131,
-			"original": "receiveTokenId == TOKEN_3 ||\n            receiveTokenId == TOKEN_4 ||\n            receiveTokenId == TOKEN_5 ||\n            receiveTokenId == TOKEN_6",
+			"start": 4144,
+			"end": 4284,
+			"startLine": 129,
+			"endLine": 132,
+			"original": "tradeTokenId == TOKEN_3 ||\n            tradeTokenId == TOKEN_4 ||\n            tradeTokenId == TOKEN_5 ||\n            tradeTokenId == TOKEN_6",
 			"replace": "true",
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m5bf071e2"
+			"id": "m8f8e9630"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4072,
-			"end": 4220,
-			"startLine": 128,
-			"endLine": 131,
-			"original": "receiveTokenId == TOKEN_3 ||\n            receiveTokenId == TOKEN_4 ||\n            receiveTokenId == TOKEN_5 ||\n            receiveTokenId == TOKEN_6",
+			"start": 4144,
+			"end": 4284,
+			"startLine": 129,
+			"endLine": 132,
+			"original": "tradeTokenId == TOKEN_3 ||\n            tradeTokenId == TOKEN_4 ||\n            tradeTokenId == TOKEN_5 ||\n            tradeTokenId == TOKEN_6",
 			"replace": "false",
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m497367e8"
+			"id": "mb56a75fb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4310,
-			"end": 4470,
-			"startLine": 132,
-			"endLine": 137,
+			"start": 4374,
+			"end": 4534,
+			"startLine": 133,
+			"endLine": 138,
 			"original": " else {\n            nftAddress.burn(msg.sender, tradeTokenId, tradeAmount);\n            nftAddress.mintExtra(msg.sender, receiveTokenId, tradeAmount);\n        }",
 			"replace": "",
 			"operator": "CSC",
 			"status": null,
 			"testingTime": null,
-			"id": "m12382302"
+			"id": "m6f89ef33"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2048,
-			"end": 2061,
+			"start": 2044,
+			"end": 2057,
 			"startLine": 70,
 			"endLine": 70,
 			"original": "string memory",
@@ -1545,12 +1610,12 @@
 			"operator": "DLR",
 			"status": null,
 			"testingTime": null,
-			"id": "m99425214"
+			"id": "md18d54a3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2164,
-			"end": 2181,
+			"start": 2160,
+			"end": 2177,
 			"startLine": 76,
 			"endLine": 76,
 			"original": "string memory uri",
@@ -1558,12 +1623,12 @@
 			"operator": "DLR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf6c8f882"
+			"id": "m37f4f170"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2231,
-			"end": 2252,
+			"start": 2227,
+			"end": 2248,
 			"startLine": 78,
 			"endLine": 78,
 			"original": "bytes(_uris[tokenId])",
@@ -1571,77 +1636,90 @@
 			"operator": "ECS",
 			"status": null,
 			"testingTime": null,
-			"id": "m10ee315b"
+			"id": "m9c01c8ef"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 963,
-			"end": 1085,
+			"start": 955,
+			"end": 1077,
 			"startLine": 32,
 			"endLine": 35,
-			"original": "require(\n            msg.sender == forgeContract,\n            'Only ForgeToken contract can call this function'\n        );",
-			"replace": "/* require(\n            msg.sender == forgeContract,\n            'Only ForgeToken contract can call this function'\n        ); */",
+			"original": "require(\n            msg.sender == forgeContract,\n            \"Only ForgeToken contract can call this function\"\n        );",
+			"replace": "/* require(\n            msg.sender == forgeContract,\n            \"Only ForgeToken contract can call this function\"\n        ); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "m44d96ac7"
+			"id": "m93c5710f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1280,
-			"end": 1412,
+			"start": 1276,
+			"end": 1408,
 			"startLine": 44,
 			"endLine": 47,
-			"original": "require(\n            tokenid == 0 || tokenid == 1 || tokenid == 2,\n            'This token can only be forged not minted'\n        );",
-			"replace": "/* require(\n            tokenid == 0 || tokenid == 1 || tokenid == 2,\n            'This token can only be forged not minted'\n        ); */",
+			"original": "require(\n            tokenid == 0 || tokenid == 1 || tokenid == 2,\n            \"This token can only be forged not minted\"\n        );",
+			"replace": "/* require(\n            tokenid == 0 || tokenid == 1 || tokenid == 2,\n            \"This token can only be forged not minted\"\n        ); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "ma6b0e8d2"
+			"id": "mb70160d9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1488,
-			"end": 1547,
+			"start": 1484,
+			"end": 1543,
 			"startLine": 49,
 			"endLine": 49,
-			"original": "require(elapsedTime > 1 minutes, 'Cannot mint token yet.');",
-			"replace": "/* require(elapsedTime > 1 minutes, 'Cannot mint token yet.'); */",
+			"original": "require(elapsedTime > 1 minutes, \"Cannot mint token yet.\");",
+			"replace": "/* require(elapsedTime > 1 minutes, \"Cannot mint token yet.\"); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "m85a5f4f3"
+			"id": "m5f990f80"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2223,
-			"end": 2290,
+			"start": 2219,
+			"end": 2286,
 			"startLine": 78,
 			"endLine": 78,
-			"original": "require(bytes(_uris[tokenId]).length == 0, 'Cannot set uri twice');",
-			"replace": "/* require(bytes(_uris[tokenId]).length == 0, 'Cannot set uri twice'); */",
+			"original": "require(bytes(_uris[tokenId]).length == 0, \"Cannot set uri twice\");",
+			"replace": "/* require(bytes(_uris[tokenId]).length == 0, \"Cannot set uri twice\"); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "m5f0ae93a"
+			"id": "m399e28bc"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2842,
-			"end": 2990,
+			"start": 2838,
+			"end": 2986,
 			"startLine": 98,
 			"endLine": 101,
-			"original": "require(\n            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,\n            'This token can only be minted not forged'\n        );",
-			"replace": "/* require(\n            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,\n            'This token can only be minted not forged'\n        ); */",
+			"original": "require(\n            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,\n            \"This token can only be minted not forged\"\n        );",
+			"replace": "/* require(\n            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,\n            \"This token can only be minted not forged\"\n        ); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "m28c46dc6"
+			"id": "m38ca9b97"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1108,
-			"end": 1177,
+			"start": 4051,
+			"end": 4118,
+			"startLine": 127,
+			"endLine": 127,
+			"original": "require(tradeTokenId != receiveTokenId, \"Cannot trade same token\");",
+			"replace": "/* require(tradeTokenId != receiveTokenId, \"Cannot trade same token\"); */",
+			"operator": "EHC",
+			"status": null,
+			"testingTime": null,
+			"id": "md07f79e0"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 1100,
+			"end": 1169,
 			"startLine": 39,
 			"endLine": 39,
 			"original": "function setForgeContract(address _forgeContract) external onlyOwner ",
@@ -1649,12 +1727,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3ac66d30"
+			"id": "m58566434"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1108,
-			"end": 1177,
+			"start": 1100,
+			"end": 1169,
 			"startLine": 39,
 			"endLine": 39,
 			"original": "function setForgeContract(address _forgeContract) external onlyOwner ",
@@ -1662,12 +1740,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf7530c89"
+			"id": "m67bf060a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1108,
-			"end": 1177,
+			"start": 1100,
+			"end": 1169,
 			"startLine": 39,
 			"endLine": 39,
 			"original": "function setForgeContract(address _forgeContract) external onlyOwner ",
@@ -1675,51 +1753,51 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m65c4b029"
+			"id": "m1ce3b31d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1230,
-			"end": 1270,
+			"start": 1222,
+			"end": 1266,
 			"startLine": 43,
 			"endLine": 43,
-			"original": "function mint(uint256 tokenid) external ",
-			"replace": "function mint(uint256 tokenid) public ",
+			"original": "function freeMint(uint256 tokenid) external ",
+			"replace": "function freeMint(uint256 tokenid) public ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m93a355b4"
+			"id": "maf2790d4"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1230,
-			"end": 1270,
+			"start": 1222,
+			"end": 1266,
 			"startLine": 43,
 			"endLine": 43,
-			"original": "function mint(uint256 tokenid) external ",
-			"replace": "function mint(uint256 tokenid) internal ",
+			"original": "function freeMint(uint256 tokenid) external ",
+			"replace": "function freeMint(uint256 tokenid) internal ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbf822aa0"
+			"id": "m53dd9969"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1230,
-			"end": 1270,
+			"start": 1222,
+			"end": 1266,
 			"startLine": 43,
 			"endLine": 43,
-			"original": "function mint(uint256 tokenid) external ",
-			"replace": "function mint(uint256 tokenid) private ",
+			"original": "function freeMint(uint256 tokenid) external ",
+			"replace": "function freeMint(uint256 tokenid) private ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mcc30f5d8"
+			"id": "m7c521b1f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1647,
-			"end": 1771,
+			"start": 1643,
+			"end": 1767,
 			"startLine": 54,
 			"endLine": 58,
 			"original": "function mintExtra(\n        address owner,\n        uint256 tokenid,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -1727,12 +1805,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m836feb34"
+			"id": "mc22de610"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1647,
-			"end": 1771,
+			"start": 1643,
+			"end": 1767,
 			"startLine": 54,
 			"endLine": 58,
 			"original": "function mintExtra(\n        address owner,\n        uint256 tokenid,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -1740,12 +1818,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3b28b90a"
+			"id": "m07b8be9a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1647,
-			"end": 1771,
+			"start": 1643,
+			"end": 1767,
 			"startLine": 54,
 			"endLine": 58,
 			"original": "function mintExtra(\n        address owner,\n        uint256 tokenid,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -1753,12 +1831,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3750042c"
+			"id": "m7d351730"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1827,
-			"end": 1941,
+			"start": 1823,
+			"end": 1937,
 			"startLine": 62,
 			"endLine": 66,
 			"original": "function burn(\n        address onwer,\n        uint256 id,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -1766,12 +1844,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m25312b8f"
+			"id": "m14066f86"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1827,
-			"end": 1941,
+			"start": 1823,
+			"end": 1937,
 			"startLine": 62,
 			"endLine": 66,
 			"original": "function burn(\n        address onwer,\n        uint256 id,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -1779,12 +1857,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mcbb7d1a3"
+			"id": "m2017eb6e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1827,
-			"end": 1941,
+			"start": 1823,
+			"end": 1937,
 			"startLine": 62,
 			"endLine": 66,
 			"original": "function burn(\n        address onwer,\n        uint256 id,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -1792,12 +1870,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "md76fb614"
+			"id": "m00bf3d14"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2766,
-			"end": 2832,
+			"start": 2762,
+			"end": 2828,
 			"startLine": 97,
 			"endLine": 97,
 			"original": "function ForgeTokenById(uint256 tokenid, uint256 amount) external ",
@@ -1805,12 +1883,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc9b777ee"
+			"id": "med1a4f5f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2766,
-			"end": 2832,
+			"start": 2762,
+			"end": 2828,
 			"startLine": 97,
 			"endLine": 97,
 			"original": "function ForgeTokenById(uint256 tokenid, uint256 amount) external ",
@@ -1818,12 +1896,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma659cebe"
+			"id": "mf10d0d43"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2766,
-			"end": 2832,
+			"start": 2762,
+			"end": 2828,
 			"startLine": 97,
 			"endLine": 97,
 			"original": "function ForgeTokenById(uint256 tokenid, uint256 amount) external ",
@@ -1831,12 +1909,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m45c83f60"
+			"id": "mabcd7ec1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3919,
-			"end": 4045,
+			"start": 3915,
+			"end": 4041,
 			"startLine": 122,
 			"endLine": 126,
 			"original": "function tradeToken(\n        uint256 tradeTokenId,\n        uint256 tradeAmount,\n        uint256 receiveTokenId\n    ) external ",
@@ -1844,12 +1922,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m21ac6f84"
+			"id": "medaf19e0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3919,
-			"end": 4045,
+			"start": 3915,
+			"end": 4041,
 			"startLine": 122,
 			"endLine": 126,
 			"original": "function tradeToken(\n        uint256 tradeTokenId,\n        uint256 tradeAmount,\n        uint256 receiveTokenId\n    ) external ",
@@ -1857,12 +1935,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3221a6c7"
+			"id": "m2f47b776"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3919,
-			"end": 4045,
+			"start": 3915,
+			"end": 4041,
 			"startLine": 122,
 			"endLine": 126,
 			"original": "function tradeToken(\n        uint256 tradeTokenId,\n        uint256 tradeAmount,\n        uint256 receiveTokenId\n    ) external ",
@@ -1870,12 +1948,12 @@
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2deead04"
+			"id": "m1f887b4e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1443,
-			"end": 1458,
+			"start": 1439,
+			"end": 1454,
 			"startLine": 48,
 			"endLine": 48,
 			"original": "block.timestamp",
@@ -1883,12 +1961,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mad2b3d74"
+			"id": "m35f99981"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1443,
-			"end": 1458,
+			"start": 1439,
+			"end": 1454,
 			"startLine": 48,
 			"endLine": 48,
 			"original": "block.timestamp",
@@ -1896,12 +1974,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc424bb0d"
+			"id": "ma95ac4f3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1443,
-			"end": 1458,
+			"start": 1439,
+			"end": 1454,
 			"startLine": 48,
 			"endLine": 48,
 			"original": "block.timestamp",
@@ -1909,12 +1987,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m00f1ed9e"
+			"id": "mb97b2c50"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1443,
-			"end": 1458,
+			"start": 1439,
+			"end": 1454,
 			"startLine": 48,
 			"endLine": 48,
 			"original": "block.timestamp",
@@ -1922,12 +2000,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "me2fff59d"
+			"id": "m542008ed"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1443,
-			"end": 1458,
+			"start": 1439,
+			"end": 1454,
 			"startLine": 48,
 			"endLine": 48,
 			"original": "block.timestamp",
@@ -1935,12 +2013,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m293efdf7"
+			"id": "m4b5006ce"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1443,
-			"end": 1458,
+			"start": 1439,
+			"end": 1454,
 			"startLine": 48,
 			"endLine": 48,
 			"original": "block.timestamp",
@@ -1948,12 +2026,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7b4f9d95"
+			"id": "mf2770fae"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1576,
-			"end": 1591,
+			"start": 1572,
+			"end": 1587,
 			"startLine": 50,
 			"endLine": 50,
 			"original": "block.timestamp",
@@ -1961,12 +2039,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "md8447d47"
+			"id": "mcb238384"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1576,
-			"end": 1591,
+			"start": 1572,
+			"end": 1587,
 			"startLine": 50,
 			"endLine": 50,
 			"original": "block.timestamp",
@@ -1974,12 +2052,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4af9ab9f"
+			"id": "m2b66358c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1576,
-			"end": 1591,
+			"start": 1572,
+			"end": 1587,
 			"startLine": 50,
 			"endLine": 50,
 			"original": "block.timestamp",
@@ -1987,12 +2065,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m1166d852"
+			"id": "me531b1f2"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1576,
-			"end": 1591,
+			"start": 1572,
+			"end": 1587,
 			"startLine": 50,
 			"endLine": 50,
 			"original": "block.timestamp",
@@ -2000,12 +2078,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m120f1cec"
+			"id": "md468de8b"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1576,
-			"end": 1591,
+			"start": 1572,
+			"end": 1587,
 			"startLine": 50,
 			"endLine": 50,
 			"original": "block.timestamp",
@@ -2013,12 +2091,12 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2824f852"
+			"id": "m50b2f06e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1576,
-			"end": 1591,
+			"start": 1572,
+			"end": 1587,
 			"startLine": 50,
 			"endLine": 50,
 			"original": "block.timestamp",
@@ -2026,7 +2104,7 @@
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m795350ed"
+			"id": "m183e3585"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
@@ -2199,8 +2277,8 @@
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1312,
-			"end": 1313,
+			"start": 1308,
+			"end": 1309,
 			"startLine": 45,
 			"endLine": 45,
 			"original": "0",
@@ -2208,12 +2286,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m434a16ee"
+			"id": "me468dc36"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1328,
-			"end": 1329,
+			"start": 1324,
+			"end": 1325,
 			"startLine": 45,
 			"endLine": 45,
 			"original": "1",
@@ -2221,12 +2299,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m61d46355"
+			"id": "mad83a2ef"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1328,
-			"end": 1329,
+			"start": 1324,
+			"end": 1325,
 			"startLine": 45,
 			"endLine": 45,
 			"original": "1",
@@ -2234,12 +2312,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m9a0fe9b5"
+			"id": "m35db0f6e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1344,
-			"end": 1345,
+			"start": 1340,
+			"end": 1341,
 			"startLine": 45,
 			"endLine": 45,
 			"original": "2",
@@ -2247,12 +2325,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m34fe5da6"
+			"id": "mc8d99f79"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1344,
-			"end": 1345,
+			"start": 1340,
+			"end": 1341,
 			"startLine": 45,
 			"endLine": 45,
 			"original": "2",
@@ -2260,12 +2338,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5ed1585c"
+			"id": "mee96212a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1510,
-			"end": 1519,
+			"start": 1506,
+			"end": 1515,
 			"startLine": 49,
 			"endLine": 49,
 			"original": "1 minutes",
@@ -2273,12 +2351,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m35d8e411"
+			"id": "ma30302d9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1510,
-			"end": 1519,
+			"start": 1506,
+			"end": 1515,
 			"startLine": 49,
 			"endLine": 49,
 			"original": "1 minutes",
@@ -2286,12 +2364,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m306fda84"
+			"id": "m93c118df"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1628,
-			"end": 1629,
+			"start": 1624,
+			"end": 1625,
 			"startLine": 51,
 			"endLine": 51,
 			"original": "1",
@@ -2299,12 +2377,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma9fe01b2"
+			"id": "m05e51575"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1628,
-			"end": 1629,
+			"start": 1624,
+			"end": 1625,
 			"startLine": 51,
 			"endLine": 51,
 			"original": "1",
@@ -2312,12 +2390,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc4c41bbe"
+			"id": "m26a0c120"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2263,
-			"end": 2264,
+			"start": 2259,
+			"end": 2260,
 			"startLine": 78,
 			"endLine": 78,
 			"original": "0",
@@ -2325,12 +2403,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma0e3c7ab"
+			"id": "ma80f1040"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2425,
-			"end": 2426,
+			"start": 2421,
+			"end": 2422,
 			"startLine": 85,
 			"endLine": 85,
 			"original": "0",
@@ -2338,12 +2416,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7959cdc1"
+			"id": "m1f166f14"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2466,
-			"end": 2467,
+			"start": 2462,
+			"end": 2463,
 			"startLine": 86,
 			"endLine": 86,
 			"original": "1",
@@ -2351,12 +2429,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m41499394"
+			"id": "mff8f1c6d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2466,
-			"end": 2467,
+			"start": 2462,
+			"end": 2463,
 			"startLine": 86,
 			"endLine": 86,
 			"original": "1",
@@ -2364,12 +2442,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma214f4d8"
+			"id": "md797cc6c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2507,
-			"end": 2508,
+			"start": 2503,
+			"end": 2504,
 			"startLine": 87,
 			"endLine": 87,
 			"original": "2",
@@ -2377,12 +2455,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "md92b0f04"
+			"id": "ma6a6f643"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2507,
-			"end": 2508,
+			"start": 2503,
+			"end": 2504,
 			"startLine": 87,
 			"endLine": 87,
 			"original": "2",
@@ -2390,12 +2468,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5edd306b"
+			"id": "m46b3206f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2548,
-			"end": 2549,
+			"start": 2544,
+			"end": 2545,
 			"startLine": 88,
 			"endLine": 88,
 			"original": "3",
@@ -2403,12 +2481,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5f9f1ab4"
+			"id": "m244150e0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2548,
-			"end": 2549,
+			"start": 2544,
+			"end": 2545,
 			"startLine": 88,
 			"endLine": 88,
 			"original": "3",
@@ -2416,12 +2494,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma0dd1fea"
+			"id": "m3f0d170d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2589,
-			"end": 2590,
+			"start": 2585,
+			"end": 2586,
 			"startLine": 89,
 			"endLine": 89,
 			"original": "4",
@@ -2429,12 +2507,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m22aeab53"
+			"id": "m503de97a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2589,
-			"end": 2590,
+			"start": 2585,
+			"end": 2586,
 			"startLine": 89,
 			"endLine": 89,
 			"original": "4",
@@ -2442,12 +2520,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbe57d9ff"
+			"id": "m757ea123"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2630,
-			"end": 2631,
+			"start": 2626,
+			"end": 2627,
 			"startLine": 90,
 			"endLine": 90,
 			"original": "5",
@@ -2455,12 +2533,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "me0a285e2"
+			"id": "m95e6f6fc"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2630,
-			"end": 2631,
+			"start": 2626,
+			"end": 2627,
 			"startLine": 90,
 			"endLine": 90,
 			"original": "5",
@@ -2468,12 +2546,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2430ba3b"
+			"id": "m3cb98302"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2671,
-			"end": 2672,
+			"start": 2667,
+			"end": 2668,
 			"startLine": 91,
 			"endLine": 91,
 			"original": "6",
@@ -2481,12 +2559,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf1764ace"
+			"id": "m2d027537"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2671,
-			"end": 2672,
+			"start": 2667,
+			"end": 2668,
 			"startLine": 91,
 			"endLine": 91,
 			"original": "6",
@@ -2494,12 +2572,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7dc0aaae"
+			"id": "md34c967d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2874,
-			"end": 2875,
+			"start": 2870,
+			"end": 2871,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "3",
@@ -2507,12 +2585,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m388a67b6"
+			"id": "m823ed635"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2874,
-			"end": 2875,
+			"start": 2870,
+			"end": 2871,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "3",
@@ -2520,12 +2598,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma8d1b29b"
+			"id": "m0f3a7f09"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2890,
-			"end": 2891,
+			"start": 2886,
+			"end": 2887,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "4",
@@ -2533,12 +2611,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf1cb6da0"
+			"id": "m16e96ed0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2890,
-			"end": 2891,
+			"start": 2886,
+			"end": 2887,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "4",
@@ -2546,12 +2624,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m698a3e45"
+			"id": "md3de77d9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2906,
-			"end": 2907,
+			"start": 2902,
+			"end": 2903,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "5",
@@ -2559,12 +2637,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m1918a284"
+			"id": "ma5b99ffe"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2906,
-			"end": 2907,
+			"start": 2902,
+			"end": 2903,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "5",
@@ -2572,12 +2650,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3bdd2724"
+			"id": "m8b9b0cec"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2922,
-			"end": 2923,
+			"start": 2918,
+			"end": 2919,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "6",
@@ -2585,12 +2663,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m67645373"
+			"id": "md30d486f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2922,
-			"end": 2923,
+			"start": 2918,
+			"end": 2919,
 			"startLine": 99,
 			"endLine": 99,
 			"original": "6",
@@ -2598,12 +2676,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m273d6cf2"
+			"id": "mf5087657"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3014,
-			"end": 3015,
+			"start": 3010,
+			"end": 3011,
 			"startLine": 102,
 			"endLine": 102,
 			"original": "3",
@@ -2611,12 +2689,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2cc23f0a"
+			"id": "m9019550f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3014,
-			"end": 3015,
+			"start": 3010,
+			"end": 3011,
 			"startLine": 102,
 			"endLine": 102,
 			"original": "3",
@@ -2624,12 +2702,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m31771ba1"
+			"id": "mb4267fdb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3228,
-			"end": 3229,
+			"start": 3224,
+			"end": 3225,
 			"startLine": 106,
 			"endLine": 106,
 			"original": "4",
@@ -2637,12 +2715,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2d26544b"
+			"id": "m197d0226"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3228,
-			"end": 3229,
+			"start": 3224,
+			"end": 3225,
 			"startLine": 106,
 			"endLine": 106,
 			"original": "4",
@@ -2650,12 +2728,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m854c9a8a"
+			"id": "m5b52d61f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3442,
-			"end": 3443,
+			"start": 3438,
+			"end": 3439,
 			"startLine": 110,
 			"endLine": 110,
 			"original": "5",
@@ -2663,12 +2741,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "md3c1cf51"
+			"id": "m06cbc910"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3442,
-			"end": 3443,
+			"start": 3438,
+			"end": 3439,
 			"startLine": 110,
 			"endLine": 110,
 			"original": "5",
@@ -2676,12 +2754,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "mb67efb76"
+			"id": "mec1e8176"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3656,
-			"end": 3657,
+			"start": 3652,
+			"end": 3653,
 			"startLine": 114,
 			"endLine": 114,
 			"original": "6",
@@ -2689,12 +2767,12 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m60a11ef8"
+			"id": "m85904b49"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3656,
-			"end": 3657,
+			"start": 3652,
+			"end": 3653,
 			"startLine": 114,
 			"endLine": 114,
 			"original": "6",
@@ -2702,51 +2780,51 @@
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "me3aa55af"
+			"id": "m6cfb0f26"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 640,
-			"end": 869,
+			"start": 632,
+			"end": 861,
 			"startLine": 20,
 			"endLine": 27,
-			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'\n        )\n        Ownable(initialOwner)\n    ",
-			"replace": "constructor(\n        address initialOwner\n    )\n        Ownable(initialOwner)\n        ERC1155(\n            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'\n        )\n    ",
+			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            \"https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}\"\n        )\n        Ownable(initialOwner)\n    ",
+			"replace": "constructor(\n        address initialOwner\n    )\n        Ownable(initialOwner)\n        ERC1155(\n            \"https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}\"\n        )\n    ",
 			"operator": "MOC",
 			"status": null,
 			"testingTime": null,
-			"id": "m120289a0"
+			"id": "m9a87092e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 640,
-			"end": 869,
+			"start": 632,
+			"end": 861,
 			"startLine": 20,
 			"endLine": 27,
-			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'\n        )\n        Ownable(initialOwner)\n    ",
+			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            \"https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}\"\n        )\n        Ownable(initialOwner)\n    ",
 			"replace": "constructor(\n        address initialOwner\n    )\n        \n        Ownable(initialOwner)\n    ",
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m5f451327"
+			"id": "m8408d225"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 640,
-			"end": 869,
+			"start": 632,
+			"end": 861,
 			"startLine": 20,
 			"endLine": 27,
-			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'\n        )\n        Ownable(initialOwner)\n    ",
-			"replace": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'\n        )\n        \n    ",
+			"original": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            \"https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}\"\n        )\n        Ownable(initialOwner)\n    ",
+			"replace": "constructor(\n        address initialOwner\n    )\n        ERC1155(\n            \"https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}\"\n        )\n        \n    ",
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m559801bd"
+			"id": "m5eae4f91"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1108,
-			"end": 1177,
+			"start": 1100,
+			"end": 1169,
 			"startLine": 39,
 			"endLine": 39,
 			"original": "function setForgeContract(address _forgeContract) external onlyOwner ",
@@ -2754,12 +2832,12 @@
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "me1ad2c64"
+			"id": "m2c49d6e2"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1647,
-			"end": 1771,
+			"start": 1643,
+			"end": 1767,
 			"startLine": 54,
 			"endLine": 58,
 			"original": "function mintExtra(\n        address owner,\n        uint256 tokenid,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -2767,12 +2845,12 @@
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "mb29f4f2a"
+			"id": "m280e1c2f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1827,
-			"end": 1941,
+			"start": 1823,
+			"end": 1937,
 			"startLine": 62,
 			"endLine": 66,
 			"original": "function burn(\n        address onwer,\n        uint256 id,\n        uint256 amount\n    ) external onlyForgeContract ",
@@ -2780,12 +2858,12 @@
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m3e58eb39"
+			"id": "m22329fb0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2109,
-			"end": 2213,
+			"start": 2105,
+			"end": 2209,
 			"startLine": 74,
 			"endLine": 77,
 			"original": "function setTokenUri(\n        uint256 tokenId,\n        string memory uri\n    ) public virtual onlyOwner ",
@@ -2793,38 +2871,38 @@
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m6294740f"
+			"id": "ma85bd2a0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1230,
-			"end": 1270,
+			"start": 1222,
+			"end": 1266,
 			"startLine": 43,
 			"endLine": 43,
-			"original": "function mint(uint256 tokenid) external ",
-			"replace": "function mint(uint256 tokenid) external onlyOwner ",
+			"original": "function freeMint(uint256 tokenid) external ",
+			"replace": "function freeMint(uint256 tokenid) external onlyOwner ",
 			"operator": "MOI",
 			"status": null,
 			"testingTime": null,
-			"id": "mc30f7556"
+			"id": "m2cd3dff4"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1230,
-			"end": 1270,
+			"start": 1222,
+			"end": 1266,
 			"startLine": 43,
 			"endLine": 43,
-			"original": "function mint(uint256 tokenid) external ",
-			"replace": "function mint(uint256 tokenid) external onlyForgeContract ",
+			"original": "function freeMint(uint256 tokenid) external ",
+			"replace": "function freeMint(uint256 tokenid) external onlyForgeContract ",
 			"operator": "MOI",
 			"status": null,
 			"testingTime": null,
-			"id": "m8307cc18"
+			"id": "mc6e7a5d0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1167,
-			"end": 1176,
+			"start": 1159,
+			"end": 1168,
 			"startLine": 39,
 			"endLine": 39,
 			"original": "onlyOwner",
@@ -2832,12 +2910,12 @@
 			"operator": "MOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m9fa9f9d3"
+			"id": "m956220a5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1753,
-			"end": 1770,
+			"start": 1749,
+			"end": 1766,
 			"startLine": 54,
 			"endLine": 58,
 			"original": "onlyForgeContract",
@@ -2845,12 +2923,12 @@
 			"operator": "MOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m1024ab01"
+			"id": "m8d96836d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1923,
-			"end": 1940,
+			"start": 1919,
+			"end": 1936,
 			"startLine": 62,
 			"endLine": 66,
 			"original": "onlyForgeContract",
@@ -2858,12 +2936,12 @@
 			"operator": "MOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m121b3475"
+			"id": "m4bda8813"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2203,
-			"end": 2212,
+			"start": 2199,
+			"end": 2208,
 			"startLine": 74,
 			"endLine": 77,
 			"original": "onlyOwner",
@@ -2871,12 +2949,12 @@
 			"operator": "MOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4baf4169"
+			"id": "m051eb63a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1988,
-			"end": 2103,
+			"start": 1984,
+			"end": 2099,
 			"startLine": 70,
 			"endLine": 72,
 			"original": "function uri(uint256 tokenId) public view override returns (string memory) {\n        return (_uris[tokenId]);\n    }",
@@ -2884,12 +2962,12 @@
 			"operator": "ORFD",
 			"status": null,
 			"testingTime": null,
-			"id": "mebeb907e"
+			"id": "m250e1e57"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2073,
-			"end": 2097,
+			"start": 2069,
+			"end": 2093,
 			"startLine": 71,
 			"endLine": 71,
 			"original": "return (_uris[tokenId]);",
@@ -2897,64 +2975,25 @@
 			"operator": "RSD",
 			"status": null,
 			"testingTime": null,
-			"id": "m5f18b90a"
+			"id": "m547ca2b5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 65,
-			"end": 116,
-			"startLine": 4,
-			"endLine": 4,
-			"original": "'@openzeppelin/contracts/token/ERC1155/ERC1155.sol'",
-			"replace": "\"\"",
-			"operator": "SLR",
-			"status": null,
-			"testingTime": null,
-			"id": "m2bc4ee3c"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 125,
-			"end": 169,
-			"startLine": 5,
-			"endLine": 5,
-			"original": "'@openzeppelin/contracts/access/Ownable.sol'",
-			"replace": "\"\"",
-			"operator": "SLR",
-			"status": null,
-			"testingTime": null,
-			"id": "mcf10252e"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 178,
-			"end": 221,
-			"startLine": 6,
-			"endLine": 6,
-			"original": "'@openzeppelin/contracts/utils/Strings.sol'",
-			"replace": "\"\"",
-			"operator": "SLR",
-			"status": null,
-			"testingTime": null,
-			"id": "mae524327"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 717,
-			"end": 824,
+			"start": 709,
+			"end": 816,
 			"startLine": 24,
 			"endLine": 24,
-			"original": "'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'",
+			"original": "\"https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}\"",
 			"replace": "\"\"",
 			"operator": "SLR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4ccc82bb"
+			"id": "mc55087eb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 984,
-			"end": 994,
+			"start": 976,
+			"end": 986,
 			"startLine": 33,
 			"endLine": 33,
 			"original": "msg.sender",
@@ -2962,38 +3001,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m72515826"
+			"id": "me1945f9d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1467,
-			"end": 1477,
-			"startLine": 48,
-			"endLine": 48,
-			"original": "msg.sender",
-			"replace": "tx.origin",
-			"operator": "TOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mc8e3a6b7"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1562,
-			"end": 1572,
-			"startLine": 50,
-			"endLine": 50,
-			"original": "msg.sender",
-			"replace": "tx.origin",
-			"operator": "TOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m3df3f46f"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1607,
-			"end": 1617,
+			"start": 1603,
+			"end": 1613,
 			"startLine": 51,
 			"endLine": 51,
 			"original": "msg.sender",
@@ -3001,12 +3014,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7c86c576"
+			"id": "m30e77edb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3047,
-			"end": 3057,
+			"start": 3043,
+			"end": 3053,
 			"startLine": 103,
 			"endLine": 103,
 			"original": "msg.sender",
@@ -3014,12 +3027,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m0787c415"
+			"id": "m0f09e898"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3105,
-			"end": 3115,
+			"start": 3101,
+			"end": 3111,
 			"startLine": 104,
 			"endLine": 104,
 			"original": "msg.sender",
@@ -3027,12 +3040,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4c7eac48"
+			"id": "maca62a31"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3168,
-			"end": 3178,
+			"start": 3164,
+			"end": 3174,
 			"startLine": 105,
 			"endLine": 105,
 			"original": "msg.sender",
@@ -3040,12 +3053,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m18a0f0ec"
+			"id": "m0bc9e350"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3261,
-			"end": 3271,
+			"start": 3257,
+			"end": 3267,
 			"startLine": 107,
 			"endLine": 107,
 			"original": "msg.sender",
@@ -3053,12 +3066,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbeae8db7"
+			"id": "me7562057"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3319,
-			"end": 3329,
+			"start": 3315,
+			"end": 3325,
 			"startLine": 108,
 			"endLine": 108,
 			"original": "msg.sender",
@@ -3066,12 +3079,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2f84d2fe"
+			"id": "mf4bfe237"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3382,
-			"end": 3392,
+			"start": 3378,
+			"end": 3388,
 			"startLine": 109,
 			"endLine": 109,
 			"original": "msg.sender",
@@ -3079,12 +3092,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2ff57185"
+			"id": "m4cb0dc97"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3475,
-			"end": 3485,
+			"start": 3471,
+			"end": 3481,
 			"startLine": 111,
 			"endLine": 111,
 			"original": "msg.sender",
@@ -3092,12 +3105,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m04cd8ff2"
+			"id": "mc3f8a1b1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3533,
-			"end": 3543,
+			"start": 3529,
+			"end": 3539,
 			"startLine": 112,
 			"endLine": 112,
 			"original": "msg.sender",
@@ -3105,12 +3118,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m28a550ec"
+			"id": "m0b5b7c43"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3596,
-			"end": 3606,
+			"start": 3592,
+			"end": 3602,
 			"startLine": 113,
 			"endLine": 113,
 			"original": "msg.sender",
@@ -3118,12 +3131,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2db14784"
+			"id": "m16e90a6c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3689,
-			"end": 3699,
+			"start": 3685,
+			"end": 3695,
 			"startLine": 115,
 			"endLine": 115,
 			"original": "msg.sender",
@@ -3131,12 +3144,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc3375b8a"
+			"id": "m282225fa"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3747,
-			"end": 3757,
+			"start": 3743,
+			"end": 3753,
 			"startLine": 116,
 			"endLine": 116,
 			"original": "msg.sender",
@@ -3144,12 +3157,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf2d58b52"
+			"id": "m25859317"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3805,
-			"end": 3815,
+			"start": 3801,
+			"end": 3811,
 			"startLine": 117,
 			"endLine": 117,
 			"original": "msg.sender",
@@ -3157,12 +3170,12 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m0b46dbb8"
+			"id": "m8af3f0b1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 3868,
-			"end": 3878,
+			"start": 3864,
+			"end": 3874,
 			"startLine": 118,
 			"endLine": 118,
 			"original": "msg.sender",
@@ -3170,38 +3183,25 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc1657ed4"
+			"id": "mdf607080"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4261,
-			"end": 4271,
-			"startLine": 133,
-			"endLine": 133,
+			"start": 4325,
+			"end": 4335,
+			"startLine": 134,
+			"endLine": 134,
 			"original": "msg.sender",
 			"replace": "tx.origin",
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma790edd4"
+			"id": "m306b18f9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4346,
-			"end": 4356,
-			"startLine": 135,
-			"endLine": 135,
-			"original": "msg.sender",
-			"replace": "tx.origin",
-			"operator": "TOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m397558e7"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 4419,
-			"end": 4429,
+			"start": 4410,
+			"end": 4420,
 			"startLine": 136,
 			"endLine": 136,
 			"original": "msg.sender",
@@ -3209,12 +3209,25 @@
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "md79b344f"
+			"id": "m983bc5fe"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1510,
-			"end": 1519,
+			"start": 4483,
+			"end": 4493,
+			"startLine": 137,
+			"endLine": 137,
+			"original": "msg.sender",
+			"replace": "tx.origin",
+			"operator": "TOR",
+			"status": null,
+			"testingTime": null,
+			"id": "m49b3037f"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 1506,
+			"end": 1515,
 			"startLine": 49,
 			"endLine": 49,
 			"original": "1 minutes",
@@ -3222,12 +3235,12 @@
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "me4bf6f6d"
+			"id": "ma093b55e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1510,
-			"end": 1519,
+			"start": 1506,
+			"end": 1515,
 			"startLine": 49,
 			"endLine": 49,
 			"original": "1 minutes",
@@ -3235,12 +3248,12 @@
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "m48f67714"
+			"id": "mf21acf9d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1510,
-			"end": 1519,
+			"start": 1506,
+			"end": 1515,
 			"startLine": 49,
 			"endLine": 49,
 			"original": "1 minutes",
@@ -3248,12 +3261,12 @@
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "m463c81ed"
+			"id": "m789e0fb1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 1510,
-			"end": 1519,
+			"start": 1506,
+			"end": 1515,
 			"startLine": 49,
 			"endLine": 49,
 			"original": "1 minutes",
@@ -3261,7 +3274,7 @@
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7fb08745"
+			"id": "m00563d27"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
@@ -3473,8 +3486,34 @@
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2356,
-			"end": 2385,
+			"start": 593,
+			"end": 625,
+			"startLine": 18,
+			"endLine": 18,
+			"original": "uint256 public lastMintTimestamp",
+			"replace": "uint256 internal lastMintTimestamp",
+			"operator": "VVR",
+			"status": null,
+			"testingTime": null,
+			"id": "mf91f186b"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 593,
+			"end": 625,
+			"startLine": 18,
+			"endLine": 18,
+			"original": "uint256 public lastMintTimestamp",
+			"replace": "uint256 private lastMintTimestamp",
+			"operator": "VVR",
+			"status": null,
+			"testingTime": null,
+			"id": "m8b51eb55"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
+			"start": 2352,
+			"end": 2381,
 			"startLine": 84,
 			"endLine": 84,
 			"original": "NFTContract public nftAddress",
@@ -3482,12 +3521,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m6d988173"
+			"id": "m50e541ff"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2356,
-			"end": 2385,
+			"start": 2352,
+			"end": 2381,
 			"startLine": 84,
 			"endLine": 84,
 			"original": "NFTContract public nftAddress",
@@ -3495,12 +3534,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3ac3badc"
+			"id": "mc29dd2bd"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2391,
-			"end": 2426,
+			"start": 2387,
+			"end": 2422,
 			"startLine": 85,
 			"endLine": 85,
 			"original": "uint256 public constant TOKEN_0 = 0",
@@ -3508,12 +3547,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mb7d93c62"
+			"id": "m87f029cb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2391,
-			"end": 2426,
+			"start": 2387,
+			"end": 2422,
 			"startLine": 85,
 			"endLine": 85,
 			"original": "uint256 public constant TOKEN_0 = 0",
@@ -3521,12 +3560,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbbb25838"
+			"id": "mcfff03a3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2432,
-			"end": 2467,
+			"start": 2428,
+			"end": 2463,
 			"startLine": 86,
 			"endLine": 86,
 			"original": "uint256 public constant TOKEN_1 = 1",
@@ -3534,12 +3573,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "md1130575"
+			"id": "m9ec871b5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2432,
-			"end": 2467,
+			"start": 2428,
+			"end": 2463,
 			"startLine": 86,
 			"endLine": 86,
 			"original": "uint256 public constant TOKEN_1 = 1",
@@ -3547,12 +3586,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2a22b671"
+			"id": "mcfce2ef6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2473,
-			"end": 2508,
+			"start": 2469,
+			"end": 2504,
 			"startLine": 87,
 			"endLine": 87,
 			"original": "uint256 public constant TOKEN_2 = 2",
@@ -3560,12 +3599,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m46e3ecc3"
+			"id": "m8ddbac94"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2473,
-			"end": 2508,
+			"start": 2469,
+			"end": 2504,
 			"startLine": 87,
 			"endLine": 87,
 			"original": "uint256 public constant TOKEN_2 = 2",
@@ -3573,12 +3612,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mba13b93e"
+			"id": "mc43bde2a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2514,
-			"end": 2549,
+			"start": 2510,
+			"end": 2545,
 			"startLine": 88,
 			"endLine": 88,
 			"original": "uint256 public constant TOKEN_3 = 3",
@@ -3586,12 +3625,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m17b4a9d7"
+			"id": "m504747aa"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2514,
-			"end": 2549,
+			"start": 2510,
+			"end": 2545,
 			"startLine": 88,
 			"endLine": 88,
 			"original": "uint256 public constant TOKEN_3 = 3",
@@ -3599,12 +3638,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m7a6ffe50"
+			"id": "m2bf0f914"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2555,
-			"end": 2590,
+			"start": 2551,
+			"end": 2586,
 			"startLine": 89,
 			"endLine": 89,
 			"original": "uint256 public constant TOKEN_4 = 4",
@@ -3612,12 +3651,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m73ba0aff"
+			"id": "mc5fe31d6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2555,
-			"end": 2590,
+			"start": 2551,
+			"end": 2586,
 			"startLine": 89,
 			"endLine": 89,
 			"original": "uint256 public constant TOKEN_4 = 4",
@@ -3625,12 +3664,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m8caad808"
+			"id": "m008ad53c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2596,
-			"end": 2631,
+			"start": 2592,
+			"end": 2627,
 			"startLine": 90,
 			"endLine": 90,
 			"original": "uint256 public constant TOKEN_5 = 5",
@@ -3638,12 +3677,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m43bf4463"
+			"id": "mbd693e09"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2596,
-			"end": 2631,
+			"start": 2592,
+			"end": 2627,
 			"startLine": 90,
 			"endLine": 90,
 			"original": "uint256 public constant TOKEN_5 = 5",
@@ -3651,12 +3690,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m8ad8dfe7"
+			"id": "m847e7bbd"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2637,
-			"end": 2672,
+			"start": 2633,
+			"end": 2668,
 			"startLine": 91,
 			"endLine": 91,
 			"original": "uint256 public constant TOKEN_6 = 6",
@@ -3664,12 +3703,12 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m3ca40203"
+			"id": "m53c81bf0"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol",
-			"start": 2637,
-			"end": 2672,
+			"start": 2633,
+			"end": 2668,
 			"startLine": 91,
 			"endLine": 91,
 			"original": "uint256 public constant TOKEN_6 = 6",
@@ -3677,1010 +3716,776 @@
 			"operator": "VVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mce4a9cb8"
+			"id": "mdad412f0"
 		}
 	],
 	"PartialRefund.sol": [
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 877,
-			"end": 881,
-			"startLine": 26,
-			"endLine": 26,
-			"original": " += ",
-			"replace": " -= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m0a69cda1"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 877,
-			"end": 881,
-			"startLine": 26,
-			"endLine": 26,
-			"original": " += ",
-			"replace": "  = ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mb439bff8"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 877,
-			"end": 881,
-			"startLine": 26,
-			"endLine": 26,
-			"original": " += ",
-			"replace": " /= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m55329463"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 877,
-			"end": 881,
-			"startLine": 26,
-			"endLine": 26,
-			"original": " += ",
-			"replace": " *= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m6cb65cc3"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 877,
-			"end": 881,
-			"startLine": 26,
-			"endLine": 26,
-			"original": " += ",
-			"replace": " %= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m7f1a6ac6"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1116,
-			"end": 1120,
-			"startLine": 32,
-			"endLine": 32,
-			"original": " -= ",
-			"replace": " += ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m938db271"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1116,
-			"end": 1120,
-			"startLine": 32,
-			"endLine": 32,
-			"original": " -= ",
-			"replace": "  = ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m620b476d"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1116,
-			"end": 1120,
-			"startLine": 32,
-			"endLine": 32,
-			"original": " -= ",
-			"replace": " /= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mb05ea1bf"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1116,
-			"end": 1120,
-			"startLine": 32,
-			"endLine": 32,
-			"original": " -= ",
-			"replace": " *= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m19884a11"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1116,
-			"end": 1120,
-			"startLine": 32,
-			"endLine": 32,
-			"original": " -= ",
-			"replace": " %= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "mbc1c4b30"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1508,
-			"end": 1512,
-			"startLine": 44,
-			"endLine": 44,
-			"original": " -= ",
-			"replace": " += ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m59a7d159"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1508,
-			"end": 1512,
-			"startLine": 44,
-			"endLine": 44,
-			"original": " -= ",
-			"replace": "  = ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m18a9020f"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1508,
-			"end": 1512,
-			"startLine": 44,
-			"endLine": 44,
-			"original": " -= ",
-			"replace": " /= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m52902e9e"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1508,
-			"end": 1512,
-			"startLine": 44,
-			"endLine": 44,
-			"original": " -= ",
-			"replace": " *= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m1009b1e4"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1508,
-			"end": 1512,
-			"startLine": 44,
-			"endLine": 44,
-			"original": " -= ",
-			"replace": " %= ",
-			"operator": "AOR",
-			"status": null,
-			"testingTime": null,
-			"id": "me8666687"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 708,
-			"end": 711,
-			"startLine": 23,
-			"endLine": 23,
+			"start": 493,
+			"end": 496,
+			"startLine": 15,
+			"endLine": 15,
 			"original": " > ",
 			"replace": " >=  ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m1ac3c9a7"
+			"id": "m111b60c4"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 708,
-			"end": 711,
-			"startLine": 23,
-			"endLine": 23,
+			"start": 493,
+			"end": 496,
+			"startLine": 15,
+			"endLine": 15,
 			"original": " > ",
 			"replace": " <=  ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mb09973e9"
+			"id": "m5ec07ca7"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 708,
-			"end": 711,
-			"startLine": 23,
-			"endLine": 23,
+			"start": 493,
+			"end": 496,
+			"startLine": 15,
+			"endLine": 15,
 			"original": " > ",
 			"replace": " < ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbd6fd21a"
+			"id": "me06b827f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 708,
-			"end": 711,
-			"startLine": 23,
-			"endLine": 23,
+			"start": 493,
+			"end": 496,
+			"startLine": 15,
+			"endLine": 15,
 			"original": " > ",
 			"replace": " != ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m078808d9"
+			"id": "m25f263b1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 708,
-			"end": 711,
-			"startLine": 23,
-			"endLine": 23,
+			"start": 493,
+			"end": 496,
+			"startLine": 15,
+			"endLine": 15,
 			"original": " > ",
 			"replace": " == ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m8867a855"
+			"id": "m9b6a35a9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 801,
-			"end": 804,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 586,
+			"end": 589,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " / ",
 			"replace": " + ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbbc24488"
+			"id": "m39a23344"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 801,
-			"end": 804,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 586,
+			"end": 589,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " / ",
 			"replace": " - ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "md6a03481"
+			"id": "mcd5ce5ed"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 801,
-			"end": 804,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 586,
+			"end": 589,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " / ",
 			"replace": " * ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mce090ee3"
+			"id": "mfe1be87a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 801,
-			"end": 804,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 586,
+			"end": 589,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " / ",
 			"replace": " ** ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mea3c45d7"
+			"id": "m10015df8"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 801,
-			"end": 804,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 586,
+			"end": 589,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " / ",
 			"replace": " % ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5d6ea44f"
+			"id": "mc5805601"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 787,
-			"end": 790,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 572,
+			"end": 575,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " * ",
 			"replace": " + ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mdfc07ce6"
+			"id": "ma8ee6840"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 787,
-			"end": 790,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 572,
+			"end": 575,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " * ",
 			"replace": " - ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m8c0b7a1d"
+			"id": "m73c7c29e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 787,
-			"end": 790,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 572,
+			"end": 575,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " * ",
 			"replace": " / ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mb48b2cde"
+			"id": "m7e6917a1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 787,
-			"end": 790,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 572,
+			"end": 575,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " * ",
 			"replace": " ** ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5c968c1f"
+			"id": "mb05d9c4d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 787,
-			"end": 790,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 572,
+			"end": 575,
+			"startLine": 16,
+			"endLine": 16,
 			"original": " * ",
 			"replace": " % ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m971b7ff0"
+			"id": "mef86d815"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 999,
-			"end": 1003,
-			"startLine": 30,
-			"endLine": 30,
+			"start": 746,
+			"end": 750,
+			"startLine": 21,
+			"endLine": 21,
 			"original": " <= ",
 			"replace": "  < ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2d9c2021"
+			"id": "m00b764b9"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 999,
-			"end": 1003,
-			"startLine": 30,
-			"endLine": 30,
+			"start": 746,
+			"end": 750,
+			"startLine": 21,
+			"endLine": 21,
 			"original": " <= ",
 			"replace": "  > ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m602eef01"
+			"id": "m087341bc"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 999,
-			"end": 1003,
-			"startLine": 30,
-			"endLine": 30,
+			"start": 746,
+			"end": 750,
+			"startLine": 21,
+			"endLine": 21,
 			"original": " <= ",
 			"replace": " >= ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m85c56112"
+			"id": "mc6ddfed8"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 999,
-			"end": 1003,
-			"startLine": 30,
-			"endLine": 30,
+			"start": 746,
+			"end": 750,
+			"startLine": 21,
+			"endLine": 21,
 			"original": " <= ",
 			"replace": " != ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "me65099d7"
+			"id": "m5d8def10"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 999,
-			"end": 1003,
-			"startLine": 30,
-			"endLine": 30,
+			"start": 746,
+			"end": 750,
+			"startLine": 21,
+			"endLine": 21,
 			"original": " <= ",
 			"replace": " == ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m93a6d8ad"
+			"id": "m040e7d6c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1204,
-			"end": 1208,
-			"startLine": 36,
-			"endLine": 36,
+			"start": 978,
+			"end": 982,
+			"startLine": 27,
+			"endLine": 27,
 			"original": " <= ",
 			"replace": "  < ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m8aad7625"
+			"id": "me70ea4e2"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1204,
-			"end": 1208,
-			"startLine": 36,
-			"endLine": 36,
+			"start": 978,
+			"end": 982,
+			"startLine": 27,
+			"endLine": 27,
 			"original": " <= ",
 			"replace": "  > ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mcc0a7b95"
+			"id": "m179a76bc"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1204,
-			"end": 1208,
-			"startLine": 36,
-			"endLine": 36,
+			"start": 978,
+			"end": 982,
+			"startLine": 27,
+			"endLine": 27,
 			"original": " <= ",
 			"replace": " >= ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "med549196"
+			"id": "m793eda76"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1204,
-			"end": 1208,
-			"startLine": 36,
-			"endLine": 36,
+			"start": 978,
+			"end": 982,
+			"startLine": 27,
+			"endLine": 27,
 			"original": " <= ",
 			"replace": " != ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbb281c3e"
+			"id": "m640d505a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1204,
-			"end": 1208,
-			"startLine": 36,
-			"endLine": 36,
+			"start": 978,
+			"end": 982,
+			"startLine": 27,
+			"endLine": 27,
 			"original": " <= ",
 			"replace": " == ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m9960008d"
+			"id": "m9650972c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1314,
-			"end": 1317,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1088,
+			"end": 1091,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " / ",
 			"replace": " + ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m40e892dd"
+			"id": "mb367f4bd"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1314,
-			"end": 1317,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1088,
+			"end": 1091,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " / ",
 			"replace": " - ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mde69a726"
+			"id": "me0089524"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1314,
-			"end": 1317,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1088,
+			"end": 1091,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " / ",
 			"replace": " * ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m9dc1c9b0"
+			"id": "m87d746d1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1314,
-			"end": 1317,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1088,
+			"end": 1091,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " / ",
 			"replace": " ** ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2c8a84d1"
+			"id": "md2c0ef96"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1314,
-			"end": 1317,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1088,
+			"end": 1091,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " / ",
 			"replace": " % ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m4dbc97ed"
+			"id": "m828685fd"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1301,
-			"end": 1304,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1075,
+			"end": 1078,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " * ",
 			"replace": " + ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5586055f"
+			"id": "me64ec64f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1301,
-			"end": 1304,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1075,
+			"end": 1078,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " * ",
 			"replace": " - ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m47a1ea27"
+			"id": "mca5b3269"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1301,
-			"end": 1304,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1075,
+			"end": 1078,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " * ",
 			"replace": " / ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "ma8b22096"
+			"id": "m9de79e9a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1301,
-			"end": 1304,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1075,
+			"end": 1078,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " * ",
 			"replace": " ** ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbe6d0b9e"
+			"id": "m33c320ae"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1301,
-			"end": 1304,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1075,
+			"end": 1078,
+			"startLine": 28,
+			"endLine": 28,
 			"original": " * ",
 			"replace": " % ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m70434a13"
+			"id": "mae3bf2c3"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1374,
-			"end": 1378,
-			"startLine": 39,
-			"endLine": 39,
+			"start": 1154,
+			"end": 1158,
+			"startLine": 30,
+			"endLine": 30,
 			"original": " >= ",
 			"replace": "  > ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf70e6c01"
+			"id": "m94d38b7c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1374,
-			"end": 1378,
-			"startLine": 39,
-			"endLine": 39,
+			"start": 1154,
+			"end": 1158,
+			"startLine": 30,
+			"endLine": 30,
 			"original": " >= ",
 			"replace": "  < ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mac4fc41f"
+			"id": "m6be7c615"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1374,
-			"end": 1378,
-			"startLine": 39,
-			"endLine": 39,
+			"start": 1154,
+			"end": 1158,
+			"startLine": 30,
+			"endLine": 30,
 			"original": " >= ",
 			"replace": " <= ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m56177b5d"
+			"id": "m54097db1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1374,
-			"end": 1378,
-			"startLine": 39,
-			"endLine": 39,
+			"start": 1154,
+			"end": 1158,
+			"startLine": 30,
+			"endLine": 30,
 			"original": " >= ",
 			"replace": " != ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m79de0937"
+			"id": "mb4036de6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1374,
-			"end": 1378,
-			"startLine": 39,
-			"endLine": 39,
+			"start": 1154,
+			"end": 1158,
+			"startLine": 30,
+			"endLine": 30,
 			"original": " >= ",
 			"replace": " == ",
 			"operator": "BOR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf56e0a7d"
+			"id": "m4145c31e"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 341,
-			"end": 538,
-			"startLine": 11,
-			"endLine": 16,
-			"original": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {\n        _mint(msg.sender, initialSupply);\n    }",
+			"start": 305,
+			"end": 424,
+			"startLine": 10,
+			"endLine": 12,
+			"original": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {}",
 			"replace": "",
 			"operator": "CCD",
 			"status": null,
 			"testingTime": null,
-			"id": "m59143574"
+			"id": "m95b1a968"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 691,
-			"end": 745,
+			"start": 476,
+			"end": 530,
+			"startLine": 15,
+			"endLine": 15,
+			"original": "require(msg.value > 0, \"You need to send some ether\");",
+			"replace": "/* require(msg.value > 0, \"You need to send some ether\"); */",
+			"operator": "EHC",
+			"status": null,
+			"testingTime": null,
+			"id": "mae479a5d"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
+			"start": 732,
+			"end": 797,
+			"startLine": 21,
+			"endLine": 21,
+			"original": "require(amount <= address(this).balance, \"Insufficient balance\");",
+			"replace": "/* require(amount <= address(this).balance, \"Insufficient balance\"); */",
+			"operator": "EHC",
+			"status": null,
+			"testingTime": null,
+			"id": "m680fa2c5"
+		},
+		{
+			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
+			"start": 865,
+			"end": 901,
 			"startLine": 23,
 			"endLine": 23,
-			"original": "require(msg.value > 0, 'You need to send some ether');",
-			"replace": "/* require(msg.value > 0, 'You need to send some ether'); */",
+			"original": "require(success, \"Transfer failed\");",
+			"replace": "/* require(success, \"Transfer failed\"); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "me0857239"
+			"id": "m8c665ae1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 985,
-			"end": 1050,
-			"startLine": 30,
-			"endLine": 30,
-			"original": "require(amount <= address(this).balance, 'Insufficient balance');",
-			"replace": "/* require(amount <= address(this).balance, 'Insufficient balance'); */",
+			"start": 964,
+			"end": 1035,
+			"startLine": 27,
+			"endLine": 27,
+			"original": "require(amount <= balanceOf(msg.sender), \"Insufficient token balance\");",
+			"replace": "/* require(amount <= balanceOf(msg.sender), \"Insufficient token balance\"); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "mbe442551"
+			"id": "ma0cc5afb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1190,
-			"end": 1261,
-			"startLine": 36,
-			"endLine": 36,
-			"original": "require(amount <= balanceOf(msg.sender), 'Insufficient token balance');",
-			"replace": "/* require(amount <= balanceOf(msg.sender), 'Insufficient token balance'); */",
+			"start": 1112,
+			"end": 1226,
+			"startLine": 29,
+			"endLine": 32,
+			"original": "require(\n            address(this).balance >= refundAmount,\n            \"Insufficient contract balance\"\n        );",
+			"replace": "/* require(\n            address(this).balance >= refundAmount,\n            \"Insufficient contract balance\"\n        ); */",
 			"operator": "EHC",
 			"status": null,
 			"testingTime": null,
-			"id": "m0cd0b777"
+			"id": "m3c719929"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1338,
-			"end": 1446,
-			"startLine": 38,
-			"endLine": 41,
-			"original": "require(\n            contractBalance >= refundAmount,\n            'Insufficient contract balance'\n        );",
-			"replace": "/* require(\n            contractBalance >= refundAmount,\n            'Insufficient contract balance'\n        ); */",
-			"operator": "EHC",
-			"status": null,
-			"testingTime": null,
-			"id": "m284833d2"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1059,
-			"end": 1083,
-			"startLine": 31,
-			"endLine": 31,
-			"original": "payable(target).transfer",
-			"replace": "payable(target).send",
+			"start": 825,
+			"end": 855,
+			"startLine": 22,
+			"endLine": 22,
+			"original": "target.call{value: amount}(\"\")",
+			"replace": "target.delegatecall(\"\")",
 			"operator": "ETR",
 			"status": null,
 			"testingTime": null,
-			"id": "mff93442b"
+			"id": "ma675cdd8"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1059,
-			"end": 1091,
-			"startLine": 31,
-			"endLine": 31,
-			"original": "payable(target).transfer",
-			"replace": "payable(target).call{value: amount}(\"\")",
+			"start": 825,
+			"end": 855,
+			"startLine": 22,
+			"endLine": 22,
+			"original": "target.call{value: amount}(\"\")",
+			"replace": "target.staticcall(\"\")",
 			"operator": "ETR",
 			"status": null,
 			"testingTime": null,
-			"id": "m96825838"
+			"id": "m3f568ccb"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1534,
-			"end": 1562,
-			"startLine": 45,
-			"endLine": 45,
+			"start": 1273,
+			"end": 1301,
+			"startLine": 35,
+			"endLine": 35,
 			"original": "payable(msg.sender).transfer",
 			"replace": "payable(msg.sender).send",
 			"operator": "ETR",
 			"status": null,
 			"testingTime": null,
-			"id": "m752f8663"
+			"id": "mbad26028"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1534,
-			"end": 1576,
-			"startLine": 45,
-			"endLine": 45,
+			"start": 1273,
+			"end": 1315,
+			"startLine": 35,
+			"endLine": 35,
 			"original": "payable(msg.sender).transfer",
 			"replace": "payable(msg.sender).call{value: refundAmount}(\"\")",
 			"operator": "ETR",
 			"status": null,
 			"testingTime": null,
-			"id": "mcb7d3555"
+			"id": "mc8f0ed77"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 544,
-			"end": 604,
-			"startLine": 18,
-			"endLine": 18,
-			"original": "function mint(address add, uint256 amount) public onlyOwner ",
-			"replace": "function mint(address add, uint256 amount) external onlyOwner ",
-			"operator": "FVR",
-			"status": null,
-			"testingTime": null,
-			"id": "m50776eff"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 544,
-			"end": 604,
-			"startLine": 18,
-			"endLine": 18,
-			"original": "function mint(address add, uint256 amount) public onlyOwner ",
-			"replace": "function mint(address add, uint256 amount) internal onlyOwner ",
-			"operator": "FVR",
-			"status": null,
-			"testingTime": null,
-			"id": "me7f8388e"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 544,
-			"end": 604,
-			"startLine": 18,
-			"endLine": 18,
-			"original": "function mint(address add, uint256 amount) public onlyOwner ",
-			"replace": "function mint(address add, uint256 amount) private onlyOwner ",
-			"operator": "FVR",
-			"status": null,
-			"testingTime": null,
-			"id": "m50da770b"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 645,
-			"end": 681,
-			"startLine": 22,
-			"endLine": 22,
+			"start": 430,
+			"end": 466,
+			"startLine": 14,
+			"endLine": 14,
 			"original": "function buyTokens() public payable ",
 			"replace": "function buyTokens() external payable ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mabaa38de"
+			"id": "m5552b497"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 903,
-			"end": 975,
-			"startLine": 29,
-			"endLine": 29,
+			"start": 650,
+			"end": 722,
+			"startLine": 20,
+			"endLine": 20,
 			"original": "function withdrawEther(uint256 amount, address target) public onlyOwner ",
 			"replace": "function withdrawEther(uint256 amount, address target) external onlyOwner ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "meb6c1748"
+			"id": "m089e3d66"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 903,
-			"end": 975,
-			"startLine": 29,
-			"endLine": 29,
+			"start": 650,
+			"end": 722,
+			"startLine": 20,
+			"endLine": 20,
 			"original": "function withdrawEther(uint256 amount, address target) public onlyOwner ",
 			"replace": "function withdrawEther(uint256 amount, address target) internal onlyOwner ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m01ac1ad8"
+			"id": "ma041b25f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 903,
-			"end": 975,
-			"startLine": 29,
-			"endLine": 29,
+			"start": 650,
+			"end": 722,
+			"startLine": 20,
+			"endLine": 20,
 			"original": "function withdrawEther(uint256 amount, address target) public onlyOwner ",
 			"replace": "function withdrawEther(uint256 amount, address target) private onlyOwner ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf26886b3"
+			"id": "m9bc7db06"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1139,
-			"end": 1180,
-			"startLine": 35,
-			"endLine": 35,
+			"start": 913,
+			"end": 954,
+			"startLine": 26,
+			"endLine": 26,
 			"original": "function sellBack(uint256 amount) public ",
 			"replace": "function sellBack(uint256 amount) external ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m91bac2e7"
+			"id": "m375697ef"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1139,
-			"end": 1180,
-			"startLine": 35,
-			"endLine": 35,
+			"start": 913,
+			"end": 954,
+			"startLine": 26,
+			"endLine": 26,
 			"original": "function sellBack(uint256 amount) public ",
 			"replace": "function sellBack(uint256 amount) internal ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m38f07a74"
+			"id": "m39456e26"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1139,
-			"end": 1180,
-			"startLine": 35,
-			"endLine": 35,
+			"start": 913,
+			"end": 954,
+			"startLine": 26,
+			"endLine": 26,
 			"original": "function sellBack(uint256 amount) public ",
 			"replace": "function sellBack(uint256 amount) private ",
 			"operator": "FVR",
 			"status": null,
 			"testingTime": null,
-			"id": "mbb10a8b1"
+			"id": "m202e5660"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 699,
-			"end": 708,
-			"startLine": 23,
-			"endLine": 23,
+			"start": 484,
+			"end": 493,
+			"startLine": 15,
+			"endLine": 15,
 			"original": "msg.value",
 			"replace": "tx.gasprice",
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m2115ea26"
+			"id": "mcda1bd6c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 778,
-			"end": 787,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 563,
+			"end": 572,
+			"startLine": 16,
+			"endLine": 16,
 			"original": "msg.value",
 			"replace": "tx.gasprice",
 			"operator": "GVR",
 			"status": null,
 			"testingTime": null,
-			"id": "m91ffea3d"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 881,
-			"end": 890,
-			"startLine": 26,
-			"endLine": 26,
-			"original": "msg.value",
-			"replace": "tx.gasprice",
-			"operator": "GVR",
-			"status": null,
-			"testingTime": null,
-			"id": "mab734369"
+			"id": "m39ad85e5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
@@ -4710,354 +4515,276 @@
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 711,
-			"end": 712,
-			"startLine": 23,
-			"endLine": 23,
+			"start": 496,
+			"end": 497,
+			"startLine": 15,
+			"endLine": 15,
 			"original": "0",
 			"replace": "1",
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m36764b89"
+			"id": "m80cc958b"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 790,
-			"end": 800,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 575,
+			"end": 585,
+			"startLine": 16,
+			"endLine": 16,
 			"original": "1000 ether",
 			"replace": "999 ether",
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5d9d8afc"
+			"id": "m0e2934dd"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 790,
-			"end": 800,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 575,
+			"end": 585,
+			"startLine": 16,
+			"endLine": 16,
 			"original": "1000 ether",
 			"replace": "1001 ether",
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m1d287358"
+			"id": "ma51d37f6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 804,
-			"end": 811,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 589,
+			"end": 596,
+			"startLine": 16,
+			"endLine": 16,
 			"original": "1 ether",
 			"replace": "0 ether",
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m5f94726c"
+			"id": "m1baf8c65"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 804,
-			"end": 811,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 589,
+			"end": 596,
+			"startLine": 16,
+			"endLine": 16,
 			"original": "1 ether",
 			"replace": "2 ether",
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "mf7870919"
+			"id": "md36ef87a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1317,
-			"end": 1327,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1091,
+			"end": 1101,
+			"startLine": 28,
+			"endLine": 28,
 			"original": "1000 ether",
 			"replace": "999 ether",
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "m072687c0"
+			"id": "m71bc18da"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1317,
-			"end": 1327,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1091,
+			"end": 1101,
+			"startLine": 28,
+			"endLine": 28,
 			"original": "1000 ether",
 			"replace": "1001 ether",
 			"operator": "ILR",
 			"status": null,
 			"testingTime": null,
-			"id": "mc951d0f2"
+			"id": "mce7e8dad"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1116,
-			"end": 1120,
-			"startLine": 32,
-			"endLine": 32,
-			"original": " -= ",
-			"replace": " =- ",
-			"operator": "ICM",
-			"status": null,
-			"testingTime": null,
-			"id": "m3e3f72f6"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1508,
-			"end": 1512,
-			"startLine": 44,
-			"endLine": 44,
-			"original": " -= ",
-			"replace": " =- ",
-			"operator": "ICM",
-			"status": null,
-			"testingTime": null,
-			"id": "m129eed51"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 645,
-			"end": 681,
-			"startLine": 22,
-			"endLine": 22,
+			"start": 430,
+			"end": 466,
+			"startLine": 14,
+			"endLine": 14,
 			"original": "function buyTokens() public payable ",
 			"replace": "function buyTokens() public  ",
 			"operator": "PKD",
 			"status": null,
 			"testingTime": null,
-			"id": "m3daa21aa"
+			"id": "m655b4f66"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 341,
-			"end": 489,
-			"startLine": 11,
-			"endLine": 14,
-			"original": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
-			"replace": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS') Ownable(initialOwner) ERC20Capped(MAX_SUPPLY) ",
+			"start": 305,
+			"end": 422,
+			"startLine": 10,
+			"endLine": 12,
+			"original": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
+			"replace": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\") Ownable(initialOwner) ERC20Capped(MAX_SUPPLY) ",
 			"operator": "MOC",
 			"status": null,
 			"testingTime": null,
-			"id": "md3ee88ea"
+			"id": "m737adf2a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 341,
-			"end": 489,
-			"startLine": 11,
-			"endLine": 14,
-			"original": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
-			"replace": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    )  ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
+			"start": 305,
+			"end": 422,
+			"startLine": 10,
+			"endLine": 12,
+			"original": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
+			"replace": "constructor(\n        address initialOwner\n    )  ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m231688a0"
+			"id": "m5f8f39da"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 341,
-			"end": 489,
-			"startLine": 11,
-			"endLine": 14,
-			"original": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
-			"replace": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS')  Ownable(initialOwner) ",
+			"start": 305,
+			"end": 422,
+			"startLine": 10,
+			"endLine": 12,
+			"original": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
+			"replace": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\")  Ownable(initialOwner) ",
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m2362a3c3"
+			"id": "mc2dcb0b6"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 341,
-			"end": 489,
-			"startLine": 11,
-			"endLine": 14,
-			"original": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
-			"replace": "constructor(\n        uint256 initialSupply,\n        address initialOwner\n    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY)  ",
+			"start": 305,
+			"end": 422,
+			"startLine": 10,
+			"endLine": 12,
+			"original": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",
+			"replace": "constructor(\n        address initialOwner\n    ) ERC20(\"XHACKS\", \"XHS\") ERC20Capped(MAX_SUPPLY)  ",
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m0779b614"
+			"id": "m1fe1953c"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 544,
-			"end": 604,
-			"startLine": 18,
-			"endLine": 18,
-			"original": "function mint(address add, uint256 amount) public onlyOwner ",
-			"replace": "function mint(address add, uint256 amount) public  ",
-			"operator": "MOD",
-			"status": null,
-			"testingTime": null,
-			"id": "m1e5a3137"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 903,
-			"end": 975,
-			"startLine": 29,
-			"endLine": 29,
+			"start": 650,
+			"end": 722,
+			"startLine": 20,
+			"endLine": 20,
 			"original": "function withdrawEther(uint256 amount, address target) public onlyOwner ",
 			"replace": "function withdrawEther(uint256 amount, address target) public  ",
 			"operator": "MOD",
 			"status": null,
 			"testingTime": null,
-			"id": "m5e8574e2"
+			"id": "mf27b3a9f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 645,
-			"end": 681,
-			"startLine": 22,
-			"endLine": 22,
+			"start": 430,
+			"end": 466,
+			"startLine": 14,
+			"endLine": 14,
 			"original": "function buyTokens() public payable ",
 			"replace": "function buyTokens() public payable onlyOwner ",
 			"operator": "MOI",
 			"status": null,
 			"testingTime": null,
-			"id": "mfff12450"
+			"id": "m07eddd24"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1139,
-			"end": 1180,
-			"startLine": 35,
-			"endLine": 35,
+			"start": 913,
+			"end": 954,
+			"startLine": 26,
+			"endLine": 26,
 			"original": "function sellBack(uint256 amount) public ",
 			"replace": "function sellBack(uint256 amount) public onlyOwner ",
 			"operator": "MOI",
 			"status": null,
 			"testingTime": null,
-			"id": "me27dbb71"
+			"id": "ma07fc324"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 65,
-			"end": 129,
-			"startLine": 4,
-			"endLine": 4,
-			"original": "'@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol'",
+			"start": 359,
+			"end": 367,
+			"startLine": 12,
+			"endLine": 12,
+			"original": "\"XHACKS\"",
 			"replace": "\"\"",
 			"operator": "SLR",
 			"status": null,
 			"testingTime": null,
-			"id": "me28b3a88"
+			"id": "m64841468"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 138,
-			"end": 187,
-			"startLine": 5,
-			"endLine": 5,
-			"original": "'@openzeppelin/contracts/access/Ownable2Step.sol'",
+			"start": 369,
+			"end": 374,
+			"startLine": 12,
+			"endLine": 12,
+			"original": "\"XHS\"",
 			"replace": "\"\"",
 			"operator": "SLR",
 			"status": null,
 			"testingTime": null,
-			"id": "mca7c8dad"
+			"id": "m170f9d45"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 426,
-			"end": 434,
-			"startLine": 14,
-			"endLine": 14,
-			"original": "'XHACKS'",
-			"replace": "\"\"",
-			"operator": "SLR",
-			"status": null,
-			"testingTime": null,
-			"id": "m0e18cd6c"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 436,
-			"end": 441,
-			"startLine": 14,
-			"endLine": 14,
-			"original": "'XHS'",
-			"replace": "\"\"",
-			"operator": "SLR",
-			"status": null,
-			"testingTime": null,
-			"id": "m4e89720e"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 505,
-			"end": 515,
-			"startLine": 15,
-			"endLine": 15,
+			"start": 612,
+			"end": 622,
+			"startLine": 17,
+			"endLine": 17,
 			"original": "msg.sender",
 			"replace": "tx.origin",
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m90459a16"
+			"id": "mf76681c1"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 827,
-			"end": 837,
-			"startLine": 25,
-			"endLine": 25,
+			"start": 992,
+			"end": 1002,
+			"startLine": 27,
+			"endLine": 27,
 			"original": "msg.sender",
 			"replace": "tx.origin",
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m473745bd"
+			"id": "m00b0d049"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1218,
-			"end": 1228,
-			"startLine": 36,
-			"endLine": 36,
+			"start": 1242,
+			"end": 1252,
+			"startLine": 34,
+			"endLine": 34,
 			"original": "msg.sender",
 			"replace": "tx.origin",
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "maeb69907"
+			"id": "m869d2078"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1462,
-			"end": 1472,
-			"startLine": 43,
-			"endLine": 43,
+			"start": 1281,
+			"end": 1291,
+			"startLine": 35,
+			"endLine": 35,
 			"original": "msg.sender",
 			"replace": "tx.origin",
 			"operator": "TOR",
 			"status": null,
 			"testingTime": null,
-			"id": "m6f3708cd"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1542,
-			"end": 1552,
-			"startLine": 45,
-			"endLine": 45,
-			"original": "msg.sender",
-			"replace": "tx.origin",
-			"operator": "TOR",
-			"status": null,
-			"testingTime": null,
-			"id": "m14ed01c8"
+			"id": "m6709f24f"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
@@ -5074,55 +4801,55 @@
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 790,
-			"end": 800,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 575,
+			"end": 585,
+			"startLine": 16,
+			"endLine": 16,
 			"original": "1000 ether",
 			"replace": "1000 wei",
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "m1610f9fa"
+			"id": "m1721f38a"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 804,
-			"end": 811,
-			"startLine": 24,
-			"endLine": 24,
+			"start": 589,
+			"end": 596,
+			"startLine": 16,
+			"endLine": 16,
 			"original": "1 ether",
 			"replace": "1 wei",
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "mb80af2ea"
+			"id": "m886d41e5"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1304,
-			"end": 1313,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1078,
+			"end": 1087,
+			"startLine": 28,
+			"endLine": 28,
 			"original": "0.5 ether",
 			"replace": "0.5 wei",
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "m638b60da"
+			"id": "md986a313"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 1317,
-			"end": 1327,
-			"startLine": 37,
-			"endLine": 37,
+			"start": 1091,
+			"end": 1101,
+			"startLine": 28,
+			"endLine": 28,
 			"original": "1000 ether",
 			"replace": "1000 wei",
 			"operator": "VUR",
 			"status": null,
 			"testingTime": null,
-			"id": "m0f4f7249"
+			"id": "mf0f6767d"
 		},
 		{
 			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
@@ -5149,32 +4876,6 @@
 			"status": null,
 			"testingTime": null,
 			"id": "m734da2eb"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 304,
-			"end": 334,
-			"startLine": 9,
-			"endLine": 9,
-			"original": "uint256 public contractBalance",
-			"replace": "uint256 internal contractBalance",
-			"operator": "VVR",
-			"status": null,
-			"testingTime": null,
-			"id": "m517c57f0"
-		},
-		{
-			"file": "/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol",
-			"start": 304,
-			"end": 334,
-			"startLine": 9,
-			"endLine": 9,
-			"original": "uint256 public contractBalance",
-			"replace": "uint256 private contractBalance",
-			"operator": "VVR",
-			"status": null,
-			"testingTime": null,
-			"id": "m58a49733"
 		}
 	]
 }
