@@ -17,22 +17,22 @@ describe("NFTContract", function () {
 
     it("should mint tokens", async function () {
         const { nftContract, owner, addr1, addr2 } = await loadFixture(deployNFTFixture);
-        await nftContract.connect(addr1).mint(0);
+        await nftContract.connect(addr1).freeMint(0);
         const balance = await nftContract.balanceOf(addr1.address, 0);
         expect(balance).to.equal(1);
     });
 
     it("should not mint invalid tokens", async function () {
         const { nftContract, owner, addr1, addr2 } = await loadFixture(deployNFTFixture);
-        await expect(nftContract.connect(addr1).mint(3)).to.be.revertedWith(
+        await expect(nftContract.connect(addr1).freeMint(3)).to.be.revertedWith(
             "This token can only be forged not minted"
         );
     });
 
     it("should not mint if time elapsed is less than 1 minute", async function () {
         const { nftContract, owner, addr1, addr2 } = await loadFixture(deployNFTFixture);
-        await nftContract.connect(addr1).mint(0);
-        await expect(nftContract.connect(addr1).mint(0)).to.be.revertedWith(
+        await nftContract.connect(addr1).freeMint(0);
+        await expect(nftContract.connect(addr1).freeMint(0)).to.be.revertedWith(
             "Cannot mint token yet."
         );
     });
@@ -66,16 +66,16 @@ describe("NFTContract", function () {
 describe("ForgeToken", function () {
     async function deployForgeFixture() {
         let ForgeToken, forgeToken, NFTContract, addr1, owner;
-    
+
         [owner, addr1] = await hre.ethers.getSigners();
         NFTContract = await hre.ethers.getContractFactory("NFTContract");
         const nftContract = await NFTContract.deploy(owner.address);
-    
+
         ForgeToken = await hre.ethers.getContractFactory("ForgeToken");
         forgeToken = await ForgeToken.deploy(nftContract.target);
-    
+
         await nftContract.setForgeContract(forgeToken.target);
-    
+
         return { forgeToken, nftContract, addr1, owner };
     }
 
@@ -83,9 +83,9 @@ describe("ForgeToken", function () {
 
     it("should forge tokens", async function () {
         const { forgeToken, nftContract, addr1, owner } = await loadFixture(deployForgeFixture);
-        await nftContract.connect(owner).mint(0);
+        await nftContract.connect(owner).freeMint(0);
         await time.increase(61);
-        await nftContract.connect(owner).mint(1);
+        await nftContract.connect(owner).freeMint(1);
 
         const initialBalance0 = await nftContract.balanceOf(owner.address, 0);
         const initialBalance1 = await nftContract.balanceOf(owner.address, 1);
@@ -114,7 +114,7 @@ describe("ForgeToken", function () {
     it("should trade tokens", async function () {
         const { forgeToken, nftContract, addr1, owner } = await loadFixture(deployForgeFixture);
 
-        await nftContract.connect(owner).mint(0);
+        await nftContract.connect(owner).freeMint(0);
 
 
         const initialBalance0 = await nftContract.balanceOf(owner.address, BigInt(0));
@@ -126,7 +126,7 @@ describe("ForgeToken", function () {
         const finalBalance0 = await nftContract.balanceOf(owner.address, BigInt(0));
         const finalBalance1 = await nftContract.balanceOf(owner.address, BigInt(1));
 
-        expect(finalBalance0).to.equal(initialBalance0 -  BigInt(1));
+        expect(finalBalance0).to.equal(initialBalance0 - BigInt(1));
         expect(finalBalance1).to.equal(initialBalance1 + BigInt(1));
     });
 
