@@ -19,7 +19,8 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
 
     function withdrawEther(uint256 amount, address target) public onlyOwner {
         require(amount <= address(this).balance, "Insufficient balance");
-        payable(target).transfer(amount);
+        (bool success, ) = target.call{value: amount}("");
+        require(success, "Transfer failed");
     }
 
     function sellBack(uint256 amount) public {
