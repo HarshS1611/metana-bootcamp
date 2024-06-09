@@ -68,6 +68,5 @@ contract NFTMinter is Ownable {
 
     function withdrawToken(address target) external onlyOwner {
         erc20Token.transfer(target, NFT_PRICE);
-        erc721Token.burn(users[msg.sender]);
     }
 }
