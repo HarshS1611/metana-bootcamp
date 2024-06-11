@@ -90,12 +90,13 @@ contract ForgeToken {
     uint256 public constant TOKEN_4 = 4;
     uint256 public constant TOKEN_5 = 5;
     uint256 public constant TOKEN_6 = 6;
+    uint256 public constant amount = 1;
 
     constructor(address _address) {
         nftAddress = NFTContract(_address);
     }
 
-    function ForgeTokenById(uint256 tokenid, uint256 amount) external {
+    function ForgeTokenById(uint256 tokenid) external {
         require(
             tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,
             "This token can only be minted not forged"
@@ -122,7 +123,6 @@ contract ForgeToken {
 
     function tradeToken(
         uint256 tradeTokenId,
-        uint256 tradeAmount,
         uint256 receiveTokenId
     ) external {
         require(tradeTokenId != receiveTokenId, "Cannot trade same token");
@@ -132,10 +132,10 @@ contract ForgeToken {
             tradeTokenId == TOKEN_5 ||
             tradeTokenId == TOKEN_6
         ) {
-            nftAddress.burn(msg.sender, tradeTokenId, tradeAmount);
+            nftAddress.burn(msg.sender, tradeTokenId, amount);
         } else {
-            nftAddress.burn(msg.sender, tradeTokenId, tradeAmount);
-            nftAddress.mintExtra(msg.sender, receiveTokenId, tradeAmount);
+            nftAddress.burn(msg.sender, tradeTokenId, amount);
+            nftAddress.mintExtra(msg.sender, receiveTokenId, amount);
         }
     }
 }
