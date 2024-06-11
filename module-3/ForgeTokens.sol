@@ -20,7 +20,7 @@ abstract contract NFTContract is ERC1155, Ownable {
         ERC1155(
             "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}"
         )
-        Ownable(initialOwner)
+        Ownable()
     {}
 
     mapping(uint256 => string) private _uris;
