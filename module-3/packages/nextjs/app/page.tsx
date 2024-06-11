@@ -15,15 +15,6 @@ const Home: NextPage = () => {
   const selectedNetwork = networks[0].id;
   const [provider, setProvider] = useState(null);
 
-  const [isSelected1, setIsSelected1] = useState(false);
-  const [isSelected2, setIsSelected2] = useState(false);
-  const [isSelected3, setIsSelected3] = useState(false);
-  const [isSelected4, setIsSelected4] = useState(false);
-  const [isSelected5, setIsSelected5] = useState(false);
-  const [isSelected6, setIsSelected6] = useState(false);
-  const [isSelected7, setIsSelected7] = useState(false);
-
-  const [amount, setAmount] = useState(0);
 
   const [txHash, setTxHash] = useState("");
   const [fTxHash, setFTxHash] = useState("");
@@ -35,71 +26,63 @@ const Home: NextPage = () => {
   const [loading6, setLoading6] = useState(false);
   const [loading7, setLoading7] = useState(false);
 
-  const MintToken = async (index: number, amount: number) => {
+  const MintToken = async (index: number) => {
     setFTxHash("");
-    if (amount > 0) {
-      try {
-        const signer = await provider.getSigner();
+    try {
+      const signer = await provider.getSigner();
 
-        const contract = new ethers.Contract(
-          deployedContracts[selectedNetwork].ForgeToken.address,
-          deployedContracts[selectedNetwork].ForgeToken.abi,
-          signer
-        );
-        const tx = await contract.mint(index, amount);
-        await tx.wait();
-        console.log(tx);
-        setLoading1(false);
-        setLoading2(false);
-        setLoading3(false);
-        setTxHash(tx.hash);
-        setAmount(0);
-        alert("Token minted successfully")
-      }
-      catch (e) {
-        console.log(e)
-        setLoading1(false);
-        setLoading2(false);
-        setLoading3(false);
-
-        alert("Invalid token index or amount entered")
-      }
-    } else {
-      alert("Please enter a valid amount")
+      const contract = new ethers.Contract(
+        deployedContracts[selectedNetwork].ForgeToken.address,
+        deployedContracts[selectedNetwork].ForgeToken.abi,
+        signer
+      );
+      const tx = await contract.freeMint(index);
+      await tx.wait();
+      console.log(tx);
+      setLoading1(false);
+      setLoading2(false);
+      setLoading3(false);
+      setTxHash(tx.hash);
+      alert("Token minted successfully")
     }
+    catch (e) {
+      console.log(e)
+      setLoading1(false);
+      setLoading2(false);
+      setLoading3(false);
+
+      alert("Cannot claim more than one token every 1 minute")
+    }
+
   };
-  const ForgeToken = async (index: number, amount: number) => {
+  const ForgeToken = async (index: number) => {
     setTxHash("");
-    if (amount > 0) {
-      try {
-        const signer = await provider.getSigner();
+    try {
+      const signer = await provider.getSigner();
 
-        const contract = new ethers.Contract(
-          deployedContracts[selectedNetwork].ForgeToken.address,
-          deployedContracts[selectedNetwork].ForgeToken.abi,
-          signer
-        );
-        const tx = await contract.ForgeTokenById(index, amount);
-        await tx.wait();
-        console.log(tx);
-        setAmount(0);
-        setFTxHash(tx.hash);
-        setLoading4(false);
-        setLoading5(false);
-        setLoading6(false);
-        setLoading7(false);
-        alert("Token forged successfully")
-      } catch (e) {
-        console.log(e)
-        setLoading4(false);
-        setLoading5(false);
-        setLoading6(false);
-        setLoading7(false);
-        alert("You do not have enough tokens to forge")
-      }
-    } else {
-      alert("Please enter a valid amount")
+      const contract = new ethers.Contract(
+        deployedContracts[selectedNetwork].ForgeToken.address,
+        deployedContracts[selectedNetwork].ForgeToken.abi,
+        signer
+      );
+      const tx = await contract.ForgeTokenById(index);
+      await tx.wait();
+      console.log(tx);
+      setFTxHash(tx.hash);
+      setLoading4(false);
+      setLoading5(false);
+      setLoading6(false);
+      setLoading7(false);
+      alert("Token forged successfully")
+    } catch (e) {
+      console.log(e)
+      setLoading4(false);
+      setLoading5(false);
+      setLoading6(false);
+      setLoading7(false);
+      alert("You do not have enough tokens to forge")
     }
+
   }
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -157,25 +140,17 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/0.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:0" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0x8f40eC69C6841Df15c11618C10DE2F78F7Bd7fd9:0" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Legendary Sword <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">A powerful sword forged by ancient dwarven blacksmiths. Grants +25 Attack Power.</p>
-                  {isSelected1 ? (
-                    <div className="flex gap-4">   <input type="number" onChange={(e) => setAmount(Number(e.target.value))} className=" p-2 bg-gray-200 rounded-lg text-black" />
-                      <button onClick={() => {
-                        MintToken(0, amount);
-                        setIsSelected1(false);
-                      }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Mint</button></div>
-                  ) : <>
-                    {
-                      loading1 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
-                        setIsSelected1(true);
-                        setLoading1(true)
-                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
-                    }
-                  </>
+
+                  {loading1 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
+                    MintToken(0);
+                    setLoading1(true)
+                  }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
                   }
+
 
                 </div>
               </div>
@@ -186,24 +161,17 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/1.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:1" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0x8f40eC69C6841Df15c11618C10DE2F78F7Bd7fd9:1" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Pixel Landscapes <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">A collection of pixel art landscapes created by a renowned digital artist.</p>
-                  {isSelected2 ? (
-                    <div className="flex gap-4">   <input type="number" onChange={(e) => setAmount(Number(e.target.value))} className=" p-2 bg-gray-200 rounded-lg text-black" />
-                      <button onClick={() => {
-                        MintToken(1, amount);
-                        setIsSelected2(false);
-                      }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Mint</button></div>
-                  ) : <>
-                    {
-                      loading2 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
-                        setIsSelected2(true);
-                        setLoading2(true)
-                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
-                    }
-                  </>}
+
+                  {
+                    loading2 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
+                      MintToken(1); setLoading2(true)
+                    }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
+                  }
+
                 </div>
               </div>
 
@@ -213,23 +181,17 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/2.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:2" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0x8f40eC69C6841Df15c11618C10DE2F78F7Bd7fd9:2" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">CryptoPup #412 <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">An adorable digital puppy from the CryptoPets collection.</p>
-                  {isSelected3 ? (
-                    <div className="absolute bottom-4 flex gap-4">   <input type="number" onChange={(e) => setAmount(Number(e.target.value))} className=" p-2 bg-gray-200 rounded-lg text-black" />
-                      <button onClick={() => {
-                        MintToken(2, amount);
-                        setIsSelected3(false);
-                      }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Mint</button></div>
-                  ) : <>
-                    {
-                      loading3 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
-                        setIsSelected3(true);
-                        setLoading3(true)
-                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
-                    }                    </>}
+
+                  {
+                    loading3 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Minting...</button> : <button onClick={() => {
+                      MintToken(2);
+                      setLoading3(true)
+                    }} className=" p-2 bg-blue-700 rounded-lg text-white">Mint Token</button>
+                  }
                 </div>
               </div>
 
@@ -239,23 +201,17 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/3.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:3" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0x8f40eC69C6841Df15c11618C10DE2F78F7Bd7fd9:3" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Cyber Shades<FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">A pair of stylish augmented reality shades for your digital avatar.</p>
-                  {isSelected4 ? (
-                    <div className="flex gap-4">   <input type="number" onChange={(e) => setAmount(Number(e.target.value))} className=" p-2 bg-gray-200 rounded-lg text-black" />
-                      <button onClick={() => {
-                        ForgeToken(3, amount);
-                        setIsSelected4(false);
-                      }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
-                  ) : <>
-                    {
-                      loading4 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
-                        setIsSelected4(true);
-                        setLoading4(true)
-                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
-                    }                    </>}
+
+                  {
+                    loading4 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                      ForgeToken(3);
+                      setLoading4(true)
+                    }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                  }
                 </div>
               </div>
 
@@ -265,24 +221,18 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/4.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:4" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0x8f40eC69C6841Df15c11618C10DE2F78F7Bd7fd9:4" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl  font-bold tracking-tight text-gray-900 dark:text-white">Fractal Dreamscapes <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">A mesmerizing fractal artwork from the Dreamscapes collection by artist Kai-Xu.</p>
-                  {isSelected5 ? (
-                    <div className="flex gap-4">   <input type="number" onChange={(e) => setAmount(Number(e.target.value))} className=" p-2 bg-gray-200 rounded-lg text-black" />
-                      <button onClick={() => {
-                        ForgeToken(4, amount);
-                        setIsSelected5(false);
-                      }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
-                  ) : <>
-                    {
-                      loading5 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
-                        setIsSelected5(true);
-                        setLoading5(true)
-                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
-                    }
-                  </>}
+
+                  {
+                    loading5 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                      ForgeToken(4);
+                      setLoading5(true)
+                    }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                  }
+
                 </div>
               </div>
 
@@ -292,24 +242,18 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/5.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:5" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0x8f40eC69C6841Df15c11618C10DE2F78F7Bd7fd9:5" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-80 font-bold tracking-tight text-gray-900 dark:text-white">MetaCity Penthouse <FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">A luxurious penthouse in the heart of the MetaCity virtual world.</p>
-                  {isSelected6 ? (
-                    <div className="flex gap-4 absolute bottom-4">   <input type="number" onChange={(e) => setAmount(Number(e.target.value))} className=" p-2 bg-gray-200 rounded-lg text-black" />
-                      <button onClick={() => {
-                        ForgeToken(5, amount);
-                        setIsSelected6(false);
-                      }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
-                  ) : <>
-                    {
-                      loading6 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
-                        setIsSelected6(true);
-                        setLoading6(true)
-                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
-                    }
-                  </>}
+
+                  {
+                    loading6 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                      ForgeToken(5);
+                      setLoading6(true)
+                    }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                  }
+
                 </div>
               </div>
 
@@ -319,24 +263,18 @@ const Home: NextPage = () => {
                   <img className="rounded-t-lg w-96 h-48" src="./assets/6.jpeg" alt="" />
                 </div>
                 <div className="p-5">
-                  <a href="https://testnet.rarible.com/token/polygon/0xcee39b3c74a75f797182cd51ec18c9bb0144fffb:6" target="blank">
+                  <a href="https://testnet.rarible.com/token/polygon/0x8f40eC69C6841Df15c11618C10DE2F78F7Bd7fd9:6" target="blank">
                     <h5 className="flex items-center gap-2 mb-2 text-2xl w-60 font-bold tracking-tight text-gray-900 dark:text-white">Cyber Kicks 2.0<FaExternalLinkAlt className="h-4 w-4" /></h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">The latest edition of the popular Cyber Kicks digital sneakers.</p>
-                  {isSelected7 ? (
-                    <div className="absolute bottom-4 flex gap-4">   <input type="number" onChange={(e) => setAmount(Number(e.target.value))} className=" p-2 bg-gray-200 rounded-lg text-black" />
-                      <button onClick={() => {
-                        ForgeToken(6, amount);
-                        setIsSelected7(false);
-                      }} className="px-4 p-2 bg-blue-700 rounded-lg text-white">Forge</button></div>
-                  ) : <>
-                    {
-                      loading7 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
-                        setIsSelected7(true);
-                        setLoading7(true)
-                      }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
-                    }
-                  </>}
+
+                  {
+                    loading7 ? <button className="p-2 bg-blue-700 rounded-lg text-white" disabled>Forging...</button> : <button onClick={() => {
+                      ForgeToken(6);
+                      setLoading7(true)
+                    }} className=" p-2 bg-blue-700 rounded-lg text-white">Forge Token</button>
+                  }
+
                 </div>
               </div>
 

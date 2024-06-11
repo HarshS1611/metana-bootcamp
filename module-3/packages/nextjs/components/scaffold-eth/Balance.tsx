@@ -17,6 +17,7 @@ type BalanceProps = {
  */
 export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
   const { targetNetwork } = useTargetNetwork();
+  //@ts-ignore
   const price = useGlobalState(state => state.nativeCurrencyPrice);
   const {
     data: balance,

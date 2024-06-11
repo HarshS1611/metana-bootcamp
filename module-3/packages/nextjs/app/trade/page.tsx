@@ -20,9 +20,7 @@ const Home: NextPage = () => {
     const [recieveDropDown, setRecieveDropdownOpen] = useState(false)
 
     const [tradeId, setTradeId] = useState(10)
-    const [amount, setAmount] = useState(0);
     const [recieveId, setRecieveId] = useState(0);
-    const [tradeBalance, setTradeBalance] = useState(0);
 
     const [tradeName, setTradeName] = useState("Select Trade Token ");
     const [recieveName, setRecieveName] = useState("Select Recieve Token");
@@ -35,7 +33,7 @@ const Home: NextPage = () => {
 
     const TradeToken = async () => {
 
-        if (amount > 0 && tradeBalance >= amount && recieveId >= 0 && tradeId >= 0 && tradeId !== recieveId) {
+        if (recieveId >= 0 && tradeId >= 0 && tradeId !== recieveId) {
             setLoading(true);
 
             try {
@@ -46,12 +44,11 @@ const Home: NextPage = () => {
                     deployedContracts[selectedNetwork].ForgeToken.abi,
                     signer
                 );
-                const tx = await contract.tradeToken(tradeId, amount, recieveId);
+                const tx = await contract.tradeToken(tradeId, recieveId);
                 await tx.wait();
                 setLoading(false);
                 console.log(tx);
                 setTxHash(tx.hash);
-                setAmount(0);
                 setTradeName("Select Trade Token")
                 setRecieveName("Select Recieve Token")
                 alert("Token traded successfully")
@@ -66,35 +63,7 @@ const Home: NextPage = () => {
         }
     };
 
-    const contract = new ethers.Contract(
-        deployedContracts[selectedNetwork].ForgeToken.address,
-        deployedContracts[selectedNetwork].ForgeToken.abi,
-        provider
-    );
 
-    const fetchAccountBalance = async () => {
-        console.log("Fetching account balance");
-        console.log("Connected Address:", connectedAddress);
-        console.log("Trade ID:", tradeId);
-        console.log(provider);
-
-        if (!connectedAddress) {
-            console.error("Invalid arguments for balanceOf");
-            return;
-        }
-        try {
-            const resp = await contract.balanceOf(connectedAddress, Number(tradeId));
-            console.log(Number(resp));
-            setAmount(0);
-            setTradeBalance(Number(resp));
-        } catch (error) {
-            console.error("Error fetching account balance:", error);
-        }
-    };
-
-    useEffect(() => {
-        fetchAccountBalance();
-    }, [tradeId]);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -180,11 +149,7 @@ const Home: NextPage = () => {
                    
                             </div>}
                         </div>
-                        {/* {tradeName && <p className="text-center text-md">Trade Token: {tradeName}</p>} */}
-                        <div className="relative">
-                            <input type="number" value={amount} onChange={(e) => setAmount(Number(e.target.value))} placeholder="Enter Amount" className="w-full h-10 border border-gray-300 rounded-md px-3" />
-                            <span onClick={() => setAmount(tradeBalance)} className="cursor-pointer absolute right-5 top-[10px] text-sm text-gray-400 flex items-center">MAX : {tradeBalance}</span>
-                        </div>
+                       
                         <div className="relative "><button className="flex justify-between gap-1 bg-base-300 pr-2 rounded-lg pl-4 py-2 items-center w-full" onClick={() => setRecieveDropdownOpen(!recieveDropDown)}>{recieveName}
                             <div className=" flex w-6 items-center justify-start">
                                 <IoIosArrowDown className="text-gray-600 group-open:rotate-180" />

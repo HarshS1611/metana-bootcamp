@@ -52,6 +52,7 @@ export const EtherInput = ({
   usdMode,
 }: CommonInputProps & { usdMode?: boolean }) => {
   const [transitoryDisplayValue, setTransitoryDisplayValue] = useState<string>();
+  //@ts-ignore
   const nativeCurrencyPrice = useGlobalState(state => state.nativeCurrencyPrice);
   const [internalUsdMode, setInternalUSDMode] = useState(nativeCurrencyPrice > 0 ? Boolean(usdMode) : false);
 
