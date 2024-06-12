@@ -11,3 +11,7 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.js
 ```
+
+## Solidity Coverage:
+
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/52f27d25-bbc9-4129-9218-705f52c4cd82)
