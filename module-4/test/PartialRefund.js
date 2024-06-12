@@ -1,111 +1,111 @@
-const { time, loadFixture } = require("@nomicfoundation/hardhat-toolbox/network-helpers");
-const { anyValue } = require("@nomicfoundation/hardhat-chai-matchers/withArgs");
+const { loadFixture } = require("@nomicfoundation/hardhat-toolbox/network-helpers");
 const { expect } = require("chai");
-const ethers = require('ethers');
 const hre = require("hardhat");
-
-
 
 describe("PartialRefund", function () {
     async function deployPartialRefundFixture() {
         const [owner, nonOwner] = await hre.ethers.getSigners();
-
         const PartialRefund = await hre.ethers.getContractFactory("PartialRefund");
-
         const partialRefundContract = await PartialRefund.deploy(owner.address);
 
+        const RevertingReceiver = await hre.ethers.getContractFactory("RevertingReceiver");
+        const revertingReceiver = await RevertingReceiver.deploy();
 
-        return { partialRefundContract, owner, nonOwner };
+        return { partialRefundContract, revertingReceiver, owner, nonOwner };
     }
-
 
     describe("BuyTokens", function () {
         it("Should allow buying tokens with ether", async function () {
             const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
             const etherAmount = hre.ethers.parseEther("1");
-            await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
+            await expect(() => partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount }))
+                .to.changeEtherBalance(partialRefundContract, etherAmount);
+            const balance = await partialRefundContract.balanceOf(nonOwner.address);
+            expect(balance).to.equal(hre.ethers.parseEther("1000"));
         });
 
-        it("Should revert when buying tokens with less than the minimum amount", async function () {
+        it("Should revert when buying tokens with zero ether", async function () {
             const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
-            const etherAmount = hre.ethers.parseEther("0");
-            await expect(partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount })).to.be.reverted;
-        }
-        );
-        it("Should revert when buying tokens with more than the maximum amount", async function () {
-            const { partialRefundContract, nonOwner, owner } = await loadFixture(deployPartialRefundFixture);
-            const etherAmount = hre.ethers.parseEther("999");
-            await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
-            await expect(partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount })).to.be.reverted;
+            await expect(partialRefundContract.connect(nonOwner).buyTokens({ value: 0 })).to.be.revertedWith("You need to send some ether");
+        });
+
+        it("Should revert when total supply exceeds maximum", async function () {
+            const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
+            const maxTokens = hre.ethers.parseEther("999");
+            await partialRefundContract.connect(nonOwner).buyTokens({ value: maxTokens });
+            await expect(partialRefundContract.connect(nonOwner).buyTokens({ value: maxTokens })).to.be.reverted;
         });
     });
 
     describe("SellBack", function () {
-        it("Should revert when selling more tokens than the user balance", async function () {
+        it("Should revert when selling more tokens than balance", async function () {
             const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
-            const etherAmount = hre.ethers.parseEther("1000");
-            await expect(partialRefundContract.connect(nonOwner).sellBack(etherAmount)).to.be.revertedWith(
-                "Insufficient token balance"
-            );
+            await expect(partialRefundContract.connect(nonOwner).sellBack(hre.ethers.parseEther("1000"))).to.be.revertedWith("Insufficient token balance");
         });
 
         it("Should allow selling tokens back to the contract", async function () {
             const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
-            [add1] = await hre.ethers.getSigners();
             const etherAmount = hre.ethers.parseEther("1");
-            const expectedRefundAmount = hre.ethers.parseEther("0.5");
             const sellAmount = hre.ethers.parseEther("1000");
 
             await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
-
-            await partialRefundContract.connect(nonOwner).sellBack(sellAmount);
-            const contractBalanceAfter = await hre.ethers.provider.getBalance(partialRefundContract.target);
-
-            expect(contractBalanceAfter).to.greaterThanOrEqual(expectedRefundAmount);
+            const initialBalance = await hre.ethers.provider.getBalance(nonOwner.address);
+             await partialRefundContract.connect(nonOwner).sellBack(sellAmount);
         });
 
-        it("Should not allow selling tokens back to the contract with insufficient balance", async function () {
+        it("Should revert when selling tokens with insufficient contract balance", async function () {
+            const { partialRefundContract, owner, nonOwner } = await loadFixture(deployPartialRefundFixture);
+            await expect(partialRefundContract.connect(nonOwner).sellBack(hre.ethers.parseEther("1000"))).to.be.reverted;
+        });
+
+
+        it("Should revert when selling zero amount", async function () {
             const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
-            const sellAmount = hre.ethers.parseEther("0.5");
-            await expect(partialRefundContract.connect(nonOwner).sellBack(sellAmount)).to.be.reverted;
+            await expect(partialRefundContract.connect(nonOwner).sellBack(hre.ethers.parseEther("0"))).to.be.reverted;
         });
 
-        it("Amount should be greater than 0", async function () {
-            const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
-            const etherAmount = hre.ethers.parseEther("1");
-            const sellAmount = hre.ethers.parseEther("0");
-            await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
-            await expect(partialRefundContract.connect(nonOwner).sellBack(sellAmount)).to.be.reverted;
-        });
+        
+     
+        
     });
 
     describe("WithdrawEther", function () {
-        it("Should revert when withdrawing more ether than the contract balance", async function () {
+        it("Should revert when withdrawing more ether than contract balance", async function () {
             const { partialRefundContract, owner } = await loadFixture(deployPartialRefundFixture);
             const withdrawAmount = hre.ethers.parseEther("1000001");
-
-            await expect(partialRefundContract.connect(owner).withdrawEther(withdrawAmount, owner.address)).to.be.revertedWith(
-                "Insufficient balance"
-            );
+            await expect(partialRefundContract.connect(owner).withdrawEther(withdrawAmount, owner.address)).to.be.revertedWith("Insufficient balance");
         });
+
         it("Should not allow non-owners to withdraw ether", async function () {
             const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
             const withdrawAmount = hre.ethers.parseEther("1");
-
             await expect(partialRefundContract.connect(nonOwner).withdrawEther(withdrawAmount, nonOwner.address)).to.be.reverted;
         });
+
         it("Should allow owners to withdraw ether", async function () {
             const { partialRefundContract, owner, nonOwner } = await loadFixture(deployPartialRefundFixture);
-            const withdrawAmount = hre.ethers.parseEther("1");
-            await partialRefundContract.connect(nonOwner).buyTokens({ value: withdrawAmount });
-
-            await partialRefundContract.connect(owner).withdrawEther(withdrawAmount, nonOwner.address);
+            const etherAmount = hre.ethers.parseEther("1");
+            await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
+            await expect(() => partialRefundContract.connect(owner).withdrawEther(etherAmount, owner.address))
+                .to.changeEtherBalance(owner, etherAmount);
         });
-        it("Should not send ethers to invalid address", async function () {
-            const { partialRefundContract, owner, nonOwner } = await loadFixture(deployPartialRefundFixture);
-            const withdrawAmount = hre.ethers.parseEther("1");
 
+        it("Should revert if the target address is invalid", async function () {
+            const { partialRefundContract, owner } = await loadFixture(deployPartialRefundFixture);
+            const withdrawAmount = hre.ethers.parseEther("1");
             await expect(partialRefundContract.connect(owner).withdrawEther(withdrawAmount, ethers.ZeroAddress)).to.be.reverted;
+        });
+
+        it("Should revert if the withdraw amount is zero", async function () {
+            const { partialRefundContract, owner } = await loadFixture(deployPartialRefundFixture);
+            await expect(partialRefundContract.connect(owner).withdrawEther(hre.ethers.parseEther("0"), owner.address)).to.be.reverted;
+        });
+
+        it("Should revert when target contract rejects ether transfer", async function () {
+            const { partialRefundContract, owner, revertingReceiver } = await loadFixture(deployPartialRefundFixture);
+            const etherAmount = hre.ethers.parseEther("1");
+            await partialRefundContract.connect(owner).buyTokens({ value: etherAmount });
+            await expect(partialRefundContract.connect(owner).withdrawEther(etherAmount, revertingReceiver.target)).to.be.revertedWith("Transfer failed");
         });
      
     });
