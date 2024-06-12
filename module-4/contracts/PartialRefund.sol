@@ -18,12 +18,14 @@ contract PartialRefund is ERC20Capped, Ownable2Step {
     }
 
     function withdrawEther(uint256 amount, address target) public onlyOwner {
+        require(target != address(0), "Invalid target address");
         require(amount <= address(this).balance, "Insufficient balance");
         (bool success, ) = target.call{value: amount}("");
         require(success, "Transfer failed");
     }
 
     function sellBack(uint256 amount) public {
+        require(amount > 0, "Amount must be greater than 0");
         require(amount <= balanceOf(msg.sender), "Insufficient token balance");
         uint256 refundAmount = ((amount * 0.5 ether) / 1000 ether);
         require(

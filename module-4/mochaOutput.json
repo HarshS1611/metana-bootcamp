@@ -1,0 +1,252 @@
+{
+ "stats": {
+  "suites": 9,
+  "tests": 17,
+  "passes": 17,
+  "pending": 0,
+  "failures": 0
+ },
+ "tests": [
+  {
+   "title": "should forge tokens",
+   "fullTitle": "ForgeTokenContract ForgeToken should forge tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not forge invalid tokens",
+   "fullTitle": "ForgeTokenContract ForgeToken should not forge invalid tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should mint tokens",
+   "fullTitle": "ForgeTokenContract Mint Token should mint tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not mint invalid tokens",
+   "fullTitle": "ForgeTokenContract Mint Token should not mint invalid tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not mint if time elapsed is less than 1 minute",
+   "fullTitle": "ForgeTokenContract Mint Token should not mint if time elapsed is less than 1 minute",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should trade tokens",
+   "fullTitle": "ForgeTokenContract Trade Token should trade tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not trade same tokens",
+   "fullTitle": "ForgeTokenContract Trade Token should not trade same tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should set token URI",
+   "fullTitle": "ForgeTokenContract URI should set token URI",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not set token URI twice",
+   "fullTitle": "ForgeTokenContract URI should not set token URI twice",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not set token URI if not owner",
+   "fullTitle": "ForgeTokenContract URI should not set token URI if not owner",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should allow buying tokens with ether",
+   "fullTitle": "PartialRefund BuyTokens Should allow buying tokens with ether",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when buying tokens with less than the minimum amount",
+   "fullTitle": "PartialRefund BuyTokens Should revert when buying tokens with less than the minimum amount",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when buying tokens with more than the maximum amount",
+   "fullTitle": "PartialRefund BuyTokens Should revert when buying tokens with more than the maximum amount",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when selling more tokens than the user balance",
+   "fullTitle": "PartialRefund SellBack Should revert when selling more tokens than the user balance",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should allow selling tokens back to the contract",
+   "fullTitle": "PartialRefund SellBack Should allow selling tokens back to the contract",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when withdrawing more ether than the contract balance",
+   "fullTitle": "PartialRefund WithdrawEther Should revert when withdrawing more ether than the contract balance",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should not allow non-owners to withdraw ether",
+   "fullTitle": "PartialRefund WithdrawEther Should not allow non-owners to withdraw ether",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  }
+ ],
+ "failures": [],
+ "passes": [
+  {
+   "title": "should forge tokens",
+   "fullTitle": "ForgeTokenContract ForgeToken should forge tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not forge invalid tokens",
+   "fullTitle": "ForgeTokenContract ForgeToken should not forge invalid tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should mint tokens",
+   "fullTitle": "ForgeTokenContract Mint Token should mint tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not mint invalid tokens",
+   "fullTitle": "ForgeTokenContract Mint Token should not mint invalid tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not mint if time elapsed is less than 1 minute",
+   "fullTitle": "ForgeTokenContract Mint Token should not mint if time elapsed is less than 1 minute",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should trade tokens",
+   "fullTitle": "ForgeTokenContract Trade Token should trade tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not trade same tokens",
+   "fullTitle": "ForgeTokenContract Trade Token should not trade same tokens",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should set token URI",
+   "fullTitle": "ForgeTokenContract URI should set token URI",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not set token URI twice",
+   "fullTitle": "ForgeTokenContract URI should not set token URI twice",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "should not set token URI if not owner",
+   "fullTitle": "ForgeTokenContract URI should not set token URI if not owner",
+   "file": "test/ForgeToken.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should allow buying tokens with ether",
+   "fullTitle": "PartialRefund BuyTokens Should allow buying tokens with ether",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when buying tokens with less than the minimum amount",
+   "fullTitle": "PartialRefund BuyTokens Should revert when buying tokens with less than the minimum amount",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when buying tokens with more than the maximum amount",
+   "fullTitle": "PartialRefund BuyTokens Should revert when buying tokens with more than the maximum amount",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when selling more tokens than the user balance",
+   "fullTitle": "PartialRefund SellBack Should revert when selling more tokens than the user balance",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should allow selling tokens back to the contract",
+   "fullTitle": "PartialRefund SellBack Should allow selling tokens back to the contract",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should revert when withdrawing more ether than the contract balance",
+   "fullTitle": "PartialRefund WithdrawEther Should revert when withdrawing more ether than the contract balance",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Should not allow non-owners to withdraw ether",
+   "fullTitle": "PartialRefund WithdrawEther Should not allow non-owners to withdraw ether",
+   "file": "test/PartialRefund.js",
+   "currentRetry": 0,
+   "err": {}
+  }
+ ]
+}

@@ -32,6 +32,12 @@ describe("PartialRefund", function () {
             await expect(partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount })).to.be.reverted;
         }
         );
+        it("Should revert when buying tokens with more than the maximum amount", async function () {
+            const { partialRefundContract, nonOwner, owner } = await loadFixture(deployPartialRefundFixture);
+            const etherAmount = hre.ethers.parseEther("999");
+            await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
+            await expect(partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount })).to.be.reverted;
+        });
     });
 
     describe("SellBack", function () {
@@ -57,6 +63,20 @@ describe("PartialRefund", function () {
 
             expect(contractBalanceAfter).to.greaterThanOrEqual(expectedRefundAmount);
         });
+
+        it("Should not allow selling tokens back to the contract with insufficient balance", async function () {
+            const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
+            const sellAmount = hre.ethers.parseEther("0.5");
+            await expect(partialRefundContract.connect(nonOwner).sellBack(sellAmount)).to.be.reverted;
+        });
+
+        it("Amount should be greater than 0", async function () {
+            const { partialRefundContract, nonOwner } = await loadFixture(deployPartialRefundFixture);
+            const etherAmount = hre.ethers.parseEther("1");
+            const sellAmount = hre.ethers.parseEther("0");
+            await partialRefundContract.connect(nonOwner).buyTokens({ value: etherAmount });
+            await expect(partialRefundContract.connect(nonOwner).sellBack(sellAmount)).to.be.reverted;
+        });
     });
 
     describe("WithdrawEther", function () {
@@ -74,5 +94,19 @@ describe("PartialRefund", function () {
 
             await expect(partialRefundContract.connect(nonOwner).withdrawEther(withdrawAmount, nonOwner.address)).to.be.reverted;
         });
+        it("Should allow owners to withdraw ether", async function () {
+            const { partialRefundContract, owner, nonOwner } = await loadFixture(deployPartialRefundFixture);
+            const withdrawAmount = hre.ethers.parseEther("1");
+            await partialRefundContract.connect(nonOwner).buyTokens({ value: withdrawAmount });
+
+            await partialRefundContract.connect(owner).withdrawEther(withdrawAmount, nonOwner.address);
+        });
+        it("Should not send ethers to invalid address", async function () {
+            const { partialRefundContract, owner, nonOwner } = await loadFixture(deployPartialRefundFixture);
+            const withdrawAmount = hre.ethers.parseEther("1");
+
+            await expect(partialRefundContract.connect(owner).withdrawEther(withdrawAmount, ethers.ZeroAddress)).to.be.reverted;
+        });
+     
     });
 });
