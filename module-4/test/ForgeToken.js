@@ -14,33 +14,32 @@ describe("ForgeTokenContract", function () {
         ForgeToken = await hre.ethers.getContractFactory("ForgeToken");
         forgeToken = await ForgeToken.deploy(owner.address);
 
-        return { forgeToken, addr1, owner };
+        return { forgeToken, ForgeToken, addr1, owner };
     }
     describe("ForgeToken", function () {
 
+        it("should forge token 3", async function () {
+            const { forgeToken, addr1 } = await loadFixture(deployForgeFixture);
+            await forgeToken.connect(addr1).freeMint(0);
+            await time.increase(61);
+            await forgeToken.connect(addr1).freeMint(1);
 
-        // it("should forge token 3", async function () {
-        //     const { forgeToken, addr1 } = await loadFixture(deployForgeFixture);
-        //     await forgeToken.connect(addr1).freeMint(0);
-        //     await time.increase(61);
-        //     await forgeToken.connect(addr1).freeMint(1);
+            const initialBalance0 = await forgeToken.balanceOf(addr1.address, 0);
+            const initialBalance1 = await forgeToken.balanceOf(addr1.address, 1);
+            const initialBalance2 = await forgeToken.balanceOf(addr1.address, 2);
 
-        //     const initialBalance0 = await forgeToken.balanceOf(addr1.address, 0);
-        //     const initialBalance1 = await forgeToken.balanceOf(addr1.address, 1);
-        //     const initialBalance2 = await forgeToken.balanceOf(addr1.address, 2);
+            await forgeToken.connect(addr1).ForgeTokenById(3);
 
-        //     await forgeToken.connect(addr1).ForgeTokenById(3);
+            const finalBalance0 = await forgeToken.balanceOf(addr1.address, 0);
+            const finalBalance1 = await forgeToken.balanceOf(addr1.address, 1);
+            const finalBalance2 = await forgeToken.balanceOf(addr1.address, 2);
+            const finalBalance3 = await forgeToken.balanceOf(addr1.address, 3);
 
-        //     const finalBalance0 = await forgeToken.balanceOf(addr1.address, 0);
-        //     const finalBalance1 = await forgeToken.balanceOf(addr1.address, 1);
-        //     const finalBalance2 = await forgeToken.balanceOf(addr1.address, 2);
-        //     const finalBalance3 = await forgeToken.balanceOf(addr1.address, 3);
-
-        //     expect(finalBalance0).to.equal(initialBalance0 - BigInt(1));
-        //     expect(finalBalance1).to.equal(initialBalance1 - BigInt(1));
-        //     expect(finalBalance2).to.equal(initialBalance2);
-        //     expect(finalBalance3).to.equal(BigInt(1));
-        // });
+            expect(finalBalance0).to.equal(initialBalance0 - BigInt(1));
+            expect(finalBalance1).to.equal(initialBalance1 - BigInt(1));
+            expect(finalBalance2).to.equal(initialBalance2);
+            expect(finalBalance3).to.equal(BigInt(1));
+        });
         it("should forge token 4", async function () {
             const { forgeToken, addr1 } = await loadFixture(deployForgeFixture);
             await forgeToken.connect(addr1).freeMint(1);
@@ -153,24 +152,24 @@ describe("ForgeTokenContract", function () {
     );
 
     describe("Trade Token", function () {
-        it("should trade non-forged tokens", async function () {
-            const { forgeToken, addr1 } = await loadFixture(deployForgeFixture);
+        // it("should trade non-forged tokens", async function () {
+        //     const { forgeToken, addr1 } = await loadFixture(deployForgeFixture);
 
-            await forgeToken.connect(addr1).freeMint(0);
-
-
-            const initialBalance0 = await forgeToken.balanceOf(addr1.address, BigInt(0));
-            const initialBalance1 = await forgeToken.balanceOf(addr1.address, BigInt(1));
+        //     await forgeToken.connect(addr1).freeMint(0);
 
 
-            await forgeToken.connect(addr1).tradeToken(0, 1);
+        //     const initialBalance0 = await forgeToken.balanceOf(addr1.address, BigInt(0));
+        //     const initialBalance1 = await forgeToken.balanceOf(addr1.address, BigInt(1));
 
-            const finalBalance0 = await forgeToken.balanceOf(addr1.address, BigInt(0));
-            const finalBalance1 = await forgeToken.balanceOf(addr1.address, BigInt(1));
 
-            expect(finalBalance0).to.equal(initialBalance0 - BigInt(1));
-            expect(finalBalance1).to.equal(initialBalance1 + BigInt(1));
-        });
+        //     await forgeToken.connect(addr1).tradeToken(0, 1);
+
+        //     const finalBalance0 = await forgeToken.balanceOf(addr1.address, BigInt(0));
+        //     const finalBalance1 = await forgeToken.balanceOf(addr1.address, BigInt(1));
+
+        //     expect(finalBalance0).to.equal(initialBalance0 - BigInt(1));
+        //     expect(finalBalance1).to.equal(initialBalance1 + BigInt(1));
+        // });
 
         it("should not trade same tokens", async function () {
             const { forgeToken, addr1 } = await loadFixture(deployForgeFixture);
@@ -202,6 +201,7 @@ describe("ForgeTokenContract", function () {
         });
 
 
+
     });
 
     describe("URI", function () {
@@ -227,5 +227,6 @@ describe("ForgeTokenContract", function () {
             const uri = "https://example.com/token/{id}.json";
             await expect(forgeToken.connect(addr1).setTokenUri(0, uri)).to.be.reverted;
         });
+
     });
 });

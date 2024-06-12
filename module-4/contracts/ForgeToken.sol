@@ -67,11 +67,13 @@ contract ForgeToken is NFTContract {
             _burn(msg.sender, TOKEN_0, amount);
             _burn(msg.sender, TOKEN_1, amount);
             _mint(msg.sender, tokenid, amount, '');
-        } else if (tokenid == 4) {
+        }
+         else if (tokenid == 4) {
             _burn(msg.sender, TOKEN_1, amount);
             _burn(msg.sender, TOKEN_2, amount);
             _mint(msg.sender, tokenid, amount, '');
-        } else if (tokenid == 5) {
+        } 
+        else if (tokenid == 5) {
             _burn(msg.sender, TOKEN_0, amount);
             _burn(msg.sender, TOKEN_2, amount);
             _mint(msg.sender, tokenid, amount, '');
