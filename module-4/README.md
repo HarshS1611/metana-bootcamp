@@ -11,7 +11,15 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.js
 ```
+## For slither:
+run ` slither . `
+
+## For mutation testing:
+run ` npx sumo test `
+
+## For solidity coverage:
+run ` npx hardhat coverage `
 
 ## Solidity Coverage:
 
-![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/52f27d25-bbc9-4129-9218-705f52c4cd82)
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/112b189a-1e48-43d6-8b75-60b979790da6)
