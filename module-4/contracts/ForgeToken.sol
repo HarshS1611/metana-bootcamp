@@ -3,7 +3,6 @@ pragma solidity 0.8.22;
 
 import '@openzeppelin/contracts/token/ERC1155/ERC1155.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
-import '@openzeppelin/contracts/utils/Strings.sol';
 
 abstract contract NFTContract is ERC1155, Ownable {
     uint256 public constant TOKEN_0 = 0;
