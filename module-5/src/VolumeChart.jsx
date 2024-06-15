@@ -15,20 +15,20 @@ export default function VolumeChart() {
   const [blockNumber, setBlockNumber] = useState([]);
   const [volume, setVolume] = useState([]);
   const [gasPrice, setGasPrice] = useState([]);
+  const [gasRatio, setGasRatio] = useState([]);
 
   useEffect(() => {
     const initWeb3 = async () => {
       const latestBlock = await alchemy.core.getBlock();
-      console.log((Number(latestBlock.baseFeePerGas) / 10e8), latestBlock.number);
 
       const fromBlock = latestBlock.number - 9;
 
       for (let i = fromBlock; i <= latestBlock.number; i++) {
         const block = await alchemy.core.getBlock(i);
-        console.log(block.number, block.transactions.length);
         setBlockNumber((prev) => [...prev, block.number]);
         setVolume((prev) => [...prev, block.transactions.length]);
         setGasPrice((prev) => [...prev, Number(block.baseFeePerGas) / 10e8]);
+        setGasRatio((prev) => [...prev, (Number(block.gasUsed) / Number(block.gasLimit)) * 100]);
       }
     };
 
@@ -69,6 +69,23 @@ export default function VolumeChart() {
     [blockNumber[9], gasPrice[9]],
   ];
 
+  const gasRatioData = [
+    [
+      { label: "Block Number" },
+      "Gas Ratio",
+    ],
+    [blockNumber[0], gasRatio[0]],
+    [blockNumber[1], gasRatio[1]],
+    [blockNumber[2], gasRatio[2]],
+    [blockNumber[3], gasRatio[3]],
+    [blockNumber[4], gasRatio[4]],
+    [blockNumber[5], gasRatio[5]],
+    [blockNumber[6], gasRatio[6]],
+    [blockNumber[7], gasRatio[7]],
+    [blockNumber[8], gasRatio[8]],
+    [blockNumber[9], gasRatio[9]],
+  ];
+
   const volumeOptions = {
     chart: {
       title: "the total volume of the transfer for each block (USDC)",
@@ -101,8 +118,21 @@ export default function VolumeChart() {
     },
   };
 
-  console.log(volumeData);
-  console.log(gasPriceData);
+  const gasRatioOptions = {
+    chart: {
+      title: "Ratio of gasUsed over gasLimit for each block (in %age)",
+    },
+    width: 800,
+    height: 500,
+    series: {
+      0: { axis: "Temps" },
+    },
+    axes: {
+      y: {
+        Temps: { label: "Ratio of gasUsed over gasLimit" },
+      },
+    },
+  };
 
   return (
     <>
@@ -120,6 +150,15 @@ export default function VolumeChart() {
         height="400px"
         data={gasPriceData}
         options={gasOptions}
+      />
+        : <div>Loading...</div>}
+
+      {gasRatioData && gasRatioData.length > 10 ? <Chart
+        chartType="Line"
+        width="90%"
+        height="400px"
+        data={gasRatioData}
+        options={gasRatioOptions}
       />
         : <div>Loading...</div>}
     </>
