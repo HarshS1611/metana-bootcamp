@@ -1,3 +1,13 @@
+# metana-bootcamp
+
+## Assignments M1
+
+### Deliverables
+- ERC20 with god-mode
+- ERC20 with sanctions
+- ERC20 with token sale
+- ERC20 with token sale and partial refunds
+  
 ## Assignment M5
 
 - Use a lookback of 10 blocks for all three charts so the chart isn’t empty when the page loads.
