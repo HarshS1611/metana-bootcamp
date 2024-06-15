@@ -1,11 +1,13 @@
-import { useState } from 'react'
 
+import VolumeChart from "./VolumeChart";
 
-function App() {
+const App = () => {
 
   return (
-   <div>hii</div>
-  )
-}
+    <div className="charts">
+      <VolumeChart />
 
-export default App
+    </div>
+  );
+}
+export default App;
