@@ -89,7 +89,7 @@ contract NFTStake is IERC721Receiver {
         uint256 _multiplier = elapsedTime / lockTime;
         uint256 _rewardAmount = 10 * _multiplier;
         token.mint(stake.intialOwner, _rewardAmount);
-        token.stakingTime += lockTime * _multiplier;
+        stake.stakingTime += lockTime * _multiplier;
     }
 
     function withdrawNFT(uint256 tokenId) external {
