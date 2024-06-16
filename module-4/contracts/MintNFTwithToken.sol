@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.22;
+pragma solidity ^0.8.20;
 import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
@@ -41,8 +41,8 @@ contract ERC721Token is ERC721, Ownable {
 }
 
 contract NFTMinter is Ownable {
-    ERC20Token public erc20Token;
-    ERC721Token public erc721Token;
+    ERC20Token public immutable erc20Token;
+    ERC721Token public immutable erc721Token;
     uint256 public tokenid;
     mapping(address => uint) users;
     uint256 public constant NFT_PRICE = 10 ether;
