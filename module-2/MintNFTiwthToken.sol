@@ -38,10 +38,6 @@ contract ERC721Token is ERC721, Ownable {
     function mint(address to, uint256 amount) external onlyNFTMinter {
         _mint(to, amount);
     }
-
-    function burn( uint256 amount) external onlyNFTMinter {
-        _burn(amount);
-    }
 }
 
 contract NFTMinter is Ownable {
