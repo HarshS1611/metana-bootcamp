@@ -123,7 +123,12 @@ describe("ForgeTokenContract", function () {
             const { forgeToken, addr1 } = await loadFixture(deployForgeFixture);
             await forgeToken.connect(addr1).freeMint(1);
             const balance1 = await forgeToken.balanceOf(addr1.address, 1);
+            const balance2 = await forgeToken.balanceOf(addr1.address, 0);
+            const balance3 = await forgeToken.balanceOf(addr1.address, 2);
             expect(balance1).to.equal(BigInt(1));
+            expect(balance2).to.equal(BigInt(0));
+            expect(balance3).to.equal(BigInt(0));
+
         });
 
 
