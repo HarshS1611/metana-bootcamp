@@ -22,4 +22,4 @@ run ` npx hardhat coverage `
 
 ## Solidity Coverage:
 
-![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/112b189a-1e48-43d6-8b75-60b979790da6)
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/902b1d0a-175a-4fde-a3ec-9acfb572ba29)
