@@ -16,7 +16,9 @@ abstract contract NFTContract is ERC1155, Ownable {
 
     uint256 public lastMintTimestamp;
 
-    constructor(address initialOwner)
+    constructor(
+        address initialOwner
+    )
         ERC1155(
             "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}"
         )
@@ -36,21 +38,16 @@ abstract contract NFTContract is ERC1155, Ownable {
         _mint(msg.sender, tokenid, 1, "");
     }
 
-    function uri(uint256 tokenId)
-        public
-        view
-        virtual
-        override
-        returns (string memory)
-    {
+    function uri(
+        uint256 tokenId
+    ) public view virtual override returns (string memory) {
         return (_uris[tokenId]);
     }
 
-    function setTokenUri(uint256 tokenId, string memory uri)
-        public
-        virtual
-        onlyOwner
-    {
+    function setTokenUri(
+        uint256 tokenId,
+        string memory uri
+    ) public virtual onlyOwner {
         require(bytes(_uris[tokenId]).length == 0, "Cannot set uri twice");
         _uris[tokenId] = uri;
     }
@@ -69,21 +66,18 @@ contract ForgeToken is NFTContract {
         if (tokenid == 3) {
             _burn(msg.sender, TOKEN_0, amount);
             _burn(msg.sender, TOKEN_1, amount);
-            _mint(msg.sender, tokenid, amount, "");
         } else if (tokenid == 4) {
             _burn(msg.sender, TOKEN_1, amount);
             _burn(msg.sender, TOKEN_2, amount);
-            _mint(msg.sender, tokenid, amount, "");
         } else if (tokenid == 5) {
             _burn(msg.sender, TOKEN_0, amount);
             _burn(msg.sender, TOKEN_2, amount);
-            _mint(msg.sender, tokenid, amount, "");
         } else if (tokenid == 6) {
             _burn(msg.sender, TOKEN_0, amount);
             _burn(msg.sender, TOKEN_1, amount);
             _burn(msg.sender, TOKEN_2, amount);
-            _mint(msg.sender, tokenid, amount, "");
         }
+        _mint(msg.sender, tokenid, amount, "");
     }
 
     function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) external {
