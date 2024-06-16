@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.22;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable2Step.sol";
+import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
+import '@openzeppelin/contracts/access/Ownable2Step.sol';
 
 contract GodModeERC20 is ERC20, Ownable2Step {
     constructor(
         address initialOwner
-    ) ERC20("XHACKS", "XHS") Ownable(initialOwner) {}
+    ) ERC20('XHACKS', 'XHS') Ownable(initialOwner) {}
 
     function mintTokensToAddress(
         address recipient,
