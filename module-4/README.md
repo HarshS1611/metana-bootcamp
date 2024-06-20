@@ -27,6 +27,11 @@ run ` npx hardhat coverage `
 - [Use of timestamp](https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp)
 - [Local variable shadowing](https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing)
 
+## False Positive 
+
+- [Low level calls](https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls)
+- [Assembly Usage](https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage)
+
 ## Solidity Coverage:
 
 ![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/902b1d0a-175a-4fde-a3ec-9acfb572ba29)
