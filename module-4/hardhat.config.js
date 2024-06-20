@@ -1,5 +1,4 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("hardhat-prettier");
 require('solidity-coverage')
 
 /** @type import('hardhat/config').HardhatUserConfig */

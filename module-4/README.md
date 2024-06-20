@@ -21,7 +21,11 @@ run ` npx sumo test `
 run ` npx hardhat coverage `
 
 ## Errors
-- 
+- [Unchecked Tranfer](https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-transfer)
+- [Divide before Multiply](https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply)
+- [Reentrancy 1,2,3](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1)
+- [Use of timestamp](https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp)
+- [Local variable shadowing](https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing)
 
 ## Solidity Coverage:
 
