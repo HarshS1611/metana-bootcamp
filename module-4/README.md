@@ -20,6 +20,9 @@ run ` npx sumo test `
 ## For solidity coverage:
 run ` npx hardhat coverage `
 
+## Errors
+- 
+
 ## Solidity Coverage:
 
 ![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/902b1d0a-175a-4fde-a3ec-9acfb572ba29)
