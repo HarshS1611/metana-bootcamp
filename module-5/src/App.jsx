@@ -24,8 +24,10 @@ const filter = {
   topics: [ethers.id("Transfer(address,address,uint256)")],
 };
 
-alchemy.ws.on(filter, (log, event) => {
-  console.log(log, event);
+
+alchemy.ws.on(filter, (log) => {
+  console.log(filter)
+  console.log(log.blockNumber);
 });
 
 
