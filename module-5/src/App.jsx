@@ -25,7 +25,6 @@ const filter = {
 };
 
 alchemy.ws.on(filter, (log, event) => {
-  // Emitted whenever a DAI token transfer occurs
   console.log(log, event);
 });
 
