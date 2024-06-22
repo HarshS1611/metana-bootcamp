@@ -11,43 +11,41 @@ const settings = {
 const alchemy = new Alchemy(settings);
 
 const App = () => {
-  const [blockNumber, setBlockNumber] = useState(0);
-  const [volume, setVolume] = useState(0);
-
-  // create a map for each block conatining total value of USDC transferred
-  // on that block
-  const blockMap = new Map();
+  const [blockNumber, setBlockNumber] = useState([]);
+  const [blockMap, setblockMap] = useState(new Map());
 
 
   alchemy.ws.on("block", async (block) => {
     console.log(block);
-    if (blockMap.size > 2) {
+
+    if (blockMap.size > 10) {
       blockMap.clear();
     }
+    setBlockNumber([]);
+
 
     let logs = await alchemy.core.getLogs({
-      fromBlock: block - 2,
+      fromBlock: block - 10,
       toBlock: block,
       address: USDC_ADDRESS,
       topics: [ethers.id("Transfer(address,address,uint256)")],
 
     });
     logs.map((log) => {
-      // console.log(log.blockNumber,BigInt(log.data).toString());
       if (blockMap.has(log.blockNumber)) {
-        console.log("already",log.blockNumber, BigInt(log.data).toString());
-        blockMap.set(
-          log.blockNumber,
-          // it should add the previous value to the current value not concatenate
-          blockMap.get(log.blockNumber) + BigInt(log.data)
-        );
-      } else {
-        console.log("new",log.blockNumber, BigInt(log.data).toString());
+        setblockMap(map => new Map(map.set(log.blockNumber, map.get(log.blockNumber) + BigInt(log.data))));
 
-        blockMap.set(log.blockNumber, BigInt(log.data));
+      } else {
+        setBlockNumber((prev) => {
+          if (!prev.includes(log.blockNumber)) {
+            return [...prev, log.blockNumber];
+          }
+          return prev;
+        });        console.log(log.blockNumber);
+        setblockMap(map => new Map(map.set(log.blockNumber, BigInt(log.data))));
       }
     });
-    console.log(logs);
+
   });
 
 
@@ -56,7 +54,7 @@ const App = () => {
 
   return (
     <div className="charts">
-      {/* <VolumeChart /> */}
+      <VolumeChart blockNumber={blockNumber} blockMap={blockMap} />
       hii
 
     </div>

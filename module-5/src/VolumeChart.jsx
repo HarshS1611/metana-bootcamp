@@ -10,10 +10,8 @@ const settings = {
 };
 const alchemy = new Alchemy(settings);
 
-export default function VolumeChart() {
+export default function VolumeChart({ blockNumber, blockMap}) {
 
-  const [blockNumber, setBlockNumber] = useState([]);
-  const [volume, setVolume] = useState([]);
   const [gasPrice, setGasPrice] = useState([]);
   const [gasRatio, setGasRatio] = useState([]);
 
@@ -32,7 +30,7 @@ export default function VolumeChart() {
       }
     };
 
-    initWeb3();
+    // initWeb3();
   }, []);
 
   const volumeData = [
@@ -40,17 +38,20 @@ export default function VolumeChart() {
       { label: "Block Number" },
       "Block Number",
     ],
-    [blockNumber[0], volume[0]],
-    [blockNumber[1], volume[1]],
-    [blockNumber[2], volume[2]],
-    [blockNumber[3], volume[3]],
-    [blockNumber[4], volume[4]],
-    [blockNumber[5], volume[5]],
-    [blockNumber[6], volume[6]],
-    [blockNumber[7], volume[7]],
-    [blockNumber[8], volume[8]],
-    [blockNumber[9], volume[9]],
+    [blockNumber[0], parseFloat(blockMap.get(blockNumber[0])) / 1e6],
+    [blockNumber[1], parseFloat(blockMap.get(blockNumber[1])) / 1e6],
+    [blockNumber[2], parseFloat(blockMap.get(blockNumber[2])) / 1e6],
+    [blockNumber[3], parseFloat(blockMap.get(blockNumber[3])) / 1e6],
+    [blockNumber[4], parseFloat(blockMap.get(blockNumber[4])) / 1e6],
+    [blockNumber[5], parseFloat(blockMap.get(blockNumber[5])) / 1e6],
+    [blockNumber[6], parseFloat(blockMap.get(blockNumber[6])) / 1e6],
+    [blockNumber[7], parseFloat(blockMap.get(blockNumber[7])) / 1e6],
+    [blockNumber[8], parseFloat(blockMap.get(blockNumber[8])) / 1e6],
+    [blockNumber[9], parseFloat(blockMap.get(blockNumber[9])) / 1e6],
+    
   ];
+
+  console.log("volumeData", volumeData);
 
   const gasPriceData = [
     [
@@ -136,7 +137,7 @@ export default function VolumeChart() {
 
   return (
     <>
-      {volumeData && volumeData.length > 10 ? <Chart
+      {volumeData ? <Chart
         chartType="Line"
         width="90%"
         height="400px"
@@ -144,7 +145,7 @@ export default function VolumeChart() {
         options={volumeOptions}
       />
         : <div>Loading...</div>}
-      {gasPriceData && gasPriceData.length > 10 ? <Chart
+      {/* {gasPriceData && gasPriceData.length > 10 ? <Chart
         chartType="Line"
         width="90%"
         height="400px"
@@ -160,7 +161,7 @@ export default function VolumeChart() {
         data={gasRatioData}
         options={gasRatioOptions}
       />
-        : <div>Loading...</div>}
+        : <div>Loading...</div>} */}
     </>
   );
 }
