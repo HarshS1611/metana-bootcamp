@@ -13,7 +13,8 @@ const alchemy = new Alchemy(settings);
 const App = () => {
   const [blockNumber, setBlockNumber] = useState([]);
   const [blockMap, setblockMap] = useState(new Map());
-
+  const [gasPrice, setGasPrice] = useState([]);
+  const [gasRatio, setGasRatio] = useState([]);
 
   alchemy.ws.on("block", async (block) => {
     console.log(block);
@@ -22,6 +23,8 @@ const App = () => {
       blockMap.clear();
     }
     setBlockNumber([]);
+    setGasPrice([]);
+    setGasRatio([]);
 
 
     let logs = await alchemy.core.getLogs({
@@ -36,12 +39,15 @@ const App = () => {
         setblockMap(map => new Map(map.set(log.blockNumber, map.get(log.blockNumber) + BigInt(log.data))));
 
       } else {
-        setBlockNumber((prev) => {
+        setBlockNumber(async (prev) => {
           if (!prev.includes(log.blockNumber)) {
+            // const block = await alchemy.core.getBlock(log.blockNumber);
+            // setGasPrice((prev) => [...prev, Number(block.baseFeePerGas) / 10e8]);
+            // setGasRatio((prev) => [...prev, (Number(block.gasUsed) / Number(block.gasLimit)) * 100]);
             return [...prev, log.blockNumber];
           }
           return prev;
-        });        console.log(log.blockNumber);
+        });        
         setblockMap(map => new Map(map.set(log.blockNumber, BigInt(log.data))));
       }
     });
@@ -54,7 +60,7 @@ const App = () => {
 
   return (
     <div className="charts">
-      <VolumeChart blockNumber={blockNumber} blockMap={blockMap} />
+      <VolumeChart blockNumber={blockNumber} blockMap={blockMap} gasPrice={gasPrice} gasRatio={gasRatio} />
       hii
 
     </div>

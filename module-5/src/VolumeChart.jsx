@@ -10,10 +10,10 @@ const settings = {
 };
 const alchemy = new Alchemy(settings);
 
-export default function VolumeChart({ blockNumber, blockMap}) {
+export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}) {
 
-  const [gasPrice, setGasPrice] = useState([]);
-  const [gasRatio, setGasRatio] = useState([]);
+  console.log(gasPrice)
+  console.log(gasRatio)
 
   useEffect(() => {
     const initWeb3 = async () => {
@@ -48,7 +48,7 @@ export default function VolumeChart({ blockNumber, blockMap}) {
     [blockNumber[7], parseFloat(blockMap.get(blockNumber[7])) / 1e6],
     [blockNumber[8], parseFloat(blockMap.get(blockNumber[8])) / 1e6],
     [blockNumber[9], parseFloat(blockMap.get(blockNumber[9])) / 1e6],
-    
+
   ];
 
   console.log("volumeData", volumeData);
