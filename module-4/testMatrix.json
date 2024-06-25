@@ -1,0 +1,368 @@
+{
+ "contracts/ForgeToken.sol": {
+  "29": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should mint tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not mint invalid tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not mint if time elapsed is less than 1 minute",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "33": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should mint tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not mint if time elapsed is less than 1 minute",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "34": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should mint tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not mint if time elapsed is less than 1 minute",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "35": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should mint tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not mint if time elapsed is less than 1 minute",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "36": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should mint tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not mint if time elapsed is less than 1 minute",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "46": [
+   {
+    "title": "should set token URI",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "54": [
+   {
+    "title": "should set token URI",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not set token URI twice",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "55": [
+   {
+    "title": "should set token URI",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not set token URI twice",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "65": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not forge invalid tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "69": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "70": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "71": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "72": [
+   {
+    "title": "should forge tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "74": [],
+  "75": [],
+  "76": [],
+  "78": [],
+  "79": [],
+  "80": [],
+  "82": [],
+  "83": [],
+  "84": [],
+  "85": [],
+  "90": [
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   },
+   {
+    "title": "should not trade same tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "91": [
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "97": [],
+  "99": [
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ],
+  "100": [
+   {
+    "title": "should trade tokens",
+    "file": "test/ForgeToken.js"
+   }
+  ]
+ },
+ "contracts/GodModeERC20.sol": {
+  "16": [],
+  "23": [],
+  "25": [],
+  "26": [],
+  "28": []
+ },
+ "contracts/MintNFTwithToken.sol": {
+  "11": [],
+  "23": [],
+  "27": [],
+  "31": [],
+  "35": [],
+  "39": [],
+  "43": [],
+  "59": [],
+  "60": [],
+  "64": [],
+  "65": [],
+  "66": [],
+  "70": [],
+  "71": []
+ },
+ "contracts/PartialRefund.sol": {
+  "15": [
+   {
+    "title": "Should allow buying tokens with ether",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should revert when buying tokens with less than the minimum amount",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should revert when buying tokens with more than the maximum amount",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "16": [
+   {
+    "title": "Should allow buying tokens with ether",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should revert when buying tokens with more than the maximum amount",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "17": [
+   {
+    "title": "Should allow buying tokens with ether",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should revert when buying tokens with more than the maximum amount",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "21": [
+   {
+    "title": "Should revert when withdrawing more ether than the contract balance",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "22": [],
+  "23": [],
+  "27": [
+   {
+    "title": "Should revert when selling more tokens than the user balance",
+    "file": "test/PartialRefund.js"
+   },
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "28": [
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "29": [
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "34": [
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ],
+  "35": [
+   {
+    "title": "Should allow selling tokens back to the contract",
+    "file": "test/PartialRefund.js"
+   }
+  ]
+ },
+ "contracts/SanctionedERC20.sol": {
+  "15": [],
+  "16": [],
+  "20": [],
+  "21": [],
+  "29": [],
+  "30": [],
+  "32": [],
+  "33": [],
+  "38": []
+ },
+ "contracts/SimpleNFT.sol": {
+  "14": [],
+  "15": [],
+  "20": []
+ },
+ "contracts/StakeNFT.sol": {
+  "18": [],
+  "22": [],
+  "26": [],
+  "30": [],
+  "34": [],
+  "42": [],
+  "60": [],
+  "61": [],
+  "65": [],
+  "69": [],
+  "78": [],
+  "79": [],
+  "80": [],
+  "82": [],
+  "86": [],
+  "87": [],
+  "88": [],
+  "89": [],
+  "91": [],
+  "95": [],
+  "96": [],
+  "97": [],
+  "98": [],
+  "99": [],
+  "100": [],
+  "104": [],
+  "105": [],
+  "106": [],
+  "107": [],
+  "108": []
+ },
+ "contracts/TokenSale.sol": {
+  "18": [],
+  "19": [],
+  "20": [],
+  "24": [],
+  "25": [],
+  "26": [],
+  "27": [],
+  "28": []
+ }
+}
