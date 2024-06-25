@@ -38,16 +38,17 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}
       { label: "Block Number" },
       "Block Number",
     ],
-    [blockNumber[0], parseFloat(blockMap.get(blockNumber[0])) / 1e6],
-    [blockNumber[1], parseFloat(blockMap.get(blockNumber[1])) / 1e6],
-    [blockNumber[2], parseFloat(blockMap.get(blockNumber[2])) / 1e6],
-    [blockNumber[3], parseFloat(blockMap.get(blockNumber[3])) / 1e6],
-    [blockNumber[4], parseFloat(blockMap.get(blockNumber[4])) / 1e6],
-    [blockNumber[5], parseFloat(blockMap.get(blockNumber[5])) / 1e6],
-    [blockNumber[6], parseFloat(blockMap.get(blockNumber[6])) / 1e6],
-    [blockNumber[7], parseFloat(blockMap.get(blockNumber[7])) / 1e6],
-    [blockNumber[8], parseFloat(blockMap.get(blockNumber[8])) / 1e6],
-    [blockNumber[9], parseFloat(blockMap.get(blockNumber[9])) / 1e6],
+    [blockNumber[0], parseFloat(blockMap[0])],
+    [blockNumber[1], parseFloat(blockMap[1])],
+    [blockNumber[2], parseFloat(blockMap[2])],
+    [blockNumber[3], parseFloat(blockMap[3])],
+    [blockNumber[4], parseFloat(blockMap[4])],
+    [blockNumber[5], parseFloat(blockMap[5])],
+    [blockNumber[6], parseFloat(blockMap[6])],
+    [blockNumber[7], parseFloat(blockMap[7])],
+    [blockNumber[8], parseFloat(blockMap[8])],
+    [blockNumber[9], parseFloat(blockMap[9])],
+
 
   ];
 
