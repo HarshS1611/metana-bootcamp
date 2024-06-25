@@ -41,8 +41,8 @@ contract ERC721Token is ERC721, Ownable {
 }
 
 contract NFTMinter is Ownable {
-    ERC20Token public immutable erc20Token;
-    ERC721Token public immutable erc721Token;
+    ERC20Token public  erc20Token;
+    ERC721Token public  erc721Token;
     uint256 public tokenid;
     mapping(address => uint) users;
     uint256 public constant NFT_PRICE = 10 ether;
