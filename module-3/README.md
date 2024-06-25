@@ -1,10 +1,10 @@
 # Assignments M3
 
-## Deliverables - [Deployed Link](https://forge-token.vercel.app/)
+## Deliverables - [Deployed Link](https://forge-token-frontend.vercel.app/)
 - A website that allows users to mint ERC1155 tokens and “forge” new ones
 
-- Deployed contract - [Polygonscan](https://amoy.polygonscan.com/address/0x3f03c2b2ee8030afa5b36acd4898242c086db003)
-- Rarible Collection - [NFT Details](https://testnet.rarible.com/collection/polygon/0x3f03c2b2ee8030afa5b36acd4898242c086db003/items)
+- Deployed contract - [Polygonscan](https://amoy.polygonscan.com/address/0x8f40ec69c6841df15c11618c10de2f78f7bd7fd9)
+- Rarible Collection - [NFT Details](https://testnet.rarible.com/collection/polygon/0x8f40ec69c6841df15c11618c10de2f78f7bd7fd9/items)
 
   ## Technology Used
 
