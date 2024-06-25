@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
+import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
 
 contract ERC20Token is ERC20 {
-    constructor() ERC20("XHACKS", "XHS") {}
+    constructor() ERC20('XHACKS', 'XHS') {}
 
     function mint(address to, uint256 amount) external {
         _mint(to, amount);
@@ -17,12 +17,12 @@ contract ERC721Token is ERC721, Ownable {
 
     constructor(
         address initialOwner
-    ) ERC721("MyERC721", "M721") Ownable(initialOwner) {}
+    ) ERC721('MyERC721', 'M721') Ownable(initialOwner) {}
 
     modifier onlyNFTMinter() {
         require(
             msg.sender == nftMintContract,
-            "Only NFTMinter contract can call this function"
+            'Only NFTMinter contract can call this function'
         );
         _;
     }
@@ -30,7 +30,7 @@ contract ERC721Token is ERC721, Ownable {
     function setNFTMintContract(address _nftMintContract) external onlyOwner {
         require(
             nftMintContract == address(0),
-            "NFTMinter contract already set"
+            'NFTMinter contract already set'
         );
         nftMintContract = _nftMintContract;
     }
@@ -38,15 +38,11 @@ contract ERC721Token is ERC721, Ownable {
     function mint(address to, uint256 amount) external onlyNFTMinter {
         _mint(to, amount);
     }
-
-    function burn( uint256 amount) external onlyNFTMinter {
-        _burn(amount);
-    }
 }
 
 contract NFTMinter is Ownable {
-    ERC20Token public erc20Token;
-    ERC721Token public erc721Token;
+    ERC20Token public  erc20Token;
+    ERC721Token public  erc721Token;
     uint256 public tokenid;
     mapping(address => uint) users;
     uint256 public constant NFT_PRICE = 10 ether;
@@ -67,7 +63,6 @@ contract NFTMinter is Ownable {
     }
 
     function withdrawToken(address target) external onlyOwner {
-        erc20Token.transfer(target, NFT_PRICE);
-        erc721Token.burn(users[msg.sender]);
+        erc20Token.transfer(target, erc20Token.balanceOf(address(this)));
     }
 }

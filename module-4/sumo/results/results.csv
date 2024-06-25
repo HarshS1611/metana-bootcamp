@@ -1,290 +1,237 @@
 Hash,File,Operator,Start,End,StartLine,EndLine,Original,Replacement,Status,Time(ms)
-mb9413841,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,AVR,1195,1209,40,40,_forgeContract,address(this),killed,2390
-m89b4b7a2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,AVR,1195,1209,40,40,_forgeContract,address(0),killed,2445
-mef625778,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,986,990,33,33," == "," <= ",live,2404
-medecf3eb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,986,990,33,33," == "," >= ",live,2426
-m4c645798,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,986,990,33,33," == ","  < ",killed,2494
-ma885c1fe,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,986,990,33,33," == ","  > ",killed,2408
-m81c41f9a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,986,990,33,33," == "," != ",killed,2443
-m5f967513,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1325,1329,45,45," || "," && ",killed,2382
-mb1301603,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1309,1313,45,45," || "," && ",killed,2362
-ma312c6d8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1304,1308,45,45," == "," <= ",live,2626
-m099ca190,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1304,1308,45,45," == "," >= ",killed,2360
-m3093fc79,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1304,1308,45,45," == ","  < ",killed,2577
-mae023ae6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1304,1308,45,45," == ","  > ",killed,3019
-m2c5894b8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1304,1308,45,45," == "," != ",killed,2632
-m0cfc5d4d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1320,1324,45,45," == "," <= ",live,2695
-m2e1625a5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1320,1324,45,45," == "," >= ",killed,2558
-mbbc7bf54,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1320,1324,45,45," == ","  < ",killed,2559
-m5d68909a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1320,1324,45,45," == ","  > ",killed,2323
-md55de14e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1320,1324,45,45," == "," != ",killed,2377
-m48ba64d9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1336,1340,45,45," == "," <= ",live,2421
-m2d9edc5b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1336,1340,45,45," == "," >= ",killed,2399
-m7bddd6dc,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1336,1340,45,45," == ","  < ",live,2407
-m055f20ea,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1336,1340,45,45," == ","  > ",killed,2355
-m2a5a1bcd,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1336,1340,45,45," == "," != ",killed,2525
-m8cd22aed,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1454,1457,48,48," - "," + ",killed,3098
-mfbcfb13c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1454,1457,48,48," - "," * ",killed,2955
-m7aeca0f5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1454,1457,48,48," - "," / ",killed,2836
-m04500ea7,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1454,1457,48,48," - "," ** ",killed,3071
-m57fa49eb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1454,1457,48,48," - "," % ",killed,2968
-m91e288bf,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1503,1506,49,49," > "," >=  ",live,3073
-mdac81fea,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1503,1506,49,49," > "," <=  ",killed,3025
-m75a7caf7,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1503,1506,49,49," > "," < ",killed,2973
-m443edbd6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1503,1506,49,49," > "," != ",killed,2951
-m36c89751,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1503,1506,49,49," > "," == ",killed,3034
-m4dce0b62,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2255,2259,78,78," == "," <= ",live,3099
-md90b200e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2255,2259,78,78," == "," >= ",killed,2997
-m824e47e3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2255,2259,78,78," == ","  < ",killed,3063
-ma2b8399b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2255,2259,78,78," == ","  > ",killed,2959
-m0f581546,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2255,2259,78,78," == "," != ",killed,2492
-m1391fdae,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2903,2907,99,99," || "," && ",live,2809
-m15aeae39,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2887,2891,99,99," || "," && ",live,2983
-m7fbeb89d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2871,2875,99,99," || "," && ",killed,2879
-m61a1fa8c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2866,2870,99,99," == "," <= ",killed,2946
-m0673f53d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2866,2870,99,99," == "," >= ",live,2974
-m360559d7,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2866,2870,99,99," == ","  < ",killed,2895
-mc4b4ce12,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2866,2870,99,99," == ","  > ",killed,2880
-m32febb5a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2866,2870,99,99," == "," != ",killed,2728
-md8996c44,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2882,2886,99,99," == "," <= ",killed,2443
-m510ee2b4,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2882,2886,99,99," == "," >= ",untested,0
-ma5667bf9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2882,2886,99,99," == ","  < ",untested,0
-mf59525a0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2882,2886,99,99," == ","  > ",untested,0
-m0ac2855e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2882,2886,99,99," == "," != ",untested,0
-m0c2f1218,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2898,2902,99,99," == "," <= ",untested,0
-md2605c79,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2898,2902,99,99," == "," >= ",untested,0
-m9c8f3e47,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2898,2902,99,99," == ","  < ",untested,0
-md7a78771,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2898,2902,99,99," == ","  > ",untested,0
-m2b562393,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2898,2902,99,99," == "," != ",untested,0
-md0e0fa2a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2914,2918,99,99," == "," <= ",untested,0
-m28d23c94,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2914,2918,99,99," == "," >= ",untested,0
-m8091274f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2914,2918,99,99," == ","  < ",untested,0
-m22d826de,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2914,2918,99,99," == ","  > ",untested,0
-mf154eeaf,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2914,2918,99,99," == "," != ",untested,0
-m36066cc1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3006,3010,102,102," == "," <= ",untested,0
-m44263733,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3006,3010,102,102," == "," >= ",untested,0
-m79a3a103,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3006,3010,102,102," == ","  < ",untested,0
-m9ef39f89,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3006,3010,102,102," == ","  > ",untested,0
-m5ea33d3a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3006,3010,102,102," == "," != ",untested,0
-m24e60013,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3220,3224,106,106," == "," <= ",untested,0
-mf994a9c9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3220,3224,106,106," == "," >= ",untested,0
-m5422af6d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3220,3224,106,106," == ","  < ",untested,0
-m24840fa3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3220,3224,106,106," == ","  > ",untested,0
-mf1077b29,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3220,3224,106,106," == "," != ",untested,0
-m87717118,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3434,3438,110,110," == "," <= ",untested,0
-m3d550ab5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3434,3438,110,110," == "," >= ",untested,0
-mc3a75b80,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3434,3438,110,110," == ","  < ",untested,0
-med05ace3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3434,3438,110,110," == ","  > ",untested,0
-mc14cbdbb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3434,3438,110,110," == "," != ",untested,0
-mb8e257c6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3648,3652,114,114," == "," <= ",untested,0
-m1717a97e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3648,3652,114,114," == "," >= ",untested,0
-m0d86e662,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3648,3652,114,114," == ","  < ",untested,0
-mae966022,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3648,3652,114,114," == ","  > ",untested,0
-m61f31669,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3648,3652,114,114," == "," != ",untested,0
-m353ab702,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4071,4075,127,127," != "," >  ",untested,0
-mb154ee1a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4071,4075,127,127," != ","  < ",untested,0
-m81ef8fc9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4071,4075,127,127," != "," <= ",untested,0
-m6a0caf6c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4071,4075,127,127," != "," >= ",untested,0
-m60199344,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4071,4075,127,127," != "," == ",untested,0
-m62a581cb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4245,4261,131,132," ||            "," &&            ",untested,0
-mbc080401,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4206,4222,130,131," ||            "," &&            ",untested,0
-maf478259,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4167,4183,129,130," ||            "," &&            ",untested,0
-m04ab2fdb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4156,4160,129,129," == "," <= ",untested,0
-m4d0999bf,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4156,4160,129,129," == "," >= ",untested,0
-m3aa8878a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4156,4160,129,129," == ","  < ",untested,0
-mf9c43a13,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4156,4160,129,129," == ","  > ",untested,0
-ma9752a3b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4156,4160,129,129," == "," != ",untested,0
-m3e410a14,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4195,4199,130,130," == "," <= ",untested,0
-mec16cb5c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4195,4199,130,130," == "," >= ",untested,0
-mebeb2a8f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4195,4199,130,130," == ","  < ",untested,0
-m60376da1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4195,4199,130,130," == ","  > ",untested,0
-md2fdd1d3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4195,4199,130,130," == "," != ",untested,0
-m94d92421,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4234,4238,131,131," == "," <= ",untested,0
-m95380f51,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4234,4238,131,131," == "," >= ",untested,0
-m6dcc73b8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4234,4238,131,131," == ","  < ",untested,0
-m76dd28fe,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4234,4238,131,131," == ","  > ",untested,0
-mc871b408,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4234,4238,131,131," == "," != ",untested,0
-mcc83f553,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4273,4277,132,132," == "," <= ",untested,0
-m9a077d8a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4273,4277,132,132," == "," >= ",untested,0
-m94e33e64,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4273,4277,132,132," == ","  < ",untested,0
-md2ae509a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4273,4277,132,132," == ","  > ",untested,0
-me76af9ea,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,4273,4277,132,132," == "," != ",untested,0
-m6149ee9c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CCD,632,863,20,27,"constructor(        address initialOwner    )        ERC1155(            ""https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}""        )        Ownable(initialOwner)    {}",,untested,0
-m63f1e67a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CCD,2675,2756,93,95,constructor(address _address) {        nftAddress = NFTContract(_address);    },,untested,0
-md8143596,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2999,3011,102,102,tokenid == 3,true,untested,0
-m204b93b8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2999,3011,102,102,tokenid == 3,false,untested,0
-m54a77045,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,3213,3225,106,106,tokenid == 4,true,untested,0
-madebd536,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,3213,3225,106,106,tokenid == 4,false,untested,0
-m8f9c52c0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,3427,3439,110,110,tokenid == 5,true,untested,0
-m5ef4971c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,3427,3439,110,110,tokenid == 5,false,untested,0
-mf3e693a6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,3641,3653,114,114,tokenid == 6,true,untested,0
-m39b1f9be,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,3641,3653,114,114,tokenid == 6,false,untested,0
-m8f8e9630,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,4144,4284,129,132,tradeTokenId == TOKEN_3 ||            tradeTokenId == TOKEN_4 ||            tradeTokenId == TOKEN_5 ||            tradeTokenId == TOKEN_6,true,untested,0
-mb56a75fb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,4144,4284,129,132,tradeTokenId == TOKEN_3 ||            tradeTokenId == TOKEN_4 ||            tradeTokenId == TOKEN_5 ||            tradeTokenId == TOKEN_6,false,untested,0
-m6f89ef33,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,4374,4534,133,138," else {            nftAddress.burn(msg.sender, tradeTokenId, tradeAmount);            nftAddress.mintExtra(msg.sender, receiveTokenId, tradeAmount);        }",,untested,0
-md18d54a3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,DLR,2044,2057,70,70,string memory,string storage,untested,0
-m37f4f170,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,DLR,2160,2177,76,76,string memory uri,string storage uri,untested,0
-m9c01c8ef,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ECS,2227,2248,78,78,bytes(_uris[tokenId]),bytes1(_uris[tokenId]),untested,0
-m93c5710f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,955,1077,32,35,"require(            msg.sender == forgeContract,            ""Only ForgeToken contract can call this function""        );","/* require(            msg.sender == forgeContract,            ""Only ForgeToken contract can call this function""        ); */",untested,0
-mb70160d9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,1276,1408,44,47,"require(            tokenid == 0 || tokenid == 1 || tokenid == 2,            ""This token can only be forged not minted""        );","/* require(            tokenid == 0 || tokenid == 1 || tokenid == 2,            ""This token can only be forged not minted""        ); */",untested,0
-m5f990f80,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,1484,1543,49,49,"require(elapsedTime > 1 minutes, ""Cannot mint token yet."");","/* require(elapsedTime > 1 minutes, ""Cannot mint token yet.""); */",untested,0
-m399e28bc,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,2219,2286,78,78,"require(bytes(_uris[tokenId]).length == 0, ""Cannot set uri twice"");","/* require(bytes(_uris[tokenId]).length == 0, ""Cannot set uri twice""); */",untested,0
-m38ca9b97,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,2838,2986,98,101,"require(            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,            ""This token can only be minted not forged""        );","/* require(            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,            ""This token can only be minted not forged""        ); */",untested,0
-md07f79e0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,4051,4118,127,127,"require(tradeTokenId != receiveTokenId, ""Cannot trade same token"");","/* require(tradeTokenId != receiveTokenId, ""Cannot trade same token""); */",untested,0
-m58566434,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1100,1169,39,39,"function setForgeContract(address _forgeContract) external onlyOwner ","function setForgeContract(address _forgeContract) public onlyOwner ",untested,0
-m67bf060a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1100,1169,39,39,"function setForgeContract(address _forgeContract) external onlyOwner ","function setForgeContract(address _forgeContract) internal onlyOwner ",untested,0
-m1ce3b31d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1100,1169,39,39,"function setForgeContract(address _forgeContract) external onlyOwner ","function setForgeContract(address _forgeContract) private onlyOwner ",untested,0
-maf2790d4,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1222,1266,43,43,"function freeMint(uint256 tokenid) external ","function freeMint(uint256 tokenid) public ",untested,0
-m53dd9969,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1222,1266,43,43,"function freeMint(uint256 tokenid) external ","function freeMint(uint256 tokenid) internal ",untested,0
-m7c521b1f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1222,1266,43,43,"function freeMint(uint256 tokenid) external ","function freeMint(uint256 tokenid) private ",untested,0
-mc22de610,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1643,1767,54,58,"function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) external onlyForgeContract ","function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) public onlyForgeContract ",untested,0
-m07b8be9a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1643,1767,54,58,"function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) external onlyForgeContract ","function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) internal onlyForgeContract ",untested,0
-m7d351730,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1643,1767,54,58,"function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) external onlyForgeContract ","function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) private onlyForgeContract ",untested,0
-m14066f86,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1823,1937,62,66,"function burn(        address onwer,        uint256 id,        uint256 amount    ) external onlyForgeContract ","function burn(        address onwer,        uint256 id,        uint256 amount    ) public onlyForgeContract ",untested,0
-m2017eb6e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1823,1937,62,66,"function burn(        address onwer,        uint256 id,        uint256 amount    ) external onlyForgeContract ","function burn(        address onwer,        uint256 id,        uint256 amount    ) internal onlyForgeContract ",untested,0
-m00bf3d14,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1823,1937,62,66,"function burn(        address onwer,        uint256 id,        uint256 amount    ) external onlyForgeContract ","function burn(        address onwer,        uint256 id,        uint256 amount    ) private onlyForgeContract ",untested,0
-med1a4f5f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,2762,2828,97,97,"function ForgeTokenById(uint256 tokenid, uint256 amount) external ","function ForgeTokenById(uint256 tokenid, uint256 amount) public ",untested,0
-mf10d0d43,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,2762,2828,97,97,"function ForgeTokenById(uint256 tokenid, uint256 amount) external ","function ForgeTokenById(uint256 tokenid, uint256 amount) internal ",untested,0
-mabcd7ec1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,2762,2828,97,97,"function ForgeTokenById(uint256 tokenid, uint256 amount) external ","function ForgeTokenById(uint256 tokenid, uint256 amount) private ",untested,0
-medaf19e0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,3915,4041,122,126,"function tradeToken(        uint256 tradeTokenId,        uint256 tradeAmount,        uint256 receiveTokenId    ) external ","function tradeToken(        uint256 tradeTokenId,        uint256 tradeAmount,        uint256 receiveTokenId    ) public ",untested,0
-m2f47b776,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,3915,4041,122,126,"function tradeToken(        uint256 tradeTokenId,        uint256 tradeAmount,        uint256 receiveTokenId    ) external ","function tradeToken(        uint256 tradeTokenId,        uint256 tradeAmount,        uint256 receiveTokenId    ) internal ",untested,0
-m1f887b4e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,3915,4041,122,126,"function tradeToken(        uint256 tradeTokenId,        uint256 tradeAmount,        uint256 receiveTokenId    ) external ","function tradeToken(        uint256 tradeTokenId,        uint256 tradeAmount,        uint256 receiveTokenId    ) private ",untested,0
-m35f99981,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1439,1454,48,48,block.timestamp,block.number,untested,0
-ma95ac4f3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1439,1454,48,48,block.timestamp,block.difficulty,untested,0
-mb97b2c50,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1439,1454,48,48,block.timestamp,block.gaslimit,untested,0
-m542008ed,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1439,1454,48,48,block.timestamp,tx.gasprice,untested,0
-m4b5006ce,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1439,1454,48,48,block.timestamp,gasleft(),untested,0
-mf2770fae,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1439,1454,48,48,block.timestamp,msg.value,untested,0
-mcb238384,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1572,1587,50,50,block.timestamp,block.number,untested,0
-m2b66358c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1572,1587,50,50,block.timestamp,block.difficulty,untested,0
-me531b1f2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1572,1587,50,50,block.timestamp,block.gaslimit,untested,0
-md468de8b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1572,1587,50,50,block.timestamp,tx.gasprice,untested,0
-m50b2f06e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1572,1587,50,50,block.timestamp,gasleft(),untested,0
-m183e3585,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1572,1587,50,50,block.timestamp,msg.value,untested,0
-m03fe8d91,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,339,340,10,10,0,1,untested,0
-me2fc56bb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,380,381,11,11,1,0,untested,0
-m3cc038b9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,380,381,11,11,1,2,untested,0
-me3d86699,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,421,422,12,12,2,1,untested,0
-m305ab14d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,421,422,12,12,2,3,untested,0
-mc5ae7386,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,462,463,13,13,3,2,untested,0
-mf894abc5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,462,463,13,13,3,4,untested,0
-m2faaf24f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,503,504,14,14,4,3,untested,0
-mf676375e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,503,504,14,14,4,5,untested,0
-mb8c718af,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,544,545,15,15,5,4,untested,0
-mb8499ed9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,544,545,15,15,5,6,untested,0
-m5d2e6ed8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,585,586,16,16,6,5,untested,0
-mcc180767,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,585,586,16,16,6,7,untested,0
-me468dc36,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1308,1309,45,45,0,1,untested,0
-mad83a2ef,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1324,1325,45,45,1,0,untested,0
-m35db0f6e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1324,1325,45,45,1,2,untested,0
-mc8d99f79,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1340,1341,45,45,2,1,untested,0
-mee96212a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1340,1341,45,45,2,3,untested,0
-ma30302d9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1506,1515,49,49,1 minutes,0 minutes,untested,0
-m93c118df,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1506,1515,49,49,1 minutes,2 minutes,untested,0
-m05e51575,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1624,1625,51,51,1,0,untested,0
-m26a0c120,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1624,1625,51,51,1,2,untested,0
-ma80f1040,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2259,2260,78,78,0,1,untested,0
-m1f166f14,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2421,2422,85,85,0,1,untested,0
-mff8f1c6d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2462,2463,86,86,1,0,untested,0
-md797cc6c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2462,2463,86,86,1,2,untested,0
-ma6a6f643,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2503,2504,87,87,2,1,untested,0
-m46b3206f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2503,2504,87,87,2,3,untested,0
-m244150e0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2544,2545,88,88,3,2,untested,0
-m3f0d170d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2544,2545,88,88,3,4,untested,0
-m503de97a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2585,2586,89,89,4,3,untested,0
-m757ea123,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2585,2586,89,89,4,5,untested,0
-m95e6f6fc,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2626,2627,90,90,5,4,untested,0
-m3cb98302,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2626,2627,90,90,5,6,untested,0
-m2d027537,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2667,2668,91,91,6,5,untested,0
-md34c967d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2667,2668,91,91,6,7,untested,0
-m823ed635,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2870,2871,99,99,3,2,untested,0
-m0f3a7f09,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2870,2871,99,99,3,4,untested,0
-m16e96ed0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2886,2887,99,99,4,3,untested,0
-md3de77d9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2886,2887,99,99,4,5,untested,0
-ma5b99ffe,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2902,2903,99,99,5,4,untested,0
-m8b9b0cec,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2902,2903,99,99,5,6,untested,0
-md30d486f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2918,2919,99,99,6,5,untested,0
-mf5087657,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2918,2919,99,99,6,7,untested,0
-m9019550f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3010,3011,102,102,3,2,untested,0
-mb4267fdb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3010,3011,102,102,3,4,untested,0
-m197d0226,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3224,3225,106,106,4,3,untested,0
-m5b52d61f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3224,3225,106,106,4,5,untested,0
-m06cbc910,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3438,3439,110,110,5,4,untested,0
-mec1e8176,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3438,3439,110,110,5,6,untested,0
-m85904b49,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3652,3653,114,114,6,5,untested,0
-m6cfb0f26,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,3652,3653,114,114,6,7,untested,0
-m9a87092e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOC,632,861,20,27,"constructor(        address initialOwner    )        ERC1155(            ""https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}""        )        Ownable(initialOwner)    ","constructor(        address initialOwner    )        Ownable(initialOwner)        ERC1155(            ""https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}""        )    ",untested,0
-m8408d225,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,632,861,20,27,"constructor(        address initialOwner    )        ERC1155(            ""https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}""        )        Ownable(initialOwner)    ","constructor(        address initialOwner    )                Ownable(initialOwner)    ",untested,0
-m5eae4f91,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,632,861,20,27,"constructor(        address initialOwner    )        ERC1155(            ""https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}""        )        Ownable(initialOwner)    ","constructor(        address initialOwner    )        ERC1155(            ""https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}""        )            ",untested,0
-m2c49d6e2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,1100,1169,39,39,"function setForgeContract(address _forgeContract) external onlyOwner ","function setForgeContract(address _forgeContract) external  ",untested,0
-m280e1c2f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,1643,1767,54,58,"function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) external onlyForgeContract ","function mintExtra(        address owner,        uint256 tokenid,        uint256 amount    ) external  ",untested,0
-m22329fb0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,1823,1937,62,66,"function burn(        address onwer,        uint256 id,        uint256 amount    ) external onlyForgeContract ","function burn(        address onwer,        uint256 id,        uint256 amount    ) external  ",untested,0
-ma85bd2a0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,2105,2209,74,77,"function setTokenUri(        uint256 tokenId,        string memory uri    ) public virtual onlyOwner ","function setTokenUri(        uint256 tokenId,        string memory uri    ) public virtual  ",untested,0
-m2cd3dff4,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOI,1222,1266,43,43,"function freeMint(uint256 tokenid) external ","function freeMint(uint256 tokenid) external onlyOwner ",untested,0
-mc6e7a5d0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOI,1222,1266,43,43,"function freeMint(uint256 tokenid) external ","function freeMint(uint256 tokenid) external onlyForgeContract ",untested,0
-m956220a5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOR,1159,1168,39,39,onlyOwner,onlyForgeContract,untested,0
-m8d96836d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOR,1749,1766,54,58,onlyForgeContract,onlyOwner,untested,0
-m4bda8813,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOR,1919,1936,62,66,onlyForgeContract,onlyOwner,untested,0
-m051eb63a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOR,2199,2208,74,77,onlyOwner,onlyForgeContract,untested,0
-m250e1e57,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ORFD,1984,2099,70,72,function uri(uint256 tokenId) public view override returns (string memory) {        return (_uris[tokenId]);    },,untested,0
-m547ca2b5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,RSD,2069,2093,71,71,return (_uris[tokenId]);,/* return (_uris[tokenId]); */,untested,0
-mc55087eb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,SLR,709,816,24,24,"""https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}""","""""",untested,0
-me1945f9d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,976,986,33,33,msg.sender,tx.origin,untested,0
-m30e77edb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,1603,1613,51,51,msg.sender,tx.origin,untested,0
-m0f09e898,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3043,3053,103,103,msg.sender,tx.origin,untested,0
-maca62a31,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3101,3111,104,104,msg.sender,tx.origin,untested,0
-m0bc9e350,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3164,3174,105,105,msg.sender,tx.origin,untested,0
-me7562057,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3257,3267,107,107,msg.sender,tx.origin,untested,0
-mf4bfe237,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3315,3325,108,108,msg.sender,tx.origin,untested,0
-m4cb0dc97,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3378,3388,109,109,msg.sender,tx.origin,untested,0
-mc3f8a1b1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3471,3481,111,111,msg.sender,tx.origin,untested,0
-m0b5b7c43,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3529,3539,112,112,msg.sender,tx.origin,untested,0
-m16e90a6c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3592,3602,113,113,msg.sender,tx.origin,untested,0
-m282225fa,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3685,3695,115,115,msg.sender,tx.origin,untested,0
-m25859317,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3743,3753,116,116,msg.sender,tx.origin,untested,0
-m8af3f0b1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3801,3811,117,117,msg.sender,tx.origin,untested,0
-mdf607080,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3864,3874,118,118,msg.sender,tx.origin,untested,0
-m306b18f9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,4325,4335,134,134,msg.sender,tx.origin,untested,0
-m983bc5fe,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,4410,4420,136,136,msg.sender,tx.origin,untested,0
-m49b3037f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,4483,4493,137,137,msg.sender,tx.origin,untested,0
-ma093b55e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1506,1515,49,49,1 minutes,1 seconds,untested,0
-mf21acf9d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1506,1515,49,49,1 minutes,1 hours,untested,0
-m789e0fb1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1506,1515,49,49,1 minutes,1 days,untested,0
-m00563d27,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1506,1515,49,49,1 minutes,1 weeks,untested,0
-mc9b6bfba,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,271,299,9,9,address public forgeContract,address internal forgeContract,untested,0
-m55d2f6d1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,271,299,9,9,address public forgeContract,address private forgeContract,untested,0
-md8d6f55f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,305,340,10,10,uint256 public constant TOKEN_0 = 0,uint256 internal constant TOKEN_0 = 0,untested,0
-m3c5e8f0c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,305,340,10,10,uint256 public constant TOKEN_0 = 0,uint256 private constant TOKEN_0 = 0,untested,0
-mb55d7f61,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,346,381,11,11,uint256 public constant TOKEN_1 = 1,uint256 internal constant TOKEN_1 = 1,untested,0
-mfacb648e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,346,381,11,11,uint256 public constant TOKEN_1 = 1,uint256 private constant TOKEN_1 = 1,untested,0
-m477cb3e1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,387,422,12,12,uint256 public constant TOKEN_2 = 2,uint256 internal constant TOKEN_2 = 2,untested,0
-m0c8aee41,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,387,422,12,12,uint256 public constant TOKEN_2 = 2,uint256 private constant TOKEN_2 = 2,untested,0
-m00f134da,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,428,463,13,13,uint256 public constant TOKEN_3 = 3,uint256 internal constant TOKEN_3 = 3,untested,0
-m7c7129eb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,428,463,13,13,uint256 public constant TOKEN_3 = 3,uint256 private constant TOKEN_3 = 3,untested,0
-m8b9aeba3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,469,504,14,14,uint256 public constant TOKEN_4 = 4,uint256 internal constant TOKEN_4 = 4,untested,0
-m0cb6ea63,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,469,504,14,14,uint256 public constant TOKEN_4 = 4,uint256 private constant TOKEN_4 = 4,untested,0
-mb2601237,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,510,545,15,15,uint256 public constant TOKEN_5 = 5,uint256 internal constant TOKEN_5 = 5,untested,0
-m9fdc4ec9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,510,545,15,15,uint256 public constant TOKEN_5 = 5,uint256 private constant TOKEN_5 = 5,untested,0
-m28a55f26,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,551,586,16,16,uint256 public constant TOKEN_6 = 6,uint256 internal constant TOKEN_6 = 6,untested,0
-m2cab71f8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,551,586,16,16,uint256 public constant TOKEN_6 = 6,uint256 private constant TOKEN_6 = 6,untested,0
-mf91f186b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,593,625,18,18,uint256 public lastMintTimestamp,uint256 internal lastMintTimestamp,untested,0
-m8b51eb55,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,593,625,18,18,uint256 public lastMintTimestamp,uint256 private lastMintTimestamp,untested,0
-m50e541ff,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2352,2381,84,84,NFTContract public nftAddress,NFTContract internal nftAddress,untested,0
-mc29dd2bd,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2352,2381,84,84,NFTContract public nftAddress,NFTContract private nftAddress,untested,0
-m87f029cb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2387,2422,85,85,uint256 public constant TOKEN_0 = 0,uint256 internal constant TOKEN_0 = 0,untested,0
-mcfff03a3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2387,2422,85,85,uint256 public constant TOKEN_0 = 0,uint256 private constant TOKEN_0 = 0,untested,0
-m9ec871b5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2428,2463,86,86,uint256 public constant TOKEN_1 = 1,uint256 internal constant TOKEN_1 = 1,untested,0
-mcfce2ef6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2428,2463,86,86,uint256 public constant TOKEN_1 = 1,uint256 private constant TOKEN_1 = 1,untested,0
-m8ddbac94,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2469,2504,87,87,uint256 public constant TOKEN_2 = 2,uint256 internal constant TOKEN_2 = 2,untested,0
-mc43bde2a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2469,2504,87,87,uint256 public constant TOKEN_2 = 2,uint256 private constant TOKEN_2 = 2,untested,0
-m504747aa,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2510,2545,88,88,uint256 public constant TOKEN_3 = 3,uint256 internal constant TOKEN_3 = 3,untested,0
-m2bf0f914,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2510,2545,88,88,uint256 public constant TOKEN_3 = 3,uint256 private constant TOKEN_3 = 3,untested,0
-mc5fe31d6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2551,2586,89,89,uint256 public constant TOKEN_4 = 4,uint256 internal constant TOKEN_4 = 4,untested,0
-m008ad53c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2551,2586,89,89,uint256 public constant TOKEN_4 = 4,uint256 private constant TOKEN_4 = 4,untested,0
-mbd693e09,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2592,2627,90,90,uint256 public constant TOKEN_5 = 5,uint256 internal constant TOKEN_5 = 5,untested,0
-m847e7bbd,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2592,2627,90,90,uint256 public constant TOKEN_5 = 5,uint256 private constant TOKEN_5 = 5,untested,0
-m53c81bf0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2633,2668,91,91,uint256 public constant TOKEN_6 = 6,uint256 internal constant TOKEN_6 = 6,untested,0
-mdad412f0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,2633,2668,91,91,uint256 public constant TOKEN_6 = 6,uint256 private constant TOKEN_6 = 6,untested,0
+mbd69a7df,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,950,954,31,31," || "," && ",killed,2823
+mb4a3c3f6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,934,938,31,31," || "," && ",killed,1509
+mbee28084,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,929,933,31,31," == "," <= ",live,1584
+me4d2b8a3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,929,933,31,31," == "," >= ",killed,1475
+m0a2f4661,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,929,933,31,31," == ","  < ",killed,1446
+m2a5218ed,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,929,933,31,31," == ","  > ",killed,1446
+mde4d5b56,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,929,933,31,31," == "," != ",killed,1479
+m8a76fed2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,945,949,31,31," == "," <= ",live,1537
+m89483465,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,945,949,31,31," == "," >= ",killed,1477
+m58c6d4d5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,945,949,31,31," == ","  < ",killed,1436
+md60e3d07,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,945,949,31,31," == ","  > ",killed,1437
+me3244358,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,945,949,31,31," == "," != ",killed,1444
+m8cf09713,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,961,965,31,31," == "," <= ",live,1538
+m06bc0687,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,961,965,31,31," == "," >= ",killed,1512
+m8a95df8d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,961,965,31,31," == ","  < ",killed,1493
+mce460ee3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,961,965,31,31," == ","  > ",killed,1460
+m65c357ab,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,961,965,31,31," == "," != ",killed,1502
+m0c098fbc,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1079,1082,34,34," - "," + ",killed,1476
+m10bc955d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1079,1082,34,34," - "," * ",untested,0
+mf8b47a6a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1079,1082,34,34," - "," / ",untested,0
+m19064e9f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1079,1082,34,34," - "," ** ",untested,0
+m02d7f5e9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1079,1082,34,34," - "," % ",untested,0
+m46aff3e1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1128,1131,35,35," > "," >=  ",untested,0
+m5354124c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1128,1131,35,35," > "," <=  ",untested,0
+medb416ac,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1128,1131,35,35," > "," < ",untested,0
+mcc6165c1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1128,1131,35,35," > "," != ",untested,0
+mb4a27940,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1128,1131,35,35," > "," == ",untested,0
+mf3d54697,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1561,1565,50,50," == "," <= ",untested,0
+m88300a6d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1561,1565,50,50," == "," >= ",untested,0
+m39fbe917,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1561,1565,50,50," == ","  < ",untested,0
+m1e644826,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1561,1565,50,50," == ","  > ",untested,0
+m6864f274,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1561,1565,50,50," == "," != ",untested,0
+mfd9cdb95,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1907,1911,62,62," || "," && ",untested,0
+m5b538207,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1891,1895,62,62," || "," && ",untested,0
+m1ac1975d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1875,1879,62,62," || "," && ",untested,0
+md3f00c0f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1870,1874,62,62," == "," <= ",untested,0
+m150ed0f1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1870,1874,62,62," == "," >= ",untested,0
+m13fe9897,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1870,1874,62,62," == ","  < ",untested,0
+m17cc3c6a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1870,1874,62,62," == ","  > ",untested,0
+m074e3d36,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1870,1874,62,62," == "," != ",untested,0
+m2323e4cf,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1886,1890,62,62," == "," <= ",untested,0
+m4f9ce943,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1886,1890,62,62," == "," >= ",untested,0
+mfc1aa829,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1886,1890,62,62," == ","  < ",untested,0
+m85364b10,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1886,1890,62,62," == ","  > ",untested,0
+m1e15431f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1886,1890,62,62," == "," != ",untested,0
+mbefc0a14,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1902,1906,62,62," == "," <= ",untested,0
+mcfc08848,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1902,1906,62,62," == "," >= ",untested,0
+mbebd07a1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1902,1906,62,62," == ","  < ",untested,0
+mc7c52f33,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1902,1906,62,62," == ","  > ",untested,0
+mbb13d301,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1902,1906,62,62," == "," != ",untested,0
+m9a25e90d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1918,1922,62,62," == "," <= ",untested,0
+m3d118977,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1918,1922,62,62," == "," >= ",untested,0
+ma75ae093,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1918,1922,62,62," == ","  < ",untested,0
+m433b0e4e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1918,1922,62,62," == ","  > ",untested,0
+mf0846a88,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,1918,1922,62,62," == "," != ",untested,0
+m750bcd44,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2010,2014,65,65," == "," <= ",untested,0
+m1e4268d4,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2010,2014,65,65," == "," >= ",untested,0
+m49ddcaa2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2010,2014,65,65," == ","  < ",untested,0
+m646c607c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2010,2014,65,65," == ","  > ",untested,0
+m10b5ae50,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2010,2014,65,65," == "," != ",untested,0
+m172012f3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2193,2197,69,69," == "," <= ",untested,0
+m3cbe806b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2193,2197,69,69," == "," >= ",untested,0
+mb91ca2d5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2193,2197,69,69," == ","  < ",untested,0
+m31eb51b7,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2193,2197,69,69," == ","  > ",untested,0
+m23a6ffe3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2193,2197,69,69," == "," != ",untested,0
+mf5f9746f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2376,2380,73,73," == "," <= ",untested,0
+mddc81925,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2376,2380,73,73," == "," >= ",untested,0
+m9c5221dc,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2376,2380,73,73," == ","  < ",untested,0
+m0c50dc2d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2376,2380,73,73," == ","  > ",untested,0
+m97551212,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2376,2380,73,73," == "," != ",untested,0
+mfc61a438,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2559,2563,77,77," == "," <= ",untested,0
+m7a83d0da,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2559,2563,77,77," == "," >= ",untested,0
+ma9fad9a2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2559,2563,77,77," == ","  < ",untested,0
+m7edb28f2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2559,2563,77,77," == ","  > ",untested,0
+m62d54d99,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2559,2563,77,77," == "," != ",untested,0
+m31d19fda,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2890,2894,86,86," != "," >  ",untested,0
+mc81c2147,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2890,2894,86,86," != ","  < ",untested,0
+m24dfd88b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2890,2894,86,86," != "," <= ",untested,0
+md1314e23,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2890,2894,86,86," != "," >= ",untested,0
+m700bb7e0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2890,2894,86,86," != "," == ",untested,0
+md6e9732f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3064,3080,90,91," ||            "," &&            ",untested,0
+m2b70eb32,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3025,3041,89,90," ||            "," &&            ",untested,0
+mde3bea2e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2986,3002,88,89," ||            "," &&            ",untested,0
+m979458b3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2975,2979,88,88," == "," <= ",untested,0
+m1b2e91a0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2975,2979,88,88," == "," >= ",untested,0
+m92c472b9,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2975,2979,88,88," == ","  < ",untested,0
+m5138cb3a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2975,2979,88,88," == ","  > ",untested,0
+m1831faca,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,2975,2979,88,88," == "," != ",untested,0
+ma4193998,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3014,3018,89,89," == "," <= ",untested,0
+m3577ca7d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3014,3018,89,89," == "," >= ",untested,0
+m38c9285b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3014,3018,89,89," == ","  < ",untested,0
+m6b7dc403,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3014,3018,89,89," == ","  > ",untested,0
+mbbd92634,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3014,3018,89,89," == "," != ",untested,0
+m9fd3848c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3053,3057,90,90," == "," <= ",untested,0
+me75ff207,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3053,3057,90,90," == "," >= ",untested,0
+m6cb113a6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3053,3057,90,90," == ","  < ",untested,0
+m87778f38,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3053,3057,90,90," == ","  > ",untested,0
+mf41fd03b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3053,3057,90,90," == "," != ",untested,0
+mc87a618f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3092,3096,91,91," == "," <= ",untested,0
+me5f473d0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3092,3096,91,91," == "," >= ",untested,0
+m6e140434,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3092,3096,91,91," == ","  < ",untested,0
+mfcdf5017,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3092,3096,91,91," == ","  > ",untested,0
+m179c4da5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,BOR,3092,3096,91,91," == "," != ",untested,0
+mb3bfb244,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CCD,555,786,18,25,constructor(        address initialOwner    )        ERC1155(            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'        )        Ownable(initialOwner)    {},,untested,0
+mca350c8d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CCD,1714,1776,58,58,constructor(address initialOwner) NFTContract(initialOwner) {},,untested,0
+m91626315,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2003,2015,65,65,tokenid == 3,true,untested,0
+m0c6fd4f5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2003,2015,65,65,tokenid == 3,false,untested,0
+md997b281,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2186,2198,69,69,tokenid == 4,true,untested,0
+ma77ed3a6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2186,2198,69,69,tokenid == 4,false,untested,0
+mfd34d0e8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2369,2381,73,73,tokenid == 5,true,untested,0
+m30b42a56,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2369,2381,73,73,tokenid == 5,false,untested,0
+m308a0529,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2552,2564,77,77,tokenid == 6,true,untested,0
+mfb3a767e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2552,2564,77,77,tokenid == 6,false,untested,0
+m90bdfb99,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2963,3103,88,91,tradeTokenId == TOKEN_3 ||            tradeTokenId == TOKEN_4 ||            tradeTokenId == TOKEN_5 ||            tradeTokenId == TOKEN_6,true,untested,0
+mf5c7b868,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,2963,3103,88,91,tradeTokenId == TOKEN_3 ||            tradeTokenId == TOKEN_4 ||            tradeTokenId == TOKEN_5 ||            tradeTokenId == TOKEN_6,false,untested,0
+m30c3a1ef,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,CSC,3178,3307,92,97," else {            _burn(msg.sender, tradeTokenId, amount);            _mint(msg.sender, receiveTokenId, amount, '');        }",,untested,0
+m134524de,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,DLR,1350,1363,42,42,string memory,string storage,untested,0
+mb0d3b6fa,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,DLR,1466,1483,48,48,string memory uri,string storage uri,untested,0
+m56be282c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ECS,1533,1554,50,50,bytes(_uris[tokenId]),bytes1(_uris[tokenId]),untested,0
+m96d50678,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,901,1033,30,33,"require(            tokenid == 0 || tokenid == 1 || tokenid == 2,            'This token can only be forged not minted'        );","/* require(            tokenid == 0 || tokenid == 1 || tokenid == 2,            'This token can only be forged not minted'        ); */",untested,0
+m433144a3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,1109,1168,35,35,"require(elapsedTime > 1 minutes, 'Cannot mint token yet.');","/* require(elapsedTime > 1 minutes, 'Cannot mint token yet.'); */",untested,0
+m6761f7c4,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,1525,1592,50,50,"require(bytes(_uris[tokenId]).length == 0, 'Cannot set uri twice');","/* require(bytes(_uris[tokenId]).length == 0, 'Cannot set uri twice'); */",untested,0
+m2d9f96e1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,1842,1990,61,64,"require(            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,            'This token can only be minted not forged'        );","/* require(            tokenid == 3 || tokenid == 4 || tokenid == 5 || tokenid == 6,            'This token can only be minted not forged'        ); */",untested,0
+mc5a8d07a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,EHC,2870,2937,86,86,"require(tradeTokenId != receiveTokenId, 'Cannot trade same token');","/* require(tradeTokenId != receiveTokenId, 'Cannot trade same token'); */",untested,0
+m4a3dbea2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1782,1832,60,60,"function ForgeTokenById(uint256 tokenid) external ","function ForgeTokenById(uint256 tokenid) public ",untested,0
+m6e4bb84b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1782,1832,60,60,"function ForgeTokenById(uint256 tokenid) external ","function ForgeTokenById(uint256 tokenid) internal ",untested,0
+m40900046,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,1782,1832,60,60,"function ForgeTokenById(uint256 tokenid) external ","function ForgeTokenById(uint256 tokenid) private ",untested,0
+mb467483d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,2785,2860,85,85,"function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) external ","function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) public ",untested,0
+mb34196e7,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,2785,2860,85,85,"function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) external ","function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) internal ",untested,0
+me65b3996,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,FVR,2785,2860,85,85,"function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) external ","function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) private ",untested,0
+m2c98da7c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1064,1079,34,34,block.timestamp,block.number,untested,0
+maa23c0b6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1064,1079,34,34,block.timestamp,block.difficulty,untested,0
+m4d2bcbef,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1064,1079,34,34,block.timestamp,block.gaslimit,untested,0
+m26b7fcb5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1064,1079,34,34,block.timestamp,tx.gasprice,untested,0
+m8e8cad03,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1064,1079,34,34,block.timestamp,gasleft(),untested,0
+m848275ce,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1064,1079,34,34,block.timestamp,msg.value,untested,0
+m751868ed,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1197,1212,36,36,block.timestamp,block.number,untested,0
+mf3c49ce5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1197,1212,36,36,block.timestamp,block.difficulty,untested,0
+me4068e7f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1197,1212,36,36,block.timestamp,block.gaslimit,untested,0
+m6c3d2737,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1197,1212,36,36,block.timestamp,tx.gasprice,untested,0
+m7c283546,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1197,1212,36,36,block.timestamp,gasleft(),untested,0
+mb7c8cbc0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,GVR,1197,1212,36,36,block.timestamp,msg.value,untested,0
+mc3a31d50,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,262,263,8,8,0,1,untested,0
+mf8a78f6b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,303,304,9,9,1,0,untested,0
+m8151d6d0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,303,304,9,9,1,2,untested,0
+m2d4a962e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,344,345,10,10,2,1,untested,0
+m05ca96b5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,344,345,10,10,2,3,untested,0
+m8deae1d6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,385,386,11,11,3,2,untested,0
+mb3e3d6c5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,385,386,11,11,3,4,untested,0
+m9f72e341,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,426,427,12,12,4,3,untested,0
+m170147cb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,426,427,12,12,4,5,untested,0
+m8b6d0ecd,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,467,468,13,13,5,4,untested,0
+m18750d29,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,467,468,13,13,5,6,untested,0
+m73fd6bb8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,508,509,14,14,6,5,untested,0
+m8e2aeac4,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,508,509,14,14,6,7,untested,0
+me46d7682,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,933,934,31,31,0,1,untested,0
+m5e50ece3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,949,950,31,31,1,0,untested,0
+mb4bd7349,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,949,950,31,31,1,2,untested,0
+md411d3a3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,965,966,31,31,2,1,untested,0
+m3d5ae243,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,965,966,31,31,2,3,untested,0
+mafac6a9e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1131,1140,35,35,1 minutes,0 minutes,untested,0
+maf500f6b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1131,1140,35,35,1 minutes,2 minutes,untested,0
+me74da821,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1249,1250,37,37,1,0,untested,0
+m31af502a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1249,1250,37,37,1,2,untested,0
+m6cd1c618,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1565,1566,50,50,0,1,untested,0
+mc50908c0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1706,1707,56,56,1,0,untested,0
+m7ac588dd,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1706,1707,56,56,1,2,untested,0
+mc8959c10,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1874,1875,62,62,3,2,untested,0
+m25dc6774,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1874,1875,62,62,3,4,untested,0
+m3e567ff2,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1890,1891,62,62,4,3,untested,0
+m27dd87fa,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1890,1891,62,62,4,5,untested,0
+me9c68940,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1906,1907,62,62,5,4,untested,0
+m87138bb5,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1906,1907,62,62,5,6,untested,0
+md37fc549,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1922,1923,62,62,6,5,untested,0
+mf10b5f86,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,1922,1923,62,62,6,7,untested,0
+m6f38b295,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2014,2015,65,65,3,2,untested,0
+m27bc0bd3,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2014,2015,65,65,3,4,untested,0
+maa67eaed,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2197,2198,69,69,4,3,untested,0
+m00410cab,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2197,2198,69,69,4,5,untested,0
+m320864cb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2380,2381,73,73,5,4,untested,0
+m55a09081,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2380,2381,73,73,5,6,untested,0
+m0bcb8b9a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2563,2564,77,77,6,5,untested,0
+mf0352f03,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ILR,2563,2564,77,77,6,7,untested,0
+m4b391734,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOC,555,784,18,25,"constructor(        address initialOwner    )        ERC1155(            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'        )        Ownable(initialOwner)    ","constructor(        address initialOwner    )        Ownable(initialOwner)        ERC1155(            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'        )    ",untested,0
+mf42fb604,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,555,784,18,25,"constructor(        address initialOwner    )        ERC1155(            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'        )        Ownable(initialOwner)    ","constructor(        address initialOwner    )                Ownable(initialOwner)    ",untested,0
+m337ab07b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,555,784,18,25,"constructor(        address initialOwner    )        ERC1155(            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'        )        Ownable(initialOwner)    ","constructor(        address initialOwner    )        ERC1155(            'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}'        )            ",untested,0
+md70603be,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,1411,1515,46,49,"function setTokenUri(        uint256 tokenId,        string memory uri    ) public virtual onlyOwner ","function setTokenUri(        uint256 tokenId,        string memory uri    ) public virtual  ",untested,0
+mf352203d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOD,1714,1774,58,58,"constructor(address initialOwner) NFTContract(initialOwner) ","constructor(address initialOwner)  ",untested,0
+m0c145e8c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,MOI,839,891,29,29,"function freeMint(uint256 tokenid) external virtual ","function freeMint(uint256 tokenid) external virtual onlyOwner ",untested,0
+m7e5f5b3b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,ORFD,1268,1405,40,44,function uri(        uint256 tokenId    ) public view virtual override returns (string memory) {        return (_uris[tokenId]);    },,untested,0
+me28bba28,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,RSD,1375,1399,43,43,return (_uris[tokenId]);,/* return (_uris[tokenId]); */,untested,0
+m2bc4ee3c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,SLR,65,116,4,4,'@openzeppelin/contracts/token/ERC1155/ERC1155.sol',"""""",untested,0
+mcf10252e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,SLR,125,169,5,5,'@openzeppelin/contracts/access/Ownable.sol',"""""",untested,0
+m59d2bcbb,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,SLR,632,739,22,22,'https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}',"""""",untested,0
+m748932c8,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,1228,1238,37,37,msg.sender,tx.origin,untested,0
+mb6e40932,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2037,2047,66,66,msg.sender,tx.origin,untested,0
+m4273313a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2085,2095,67,67,msg.sender,tx.origin,untested,0
+m2cfc7a5f,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2133,2143,68,68,msg.sender,tx.origin,untested,0
+mf568ae92,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2220,2230,70,70,msg.sender,tx.origin,untested,0
+m2f70ac8c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2268,2278,71,71,msg.sender,tx.origin,untested,0
+m163c3728,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2316,2326,72,72,msg.sender,tx.origin,untested,0
+m917484b4,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2403,2413,74,74,msg.sender,tx.origin,untested,0
+me1d9007c,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2451,2461,75,75,msg.sender,tx.origin,untested,0
+m5bb8a77e,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2499,2509,76,76,msg.sender,tx.origin,untested,0
+m57127b09,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2586,2596,78,78,msg.sender,tx.origin,untested,0
+m5c56b192,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2634,2644,79,79,msg.sender,tx.origin,untested,0
+m4c188a34,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2682,2692,80,80,msg.sender,tx.origin,untested,0
+m3b65465b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,2730,2740,81,81,msg.sender,tx.origin,untested,0
+m98dd3372,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3134,3144,93,93,msg.sender,tx.origin,untested,0
+mbd64618d,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3204,3214,95,95,msg.sender,tx.origin,untested,0
+me7562057,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,TOR,3257,3267,96,96,msg.sender,tx.origin,untested,0
+m9a085215,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1131,1140,35,35,1 minutes,1 seconds,untested,0
+mfdbaa897,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1131,1140,35,35,1 minutes,1 hours,untested,0
+m683a7b62,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1131,1140,35,35,1 minutes,1 days,untested,0
+m9cb3ef37,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VUR,1131,1140,35,35,1 minutes,1 weeks,untested,0
+m807d77d0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,228,263,8,8,uint256 public constant TOKEN_0 = 0,uint256 internal constant TOKEN_0 = 0,untested,0
+m56d0302a,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,228,263,8,8,uint256 public constant TOKEN_0 = 0,uint256 private constant TOKEN_0 = 0,untested,0
+meb606752,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,269,304,9,9,uint256 public constant TOKEN_1 = 1,uint256 internal constant TOKEN_1 = 1,untested,0
+m489e2b67,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,269,304,9,9,uint256 public constant TOKEN_1 = 1,uint256 private constant TOKEN_1 = 1,untested,0
+m8e8c28bf,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,310,345,10,10,uint256 public constant TOKEN_2 = 2,uint256 internal constant TOKEN_2 = 2,untested,0
+m224deb96,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,310,345,10,10,uint256 public constant TOKEN_2 = 2,uint256 private constant TOKEN_2 = 2,untested,0
+m9d404e90,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,351,386,11,11,uint256 public constant TOKEN_3 = 3,uint256 internal constant TOKEN_3 = 3,untested,0
+m2e9ec53b,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,351,386,11,11,uint256 public constant TOKEN_3 = 3,uint256 private constant TOKEN_3 = 3,untested,0
+m5f2ad469,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,392,427,12,12,uint256 public constant TOKEN_4 = 4,uint256 internal constant TOKEN_4 = 4,untested,0
+mecb343a0,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,392,427,12,12,uint256 public constant TOKEN_4 = 4,uint256 private constant TOKEN_4 = 4,untested,0
+m7359f0c7,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,433,468,13,13,uint256 public constant TOKEN_5 = 5,uint256 internal constant TOKEN_5 = 5,untested,0
+mfbd6cbae,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,433,468,13,13,uint256 public constant TOKEN_5 = 5,uint256 private constant TOKEN_5 = 5,untested,0
+m473035d6,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,474,509,14,14,uint256 public constant TOKEN_6 = 6,uint256 internal constant TOKEN_6 = 6,untested,0
+mb74a69ed,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,474,509,14,14,uint256 public constant TOKEN_6 = 6,uint256 private constant TOKEN_6 = 6,untested,0
+mc9b2a4b1,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,516,548,16,16,uint256 public lastMintTimestamp,uint256 internal lastMintTimestamp,untested,0
+m1ed99bae,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,516,548,16,16,uint256 public lastMintTimestamp,uint256 private lastMintTimestamp,untested,0
+m10273930,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,1673,1707,56,56,uint256 public constant amount = 1,uint256 internal constant amount = 1,untested,0
+m918b18ca,/Users/harshsingh/metana-bootcamp/module-4/contracts/ForgeToken.sol,VVR,1673,1707,56,56,uint256 public constant amount = 1,uint256 private constant amount = 1,untested,0
 m111b60c4,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,493,496,15,15," > "," >=  ",untested,0
 m5ec07ca7,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,493,496,15,15," > "," <=  ",untested,0
 me06b827f,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,493,496,15,15," > "," < ",untested,0
@@ -320,21 +267,16 @@ mca5b3269,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol
 m9de79e9a,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1075,1078,28,28," * "," / ",untested,0
 m33c320ae,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1075,1078,28,28," * "," ** ",untested,0
 mae3bf2c3,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1075,1078,28,28," * "," % ",untested,0
-m94d38b7c,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1154,1158,30,30," >= ","  > ",untested,0
-m6be7c615,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1154,1158,30,30," >= ","  < ",untested,0
-m54097db1,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1154,1158,30,30," >= "," <= ",untested,0
-mb4036de6,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1154,1158,30,30," >= "," != ",untested,0
-m4145c31e,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,BOR,1154,1158,30,30," >= "," == ",untested,0
-m95b1a968,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,CCD,305,424,10,12,"constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {}",,untested,0
-mae479a5d,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,476,530,15,15,"require(msg.value > 0, ""You need to send some ether"");","/* require(msg.value > 0, ""You need to send some ether""); */",untested,0
-m680fa2c5,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,732,797,21,21,"require(amount <= address(this).balance, ""Insufficient balance"");","/* require(amount <= address(this).balance, ""Insufficient balance""); */",untested,0
-m8c665ae1,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,865,901,23,23,"require(success, ""Transfer failed"");","/* require(success, ""Transfer failed""); */",untested,0
-ma0cc5afb,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,964,1035,27,27,"require(amount <= balanceOf(msg.sender), ""Insufficient token balance"");","/* require(amount <= balanceOf(msg.sender), ""Insufficient token balance""); */",untested,0
-m3c719929,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,1112,1226,29,32,"require(            address(this).balance >= refundAmount,            ""Insufficient contract balance""        );","/* require(            address(this).balance >= refundAmount,            ""Insufficient contract balance""        ); */",untested,0
-ma675cdd8,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,825,855,22,22,"target.call{value: amount}("""")","target.delegatecall("""")",untested,0
-m3f568ccb,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,825,855,22,22,"target.call{value: amount}("""")","target.staticcall("""")",untested,0
-mbad26028,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,1273,1301,35,35,payable(msg.sender).transfer,payable(msg.sender).send,untested,0
-mc8f0ed77,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,1273,1315,35,35,payable(msg.sender).transfer,"payable(msg.sender).call{value: refundAmount}("""")",untested,0
+m95b1a968,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,CCD,305,424,10,12,"constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) {}",,untested,0
+mfaccffa0,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,476,530,15,15,"require(msg.value > 0, 'You need to send some ether');","/* require(msg.value > 0, 'You need to send some ether'); */",untested,0
+m3910dc04,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,732,797,21,21,"require(amount <= address(this).balance, 'Insufficient balance');","/* require(amount <= address(this).balance, 'Insufficient balance'); */",untested,0
+maffbfabc,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,865,901,23,23,"require(success, 'Transfer failed');","/* require(success, 'Transfer failed'); */",untested,0
+m1fd79794,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,964,1035,27,27,"require(amount <= balanceOf(msg.sender), 'Insufficient token balance');","/* require(amount <= balanceOf(msg.sender), 'Insufficient token balance'); */",untested,0
+mb663fafc,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,EHC,1273,1301,37,37,revert('Revert on receive');,/* revert('Revert on receive'); */,untested,0
+mae2d32ea,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,825,855,22,22,target.call{value: amount}(''),target.delegatecall(''),untested,0
+m3e9432ee,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,825,855,22,22,target.call{value: amount}(''),target.staticcall(''),untested,0
+m3da7724c,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,1150,1178,31,31,payable(msg.sender).transfer,payable(msg.sender).send,untested,0
+m5336dcaa,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ETR,1150,1192,31,31,payable(msg.sender).transfer,"payable(msg.sender).call{value: refundAmount}("""")",untested,0
 m5552b497,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,FVR,430,466,14,14,"function buyTokens() public payable ","function buyTokens() external payable ",untested,0
 m089e3d66,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,FVR,650,722,20,20,"function withdrawEther(uint256 amount, address target) public onlyOwner ","function withdrawEther(uint256 amount, address target) external onlyOwner ",untested,0
 ma041b25f,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,FVR,650,722,20,20,"function withdrawEther(uint256 amount, address target) public onlyOwner ","function withdrawEther(uint256 amount, address target) internal onlyOwner ",untested,0
@@ -354,19 +296,21 @@ md36ef87a,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol
 m71bc18da,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ILR,1091,1101,28,28,1000 ether,999 ether,untested,0
 mce7e8dad,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,ILR,1091,1101,28,28,1000 ether,1001 ether,untested,0
 m655b4f66,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,PKD,430,466,14,14,"function buyTokens() public payable ","function buyTokens() public  ",untested,0
-m737adf2a,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOC,305,422,10,12,"constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"") Ownable(initialOwner) ERC20Capped(MAX_SUPPLY) ",untested,0
-m5f8f39da,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOD,305,422,10,12,"constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    )  ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",untested,0
-mc2dcb0b6,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOD,305,422,10,12,"constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"")  Ownable(initialOwner) ",untested,0
-m1fe1953c,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOD,305,422,10,12,"constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"") ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    ) ERC20(""XHACKS"", ""XHS"") ERC20Capped(MAX_SUPPLY)  ",untested,0
+m02dfb610,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOC,305,422,10,12,"constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS') Ownable(initialOwner) ERC20Capped(MAX_SUPPLY) ",untested,0
+m5f8f39da,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOD,305,422,10,12,"constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    )  ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ",untested,0
+mca67621c,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOD,305,422,10,12,"constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS')  Ownable(initialOwner) ",untested,0
+m73d6aa37,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOD,305,422,10,12,"constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY) Ownable(initialOwner) ","constructor(        address initialOwner    ) ERC20('XHACKS', 'XHS') ERC20Capped(MAX_SUPPLY)  ",untested,0
 mf27b3a9f,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOD,650,722,20,20,"function withdrawEther(uint256 amount, address target) public onlyOwner ","function withdrawEther(uint256 amount, address target) public  ",untested,0
 m07eddd24,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOI,430,466,14,14,"function buyTokens() public payable ","function buyTokens() public payable onlyOwner ",untested,0
 ma07fc324,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,MOI,913,954,26,26,"function sellBack(uint256 amount) public ","function sellBack(uint256 amount) public onlyOwner ",untested,0
-m64841468,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,SLR,359,367,12,12,"""XHACKS""","""""",untested,0
-m170f9d45,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,SLR,369,374,12,12,"""XHS""","""""",untested,0
+me28b3a88,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,SLR,65,129,4,4,'@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol',"""""",untested,0
+mca7c8dad,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,SLR,138,187,5,5,'@openzeppelin/contracts/access/Ownable2Step.sol',"""""",untested,0
+m64841468,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,SLR,359,367,12,12,'XHACKS',"""""",untested,0
+m170f9d45,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,SLR,369,374,12,12,'XHS',"""""",untested,0
 mf76681c1,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,TOR,612,622,17,17,msg.sender,tx.origin,untested,0
 m00b0d049,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,TOR,992,1002,27,27,msg.sender,tx.origin,untested,0
-m869d2078,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,TOR,1242,1252,34,34,msg.sender,tx.origin,untested,0
-m6709f24f,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,TOR,1281,1291,35,35,msg.sender,tx.origin,untested,0
+m4a13f8df,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,TOR,1119,1129,30,30,msg.sender,tx.origin,untested,0
+ma3dfe790,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,TOR,1158,1168,31,31,msg.sender,tx.origin,untested,0
 m0563a1b3,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,VUR,285,298,8,8,1000000 ether,1000000 wei,untested,0
 m1721f38a,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,VUR,575,585,16,16,1000 ether,1000 wei,untested,0
 m886d41e5,/Users/harshsingh/metana-bootcamp/module-4/contracts/PartialRefund.sol,VUR,589,596,16,16,1 ether,1 wei,untested,0

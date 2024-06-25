@@ -9,10 +9,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract MyToken is ERC20, Ownable {
     address public nftStakeContract;
 
-    constructor(address initialOwner)
-        ERC20("XHACKS", "XHS")
-        Ownable(initialOwner)
-    {}
+    constructor(
+        address initialOwner
+    ) ERC20("XHACKS", "XHS") Ownable(initialOwner) {}
 
     modifier onlyNFTStake() {
         require(
@@ -82,29 +81,24 @@ contract NFTStake is IERC721Receiver {
         return IERC721Receiver.onERC721Received.selector;
     }
 
-    function claimLogic(Stake memory stake) internal returns (uint256 multiplier) {
+    function claimToken(uint256 tokenId, bool isWithdrawn) internal {
+        Stake storage stake = stakes[tokenId];
+        require(stake.isActive, "You don't have an active stake");
         uint256 elapsedTime = block.timestamp - stake.stakingTime;
+        require((elapsedTime > lockTime) || isWithdrawn, "Cannot claim yet.");
         uint256 _multiplier = elapsedTime / lockTime;
         uint256 _rewardAmount = 10 * _multiplier;
         token.mint(stake.intialOwner, _rewardAmount);
-
-        return _multiplier;
+        stake.stakingTime += lockTime * _multiplier;
     }
 
     function withdrawNFT(uint256 tokenId) external {
-        Stake storage stake = stakes[tokenId];
-        require(stake.isActive, "You don't have an active stake");
-        uint256 multiplier = claimLogic(stake);
-        stake.stakingTime  += lockTime * multiplier;
+        claimToken(tokenId, true);
         nft.safeTransferFrom(address(this), msg.sender, tokenId);
         delete stakes[tokenId];
     }
 
     function claimReward(uint256 tokenId) external {
-        Stake storage stake = stakes[tokenId];
-        uint256 elapsedTime = block.timestamp - stake.stakingTime;
-        require(elapsedTime > lockTime, "Cannot claim yet.");
-        uint256 multiplier = claimLogic(stake);
-        stake.stakingTime  += lockTime * multiplier;
+        claimToken(tokenId, false);
     }
 }
