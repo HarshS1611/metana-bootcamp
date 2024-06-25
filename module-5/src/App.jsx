@@ -93,10 +93,7 @@ const App = () => {
     });
     console.log(logs);
     for (let i = currentBlock - BigInt(9); i <= currentBlock; i++) {
-      const volume = logs.reduce((sum, event) => {
-        return sum + parseInt(event.returnValues.value);
-      }, 0);
-      console.log(volume);
+      if()
       setBlockNumber((prev) => [...prev, i]);
       setblockMap(prev => [...prev, volume]);
     }
