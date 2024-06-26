@@ -20,7 +20,7 @@ abstract contract NFTContract is ERC1155, Ownable {
         address initialOwner
     )
         ERC1155(
-            "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}"
+            "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX"
         )
         Ownable()
     {}
@@ -54,7 +54,6 @@ abstract contract NFTContract is ERC1155, Ownable {
 }
 
 contract ForgeToken is NFTContract {
-    uint256 public constant amount = 1;
 
     constructor(address initialOwner) NFTContract(initialOwner) {}
 
@@ -64,20 +63,20 @@ contract ForgeToken is NFTContract {
             "This token can only be minted not forged"
         );
         if (tokenid == 3) {
-            _burn(msg.sender, TOKEN_0, amount);
-            _burn(msg.sender, TOKEN_1, amount);
+            _burn(msg.sender, TOKEN_0, 1);
+            _burn(msg.sender, TOKEN_1, 1);
         } else if (tokenid == 4) {
-            _burn(msg.sender, TOKEN_1, amount);
-            _burn(msg.sender, TOKEN_2, amount);
+            _burn(msg.sender, TOKEN_1, 1);
+            _burn(msg.sender, TOKEN_2, 1);
         } else if (tokenid == 5) {
-            _burn(msg.sender, TOKEN_0, amount);
-            _burn(msg.sender, TOKEN_2, amount);
+            _burn(msg.sender, TOKEN_0, 1);
+            _burn(msg.sender, TOKEN_2, 1);
         } else if (tokenid == 6) {
-            _burn(msg.sender, TOKEN_0, amount);
-            _burn(msg.sender, TOKEN_1, amount);
-            _burn(msg.sender, TOKEN_2, amount);
+            _burn(msg.sender, TOKEN_0, 1);
+            _burn(msg.sender, TOKEN_1, 1);
+            _burn(msg.sender, TOKEN_2, 1);
         }
-        _mint(msg.sender, tokenid, amount, "");
+        _mint(msg.sender, tokenid, 1, "");
     }
 
     function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) external {
@@ -88,10 +87,10 @@ contract ForgeToken is NFTContract {
             tradeTokenId == TOKEN_5 ||
             tradeTokenId == TOKEN_6
         ) {
-            _burn(msg.sender, tradeTokenId, amount);
+            _burn(msg.sender, tradeTokenId, 1);
         } else {
-            _burn(msg.sender, tradeTokenId, amount);
-            _mint(msg.sender, receiveTokenId, amount, "");
+            _burn(msg.sender, tradeTokenId, 1);
+            _mint(msg.sender, receiveTokenId, 1, "");
         }
     }
 }
