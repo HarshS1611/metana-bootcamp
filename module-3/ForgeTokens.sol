@@ -6,6 +6,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 abstract contract NFTContract is ERC1155, Ownable {
+    using Strings for uint256;
+
     uint256 public constant TOKEN_0 = 0;
     uint256 public constant TOKEN_1 = 1;
     uint256 public constant TOKEN_2 = 2;
@@ -16,16 +18,12 @@ abstract contract NFTContract is ERC1155, Ownable {
 
     uint256 public lastMintTimestamp;
 
-    constructor(
-        address initialOwner
-    )
+    constructor(address initialOwner)
         ERC1155(
-            "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX"
+            "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/"
         )
-        Ownable()
+        Ownable(initialOwner)
     {}
-
-    mapping(uint256 => string) private _uris;
 
     function freeMint(uint256 tokenid) external virtual {
         require(
@@ -38,23 +36,22 @@ abstract contract NFTContract is ERC1155, Ownable {
         _mint(msg.sender, tokenid, 1, "");
     }
 
-    function uri(
-        uint256 tokenId
-    ) public view virtual override returns (string memory) {
-        return (_uris[tokenId]);
-    }
-
-    function setTokenUri(
-        uint256 tokenId,
-        string memory uri
-    ) public virtual onlyOwner {
-        require(bytes(_uris[tokenId]).length == 0, "Cannot set uri twice");
-        _uris[tokenId] = uri;
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        virtual
+        returns (string memory)
+    {   
+        require(tokenId >=0 && tokenId <7,"Invalid token Id");
+        string memory baseURI = uri(tokenId);
+        return
+            bytes(baseURI).length > 0
+                ? string.concat(baseURI, tokenId.toString())
+                : "";
     }
 }
 
 contract ForgeToken is NFTContract {
-
     constructor(address initialOwner) NFTContract(initialOwner) {}
 
     function ForgeTokenById(uint256 tokenid) external {
