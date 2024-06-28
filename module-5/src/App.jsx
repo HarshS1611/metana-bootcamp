@@ -40,7 +40,7 @@ const erc20Abi = [
 
 const App = () => {
   const [blockNumber, setBlockNumber] = useState([]);
-  const [blockMap, setblockMap] = useState([]);
+  const [blockMap, setblockMap] = useState(new Map());
   const [gasPrice, setGasPrice] = useState([]);
   const [gasRatio, setGasRatio] = useState([]);
 
@@ -91,22 +91,21 @@ const App = () => {
       fromBlock: currentBlock - BigInt(9),
       toBlock: currentBlock,
     });
-    console.log(logs);
+    setblockMap(new Map());
     setBlockNumber([]);
-    setblockMap([]);
-    // for (let i = currentBlock - BigInt(9); i <= currentBlock; i++) {
-    //   setBlockNumber((prev) => [...prev, i.toString()]);
-    // }
-    for (let j = 0; j < logs.length - 1; j++) {
-      if(logs[j].blockNumber !== logs[j+1].blockNumber) {
-        setBlockNumber((prev) => [...prev, logs[j].blockNumber.toString()]);
-        setblockMap(prev => [...prev, logs[j].returnValues.value]);
-        // console.log(logs[j]);
-      }
-      else {
-        setblockMap(prev => [...prev, logs[j].returnValues.value]+ logs[j+1].returnValues.value);
-      }
+
+    for (let i = currentBlock - BigInt(9); i <= currentBlock; i++) {
+      setBlockNumber((prev) => [...prev, i.toString()]);
     }
+    console.log(logs);
+  
+    logs.map((log) => {
+      if (blockMap.has(log.blockNumber)) {
+        setblockMap(map => new Map(map.set(log.blockNumber.toString(), map.get(log.blockNumber) + BigInt(log.returnValues.value))));
+      } else {
+        setblockMap(map => new Map(map.set(log.blockNumber.toString(), BigInt(log.returnValues.value))));
+      }
+    });
   }
 
   useEffect(() => {
