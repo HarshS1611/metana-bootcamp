@@ -12,8 +12,8 @@ const alchemy = new Alchemy(settings);
 
 export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}) {
 
-  console.log(gasPrice)
-  console.log(gasRatio)
+  console.log("blockNumber", blockNumber);
+  console.log("blockMap", blockMap);
 
   useEffect(() => {
     const initWeb3 = async () => {
@@ -52,7 +52,7 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}
 
   ];
 
-  console.log("volumeData", volumeData);
+  // console.log("volumeData", volumeData);
 
   const gasPriceData = [
     [

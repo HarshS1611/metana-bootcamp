@@ -88,14 +88,24 @@ const App = () => {
     console.log(currentBlock);
     const contract = new web3.eth.Contract(erc20Abi, USDC_ADDRESS);
     const logs = await contract.getPastEvents('Transfer', {
-      fromBlock: currentBlock - BigInt(10),
+      fromBlock: currentBlock - BigInt(9),
       toBlock: currentBlock,
     });
     console.log(logs);
-    for (let i = currentBlock - BigInt(9); i <= currentBlock; i++) {
-      if()
-      setBlockNumber((prev) => [...prev, i]);
-      setblockMap(prev => [...prev, volume]);
+    setBlockNumber([]);
+    setblockMap([]);
+    // for (let i = currentBlock - BigInt(9); i <= currentBlock; i++) {
+    //   setBlockNumber((prev) => [...prev, i.toString()]);
+    // }
+    for (let j = 0; j < logs.length - 1; j++) {
+      if(logs[j].blockNumber !== logs[j+1].blockNumber) {
+        setBlockNumber((prev) => [...prev, logs[j].blockNumber.toString()]);
+        setblockMap(prev => [...prev, logs[j].returnValues.value]);
+        // console.log(logs[j]);
+      }
+      else {
+        setblockMap(prev => [...prev, logs[j].returnValues.value]+ logs[j+1].returnValues.value);
+      }
     }
   }
 
