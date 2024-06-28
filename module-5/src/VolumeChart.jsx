@@ -10,10 +10,12 @@ const settings = {
 };
 const alchemy = new Alchemy(settings);
 
-export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}) {
+export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio }) {
 
-  console.log("blockNumber", blockNumber);
-  console.log("blockMap", blockMap);
+  // console.log("blockNumber", blockNumber);
+  // console.log("blockMap", blockMap);
+  console.log("gasPrice", gasPrice);
+  console.log("gasRatio", gasRatio);
 
   useEffect(() => {
     const initWeb3 = async () => {
@@ -58,34 +60,17 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}
       { label: "Block Number" },
       "Gas Price",
     ],
-    [blockNumber[0], gasPrice[0]],
-    [blockNumber[1], gasPrice[1]],
-    [blockNumber[2], gasPrice[2]],
-    [blockNumber[3], gasPrice[3]],
-    [blockNumber[4], gasPrice[4]],
-    [blockNumber[5], gasPrice[5]],
-    [blockNumber[6], gasPrice[6]],
-    [blockNumber[7], gasPrice[7]],
-    [blockNumber[8], gasPrice[8]],
-    [blockNumber[9], gasPrice[9]],
+    [blockNumber[0], Number(gasPrice[0])],
+    [blockNumber[1], Number(gasPrice[1])],
+    [blockNumber[2], Number(gasPrice[2])],
+    [blockNumber[3], Number(gasPrice[3])],
+    [blockNumber[4], Number(gasPrice[4])],
+    [blockNumber[5], Number(gasPrice[5])],
+
   ];
 
-  const gasRatioData = [
-    [
-      { label: "Block Number" },
-      "Gas Ratio",
-    ],
-    [blockNumber[0], gasRatio[0]],
-    [blockNumber[1], gasRatio[1]],
-    [blockNumber[2], gasRatio[2]],
-    [blockNumber[3], gasRatio[3]],
-    [blockNumber[4], gasRatio[4]],
-    [blockNumber[5], gasRatio[5]],
-    [blockNumber[6], gasRatio[6]],
-    [blockNumber[7], gasRatio[7]],
-    [blockNumber[8], gasRatio[8]],
-    [blockNumber[9], gasRatio[9]],
-  ];
+  console.log("gasPriceData", gasPriceData);
+
 
   const volumeOptions = {
     chart: {
@@ -119,21 +104,6 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}
     },
   };
 
-  const gasRatioOptions = {
-    chart: {
-      title: "Ratio of gasUsed over gasLimit for each block (in %age)",
-    },
-    width: 800,
-    height: 500,
-    series: {
-      0: { axis: "Temps" },
-    },
-    axes: {
-      y: {
-        Temps: { label: "Ratio of gasUsed over gasLimit" },
-      },
-    },
-  };
 
   return (
     <>
@@ -145,7 +115,7 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}
         options={volumeOptions}
       />
         : <div>Loading...</div>}
-      {/* {gasPriceData && gasPriceData.length > 10 ? <Chart
+      {gasPriceData ? <Chart
         chartType="Line"
         width="90%"
         height="400px"
@@ -154,14 +124,6 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio}
       />
         : <div>Loading...</div>}
 
-      {gasRatioData && gasRatioData.length > 10 ? <Chart
-        chartType="Line"
-        width="90%"
-        height="400px"
-        data={gasRatioData}
-        options={gasRatioOptions}
-      />
-        : <div>Loading...</div>} */}
     </>
   );
 }

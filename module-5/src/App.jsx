@@ -96,8 +96,12 @@ const App = () => {
 
     for (let i = currentBlock - BigInt(9); i <= currentBlock; i++) {
       setBlockNumber((prev) => [...prev, i.toString()]);
+      const block = await web3.eth.getBlock(i);
+      // console.log(block);
+      setGasPrice((prev) => [...prev, Number(block.baseFeePerGas)]);
+      setGasRatio((prev) => [...prev, (Number(block.gasUsed) / Number(block.gasLimit)) * 100]);
     }
-    console.log(logs);
+    // console.log(logs);
   
     logs.map((log) => {
       if (blockMap.has(log.blockNumber)) {
