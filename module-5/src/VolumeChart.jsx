@@ -12,11 +12,6 @@ const alchemy = new Alchemy(settings);
 
 export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio }) {
 
-  // console.log("blockNumber", blockNumber);
-  // console.log("blockMap", blockMap);
-  console.log("gasPrice", gasPrice);
-  console.log("gasRatio", gasRatio);
-
   useEffect(() => {
     const initWeb3 = async () => {
       const latestBlock = await alchemy.core.getBlock();
@@ -40,36 +35,38 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio 
       { label: "Block Number" },
       "Block Number",
     ],
-    [blockNumber[0], parseFloat(blockMap.get(blockNumber[0]))],
-    [blockNumber[1], parseFloat(blockMap.get(blockNumber[1]))],
-    [blockNumber[2], parseFloat(blockMap.get(blockNumber[2]))],
-    [blockNumber[3], parseFloat(blockMap.get(blockNumber[3]))],
-    [blockNumber[4], parseFloat(blockMap.get(blockNumber[4]))],
-    [blockNumber[5], parseFloat(blockMap.get(blockNumber[5]))],
-    [blockNumber[6], parseFloat(blockMap.get(blockNumber[6]))],
-    [blockNumber[7], parseFloat(blockMap.get(blockNumber[7]))],
-    [blockNumber[8], parseFloat(blockMap.get(blockNumber[8]))],
-    [blockNumber[9], parseFloat(blockMap.get(blockNumber[9]))],
+    [blockNumber[0], Number(blockMap.get(blockNumber[0]))],
+    [blockNumber[1], Number(blockMap.get(blockNumber[1]))],
+    [blockNumber[2], Number(blockMap.get(blockNumber[2]))],
+    [blockNumber[3], Number(blockMap.get(blockNumber[3]))],
+    [blockNumber[4], Number(blockMap.get(blockNumber[4]))],
+    [blockNumber[5], Number(blockMap.get(blockNumber[5]))],
+    [blockNumber[6], Number(blockMap.get(blockNumber[6]))],
+    [blockNumber[7], Number(blockMap.get(blockNumber[7]))],
+    [blockNumber[8], Number(blockMap.get(blockNumber[8]))],
+    [blockNumber[9], Number(blockMap.get(blockNumber[9]))],
 
   ];
-
-  console.log("volumeData", volumeData);
 
   const gasPriceData = [
     [
       { label: "Block Number" },
-      "Gas Price",
+      "BASEFEE",
+      "Gas Ratio"
     ],
-    [blockNumber[0], Number(gasPrice[0])],
-    [blockNumber[1], Number(gasPrice[1])],
-    [blockNumber[2], Number(gasPrice[2])],
-    [blockNumber[3], Number(gasPrice[3])],
-    [blockNumber[4], Number(gasPrice[4])],
-    [blockNumber[5], Number(gasPrice[5])],
+    [blockNumber[0], Number(gasPrice[0]), Number(gasRatio[0])],
+    [blockNumber[1], Number(gasPrice[1]), Number(gasRatio[1])],
+    [blockNumber[2], Number(gasPrice[2]), Number(gasRatio[2])],
+    [blockNumber[3], Number(gasPrice[3]), Number(gasRatio[3])],
+    [blockNumber[4], Number(gasPrice[4]), Number(gasRatio[4])],
+    [blockNumber[5], Number(gasPrice[5]), Number(gasRatio[5])],
+    [blockNumber[6], Number(gasPrice[6]), Number(gasRatio[6])],
+    [blockNumber[7], Number(gasPrice[7]), Number(gasRatio[7])],
+    [blockNumber[8], Number(gasPrice[8]), Number(gasRatio[8])],
+    [blockNumber[9], Number(gasPrice[9]), Number(gasRatio[9])],
 
   ];
 
-  console.log("gasPriceData", gasPriceData);
 
 
   const volumeOptions = {
