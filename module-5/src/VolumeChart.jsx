@@ -11,40 +11,23 @@ const settings = {
 const alchemy = new Alchemy(settings);
 
 export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio }) {
-
-  useEffect(() => {
-    const initWeb3 = async () => {
-      const latestBlock = await alchemy.core.getBlock();
-
-      const fromBlock = latestBlock.number - 9;
-
-      for (let i = fromBlock; i <= latestBlock.number; i++) {
-        const block = await alchemy.core.getBlock(i);
-        setBlockNumber((prev) => [...prev, block.number]);
-        setVolume((prev) => [...prev, block.transactions.length]);
-        setGasPrice((prev) => [...prev, Number(block.baseFeePerGas) / 10e8]);
-        setGasRatio((prev) => [...prev, (Number(block.gasUsed) / Number(block.gasLimit)) * 100]);
-      }
-    };
-
-    // initWeb3();
-  }, []);
+  console.log(gasPrice, gasRatio)
 
   const volumeData = [
     [
       { label: "Block Number" },
       "Block Number",
     ],
-    [blockNumber[0], Number(blockMap.get(blockNumber[0]))],
-    [blockNumber[1], Number(blockMap.get(blockNumber[1]))],
-    [blockNumber[2], Number(blockMap.get(blockNumber[2]))],
-    [blockNumber[3], Number(blockMap.get(blockNumber[3]))],
-    [blockNumber[4], Number(blockMap.get(blockNumber[4]))],
-    [blockNumber[5], Number(blockMap.get(blockNumber[5]))],
-    [blockNumber[6], Number(blockMap.get(blockNumber[6]))],
-    [blockNumber[7], Number(blockMap.get(blockNumber[7]))],
-    [blockNumber[8], Number(blockMap.get(blockNumber[8]))],
-    [blockNumber[9], Number(blockMap.get(blockNumber[9]))],
+    [blockNumber[0], parseFloat(blockMap.get(blockNumber[0]))/1e6],
+    [blockNumber[1], parseFloat(blockMap.get(blockNumber[1]))/1e6],
+    [blockNumber[2], parseFloat(blockMap.get(blockNumber[2]))/1e6],
+    [blockNumber[3], parseFloat(blockMap.get(blockNumber[3]))/1e6],
+    [blockNumber[4], parseFloat(blockMap.get(blockNumber[4]))/1e6],
+    [blockNumber[5], parseFloat(blockMap.get(blockNumber[5]))/1e6],
+    [blockNumber[6], parseFloat(blockMap.get(blockNumber[6]))/1e6],
+    [blockNumber[7], parseFloat(blockMap.get(blockNumber[7]))/1e6],
+    [blockNumber[8], parseFloat(blockMap.get(blockNumber[8]))/1e6],
+    [blockNumber[9], parseFloat(blockMap.get(blockNumber[9]))/1e6],
 
   ];
 
