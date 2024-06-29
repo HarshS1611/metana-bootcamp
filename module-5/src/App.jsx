@@ -87,8 +87,8 @@ const App = () => {
 
   return (
     <div className="charts">
-      <h1>Current block : {newBlock}</h1>
       <VolumeChart blockNumber={blockNumber} blockMap={blockMap} gasPrice={gasPrice} gasRatio={gasRatio} />
+      <h3>Current block : {newBlock}</h3>
 
     </div>
   );

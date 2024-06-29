@@ -82,7 +82,7 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio 
       {volumeData ? <Chart
         chartType="Line"
         width="100%"
-        height="900px"
+        height="400px"
         data={volumeData}
         options={volumeOptions}
       />
