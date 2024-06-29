@@ -1,14 +1,6 @@
 import { Chart } from "react-google-charts";
 import React, { useEffect, useState, useMemo } from 'react';
-import { Network, Alchemy } from "alchemy-sdk";
-const USDC_ADDRESS = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 
-const settings = {
-  // apiKey: `${import.meta.env.REACT_APP_API_KEY}`,
-  apiKey: "grz0ZmJGLvmh--ZEfeBdhgK2SEEigRg_",
-  network: Network.ETH_MAINNET,
-};
-const alchemy = new Alchemy(settings);
 
 export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio }) {
   console.log(gasPrice, gasRatio)

@@ -65,11 +65,9 @@ const App = () => {
     for (let i = BigInt(newBlock) - BigInt(9); i <= BigInt(newBlock); i++) {
       setBlockNumber((prev) => [...prev, i.toString()]);
       const block = await web3.eth.getBlock(i);
-      // console.log(block);
       setGasPrice((prev) => [...prev, Number(block.baseFeePerGas)]);
       setGasRatio((prev) => [...prev, (Number(block.gasUsed) / Number(block.gasLimit)) * 100]);
     }
-    // console.log(logs);
 
     logs.map((log) => {
       if (blockMap.has(log.blockNumber)) {
@@ -89,7 +87,7 @@ const App = () => {
 
   return (
     <div className="charts">
-      {/* <h1>Current block : {newBlock}</h1> */}
+      <h1>Current block : {newBlock}</h1>
       <VolumeChart blockNumber={blockNumber} blockMap={blockMap} gasPrice={gasPrice} gasRatio={gasRatio} />
 
     </div>
