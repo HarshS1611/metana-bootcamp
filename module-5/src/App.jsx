@@ -6,7 +6,7 @@ const USDC_ADDRESS = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 import { ethers } from "ethers";
 import Web3 from 'web3';
 const settings = {
-  apiKey: "grz0ZmJGLvmh--ZEfeBdhgK2SEEigRg_", // Replace with your Alchemy API Key.
+  apiKey: import.meta.env.VITE_API_KEY, // Replace with your Alchemy API Key.
   network: Network.ETH_MAINNET, // Replace with your network.
 };
 const alchemy = new Alchemy(settings);
@@ -49,9 +49,12 @@ const App = () => {
     setNewBlock(block);
 
   });
+  console.log(import.meta.env.VITE_API_KEY)
 
   const getLogs = async (newBlock) => {
-    const web3 = new Web3('wss://eth-mainnet.g.alchemy.com/v2/grz0ZmJGLvmh--ZEfeBdhgK2SEEigRg_');
+    const url = `https://eth-mainnet.alchemyapi.io/v2/${import.meta.env.VITE_API_KEY}`;
+    console.log(url);
+    const web3 = new Web3(url);
     const contract = new web3.eth.Contract(erc20Abi, USDC_ADDRESS);
     const logs = await contract.getPastEvents('Transfer', {
       fromBlock: BigInt(newBlock) - BigInt(9),

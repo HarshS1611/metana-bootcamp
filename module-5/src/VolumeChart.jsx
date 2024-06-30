@@ -9,16 +9,16 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio 
       { label: "Block Number" },
       "Block Number",
     ],
-    [blockNumber[0], parseFloat(blockMap.get(blockNumber[0]))/1e6],
-    [blockNumber[1], parseFloat(blockMap.get(blockNumber[1]))/1e6],
-    [blockNumber[2], parseFloat(blockMap.get(blockNumber[2]))/1e6],
-    [blockNumber[3], parseFloat(blockMap.get(blockNumber[3]))/1e6],
-    [blockNumber[4], parseFloat(blockMap.get(blockNumber[4]))/1e6],
-    [blockNumber[5], parseFloat(blockMap.get(blockNumber[5]))/1e6],
-    [blockNumber[6], parseFloat(blockMap.get(blockNumber[6]))/1e6],
-    [blockNumber[7], parseFloat(blockMap.get(blockNumber[7]))/1e6],
-    [blockNumber[8], parseFloat(blockMap.get(blockNumber[8]))/1e6],
-    [blockNumber[9], parseFloat(blockMap.get(blockNumber[9]))/1e6],
+    [blockNumber[0], parseFloat(blockMap.get(blockNumber[0]))],
+    [blockNumber[1], parseFloat(blockMap.get(blockNumber[1]))],
+    [blockNumber[2], parseFloat(blockMap.get(blockNumber[2]))],
+    [blockNumber[3], parseFloat(blockMap.get(blockNumber[3]))],
+    [blockNumber[4], parseFloat(blockMap.get(blockNumber[4]))],
+    [blockNumber[5], parseFloat(blockMap.get(blockNumber[5]))],
+    [blockNumber[6], parseFloat(blockMap.get(blockNumber[6]))],
+    [blockNumber[7], parseFloat(blockMap.get(blockNumber[7]))],
+    [blockNumber[8], parseFloat(blockMap.get(blockNumber[8]))],
+    [blockNumber[9], parseFloat(blockMap.get(blockNumber[9]))],
 
   ];
 
@@ -41,7 +41,7 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio 
 
   ];
 
-
+  console.log(volumeData);
 
   const volumeOptions = {
     chart: {
@@ -80,8 +80,8 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio 
     <>
       {volumeData ? <Chart
         chartType="Bar"
-        width="100%"
-        height="400px"
+        width="90%"
+        height="100%"
         data={volumeData}
         options={volumeOptions}
       />
