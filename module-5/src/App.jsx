@@ -68,6 +68,7 @@ const App = () => {
       setGasPrice((prev) => [...prev, Number(block.baseFeePerGas)]);
       setGasRatio((prev) => [...prev, (Number(block.gasUsed) / Number(block.gasLimit)) * 100]);
     }
+    // console.log(logs);
 
     logs.map((log) => {
       if (blockMap.has(log.blockNumber)) {

@@ -3,7 +3,6 @@ import React, { useEffect, useState, useMemo } from 'react';
 
 
 export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio }) {
-  console.log(gasPrice, gasRatio)
 
   const volumeData = [
     [
@@ -80,7 +79,7 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio 
   return (
     <>
       {volumeData ? <Chart
-        chartType="Line"
+        chartType="Bar"
         width="100%"
         height="400px"
         data={volumeData}
