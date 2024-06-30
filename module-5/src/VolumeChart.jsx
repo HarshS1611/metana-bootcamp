@@ -41,7 +41,6 @@ export default function VolumeChart({ blockNumber, blockMap, gasPrice, gasRatio 
 
   ];
 
-  console.log(volumeData);
 
   const volumeOptions = {
     chart: {

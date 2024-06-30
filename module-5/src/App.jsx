@@ -49,11 +49,9 @@ const App = () => {
     setNewBlock(block);
 
   });
-  console.log(import.meta.env.VITE_API_KEY)
 
   const getLogs = async (newBlock) => {
     const url = `https://eth-mainnet.alchemyapi.io/v2/${import.meta.env.VITE_API_KEY}`;
-    console.log(url);
     const web3 = new Web3(url);
     const contract = new web3.eth.Contract(erc20Abi, USDC_ADDRESS);
     const logs = await contract.getPastEvents('Transfer', {
@@ -71,7 +69,6 @@ const App = () => {
       setGasPrice((prev) => [...prev, Number(block.baseFeePerGas)]);
       setGasRatio((prev) => [...prev, (Number(block.gasUsed) / Number(block.gasLimit)) * 100]);
     }
-    // console.log(logs);
 
     logs.map((log) => {
       if (blockMap.has(log.blockNumber)) {
