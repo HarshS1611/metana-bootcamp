@@ -78,6 +78,10 @@ contract ForgeToken is NFTContract {
 
     function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) external {
         require(tradeTokenId != receiveTokenId, "Cannot trade same token");
+        require(
+            tradeTokenId >= 0 && tradeTokenId < 7,
+            "Invalid trade token Id"
+        );
         if (
             tradeTokenId == TOKEN_3 ||
             tradeTokenId == TOKEN_4 ||
