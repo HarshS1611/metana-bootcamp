@@ -30,20 +30,3 @@ You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to 
 
 6. Given that we push as CALLDATA byte offset index a value of 0 we need to have inside the calldata a value that will let us jump to position 0A. In this case, the solution will be to pass as calldatavalue the value 0x000000000000000000000000000000000000000000000000000000000000000A.
  
-7. Here, EQ will compare result of EXTCODESIZE with value 1 which is pushed by PUSH1 .
-CREATE : will deploy the contract
-EXTCODESIZE : will calculate the deployed contract code size
-So, EXTCODESIZE will return 1 if deployed code has only 1 instruction to follow.
-We will simply return 1 byte.
-
-8. There are two parts
-Create contract using CREATE
-CALL will call the contract and return 1 if call is successful or 0 if call fails. We need 0 because EQ compare the its result with 0.
-So as a solution we will push revert opcode and store it into memory.
-
-9. There are two parts we need to solve,
-03 < CALLDATASIZE
-(CALLVALUE * CALLDATASIZE) result equals to 08 .
-So, the CALLDATASIZE should be 4, and the CALLVALUE should be 2 to satisfy these conditions.
-
-
