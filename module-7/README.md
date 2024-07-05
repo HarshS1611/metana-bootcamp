@@ -24,9 +24,5 @@ You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to 
 
 3. The solution in this challenge is pretty easy, we just need to pass 4 bytes input value in order to make the JUMP op to jump to the JUMPDEST destination.
 
-4. The first valid JUMPDEST operation is at position 10 so XOR(CODESIZE, CALLVALUE) == 10. In our case, CODESIZE is 12 bytes, so we know that XOR(12, CALLVALUE) must equal to 10. The correct value of CALLVALUE will be 6!
 
-5. To solve this puzzle, we can see we need JUMPI(09) to JUMPDEST(0c). JUMPI pops two values from the stack. The first value will be the value where it needs to jump to and the second value will be 0 or 1 to determine if it should jump or not.
-
-6. Given that we push as CALLDATA byte offset index a value of 0 we need to have inside the calldata a value that will let us jump to position 0A. In this case, the solution will be to pass as calldatavalue the value 0x000000000000000000000000000000000000000000000000000000000000000A.
  
