@@ -59,6 +59,8 @@ export const useTransactor = (_walletClient?: WalletClient): TransactionFunc => 
         const result = await tx();
         transactionHash = result;
       } else if (tx != null) {
+        //@ts-ignore
+
         transactionHash = await walletClient.sendTransaction(tx as SendTransactionParameters);
       } else {
         throw new Error("Incorrect transaction passed to transactor");

@@ -58,6 +58,8 @@ export const useScaffoldWriteContract = <TContractName extends ContractName>(
       const { blockConfirmations, onBlockConfirmation, ...mutateOptions } = options || {};
       const makeWriteWithParams = () =>
         wagmiContractWrite.writeContractAsync(
+          //@ts-ignore
+
           {
             abi: deployedContractData.abi as Abi,
             address: deployedContractData.address,
@@ -103,6 +105,8 @@ export const useScaffoldWriteContract = <TContractName extends ContractName>(
     }
 
     wagmiContractWrite.writeContract(
+      //@ts-ignore
+
       {
         abi: deployedContractData.abi as Abi,
         address: deployedContractData.address,

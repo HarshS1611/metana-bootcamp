@@ -6,6 +6,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 abstract contract NFTContract is ERC1155, Ownable {
+    using Strings for uint256;
+
     uint256 public constant TOKEN_0 = 0;
     uint256 public constant TOKEN_1 = 1;
     uint256 public constant TOKEN_2 = 2;
@@ -16,16 +18,12 @@ abstract contract NFTContract is ERC1155, Ownable {
 
     uint256 public lastMintTimestamp;
 
-    constructor(
-        address initialOwner
-    )
+    constructor(address initialOwner)
         ERC1155(
-            "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/{id}"
+            "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/QmZDoy9GuZaLnvYkGveJyqnZ4p98GpTntiKKb1XtGHmWFX/"
         )
         Ownable()
     {}
-
-    mapping(uint256 => string) private _uris;
 
     function freeMint(uint256 tokenid) external virtual {
         require(
@@ -38,24 +36,22 @@ abstract contract NFTContract is ERC1155, Ownable {
         _mint(msg.sender, tokenid, 1, "");
     }
 
-    function uri(
-        uint256 tokenId
-    ) public view virtual override returns (string memory) {
-        return (_uris[tokenId]);
-    }
-
-    function setTokenUri(
-        uint256 tokenId,
-        string memory uri
-    ) public virtual onlyOwner {
-        require(bytes(_uris[tokenId]).length == 0, "Cannot set uri twice");
-        _uris[tokenId] = uri;
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        virtual
+        returns (string memory)
+    {   
+        require(tokenId >=0 && tokenId <7,"Invalid token Id");
+        string memory baseURI = uri(tokenId);
+        return
+            bytes(baseURI).length > 0
+                ? string.concat(baseURI, tokenId.toString())
+                : "";
     }
 }
 
 contract ForgeToken is NFTContract {
-    uint256 public constant amount = 1;
-
     constructor(address initialOwner) NFTContract(initialOwner) {}
 
     function ForgeTokenById(uint256 tokenid) external {
@@ -64,20 +60,20 @@ contract ForgeToken is NFTContract {
             "This token can only be minted not forged"
         );
         if (tokenid == 3) {
-            _burn(msg.sender, TOKEN_0, amount);
-            _burn(msg.sender, TOKEN_1, amount);
+            _burn(msg.sender, TOKEN_0, 1);
+            _burn(msg.sender, TOKEN_1, 1);
         } else if (tokenid == 4) {
-            _burn(msg.sender, TOKEN_1, amount);
-            _burn(msg.sender, TOKEN_2, amount);
+            _burn(msg.sender, TOKEN_1, 1);
+            _burn(msg.sender, TOKEN_2, 1);
         } else if (tokenid == 5) {
-            _burn(msg.sender, TOKEN_0, amount);
-            _burn(msg.sender, TOKEN_2, amount);
+            _burn(msg.sender, TOKEN_0, 1);
+            _burn(msg.sender, TOKEN_2, 1);
         } else if (tokenid == 6) {
-            _burn(msg.sender, TOKEN_0, amount);
-            _burn(msg.sender, TOKEN_1, amount);
-            _burn(msg.sender, TOKEN_2, amount);
+            _burn(msg.sender, TOKEN_0, 1);
+            _burn(msg.sender, TOKEN_1, 1);
+            _burn(msg.sender, TOKEN_2, 1);
         }
-        _mint(msg.sender, tokenid, amount, "");
+        _mint(msg.sender, tokenid, 1, "");
     }
 
     function tradeToken(uint256 tradeTokenId, uint256 receiveTokenId) external {
@@ -92,10 +88,10 @@ contract ForgeToken is NFTContract {
             tradeTokenId == TOKEN_5 ||
             tradeTokenId == TOKEN_6
         ) {
-            _burn(msg.sender, tradeTokenId, amount);
+            _burn(msg.sender, tradeTokenId, 1);
         } else {
-            _burn(msg.sender, tradeTokenId, amount);
-            _mint(msg.sender, receiveTokenId, amount, "");
+            _burn(msg.sender, tradeTokenId, 1);
+            _mint(msg.sender, receiveTokenId, 1, "");
         }
     }
 }

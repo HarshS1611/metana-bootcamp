@@ -22,7 +22,6 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deploy } = hre.deployments;
   console.log("Deploying contracts with the account:", deployer);
 
-
   await deploy("ForgeToken", {
     from: deployer,
     // Contract constructor arguments
