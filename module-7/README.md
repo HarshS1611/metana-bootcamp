@@ -27,7 +27,7 @@ You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to 
 [7] We need to go from `JUMPI(03)` to `JUMPDEST(13)`. To do that, we need to pass the CALLDATA such that after the creation of contract, the returned code (runtime code) has only 1 instruction so `EXTCODESIZE` will return 1 (byte). 
 [8] The solution of the challenge is to not execute the `REVERT` opcode in position `1A` is to deploy a contract that, when called, will revert. Reverting `CALL` will push to the stack the value 0 that will make the `EQ` push to the stack a `1`.
 By doing so, the `JUMPI` opcode will jump to the 1B position.
-[9] To solve this challenge, `CALLDATASIZE >= 3` and `CALLVALUE * CALLDATASIZE === 8`. So, the answer is `0x00000000` and `2` wei.
+[9] To solve this challenge, `CALLDATASIZE >= 3` and `CALLVALUE * CALLDATASIZE === 8` so that the program counter can move foreward to `JUMPEST`. So, the answer is `0x00000000` and `2` wei.
 
 
 ## Ethernaut Challenges
