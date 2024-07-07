@@ -24,7 +24,8 @@ You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to 
 [4] We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that first we need `CODESIZE XOR CALLVALUE = 10` i.e. `1111 XOR XXXX = 1010`. SO the answer is 6.
 [5] We need to go from `JUMPI(09)` to `JUMPDEST(0c)`. To do that, `X*X = 100`. So the answer is 16.
 [6] We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that, `CALLDATALOAD` should be `0x000000000000000000000000000000000000000000000000000000000000000a`. As the `PUSH1 00` is before `CALLDATALOAD`,so `CALLDATALOAD` will load 32 byte value string because the offset is 00 here.
-[7] We need to go from `JUMPI(03)` to `JUMPDEST(13)`.
+[7] We need to go from `JUMPI(03)` to `JUMPDEST(13)`. To do that, we need to pass the CALLDATA such that after the creation of contract, the returned code (runtime code) has only 1 instruction so `EXTCODESIZE` will return 1 (byte). 
+[8] 
 
 
 ## Ethernaut Challenges
