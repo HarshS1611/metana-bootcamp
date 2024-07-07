@@ -18,16 +18,16 @@ You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to 
 
 ## Explanation
 
-[1] We need to send 8 as msg.value to `JUMP` to `JUMPDEST` program counter.
-[2] We need to send 4 as msg.vlaue so, `CODESIZE - CODEVALUE = 06` and `CODESIZE=10`.
-[3] We need to go from `JUMP(01)` to `JUMPDEST(04)`. To do that we need to send 4 bytes of data i.e. `0x00000000`.
-[4] We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that first we need `CODESIZE XOR CALLVALUE = 10` i.e. `1111 XOR XXXX = 1010`. SO the answer is 6.
-[5] We need to go from `JUMPI(09)` to `JUMPDEST(0c)`. To do that, `X*X = 100`. So the answer is 16.
-[6] We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that, `CALLDATALOAD` should be `0x000000000000000000000000000000000000000000000000000000000000000a`. As the `PUSH1 00` is before `CALLDATALOAD`,so `CALLDATALOAD` will load 32 byte value string because the offset is 00 here.
-[7] We need to go from `JUMPI(03)` to `JUMPDEST(13)`. To do that, we need to pass the CALLDATA such that after the creation of contract, the returned code (runtime code) has only 1 instruction so `EXTCODESIZE` will return 1 (byte). 
-[8] The solution of the challenge is to not execute the `REVERT` opcode in position `1A` is to deploy a contract that, when called, will revert. Reverting `CALL` will push to the stack the value 0 that will make the `EQ` push to the stack a `1`.
+- We need to send 8 as msg.value to `JUMP` to `JUMPDEST` program counter.
+- We need to send 4 as msg.vlaue so, `CODESIZE - CODEVALUE = 06` and `CODESIZE=10`.
+- We need to go from `JUMP(01)` to `JUMPDEST(04)`. To do that we need to send 4 bytes of data i.e. `0x00000000`.
+- We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that first we need `CODESIZE XOR CALLVALUE = 10` i.e. `1111 XOR XXXX = 1010`. SO the answer is 6.
+- We need to go from `JUMPI(09)` to `JUMPDEST(0c)`. To do that, `X*X = 100`. So the answer is 16.
+- We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that, `CALLDATALOAD` should be `0x000000000000000000000000000000000000000000000000000000000000000a`. As the `PUSH1 00` is before `CALLDATALOAD`,so `CALLDATALOAD` will load 32 byte value string because the offset is 00 here.
+- We need to go from `JUMPI(03)` to `JUMPDEST(13)`. To do that, we need to pass the CALLDATA such that after the creation of contract, the returned code (runtime code) has only 1 instruction so `EXTCODESIZE` will return 1 (byte). 
+- The solution of the challenge is to not execute the `REVERT` opcode in position `1A` is to deploy a contract that, when called, will revert. Reverting `CALL` will push to the stack the value 0 that will make the `EQ` push to the stack a `1`.
 By doing so, the `JUMPI` opcode will jump to the 1B position.
-[9] To solve this challenge, `CALLDATASIZE >= 3` and `CALLVALUE * CALLDATASIZE === 8` so that the program counter can move foreward to `JUMPEST`. So, the answer is `0x00000000` and `2` wei.
+- To solve this challenge, `CALLDATASIZE >= 3` and `CALLVALUE * CALLDATASIZE === 8` so that the program counter can move foreward to `JUMPEST`. So, the answer is `0x00000000` and `2` wei.
 
 
 ## Ethernaut Challenges
