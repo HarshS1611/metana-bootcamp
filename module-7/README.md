@@ -1,0 +1,38 @@
+# EVM puzzles
+
+A collection of EVM puzzles. Each puzzle consists on sending a successful transaction to a contract. The bytecode of the contract is provided, and you need to fill the transaction data that won't revert the execution.
+
+## How to play
+
+Clone this repository and install its dependencies (`npm install` or `yarn`). Then run:
+
+```
+npx hardhat play
+```
+
+And the game will start.
+
+In some puzzles you only need to provide the value that will be sent to the contract, in others the calldata, and in others both values.
+
+You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to work through this.
+
+## Explanation
+
+- We need to send 8 as msg.value to `JUMP` to `JUMPDEST` program counter.
+- We need to send 4 as msg.vlaue so, `CODESIZE - CODEVALUE = 06` and `CODESIZE=10`.
+- We need to go from `JUMP(01)` to `JUMPDEST(04)`. To do that we need to send 4 bytes of data i.e. `0x00000000`.
+- We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that first we need `CODESIZE XOR CALLVALUE = 10` i.e. `1111 XOR XXXX = 1010`. SO the answer is 6.
+- We need to go from `JUMPI(09)` to `JUMPDEST(0c)`. To do that, `X*X = 100`. So the answer is 16.
+- We need to go from `JUMP(03)` to `JUMPDEST(0a)`. To do that, `CALLDATALOAD` should be `0x000000000000000000000000000000000000000000000000000000000000000a`. As the `PUSH1 00` is before `CALLDATALOAD`,so `CALLDATALOAD` will load 32 byte value string because the offset is 00 here.
+- We need to go from `JUMPI(03)` to `JUMPDEST(13)`. To do that, we need to pass the CALLDATA such that after the creation of contract, the returned code (runtime code) has only 1 instruction so `EXTCODESIZE` will return 1 (byte). 
+- The solution of the challenge is to not execute the `REVERT` opcode in position `1A` is to deploy a contract that, when called, will revert. Reverting `CALL` will push to the stack the value 0 that will make the `EQ` push to the stack a `1`.
+By doing so, the `JUMPI` opcode will jump to the 1B position.
+- To solve this challenge, `CALLDATASIZE >= 3` and `CALLVALUE * CALLDATASIZE === 8` so that the program counter can move foreward to `JUMPEST`. So, the answer is `0x00000000` and `2` wei.
+
+
+## Ethernaut Challenges
+
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/c2cd6be9-fe66-429a-b89f-9d0841f5443a)
+
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/e730056a-ccc1-4eb5-a11b-fd8bb5516efa)
+
