@@ -35,7 +35,6 @@ describe('PredictTheBlockHashChallenge', () => {
     let lastBlockNumber = initBlockNumber;
     do {
       lastBlockNumber = await provider.getBlockNumber();
-      console.log(`Block number: ${lastBlockNumber}`);
 
       await ethers.provider.send("evm_mine", []);
     } while (lastBlockNumber - initBlockNumber < 256);

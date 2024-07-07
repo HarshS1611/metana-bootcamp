@@ -38,8 +38,7 @@ describe('PredictTheFutureChallenge', () => {
       } catch (err) {
         console.log(err);
       }
-      const blockNumber = await provider.getBlockNumber();
-      console.log(`Tried block number: ${blockNumber}`);
+       await provider.getBlockNumber();
     }
 
     expect(await provider.getBalance(target.address)).to.equal(0);
