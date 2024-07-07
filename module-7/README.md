@@ -16,6 +16,14 @@ In some puzzles you only need to provide the value that will be sent to the cont
 
 You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to work through this.
 
+## Explanation
+
+[1] We need to send 8 as msg.value to `JUMP` to `JUMPDEST` program counter.
+[2] We need to send 4 as msg.vlaue so, `CODESIZE - CODEVALUE = 06` and `CODESIZE=10`.
+[3] We need to go from `JUMP(01)` to `JUMPDEST(04)`. To do that we need to send 4 bytes of data i.e. `0x00000000`.
+[4] 
+
+
 ## Ethernaut Challenges
 
 ![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/c2cd6be9-fe66-429a-b89f-9d0841f5443a)
