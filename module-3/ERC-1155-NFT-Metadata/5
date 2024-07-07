@@ -1,0 +1,15 @@
+{
+  "name": "MetaCity Penthouse #24",
+  "description": "A luxurious penthouse in the heart of the MetaCity virtual world.",
+  "image": "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/Qmf5h3cAcFvdHfwrg2wbzvo2yu3TY1wT2tvRcsHkUuKSus/5.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Location",
+      "value": "MetaCity"
+    },
+    {
+      "trait_type": "Property Type",
+      "value": "Penthouse"
+    }
+  ]
+}

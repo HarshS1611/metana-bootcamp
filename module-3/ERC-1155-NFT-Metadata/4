@@ -1,0 +1,15 @@
+{
+  "name": "Fractal Dreamscapes #7",
+  "description": "A mesmerizing fractal artwork from the Dreamscapes collection by artist Kai-Xu.",
+  "image": "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/Qmf5h3cAcFvdHfwrg2wbzvo2yu3TY1wT2tvRcsHkUuKSus/4.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Fractal Art"
+    },
+    {
+      "trait_type": "Edition",
+      "value": 7
+    }
+  ]
+}

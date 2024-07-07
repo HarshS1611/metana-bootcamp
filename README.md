@@ -14,6 +14,14 @@
 - Build an NFT contract and integrate it on OpenSea -  https://testnet.rarible.com/collection/0xbc03d07de7e2f0850ebbde5b700a1dc0614206a3/items
 - Create an NFT that can be minted with ERC20 tokens
 
+## Assignments M3
+
+## Deliverables - [Deployed Link](https://forge-token-frontend.vercel.app/)
+- A website that allows users to mint ERC1155 tokens and “forge” new ones
+- Deployed website - [Website Link](https://forge-token.vercel.app/)
+- Deployed contract - [Polygonscan](https://amoy.polygonscan.com/address/0x765958E0c51506bE977c9c8fbf50cca61fDa16Dd)
+- Rarible Collection - [NFT Details](https://testnets.opensea.io/collection/unidentified-contract-ad1ccf25-b20c-4aef-a1bb-266a)
+
 ## Assignments M4
 
 ### Deliverables
