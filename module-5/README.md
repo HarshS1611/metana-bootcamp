@@ -21,4 +21,5 @@ Screenshots-
 ![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/ffb3e1be-1b6f-410b-b32f-dfc81159bc26)
 
 ## What do you notice about the relationship between this ratio and the BASEFEE?
-A higher basefee could incentivize users to use less gas (lower gasUsed), reducing the gasUsed/gasLimit ratio.
+- A higher basefee could incentivize users to use less gas (lower gasUsed), reducing the gasUsed/gasLimit ratio.
+- BASEFEE is inversely propotional to the ratio of gasUsed and gasLimit.
