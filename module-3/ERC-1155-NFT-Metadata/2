@@ -1,0 +1,19 @@
+{
+  "name": "CryptoPup #412",
+  "description": "An adorable digital puppy from the CryptoPets collection.",
+  "image": "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/Qmf5h3cAcFvdHfwrg2wbzvo2yu3TY1wT2tvRcsHkUuKSus/2.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Dog"
+    },
+    {
+      "trait_type": "Breed",
+      "value": "Labrador"
+    },
+    {
+      "trait_type": "Color",
+      "value": "Golden"
+    }
+  ]
+}

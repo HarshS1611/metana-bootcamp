@@ -1,0 +1,19 @@
+{
+  "name": "Cyber Kicks 2.0",
+  "description": "The latest edition of the popular Cyber Kicks digital sneakers.",
+  "image": "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/Qmf5h3cAcFvdHfwrg2wbzvo2yu3TY1wT2tvRcsHkUuKSus/6.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Category",
+      "value": "Fashion"
+    },
+    {
+      "trait_type": "Item Type",
+      "value": "Sneakers"
+    },
+    {
+      "trait_type": "Edition",
+      "value": 2
+    }
+  ]
+}

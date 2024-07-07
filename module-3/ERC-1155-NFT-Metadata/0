@@ -1,0 +1,15 @@
+{
+  "name": "Legendary Sword",
+  "description": "A powerful sword forged by ancient dwarven blacksmiths. Grants +25 Attack Power.",
+  "image": "https://moccasin-passive-frog-784.mypinata.cloud/ipfs/Qmf5h3cAcFvdHfwrg2wbzvo2yu3TY1wT2tvRcsHkUuKSus/0.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Attack Power",
+      "value": 25
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}
