@@ -16,7 +16,9 @@ In some puzzles you only need to provide the value that will be sent to the cont
 
 You can use [`evm.codes`](https://www.evm.codes/)'s reference and playground to work through this.
 
+## Ethernaut Challenges
 
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/c2cd6be9-fe66-429a-b89f-9d0841f5443a)
 
+![image](https://github.com/HarshS1611/metana-bootcamp/assets/81004813/e730056a-ccc1-4eb5-a11b-fd8bb5516efa)
 
- 
