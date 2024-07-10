@@ -3,12 +3,11 @@ pragma solidity ^0.8.25;
 import "@openzeppelin/contracts/utils/Address.sol";
 
 contract Vulnerable {    
+    using Address for address;
 
     function checkCaller(address _addr) public view returns (bool) {
-        uint256 size;
-        assembly { size := extcodesize(_addr) }
-        require(size <= 0, "Contract is not allowed");
-        return true;
+        bool isTrue = isContract(_addr);
+        return isTrue;
     }
 }
 
@@ -27,7 +26,7 @@ contract Attacker {
     }
 }
 
-contract Defender {
+contract SafeContract {
     
     function checkCaller() public view returns (bool) {
         require(msg.sender == tx.origin,"Contract is not allowed");
@@ -35,17 +34,17 @@ contract Defender {
     }
 }
 
-contract AttackerDefender {
-    Defender public defenderContract;
+contract Attacker2 {
+    SafeContract public safeContract;
     bool public constructorCallResult;
     bool public functionCallResult;
     
-    constructor(address _defenderAddress) {
-        defenderContract = Defender(_defenderAddress);
-        constructorCallResult = defenderContract.checkCaller();
+    constructor(address _safeAddress) {
+        safeContract = Defender(_safeAddress);
+        constructorCallResult = safeContract.checkCaller();
     }
     
     function attack() public {
-        functionCallResult = defenderContract.checkCaller();
+        functionCallResult = safeContract.checkCaller();
     }
 }
