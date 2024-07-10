@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
-
 import "@openzeppelin/contracts/utils/Address.sol";
 
-contract Vulnerable {
-    using Address for address;
-    
-    function checkCaller() public view returns (bool) {
-        return msg.sender.isContract();
+contract Vulnerable {    
+
+    function checkCaller(address _addr) public view returns (bool) {
+        uint256 size;
+        assembly { size := extcodesize(_addr) }
+        require(size <= 0, "Contract is not allowed");
+        return true;
     }
 }
 
@@ -18,19 +19,19 @@ contract Attacker {
     
     constructor(address _vulnerableAddress) {
         vulnerableContract = Vulnerable(_vulnerableAddress);
-        constructorCallResult = vulnerableContract.checkCaller();
+        constructorCallResult = vulnerableContract.checkCaller(address(this));
     }
     
     function attack() public {
-        functionCallResult = vulnerableContract.checkCaller();
+        functionCallResult = vulnerableContract.checkCaller(address(this));
     }
 }
 
 contract Defender {
-    using Address for address;
     
     function checkCaller() public view returns (bool) {
-        return msg.sender == tx.origin;
+        require(msg.sender == tx.origin,"Contract is not allowed");
+        return true;
     }
 }
 
