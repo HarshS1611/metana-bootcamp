@@ -17,7 +17,3 @@ for (const [i, v] of tree.entries()) {
       console.log("Proof:", proof);
     }
   }
-  [
-    "0x94b29c01ed483e694a7ecf386d384987d4d3e9d4e6c476f5b97302b23ff871c9",
-    "0xfbd9dfd10273074214b15a83e871923fa9e88f9abd03ab2a7891a42701e72639"
-  ]
