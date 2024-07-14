@@ -32,6 +32,8 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
         bool revealed;
     }
 
+
+    mapping (address => bool) public hasClaimed;
     mapping(address => Commit) public users;
     address[] public contributors;
     mapping(address => uint256) public contributorShares;
@@ -49,7 +51,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
         currentState = newState;
     }
 
-    function presaleMint(uint256 index, bytes32[] calldata merkleProof)
+    function presaleMintBitMap(uint256 index, bytes32[] calldata merkleProof)
         external
         payable
         onlyInState(State.Presale)
@@ -65,7 +67,32 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
             "Invalid merkle proof"
         );
 
-        BitMaps.setTo(mintedBitmap, index, true);
+        BitMaps.set(mintedBitmap, index);
+        _safeMint(msg.sender, totalSupply++);
+
+        if (totalSupply == MAX_SUPPLY) {
+            currentState = State.SoldOut;
+        }
+    }
+
+
+    function presaleMintMap(uint256 index, bytes32[] calldata merkleProof)
+        external
+        payable
+        onlyInState(State.Presale)
+    {
+        require(msg.value >= PRICE, "Insufficient payment");
+        require(!hasClaimed[msg.sender], "Already minted");
+
+        bytes32 leaf = keccak256(
+            bytes.concat(keccak256(abi.encode(msg.sender, index)))
+        );
+        require(
+            MerkleProof.verify(merkleProof, merkleRoot, leaf),
+            "Invalid merkle proof"
+        );
+
+        hasClaimed[msg.sender] = true;
         _safeMint(msg.sender, totalSupply++);
 
         if (totalSupply == MAX_SUPPLY) {
