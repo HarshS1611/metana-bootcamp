@@ -1,13 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
-import "@openzeppelin/contracts/utils/Address.sol";
 
 contract Vulnerable {    
-    using Address for address;
 
     function checkCaller(address _addr) public view returns (bool) {
-        bool isTrue = isContract(_addr);
-        return isTrue;
+        return _addr.code.length == 0;
     }
 }
 
@@ -40,7 +37,7 @@ contract Attacker2 {
     bool public functionCallResult;
     
     constructor(address _safeAddress) {
-        safeContract = Defender(_safeAddress);
+        safeContract = SafeContract(_safeAddress);
         constructorCallResult = safeContract.checkCaller();
     }
     

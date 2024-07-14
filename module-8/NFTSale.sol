@@ -5,10 +5,9 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts/utils/Multicall.sol";
 import "@openzeppelin/contracts/utils/structs/BitMaps.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract AdvancedNFT is ERC721, Multicall, ReentrancyGuard, Ownable {
+contract AdvancedNFT is ERC721, Multicall, Ownable {
     using BitMaps for BitMaps.BitMap;
 
     enum State {
@@ -122,7 +121,7 @@ contract AdvancedNFT is ERC721, Multicall, ReentrancyGuard, Ownable {
         }
     }
 
-    function BatchTransfer(address[] calldata to, uint256[] calldata tokenIds)
+    function BatchTokenTransfer(address[] calldata to, uint256[] calldata tokenIds)
         external
     {
         require(to.length == tokenIds.length, "Arrays length mismatch");
@@ -139,7 +138,6 @@ contract AdvancedNFT is ERC721, Multicall, ReentrancyGuard, Ownable {
         this.multicall(calls);
     }
 
-    // Withdrawal functions
     function addContributor(address contributor, uint256 shares)
         external
         onlyOwner
@@ -166,4 +164,5 @@ contract AdvancedNFT is ERC721, Multicall, ReentrancyGuard, Ownable {
             require(success, "Transfer failed");
         }
     }
+
 }
