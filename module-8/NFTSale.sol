@@ -6,8 +6,9 @@ import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts/utils/Multicall.sol";
 import "@openzeppelin/contracts/utils/structs/BitMaps.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "https://github.com/1001-digital/erc721-extensions/blob/main/contracts/RandomlyAssigned.sol";
 
-contract AdvancedNFT is ERC721, Multicall, Ownable {
+contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     using BitMaps for BitMaps.BitMap;
 
     enum State {
@@ -19,7 +20,6 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
 
     State public currentState;
     uint256 public constant MAX_SUPPLY = 10;
-    uint256 public totalSupply;
     uint256 public constant PRICE = 1 ether;
 
     bytes32 private constant merkleRoot =
@@ -32,13 +32,16 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
         bool revealed;
     }
 
-
-    mapping (address => bool) public hasClaimed;
+    mapping(address => bool) public hasClaimed;
     mapping(address => Commit) public users;
     address[] public contributors;
-    mapping(address => uint256) public contributorShares;
+    mapping(address => uint256) public contributorAmount;
 
-    constructor() ERC721("XHACK", "XH") Ownable(msg.sender) {
+    constructor()
+        ERC721("XHACK", "XH")
+        Ownable(msg.sender)
+        RandomlyAssigned(MAX_SUPPLY, 0)
+    {
         currentState = State.Inactive;
     }
 
@@ -51,12 +54,11 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
         currentState = newState;
     }
 
-    function presaleMintBitMap(uint256 index, bytes32[] calldata merkleProof)
-        external
-        payable
-        onlyInState(State.Presale)
-    {
-        require(msg.value >= PRICE, "Insufficient payment");
+    function presaleMint(
+        uint256 index,
+        bytes32[] calldata merkleProof,
+        uint256 nonce
+    ) external onlyInState(State.Presale) {
         require(!BitMaps.get(mintedBitmap, index), "Already minted");
 
         bytes32 leaf = keccak256(
@@ -68,52 +70,24 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
         );
 
         BitMaps.set(mintedBitmap, index);
-        _safeMint(msg.sender, totalSupply++);
-
-        if (totalSupply == MAX_SUPPLY) {
-            currentState = State.SoldOut;
-        }
-    }
-
-
-    function presaleMintMap(uint256 index, bytes32[] calldata merkleProof)
-        external
-        payable
-        onlyInState(State.Presale)
-    {
-        require(msg.value >= PRICE, "Insufficient payment");
-        require(!hasClaimed[msg.sender], "Already minted");
-
-        bytes32 leaf = keccak256(
-            bytes.concat(keccak256(abi.encode(msg.sender, index)))
-        );
-        require(
-            MerkleProof.verify(merkleProof, merkleRoot, leaf),
-            "Invalid merkle proof"
-        );
-
-        hasClaimed[msg.sender] = true;
-        _safeMint(msg.sender, totalSupply++);
-
-        if (totalSupply == MAX_SUPPLY) {
-            currentState = State.SoldOut;
-        }
-    }
-
-    function commitMint(address user, uint256 nonce)
-        external
-        payable
-        onlyInState(State.PublicSale)
-    {
-        require(msg.value >= PRICE, "Insufficient payment");
         require(!users[msg.sender].revealed, "Already committed");
-        bytes32 commitment = keccak256(abi.encodePacked(user, nonce));
-        users[msg.sender].revealed = true;
+        bytes32 commitment = keccak256(
+            abi.encodePacked(msg.sender, index, nonce)
+        );
         users[msg.sender].commit = commitment;
         users[msg.sender].block = block.number;
+
+        _safeMint(msg.sender, nextToken());
+
+        if (nextToken() == MAX_SUPPLY) {
+            currentState = State.SoldOut;
+        }
     }
 
-    function revealMint(uint256 nonce) external onlyInState(State.PublicSale) {
+    function revealMint(uint256 index, uint256 nonce)
+        external
+        onlyInState(State.Presale)
+    {
         require(users[msg.sender].commit > 0, "No commitment found");
         require(
             block.number >= users[msg.sender].block + 3,
@@ -122,74 +96,71 @@ contract AdvancedNFT is ERC721, Multicall, Ownable {
 
         bytes32 commitment = users[msg.sender].commit;
         require(
-            keccak256(abi.encodePacked(msg.sender, nonce)) == commitment,
-            "Invalid nonce"
+            keccak256(abi.encodePacked(msg.sender, index, nonce)) == commitment,
+            "Invalid commitment"
         );
 
         delete users[msg.sender];
-        uint256 tokenId = uint256(
-            keccak256(
-                abi.encodePacked(
-                    blockhash(users[msg.sender].block),
-                    block.timestamp,
-                    nonce
-                )
-            )
-        ) % MAX_SUPPLY;
-        while (_ownerOf(tokenId) != address(0)) {
-            tokenId = (tokenId + 1) % MAX_SUPPLY;
-        }
 
-        _safeMint(msg.sender, tokenId);
-        totalSupply++;
+        _safeMint(msg.sender, nextToken());
 
-        if (totalSupply == MAX_SUPPLY) {
+        if (nextToken() == MAX_SUPPLY) {
             currentState = State.SoldOut;
         }
     }
 
-    function BatchTokenTransfer(address[] calldata to, uint256[] calldata tokenIds)
-        external
-    {
+    function puclicMint() external payable onlyInState(State.PublicSale) {
+        require(msg.value >= PRICE, "Insufficient Payment");
+        hasClaimed[msg.sender] = true;
+        _safeMint(msg.sender, nextToken());
+
+        if (nextToken() == MAX_SUPPLY) {
+            currentState = State.SoldOut;
+        }
+    }
+
+    function BatchTokenTransfer(
+        address[] calldata to,
+        uint256[] calldata tokenIds
+    ) external {
         require(to.length == tokenIds.length, "Arrays length mismatch");
-        this.setApprovalForAll(address(this), true);
+        
         bytes[] memory calls = new bytes[](to.length);
+        this.setApprovalForAll(address(this), true);
+
         for (uint256 i = 0; i < to.length; i++) {
-             calls[i] = abi.encodeWithSelector(
-            this.transferFrom.selector,
-            msg.sender,
-            to[i],
-            tokenIds[i]
-        );
+            calls[i] = abi.encodeWithSelector(
+                this.transferFrom.selector,
+                msg.sender,
+                to[i],
+                tokenIds[i]
+            );
         }
         this.multicall(calls);
     }
 
-    function addContributor(address contributor, uint256 shares)
+    uint256 totalShares;
+
+    function addContributor(address contributor, uint256 amount)
         external
         onlyOwner
     {
         require(contributor != address(0), "Invalid contributor address");
-        require(shares > 0, "Shares must be greater than 0");
+        require(amount > 0, "Amounr must be greater than 0");
+        totalShares += amount;
 
         contributors.push(contributor);
-        contributorShares[contributor] = shares;
+        contributorAmount[contributor] = amount;
     }
 
     function withdraw() external onlyOwner {
-        uint256 totalShares;
-        for (uint256 i = 0; i < contributors.length; i++) {
-            totalShares += contributorShares[contributors[i]];
-        }
 
-        uint256 balance = address(this).balance;
         for (uint256 i = 0; i < contributors.length; i++) {
             address contributor = contributors[i];
-            uint256 share = contributorShares[contributor];
-            uint256 amount = (balance * share) / totalShares;
+            uint256 share = contributorAmount[contributor];
+            uint256 amount = (address(this).balance * share) / totalShares;
             (bool success, ) = contributor.call{value: amount}("");
             require(success, "Transfer failed");
         }
     }
-
 }
