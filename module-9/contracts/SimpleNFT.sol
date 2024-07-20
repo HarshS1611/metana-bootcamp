@@ -9,14 +9,9 @@ contract MyNFTV1 is Initializable, ERC721Upgradeable, OwnableUpgradeable {
     uint256 public totalSupply;
     uint256 public constant MAX_SUPPLY = 10;
 
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() {
-        _disableInitializers();
-    }
-
-    function initialize() initializer public {
+    function initialize(address initialOwner) initializer public {
         __ERC721_init("MyNFTCollection", "MNFT");
-        __Ownable_init(msg.sender);
+        __Ownable_init(initialOwner);
     }
 
     function mint() public {

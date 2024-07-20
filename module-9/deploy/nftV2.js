@@ -1,8 +1,8 @@
 const { ethers, upgrades } = require("hardhat");
 
 async function main() {
-  const proxyAddress = "YOUR_PROXY_ADDRESS"; // Replace with your proxy address
-  const MyNFTUpgradeableV2 = await ethers.getContractFactory("MyNFTUpgradeableV2");
+  const proxyAddress = "0xA3Dd0202fc3824D402D2E2947dfadeabf6081eB5"; 
+  const MyNFTUpgradeableV2 = await ethers.getContractFactory("MyNFTV2");
   console.log("Upgrading MyNFTUpgradeable...");
   await upgrades.upgradeProxy(proxyAddress, MyNFTUpgradeableV2);
   console.log("MyNFTUpgradeable upgraded");
