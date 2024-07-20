@@ -21,6 +21,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     State public currentState;
     uint256 public constant MAX_SUPPLY = 10;
     uint256 public constant PRICE = 1 ether;
+    uint256 totalShares;
 
     bytes32 private constant merkleRoot =
         0x5bc8f7c642e52771dbf7dfc1d71b1144964984f730f7a16a47c85599d3381b50;
@@ -90,7 +91,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     {
         require(users[msg.sender].commit > 0, "No commitment found");
         require(
-            block.number >= users[msg.sender].block + 3,
+            block.number >= users[msg.sender].block + 10,
             "Too early to reveal"
         );
 
@@ -138,8 +139,6 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         }
         this.multicall(calls);
     }
-
-    uint256 totalShares;
 
     function addContributor(address contributor, uint256 amount)
         external
