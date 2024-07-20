@@ -6,26 +6,22 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   try {
-    // Deploy MyTokenUpgradeable
-    const MyToken = await ethers.getContractFactory("MyTokenUpgradeable");
+    const MyToken = await ethers.getContractFactory("MyToken");
     const myToken = await upgrades.deployProxy(MyToken, [deployer.address], { initializer: 'initialize' });
     await myToken.waitForDeployment();
-    console.log("MyTokenUpgradeable deployed to:", await myToken.getAddress());
+    console.log("MyTokenUpgradeable deployed to:", myToken.target);
 
-    // Deploy MyNFTUpgradeable
-    const MyNFT = await ethers.getContractFactory("MyNFTUpgradeable");
+    const MyNFT = await ethers.getContractFactory("MyNFT");
     const myNFT = await upgrades.deployProxy(MyNFT, [], { initializer: 'initialize' });
     await myNFT.waitForDeployment();
-    console.log("MyNFTUpgradeable deployed to:", await myNFT.getAddress());
+    console.log("MyNFTUpgradeable deployed to:", myNFT.target);
 
-    // Deploy NFTStakeUpgradeable
-    const NFTStake = await ethers.getContractFactory("NFTStakeUpgradeable");
-    const nftStake = await upgrades.deployProxy(NFTStake, [await myToken.getAddress(), await myNFT.getAddress()], { initializer: 'initialize' });
+    const NFTStake = await ethers.getContractFactory("StakeNFT");
+    const nftStake = await upgrades.deployProxy(NFTStake, [myToken.target, myNFT.target], { initializer: 'initialize' });
     await nftStake.waitForDeployment();
-    console.log("NFTStakeUpgradeable deployed to:", await nftStake.getAddress());
+    console.log("NFTStakeUpgradeable deployed to:", nftStake.target);
 
-    // Set NFTStake contract address in MyToken
-    await myToken.setNFTStakeContract(await nftStake.getAddress());
+    await myToken.setNFTStakeContract(nftStake.target);
     console.log("NFTStake contract address set in MyToken");
   } catch (error) {
     console.error("Deployment failed:", error);

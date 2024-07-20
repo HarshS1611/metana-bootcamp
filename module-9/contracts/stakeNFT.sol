@@ -1,34 +1,22 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
 
-contract MyTokenUpgradeable is
+contract MyToken is
     Initializable,
     ERC20Upgradeable,
-    OwnableUpgradeable,
-    UUPSUpgradeable
+    OwnableUpgradeable
 {
     address public nftStakeContract;
-
-    /// @custom:oz-upgrades-unsafe-allow constructor
-
-    constructor() {
-        _disableInitializers();
-    }
 
     function initialize(address initialOwner) public initializer {
         __ERC20_init("XHACKS", "XHS");
         __Ownable_init(initialOwner);
-        __UUPSUpgradeable_init();
     }
 
     modifier onlyNFTStake() {
@@ -50,36 +38,23 @@ contract MyTokenUpgradeable is
     function mint(address to, uint256 amount) external onlyNFTStake {
         _mint(to, amount);
     }
-
-    function _authorizeUpgrade(
-        address newImplementation
-    ) internal override onlyOwner {}
 }
 
-contract MyNFTUpgradeable is Initializable, ERC721Upgradeable, UUPSUpgradeable {
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() {
-        _disableInitializers();
-    }
-
+contract MyNFT is Initializable, ERC721Upgradeable {
     function initialize() public initializer {
         __ERC721_init("MyNFT", "MNFT");
-        __UUPSUpgradeable_init();
     }
 
     function mint(uint256 tokenId) public {
         _mint(msg.sender, tokenId);
     }
-
-    function _authorizeUpgrade(address newImplementation) internal override {}
 }
 
-contract NFTStakeUpgradeable is
+contract StakeNFT is
     Initializable,
-    IERC721Receiver,
-    UUPSUpgradeable
+    IERC721Receiver
 {
-    MyTokenUpgradeable public token;
+    MyToken public token;
     IERC721 public nft;
 
     struct Stake {
@@ -91,17 +66,11 @@ contract NFTStakeUpgradeable is
 
     mapping(uint256 => Stake) public stakes;
 
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() {
-        _disableInitializers();
-    }
-
     function initialize(
         address _tokenAddress,
         IERC721 _nftAddress
     ) public initializer {
-        __UUPSUpgradeable_init();
-        token = MyTokenUpgradeable(_tokenAddress);
+        token = MyToken(_tokenAddress);
         nft = _nftAddress;
     }
 
@@ -146,6 +115,4 @@ contract NFTStakeUpgradeable is
     function claimReward(uint256 tokenId) external {
         claimToken(tokenId, false);
     }
-
-    function _authorizeUpgrade(address newImplementation) internal override {}
 }
