@@ -1,23 +1,30 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract ERC20Token is ERC20 {
-    constructor() ERC20("XHACKS", "XHS") {}
+import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
+
+contract ERC20Token is Initializable, ERC20Upgradeable {
+
+    function initialize() initializer public {
+        __ERC20_init("XHACKS", "XHS");
+    }
 
     function mint(address to, uint256 amount) external {
         _mint(to, amount);
     }
 }
 
-contract ERC721Token is ERC721, Ownable {
+contract ERC721Token is Initializable, ERC721Upgradeable, OwnableUpgradeable {
     address public nftMintContract;
 
-    constructor(
-        address initialOwner
-    ) ERC721("MyERC721", "M721") Ownable(initialOwner) {}
+    function initialize(address initialOwner) initializer public {
+        __ERC721_init("MyERC721", "M721");
+        __Ownable_init(initialOwner);
+    }
 
     modifier onlyNFTMinter() {
         require(
@@ -40,18 +47,22 @@ contract ERC721Token is ERC721, Ownable {
     }
 }
 
-contract NFTMinter is Ownable {
+
+
+
+contract NFTMinter is Initializable, OwnableUpgradeable {
     ERC20Token public erc20Token;
     ERC721Token public erc721Token;
     uint256 public tokenid;
-    mapping(address => uint) users;
+    mapping(address => uint) public users;
     uint256 public constant NFT_PRICE = 10 ether;
 
-    constructor(
+    function initialize(
         ERC20Token _erc20Token,
         ERC721Token _erc721Token,
         address initialOwner
-    ) Ownable(initialOwner) {
+    ) initializer public {
+        __Ownable_init(initialOwner);
         erc20Token = _erc20Token;
         erc721Token = _erc721Token;
     }
