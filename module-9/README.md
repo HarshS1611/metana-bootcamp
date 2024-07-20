@@ -35,3 +35,11 @@
 - StakeNFT deployed to: 0x0368a5f4F40CF3ce72c182d690aB93A8064b0508
 - StakeNFT proxy: 0xd9Da740DE6604183d349B61486cE89B58b16De5C
 - StakeNFT admin: 0x015123a4786783A29629813C20C0E9e904997081
+
+
+## Ethernaut 
+
+![image](https://github.com/user-attachments/assets/1658f048-a18c-4742-bb8b-3357930c8942)
+![image](https://github.com/user-attachments/assets/edf59848-2287-4089-81ce-a2aaf375d3d8)
+![image](https://github.com/user-attachments/assets/89a421e3-efed-4d3b-9c64-d22c8d816a90)
+
