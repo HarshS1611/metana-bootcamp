@@ -41,7 +41,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     constructor()
         ERC721("XHACK", "XH")
         Ownable()
-        RandomlyAssigned(MAX_SUPPLY * 2, 0)
+        RandomlyAssigned(MAX_SUPPLY, 0)
     {
         currentState = State.Inactive;
     }
@@ -104,7 +104,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         }
     }
 
-    function puclicMint() external payable onlyInState(State.PublicSale) {
+    function publicMint() external payable onlyInState(State.PublicSale) {
         require(msg.value >= PRICE, "Insufficient Payment");
         hasClaimed[msg.sender] = true;
         _safeMint(msg.sender, nextToken());
