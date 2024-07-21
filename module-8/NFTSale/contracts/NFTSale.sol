@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.24;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts/utils/Multicall.sol";
 import "@openzeppelin/contracts/utils/structs/BitMaps.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "https://github.com/1001-digital/erc721-extensions/blob/main/contracts/RandomlyAssigned.sol";
+import "./utils/RandomAssigned.sol";
 
 contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     using BitMaps for BitMaps.BitMap;
@@ -40,8 +40,8 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
 
     constructor()
         ERC721("XHACK", "XH")
-        Ownable(msg.sender)
-        RandomlyAssigned(MAX_SUPPLY, 0)
+        Ownable()
+        RandomlyAssigned(MAX_SUPPLY * 2, 0)
     {
         currentState = State.Inactive;
     }
@@ -77,18 +77,12 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         );
         users[msg.sender].commit = commitment;
         users[msg.sender].block = block.number;
-
-        _safeMint(msg.sender, nextToken());
-
-        if (nextToken() == MAX_SUPPLY) {
-            currentState = State.SoldOut;
-        }
     }
 
-    function revealMint(uint256 index, uint256 nonce)
-        external
-        onlyInState(State.Presale)
-    {
+    function revealMint(
+        uint256 index,
+        uint256 nonce
+    ) external onlyInState(State.Presale) {
         require(users[msg.sender].commit > 0, "No commitment found");
         require(
             block.number >= users[msg.sender].block + 10,
@@ -105,7 +99,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
 
         _safeMint(msg.sender, nextToken());
 
-        if (nextToken() == MAX_SUPPLY) {
+        if (tokenCount() == MAX_SUPPLY) {
             currentState = State.SoldOut;
         }
     }
@@ -115,7 +109,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         hasClaimed[msg.sender] = true;
         _safeMint(msg.sender, nextToken());
 
-        if (nextToken() == MAX_SUPPLY) {
+        if (tokenCount() == MAX_SUPPLY) {
             currentState = State.SoldOut;
         }
     }
@@ -125,7 +119,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         uint256[] calldata tokenIds
     ) external {
         require(to.length == tokenIds.length, "Arrays length mismatch");
-        
+
         bytes[] memory calls = new bytes[](to.length);
         this.setApprovalForAll(address(this), true);
 
@@ -140,10 +134,10 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         this.multicall(calls);
     }
 
-    function addContributor(address contributor, uint256 amount)
-        external
-        onlyOwner
-    {
+    function addContributor(
+        address contributor,
+        uint256 amount
+    ) external onlyOwner {
         require(contributor != address(0), "Invalid contributor address");
         require(amount > 0, "Amounr must be greater than 0");
         totalShares += amount;
@@ -153,7 +147,6 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     }
 
     function withdraw() external onlyOwner {
-
         for (uint256 i = 0; i < contributors.length; i++) {
             address contributor = contributors[i];
             uint256 share = contributorAmount[contributor];
