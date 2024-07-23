@@ -46,19 +46,20 @@ describe("NFT SALE", function () {
     const etherAmount = hre.ethers.parseEther("1");
 
     await AdvancedNFTContract.connect(owner).setState(2);
+    await AdvancedNFTContract.connect(otherAccount).publicMint({ value: etherAmount});
+    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
+    await AdvancedNFTContract.connect(otherAccount).publicMint({ value: etherAmount});
+    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
+    await AdvancedNFTContract.connect(otherAccount).publicMint({ value: etherAmount});
     await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
     await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
-    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
-    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
-    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
-    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
-    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
-    await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
+    await AdvancedNFTContract.connect(otherAccount).publicMint({ value: etherAmount});
     await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
     await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount});
 
     expect(await AdvancedNFTContract.tokenCount()).to.equal(10);
-    expect(await AdvancedNFTContract.balanceOf(owner.address)).to.equal(10);
+    expect(await AdvancedNFTContract.balanceOf(owner.address)).to.equal(6);
+    expect(await AdvancedNFTContract.balanceOf(otherAccount.address)).to.equal(4);
     expect(await AdvancedNFTContract.availableTokenCount()).to.equal(0);
     expect(await AdvancedNFTContract.currentState()).to.equal(3);
     
