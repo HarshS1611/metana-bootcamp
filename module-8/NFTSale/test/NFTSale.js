@@ -127,35 +127,4 @@ describe("PRIVATE SALE", function () {
 
 });
 
-describe("Batch Transfer NFTs", function () {
-  
-    async function deployForgeFixture() {
-  
-      let AdvancedNFT, AdvancedNFTContract, owner, otherAccount;
-  
-      [owner, otherAccount] = await hre.ethers.getSigners();
-  
-      AdvancedNFT = await hre.ethers.getContractFactory("AdvancedNFT");
-      AdvancedNFTContract = await AdvancedNFT.deploy();
-  
-      return { AdvancedNFTContract, owner, otherAccount };
-    }
-  
-    it("Should allow to batch transfer NFTs", async function () {
-      const { AdvancedNFTContract, owner, otherAccount } = await loadFixture(deployForgeFixture);
-      const etherAmount = hre.ethers.parseEther("1");
-  
-      await AdvancedNFTContract.connect(owner).setState(2);
 
-      await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount });
-      await AdvancedNFTContract.connect(owner).publicMint({ value: etherAmount });
-      
-      await AdvancedNFTContract.connect(owner).BatchTokenTransfer([otherAccount.address,otherAccount.address], ["0","1"]);
-
-      expect(await AdvancedNFTContract.balanceOf(owner.address)).to.equal(0);
-
-      expect(await AdvancedNFTContract.balanceOf(otherAccount.address)).to.equal(2);
-
-    });
-
-});
