@@ -32,8 +32,6 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         uint256 block;
         bool revealed;
     }
-
-    mapping(address => bool) public hasClaimed;
     mapping(address => Commit) public users;
     address[] public contributors;
     mapping(address => uint256) public contributorAmount;
@@ -58,12 +56,12 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     function presaleMint(
         uint256 index,
         bytes32[] calldata merkleProof,
-        uint256 nonce
-    ) external onlyInState(State.Presale) {
+        address to
+    ) external onlyOwner onlyInState(State.Presale) {
         require(!BitMaps.get(mintedBitmap, index), "Already minted");
 
         bytes32 leaf = keccak256(
-            bytes.concat(keccak256(abi.encode(msg.sender, index)))
+            bytes.concat(keccak256(abi.encode(to, index)))
         );
         require(
             MerkleProof.verify(merkleProof, merkleRoot, leaf),
@@ -71,17 +69,16 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         );
 
         BitMaps.set(mintedBitmap, index);
-        require(!users[msg.sender].revealed, "Already committed");
+        require(!users[to].revealed, "Already committed");
         bytes32 commitment = keccak256(
-            abi.encodePacked(msg.sender, index, nonce)
+            abi.encodePacked(to, index)
         );
-        users[msg.sender].commit = commitment;
-        users[msg.sender].block = block.number;
+        users[to].commit = commitment;
+        users[to].block = block.number;
     }
 
     function revealMint(
-        uint256 index,
-        uint256 nonce
+        uint256 index
     ) external onlyInState(State.Presale) {
         require(users[msg.sender].commit > 0, "No commitment found");
         require(
@@ -91,7 +88,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
 
         bytes32 commitment = users[msg.sender].commit;
         require(
-            keccak256(abi.encodePacked(msg.sender, index, nonce)) == commitment,
+            keccak256(abi.encodePacked(msg.sender, index)) == commitment,
             "Invalid commitment"
         );
 
@@ -106,7 +103,6 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
 
     function publicMint() external payable onlyInState(State.PublicSale) {
         require(msg.value >= PRICE, "Insufficient Payment");
-        hasClaimed[msg.sender] = true;
         _safeMint(msg.sender, nextToken());
 
         if (tokenCount() == MAX_SUPPLY) {
@@ -150,8 +146,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         for (uint256 i = 0; i < contributors.length; i++) {
             address contributor = contributors[i];
             uint256 share = contributorAmount[contributor];
-            uint256 amount = (address(this).balance * share) / totalShares;
-            (bool success, ) = contributor.call{value: amount}("");
+            (bool success, ) = contributor.call{value: share}("");
             require(success, "Transfer failed");
         }
     }
