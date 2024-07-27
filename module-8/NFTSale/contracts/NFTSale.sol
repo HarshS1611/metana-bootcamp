@@ -70,16 +70,12 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
 
         BitMaps.set(mintedBitmap, index);
         require(!users[to].revealed, "Already committed");
-        bytes32 commitment = keccak256(
-            abi.encodePacked(to, index)
-        );
+        bytes32 commitment = keccak256(abi.encodePacked(to, index));
         users[to].commit = commitment;
         users[to].block = block.number;
     }
 
-    function revealMint(
-        uint256 index
-    ) external onlyInState(State.Presale) {
+    function revealMint(uint256 index) external onlyInState(State.Presale) {
         require(users[msg.sender].commit > 0, "No commitment found");
         require(
             block.number >= users[msg.sender].block + 10,
@@ -110,14 +106,13 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         }
     }
 
-    function BatchTokenTransfer(
+    function batchTokenTransfer(
         address[] calldata to,
         uint256[] calldata tokenIds
     ) external {
         require(to.length == tokenIds.length, "Arrays length mismatch");
 
         bytes[] memory calls = new bytes[](to.length);
-        this.setApprovalForAll(address(this), true);
 
         for (uint256 i = 0; i < to.length; i++) {
             calls[i] = abi.encodeWithSelector(
@@ -127,6 +122,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
                 tokenIds[i]
             );
         }
+
         this.multicall(calls);
     }
 
