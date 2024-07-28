@@ -29,12 +29,26 @@ contract BitWise {
     }
 }
 
-contract StringIndex {
-    function charAt(string memory input, uint256 index)
-        public
-        pure
-        returns (bytes2)
-    {
-       
+contract String {
+    function charAt(string memory input, uint index) public pure returns(bytes2) {
+        assembly {
+            let len := mload(input)
+            
+            if lt(index, len) {
+                let pos := add(add(input, 0x20), index)
+                
+                let char := mload(pos)
+                                
+                char := or(
+                    and(char, 0xff00000000000000000000000000000000000000000000000000000000000000),
+                    shr(8, and(char, 0x00ff000000000000000000000000000000000000000000000000000000000000))
+                )                
+                mstore(0x0000, char)
+                return(0x0000, 0x20)
+            }
+            
+            mstore(0x0000, 0)
+            return(0x0000, 0x20)
+        }
     }
 }
