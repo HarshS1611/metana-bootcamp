@@ -53,40 +53,43 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         currentState = newState;
     }
 
-    function presaleMint(
-        uint256 index,
-        bytes32[] calldata merkleProof,
-        address to
-    ) external onlyOwner onlyInState(State.Presale) {
+    
+    function presaleMint(uint256 index, address target)
+        external
+        onlyInState(State.Presale)
+        onlyOwner
+    {
         require(!BitMaps.get(mintedBitmap, index), "Already minted");
 
+        bytes32 commitment = keccak256(abi.encodePacked(target, index));
+        users[target].commit = commitment;
+        users[target].block = block.number;
+    }
+
+    function revealMint(bytes32[] calldata merkleProof, uint256 index)
+        external
+        onlyInState(State.Presale)
+    {
+        require(users[msg.sender].commit > 0, "No commitment found");
+        require(
+            block.number >= users[msg.sender].block + 10,
+            "Too early to reveal"
+        );
         bytes32 leaf = keccak256(
-            bytes.concat(keccak256(abi.encode(to, index)))
+            bytes.concat(keccak256(abi.encode(msg.sender, index)))
         );
         require(
             MerkleProof.verify(merkleProof, merkleRoot, leaf),
             "Invalid merkle proof"
         );
 
-        BitMaps.set(mintedBitmap, index);
-        require(!users[to].revealed, "Already committed");
-        bytes32 commitment = keccak256(abi.encodePacked(to, index));
-        users[to].commit = commitment;
-        users[to].block = block.number;
-    }
 
-    function revealMint(uint256 index) external onlyInState(State.Presale) {
-        require(users[msg.sender].commit > 0, "No commitment found");
         require(
-            block.number >= users[msg.sender].block + 10,
-            "Too early to reveal"
-        );
-
-        bytes32 commitment = users[msg.sender].commit;
-        require(
-            keccak256(abi.encodePacked(msg.sender, index)) == commitment,
+            keccak256(abi.encodePacked(msg.sender, index)) == users[msg.sender].commit,
             "Invalid commitment"
         );
+        BitMaps.setTo(mintedBitmap, index, true);
+
 
         delete users[msg.sender];
 
@@ -97,7 +100,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         }
     }
 
-    function publicMint() external payable onlyInState(State.PublicSale) {
+    function puclicMint() external payable onlyInState(State.PublicSale) {
         require(msg.value >= PRICE, "Insufficient Payment");
         _safeMint(msg.sender, nextToken());
 
@@ -126,24 +129,23 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         this.multicall(calls);
     }
 
-    function addContributor(
-        address contributor,
-        uint256 amount
-    ) external onlyOwner {
+    function addContributor(address contributor, uint256 amount)
+        external
+        onlyOwner
+    {
         require(contributor != address(0), "Invalid contributor address");
         require(amount > 0, "Amounr must be greater than 0");
-        totalShares += amount;
 
-        contributors.push(contributor);
         contributorAmount[contributor] = amount;
     }
 
-    function withdraw() external onlyOwner {
-        for (uint256 i = 0; i < contributors.length; i++) {
-            address contributor = contributors[i];
-            uint256 share = contributorAmount[contributor];
-            (bool success, ) = contributor.call{value: share}("");
-            require(success, "Transfer failed");
-        }
+    function withdrawShare() external {
+        uint256 share = contributorAmount[msg.sender];
+        require(share > 0, "No funds to withdraw");
+
+        (bool success, ) = msg.sender.call{value: share}("");
+        require(success, "Transfer failed");
     }
+
+    receive() external payable { }
 }
