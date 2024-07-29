@@ -142,7 +142,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
     function withdrawShare() external {
         uint256 share = contributorAmount[msg.sender];
         require(share > 0, "No funds to withdraw");
-
+        require(share <= address(this).balance, "Insufficient Balance");
         (bool success, ) = msg.sender.call{value: share}("");
         require(success, "Transfer failed");
     }
