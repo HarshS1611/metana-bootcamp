@@ -147,5 +147,7 @@ contract AdvancedNFT is ERC721, Multicall, Ownable, RandomlyAssigned {
         require(success, "Transfer failed");
     }
 
-    receive() external payable { }
+    receive() external payable { 
+        puclicMint();
+    }
 }
