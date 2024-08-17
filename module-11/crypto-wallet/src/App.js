@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import TransferERC20 from './components/TransferERC20';
+import TransferERC721 from './components/TransferERC721';
+import TransferEther from './components/TransferEther';
 
-function App() {
+const INFURA_URL = process.env.REACT_APP_API_URL;
+
+const App = () => {
+  const [account, setAccount] = useState('');
+
+  useEffect(() => {
+    if (window.ethereum) {
+      window.ethereum.request({ method: 'eth_requestAccounts' })
+        .then(accounts => setAccount(accounts[0]))
+        .catch(err => console.error(err));
+
+      window.ethereum.on('accountsChanged', accounts => {
+        setAccount(accounts[0]);
+      });
+    } else {
+      alert('Please install MetaMask to use this app.');
+    }
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Crypto Wallet</h1>
+      <p>Connected account: {account}</p>
+      <TransferERC20 account={account} />
+      <TransferERC721 account={account} />
+      <TransferEther account={account} />
     </div>
   );
 }
