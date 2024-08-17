@@ -1,8 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { sendETH, transferERC20, transferERC721 } = require('./utils');
+const cors = require('cors');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 // Endpoint to send ETH
