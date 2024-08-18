@@ -1,8 +1,9 @@
 const { Buffer } = require('buffer');
 const rlp = require('rlp');
-const { TransactionFactory } = require('@ethereumjs/tx');
+const { TransactionFactory, LegacyTransaction } = require('@ethereumjs/tx');
 const { bufferToHex, toBuffer } = require('ethereumjs-util');
 const { Common, Chain, Hardfork } = require('@ethereumjs/common');
+const { hexToBytes } = require('@ethereumjs/util');
 
 const axios = require('axios');
 const { loadKZG } = require('kzg-wasm')
@@ -43,13 +44,16 @@ const getGasPrice = async () => {
 
 // Function to create and sign a transaction
 const signTransaction = async (txParams, privateKey) => {
-  const kzg = await loadKZG();
-  const common = new Common({ chain: Chain.Sepolia, hardfork: Hardfork.Berlin })
+  // const kzg = await loadKZG();
+  const common = new Common({ chain: Chain.Sepolia, hardfork: Hardfork.Cancun })
 
   const privateKeyBuffer = Buffer.from(privateKey, 'hex');
-  const tx = TransactionFactory.fromTxData(txParams, { common });
+
+  const tx = LegacyTransaction.fromTxData(txParams, { common })
+
+  // const tx = TransactionFactory.fromTxData(txParams, { common });
   const signedTx = tx.sign(privateKeyBuffer);
-  console.log('Signed transaction:', signedTx);
+  // console.log('Signed transaction:', signedTx);
   return signedTx;
 };
 
@@ -59,6 +63,8 @@ const sendTransaction = async (signedTx) => {
     // Convert the signed transaction to RLP encoding and then to a hex string
     const signedTxHex = `0x${Buffer.from(signedTx.serialize()).toString('hex')}`;
 
+    console.log('Signed transaction hex:', signedTxHex);
+
     // Post the transaction
     const response = await axios.post(`https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`, {
       jsonrpc: '2.0',
@@ -66,7 +72,7 @@ const sendTransaction = async (signedTx) => {
       method: 'eth_sendRawTransaction',
       params: [signedTxHex],
     });
-    console.log('Transaction sent:', response.data.result);
+    console.log('Transaction sent:', response);
 
     return response.data.result;
   } catch (error) {
@@ -81,11 +87,11 @@ const sendETH = async (fromAddress, toAddress, amount, privateKey) => {
   const tx = {
     nonce: `0x${parseInt(nonce, 16).toString(16)}`,
     gasLimit: '0x5208', // 21000 in hex
-    gasPrice: gasPrice,
+    gasPrice: '0x6C9CCA00',
     to: toAddress,
     value: `0x${(parseFloat(amount) * 1e18).toString(16)}`, // Convert ETH to wei
-    data: '0x'
   };
+  console.log('Transaction:', tx);
   const signedTx = await signTransaction(tx, privateKey);
   return sendTransaction(signedTx);
 };
