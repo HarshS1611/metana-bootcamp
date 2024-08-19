@@ -1,9 +1,9 @@
 const { Buffer } = require('buffer');
 const rlp = require('rlp');
-const { TransactionFactory, LegacyTransaction } = require('@ethereumjs/tx');
+const { FeeMarketEIP1559Transaction } = require('@ethereumjs/tx')
 const { bufferToHex, toBuffer } = require('ethereumjs-util');
 const { Common, Chain, Hardfork } = require('@ethereumjs/common');
-const { hexToBytes } = require('@ethereumjs/util');
+const { bytesToHex } = require('@ethereumjs/util');
 
 const axios = require('axios');
 const { loadKZG } = require('kzg-wasm')
@@ -49,7 +49,7 @@ const signTransaction = async (txParams, privateKey) => {
 
   const privateKeyBuffer = Buffer.from(privateKey, 'hex');
 
-  const tx = LegacyTransaction.fromTxData(txParams, { common })
+  const tx = FeeMarketEIP1559Transaction.fromTxData(txParams, { common })
 
   // const tx = TransactionFactory.fromTxData(txParams, { common });
   const signedTx = tx.sign(privateKeyBuffer);
@@ -61,7 +61,7 @@ const signTransaction = async (txParams, privateKey) => {
 const sendTransaction = async (signedTx) => {
   try {
     // Convert the signed transaction to RLP encoding and then to a hex string
-    const signedTxHex = `0x${Buffer.from(signedTx.serialize()).toString('hex')}`;
+    const signedTxHex = bytesToHex(signedTx.serialize());
 
     console.log('Signed transaction hex:', signedTxHex);
 
@@ -73,6 +73,8 @@ const sendTransaction = async (signedTx) => {
       params: [signedTxHex],
     });
     console.log('Transaction sent:', response);
+
+    
 
     return response.data.result;
   } catch (error) {
@@ -86,8 +88,9 @@ const sendETH = async (fromAddress, toAddress, amount, privateKey) => {
   const gasPrice = await getGasPrice();
   const tx = {
     nonce: `0x${parseInt(nonce, 16).toString(16)}`,
+    maxPriorityFeePerGas: '0x635F41',
+    maxFeePerGas: '0xDD36E03',
     gasLimit: '0x5208', // 21000 in hex
-    gasPrice: '0x6C9CCA00',
     to: toAddress,
     value: `0x${(parseFloat(amount) * 1e18).toString(16)}`, // Convert ETH to wei
   };
