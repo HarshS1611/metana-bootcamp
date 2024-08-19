@@ -28,12 +28,12 @@ const getNonce = async (address) => {
 };
 
 // Function to get gas price
-const getGasPrice = async () => {
+const getMaxPriorityFeePerGas = async () => {
   try {
     const response = await axios.post(`https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`, {
       jsonrpc: '2.0',
       id: 1,
-      method: 'eth_gasPrice'
+      method: 'eth_maxPriorityFeePerGas'
     });
     return response.data.result;
   } catch (error) {
@@ -41,6 +41,22 @@ const getGasPrice = async () => {
     throw error;
   }
 };
+
+const getBaseFee = async () => {
+  try {
+    const response = await axios.post(`https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`, {
+      jsonrpc: '2.0',
+      id: 1,
+      method: 'eth_feeHistory',
+      params: ["0x5", "latest", []],
+    });
+    console.log('Fee history:', response.data.result.baseFeePerGas[0]);
+    return response.data.result.baseFeePerGas[0];
+  } catch (error) {
+    console.error('Error getting gas price:', error.message);
+    throw error;
+  }
+}
 
 // Function to create and sign a transaction
 const signTransaction = async (txParams, privateKey) => {
@@ -63,8 +79,6 @@ const sendTransaction = async (signedTx) => {
     // Convert the signed transaction to RLP encoding and then to a hex string
     const signedTxHex = bytesToHex(signedTx.serialize());
 
-    console.log('Signed transaction hex:', signedTxHex);
-
     // Post the transaction
     const response = await axios.post(`https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`, {
       jsonrpc: '2.0',
@@ -85,11 +99,14 @@ const sendTransaction = async (signedTx) => {
 
 const sendETH = async (fromAddress, toAddress, amount, privateKey) => {
   const nonce = await getNonce(fromAddress);
-  const gasPrice = await getGasPrice();
+  const maxPriorityFeePerGas = await getMaxPriorityFeePerGas();
+
+  const BASEFEE = await getBaseFee();
+  const maxFeePerGas = (BigInt(BASEFEE) + BigInt(maxPriorityFeePerGas)).toString(16);
   const tx = {
     nonce: `0x${parseInt(nonce, 16).toString(16)}`,
-    maxPriorityFeePerGas: '0x635F41',
-    maxFeePerGas: '0xDD36E03',
+    maxPriorityFeePerGas: maxPriorityFeePerGas,
+    maxFeePerGas: `0x${maxFeePerGas}`,
     gasLimit: '0x5208', // 21000 in hex
     to: toAddress,
     value: `0x${(parseFloat(amount) * 1e18).toString(16)}`, // Convert ETH to wei
