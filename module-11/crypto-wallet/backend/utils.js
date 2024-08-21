@@ -88,7 +88,7 @@ const sendTransaction = async (signedTx) => {
     });
     console.log('Transaction sent:', response);
 
-    
+
 
     return response.data.result;
   } catch (error) {
@@ -118,15 +118,23 @@ const sendETH = async (fromAddress, toAddress, amount, privateKey) => {
 
 const transferERC20 = async (contractAddress, fromAddress, toAddress, amount, privateKey) => {
   const nonce = await getNonce(fromAddress);
-  const gasPrice = await getGasPrice();
-  const data = `0xa9059cbb${'0'.repeat(24)}${toAddress.replace('0x', '')}${amount.padStart(64, '0')}`;
+  const maxPriorityFeePerGas = await getMaxPriorityFeePerGas();
+
+  const BASEFEE = await getBaseFee();
+  const maxFeePerGas = (BigInt(BASEFEE) + BigInt(maxPriorityFeePerGas)).toString(16);
+  const amountInHex = BigInt(amount).toString(16).padStart(64, '0');
+  const toAddressPadded = toAddress.replace('0x', '').padStart(64, '0');
+
+  const data = `0xa9059cbb${toAddressPadded}${amountInHex}`;
   const tx = {
-    nonce: bufferToHex(toBuffer(nonce)),
-    gasLimit: '0x5208', // 21000 in hex
-    gasPrice: gasPrice,
+    nonce: `0x${parseInt(nonce, 16).toString(16)}`,
+    maxPriorityFeePerGas: maxPriorityFeePerGas,
+    maxFeePerGas: `0x${maxFeePerGas}`,
+    gasLimit: '0x186a0', // 60000 in hex
     to: contractAddress,
-    value: '0x0',
-    data: data
+    data: data,
+    type: 2, // EIP-1559 type
+
   };
   const signedTx = await signTransaction(tx, privateKey);
   return sendTransaction(signedTx);
@@ -134,15 +142,25 @@ const transferERC20 = async (contractAddress, fromAddress, toAddress, amount, pr
 
 const transferERC721 = async (contractAddress, fromAddress, toAddress, tokenId, privateKey) => {
   const nonce = await getNonce(fromAddress);
-  const gasPrice = await getGasPrice();
-  const data = `0x23b872dd${fromAddress.replace('0x', '')}${toAddress.replace('0x', '')}${tokenId.padStart(64, '0')}`;
+  const maxPriorityFeePerGas = await getMaxPriorityFeePerGas();
+
+  const BASEFEE = await getBaseFee();
+  const maxFeePerGas = (BigInt(BASEFEE) + BigInt(maxPriorityFeePerGas)).toString(16);
+
+  const functionSignature = '0x23b872dd'; 
+  const fromAddressPadded = fromAddress.replace('0x', '').padStart(64, '0');
+  const toAddressPadded = toAddress.replace('0x', '').padStart(64, '0');
+  const tokenIdPadded = BigInt(tokenId).toString(16).padStart(64, '0');
+  const data = `${functionSignature}${fromAddressPadded}${toAddressPadded}${tokenIdPadded}`;
+
   const tx = {
-    nonce: bufferToHex(toBuffer(nonce)),
-    gasLimit: '0x5208', // 21000 in hex
-    gasPrice: gasPrice,
+    nonce: `0x${parseInt(nonce, 16).toString(16)}`,
+    maxPriorityFeePerGas: maxPriorityFeePerGas,
+    maxFeePerGas: `0x${maxFeePerGas}`,
+    gasLimit: '0x186a0', // 21000 in hex
     to: contractAddress,
-    value: '0x0',
-    data: data
+    data: data,
+    type: 2, // EIP-1559 type
   };
   const signedTx = await signTransaction(tx, privateKey);
   return sendTransaction(signedTx);
