@@ -5,6 +5,7 @@ const App = () => {
   const [fromAddress, setFromAddress] = useState('');
   const [toAddress, setToAddress] = useState('');
   const [amount, setAmount] = useState('');
+  const [tAmount, setTAmount] = useState('');
   const [tokenId, setTokenId] = useState('');
   const [privateKey, setPrivateKey] = useState('');
   const [erc20Contract, setERC20Contract] = useState('');
@@ -30,7 +31,7 @@ const App = () => {
         contractAddress: erc20Contract,
         fromAddress,
         toAddress,
-        amount,
+        tAmount,
         privateKey
       });
       console.log('ERC20 token transferred! Transaction hash:', response.data.txHash);
@@ -71,7 +72,7 @@ const App = () => {
         <input type="text" placeholder="Contract Address" value={erc20Contract} onChange={(e) => setERC20Contract(e.target.value)} />
         <input type="text" placeholder="From Address" value={fromAddress} onChange={(e) => setFromAddress(e.target.value)} />
         <input type="text" placeholder="To Address" value={toAddress} onChange={(e) => setToAddress(e.target.value)} />
-        <input type="number" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
+        <input type="number" placeholder="Amount" value={tAmount} onChange={(e) => setTAmount(e.target.value)} />
         <input type="text" placeholder="Private Key" value={privateKey} onChange={(e) => setPrivateKey(e.target.value)} />
         <button onClick={handleTransferERC20}>Transfer ERC20</button>
       </div>
