@@ -107,7 +107,7 @@ const sendETH = async (fromAddress, toAddress, amount, privateKey) => {
     nonce: `0x${parseInt(nonce, 16).toString(16)}`,
     maxPriorityFeePerGas: maxPriorityFeePerGas,
     maxFeePerGas: `0x${maxFeePerGas}`,
-    gasLimit: '0x5208', // 21000 in hex
+    gasLimit: '0x186a0', // 21000 in hex
     to: toAddress,
     value: `0x${(parseFloat(amount) * 1e18).toString(16)}`, // Convert ETH to wei
   };
