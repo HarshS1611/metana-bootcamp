@@ -6,8 +6,8 @@ const USDC_ADDRESS = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 import { ethers } from "ethers";
 import Web3 from 'web3';
 const settings = {
-  apiKey: import.meta.env.VITE_API_KEY, // Replace with your Alchemy API Key.
-  network: Network.ETH_MAINNET, // Replace with your network.
+  apiKey: import.meta.env.VITE_API_KEY, 
+  network: Network.ETH_MAINNET, 
 };
 const alchemy = new Alchemy(settings);
 const erc20Abi = [
