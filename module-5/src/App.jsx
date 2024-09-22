@@ -6,8 +6,8 @@ const USDC_ADDRESS = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 import { ethers } from "ethers";
 import Web3 from 'web3';
 const settings = {
-  apiKey: import.meta.env.VITE_API_KEY, 
-  network: Network.ETH_MAINNET, 
+  apiKey: import.meta.env.VITE_API_KEY,
+  network: Network.ETH_MAINNET,
 };
 const alchemy = new Alchemy(settings);
 const erc20Abi = [
@@ -90,6 +90,9 @@ const App = () => {
     <div className="charts">
       <VolumeChart blockNumber={blockNumber} blockMap={blockMap} gasPrice={gasPrice} gasRatio={gasRatio} />
       <h3>Current block : {newBlock}</h3>
+      <h4> The first chart is to monitor the logs of an arbitrary ERC20 token address you provide.The second chart is the BASEFEE of each block. So the X-axis is the block number, and the Y-axis is the BASEFEE and the ratio of gasUsed over gasLimit.
+
+      </h4>
 
     </div>
   );
